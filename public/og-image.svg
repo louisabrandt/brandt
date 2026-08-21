@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0a0a0a"/>
+  <rect x="24" y="24" width="1152" height="582" rx="28" fill="none" stroke="#E1E0CC" stroke-opacity="0.12"/>
+
+  <!-- Wordmark -->
+  <text x="80" y="250" font-family="Georgia, 'Times New Roman', serif" font-size="150" font-weight="500" fill="#E1E0CC" letter-spacing="-6">Brandt</text>
+  <text x="615" y="160" font-family="Georgia, serif" font-size="46" fill="#E1E0CC" fill-opacity="0.8">*</text>
+
+  <!-- Tagline -->
+  <text x="84" y="345" font-family="Helvetica, Arial, sans-serif" font-size="40" fill="#E1E0CC" fill-opacity="0.92">Couples &amp; Relationship Coaching</text>
+
+  <!-- Sub -->
+  <text x="84" y="405" font-family="Georgia, serif" font-style="italic" font-size="30" fill="#E1E0CC" fill-opacity="0.7">Gottman Method, integrated with sex therapy</text>
+
+  <!-- Meta line -->
+  <text x="84" y="520" font-family="Helvetica, Arial, sans-serif" font-size="25" fill="#DEDBC8" fill-opacity="0.6">Online worldwide  ·  Paphos · Vienna · Berlin · Miami  ·  EN &amp; DE</text>
+  <text x="84" y="560" font-family="Helvetica, Arial, sans-serif" font-size="23" fill="#DEDBC8" fill-opacity="0.45">Louisa Brandt, M.Sc. in Psychology</text>
+</svg>
