@@ -2,6 +2,7 @@ import StickyHeader from './components/StickyHeader'
 import Hero from './sections/Hero'
 import TrustBar from './sections/TrustBar'
 import About from './sections/About'
+import Ethos from './sections/Ethos'
 import WhyRelationalWork from './sections/WhyRelationalWork'
 import ForWhom from './sections/ForWhom'
 import Locations from './sections/Locations'
@@ -23,6 +24,7 @@ export default function App() {
         <Hero />
         <TrustBar />
         <About />
+        <Ethos />
         <WhyRelationalWork />
         <ForWhom />
         <Locations />
