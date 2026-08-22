@@ -81,11 +81,11 @@ export default function Footer() {
         <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-xs text-primary/45">
           <p>© 2026 Louisa Brandt. All rights reserved.</p>
           <div className="flex items-center gap-5">
-            <a href="#imprint" className="hover:text-primary/70 transition-colors">
-              Imprint
+            <a href="/impressum" className="hover:text-primary/70 transition-colors">
+              Impressum
             </a>
-            <a href="#privacy" className="hover:text-primary/70 transition-colors">
-              Privacy
+            <a href="/datenschutz" className="hover:text-primary/70 transition-colors">
+              Datenschutz
             </a>
           </div>
         </div>
