@@ -7,6 +7,7 @@ import WhyRelationalWork from './sections/WhyRelationalWork'
 import ForWhom from './sections/ForWhom'
 import Locations from './sections/Locations'
 import Approach from './sections/Approach'
+import RelationalCapacity from './sections/RelationalCapacity'
 import WhatToExpect from './sections/WhatToExpect'
 import Services from './sections/Services'
 import WhatChanges from './sections/WhatChanges'
@@ -29,6 +30,7 @@ export default function App() {
         <ForWhom />
         <Locations />
         <Approach />
+        <RelationalCapacity />
         <WhatToExpect />
         <Services />
         <WhatChanges />
