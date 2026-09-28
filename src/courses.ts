@@ -114,9 +114,9 @@ export const COURSES: Course[] = [
       title: 'Der Boden, auf dem du stehst',
       tag: 'Selbstwert & Selbstfürsorge',
       description:
-        'Dir selbst mit Stabilität begegnen: Selbstwert, Selbstfürsorge und dein eigener Sinn, damit du aus einem ruhigen Ort heraus lieben kannst.',
+        'Dir selbst mit Stabilität begegnen: Selbstwert, Selbstfürsorge und ein eigener Sinn, damit du aus einem gefestigten Selbst heraus lieben kannst.',
       intro:
-        'So viel davon, wie wir lieben, ist geprägt davon, wie wir uns selbst halten. Wenn dein Wert mit der Stimmung, der Zustimmung oder der Anwesenheit des anderen steigt und fällt, wird Nähe eher zu Angst als zu Halt. In diesem Kurs geht es darum, einen inneren Boden zu bauen, der nicht wegspült. Du sorgst für dich, lernst dich zu mögen und findest deine eigene Richtung, damit du aus einem ruhigen Ort heraus auftauchst und in der Nähe du selbst bleibst.',
+        'Wie wir lieben, hängt stark davon ab, wie wir uns selbst halten. Wenn dein Wert mit der Stimmung, der Zustimmung oder der Anwesenheit des anderen steigt und fällt, wird Nähe eher zu Angst als zu Halt. In diesem Kurs baust du einen inneren Boden, der nicht wegbricht: Du sorgst für dich, lernst dich zu mögen und findest deine eigene Richtung, damit du gefestigt in die Beziehung gehst und in der Nähe du selbst bleibst.',
       learn: [
         'Wo dein Selbstwert geprägt wurde, und wie er sich in der Liebe zeigt',
         'Für dich sorgen und lernen, wirklich zu mögen, wer du bist',
@@ -157,9 +157,9 @@ export const COURSES: Course[] = [
       title: 'Deinen Sinn finden',
       tag: 'Sinn & Richtung',
       description:
-        'Entdecken, wer du bist und wofür die Beziehung da sein soll, vom Treiben zum Wählen.',
+        'Entdecken, wer du bist und wofür die Beziehung da sein soll, vom Sich-treiben-Lassen zum bewussten Wählen.',
       intro:
-        'In einer langen Beziehung verliert man leicht die Richtung. Man organisiert sich um den anderen, oder darum, den Frieden zu wahren, bis man nicht mehr genau weiß, was man will. In diesem Kurs geht es darum, dich mit deinem eigenen Sinn zu verbinden: was dir wichtig ist, was du aufbaust und wofür diese Beziehung da sein soll, damit sie etwas wird, das du aktiv wählst, statt etwas, das dir einfach geschieht.',
+        'In einer langen Beziehung verliert man leicht die Richtung. Man richtet sich nach dem anderen, oder danach, den Frieden zu wahren, bis man nicht mehr genau weiß, was man eigentlich will. In diesem Kurs verbindest du dich wieder mit deinem eigenen Sinn: was dir wichtig ist, was du aufbaust und wofür diese Beziehung stehen soll, damit sie etwas wird, das du bewusst wählst, statt etwas, das dir einfach zustößt.',
       learn: [
         'Dich wieder mit dem verbinden, was dir wirklich wichtig ist',
         'Den Unterschied zwischen den Bedürfnissen der Beziehung und deinen eigenen erkennen',
