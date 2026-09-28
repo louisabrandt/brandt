@@ -38,6 +38,17 @@ export default function Courses() {
           and practise responding differently. Every course works for individuals
           or couples, online.
         </p>
+        <p className="mt-4 max-w-2xl text-sm md:text-[15px] leading-[1.6] text-primary/60">
+          Already know what you want to work on, whether it&apos;s a specific
+          challenge or growing yourself within your relationships? You can{' '}
+          <Link
+            to="/contact"
+            className="text-primary underline decoration-primary/30 underline-offset-2 hover:decoration-primary transition"
+          >
+            book a session on that exact topic
+          </Link>{' '}
+          instead.
+        </p>
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
           {COURSES.map((course, i) => (

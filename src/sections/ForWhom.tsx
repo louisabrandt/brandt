@@ -45,13 +45,16 @@ export default function ForWhom() {
             <p className="text-[#23201a]/50 text-[11px] uppercase tracking-[0.22em] mb-2">
               Common themes
             </p>
-            <ul>
-              {THEMES.map((theme) => (
+            <ul className="border-t border-[#23201a]/12">
+              {THEMES.map((theme, i) => (
                 <li
                   key={theme}
-                  className="py-4 border-b border-[#23201a]/12"
+                  className="flex items-baseline gap-4 sm:gap-5 py-4 border-b border-[#23201a]/12"
                 >
-                  <span className="text-[#23201a]/85 text-sm sm:text-base leading-[1.5]">
+                  <span className="text-[#23201a]/35 text-xs tabular-nums shrink-0">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <span className="text-[#23201a]/85 text-base sm:text-lg leading-[1.45]">
                     {theme}
                   </span>
                 </li>
