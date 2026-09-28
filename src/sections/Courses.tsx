@@ -4,34 +4,7 @@ import { ArrowRight, Asterisk, Check } from 'lucide-react'
 import SectionLabel from '../components/SectionLabel'
 import Reveal from '../components/Reveal'
 import { TEXT_COLOR } from '../constants'
-
-interface Course {
-  title: string
-  description: string
-}
-
-const COURSES: Course[] = [
-  {
-    title: 'Your patterns, decoded',
-    description:
-      'Where your ways of loving and protecting yourself began — and how to work with them today.',
-  },
-  {
-    title: 'Staying present in conflict',
-    description:
-      'Turn the arguments that repeat into conversations that actually connect.',
-  },
-  {
-    title: 'The art of repair',
-    description:
-      'How trust breaks — and the concrete steps that rebuild it after rupture.',
-  },
-  {
-    title: 'Desire & intimacy',
-    description:
-      'Reconnect emotional safety with physical closeness, at a pace that works for both of you.',
-  },
-]
+import { COURSES } from '../courses'
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
@@ -177,21 +150,26 @@ export default function Courses() {
           the same path.
         </p>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
           {COURSES.map((course, i) => (
             <Reveal
-              key={course.title}
+              key={course.key}
               index={i}
-              className="rounded-2xl bg-[#101010] p-6 md:p-7 flex flex-col"
+              className="rounded-2xl bg-[#101010] p-6 flex flex-col min-h-[200px]"
             >
-              <Asterisk className="h-4 w-4 text-primary/70" strokeWidth={1.5} />
+              <div className="flex items-center justify-between gap-2">
+                <Asterisk className="h-4 w-4 text-primary/70" strokeWidth={1.5} />
+                <span className="text-primary/45 text-[10px] uppercase tracking-[0.16em] text-right">
+                  {course.tag}
+                </span>
+              </div>
               <h3
-                className="mt-5 text-lg sm:text-xl font-medium"
+                className="mt-5 text-lg font-medium"
                 style={{ color: TEXT_COLOR }}
               >
                 {course.title}
               </h3>
-              <p className="mt-2 text-primary/70 text-sm leading-[1.55]">
+              <p className="mt-2 text-primary/70 text-[13px] sm:text-sm leading-[1.55]">
                 {course.description}
               </p>
             </Reveal>
