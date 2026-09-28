@@ -3,21 +3,9 @@ import { Check } from 'lucide-react'
 import SectionLabel from '../components/SectionLabel'
 import Reveal from '../components/Reveal'
 import { FEATURE_VIDEO_URL, TEXT_COLOR } from '../constants'
+import { useContent } from '../i18n/content'
 
 const EASE = [0.16, 1, 0.3, 1] as const
-
-const PRACTICAL = [
-  'Step out of the blame-and-withdraw cycle',
-  'Turn conflict into a conversation that connects',
-  'Rebuild respect, warmth, and real presence',
-]
-
-const SEX_THERAPY = [
-  'Bridge differences in desire, without pressure or blame',
-  'Sensate Focus: rebuilding presence, easing performance anxiety',
-  'Open, shame-free talk about needs and boundaries',
-  'Reconnect emotional closeness with physical intimacy',
-]
 
 function CardTitle({ children }: { children: React.ReactNode }) {
   return (
@@ -32,13 +20,8 @@ function Bullets({ items }: { items: string[] }) {
     <ul className="mt-4 space-y-2.5">
       {items.map((item) => (
         <li key={item} className="flex items-start gap-2.5">
-          <Check
-            className="h-4 w-4 mt-0.5 shrink-0 text-[#8A9A76]"
-            strokeWidth={1.75}
-          />
-          <span className="text-primary/75 text-[13px] sm:text-sm leading-[1.5]">
-            {item}
-          </span>
+          <Check className="h-4 w-4 mt-0.5 shrink-0 text-[#8A9A76]" strokeWidth={1.75} />
+          <span className="text-primary/75 text-[13px] sm:text-sm leading-[1.5]">{item}</span>
         </li>
       ))}
     </ul>
@@ -46,6 +29,7 @@ function Bullets({ items }: { items: string[] }) {
 }
 
 export default function WhatToExpect() {
+  const c = useContent()
   return (
     <section
       id="what-to-expect"
@@ -55,7 +39,7 @@ export default function WhatToExpect() {
 
       <div className="relative max-w-6xl mx-auto">
         <SectionLabel align="start" className="mb-5 sm:mb-6">
-          What you can expect
+          {c.expect.eyebrow}
         </SectionLabel>
 
         <motion.h2
@@ -65,64 +49,34 @@ export default function WhatToExpect() {
           transition={{ duration: 0.7, ease: EASE }}
           className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-primary max-w-3xl leading-[1.05]"
         >
-          Emotional and physical connection, held together.
+          {c.expect.heading}
         </motion.h2>
 
         <p className="mt-6 max-w-3xl text-sm md:text-[15px] leading-[1.6] text-primary/70">
-          We bring together the evidence-based Gottman Method and practical tools
-          from sex therapy. It&apos;s a whole-picture approach that holds both the
-          emotional foundation of your relationship and the physical, intimate
-          connection between you.
+          {c.expect.intro}
         </p>
 
         {/* Themed bento */}
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
-          <Reveal
-            index={0}
-            className="noise-overlay relative overflow-hidden rounded-2xl bg-[#212121] p-6 md:p-8"
-          >
-            <CardTitle>Clarity about your relationship</CardTitle>
-            <p className="mt-4 text-primary/75 text-sm sm:text-[15px] leading-[1.6]">
-              An honest, warm and non-judgmental look at what is really happening
-              between you: your strengths, the patterns that keep repeating, and
-              the hidden dynamics beneath them, including how emotional safety and
-              attachment shape your connection. You leave with a clear, shared
-              understanding to build on.
-            </p>
+          <Reveal index={0} className="noise-overlay relative overflow-hidden rounded-2xl bg-[#212121] p-6 md:p-8">
+            <CardTitle>{c.expect.card1Title}</CardTitle>
+            <p className="mt-4 text-primary/75 text-sm sm:text-[15px] leading-[1.6]">{c.expect.card1}</p>
           </Reveal>
 
-          <Reveal
-            index={1}
-            className="noise-overlay relative overflow-hidden rounded-2xl bg-[#212121] p-6 md:p-8"
-          >
-            <CardTitle>Support during difficult times</CardTitle>
-            <p className="mt-4 text-primary/75 text-sm sm:text-[15px] leading-[1.6]">
-              A safe space for the hardest things: infidelity, broken trust, old
-              wounds, trauma, or heavy life stress. We meet them respectfully and
-              constructively, including how they affect closeness and intimacy,
-              and begin healing both the emotional and physical bond gently, step
-              by step.
-            </p>
+          <Reveal index={1} className="noise-overlay relative overflow-hidden rounded-2xl bg-[#212121] p-6 md:p-8">
+            <CardTitle>{c.expect.card2Title}</CardTitle>
+            <p className="mt-4 text-primary/75 text-sm sm:text-[15px] leading-[1.6]">{c.expect.card2}</p>
           </Reveal>
 
-          <Reveal
-            index={2}
-            className="noise-overlay relative overflow-hidden rounded-2xl bg-[#212121] p-6 md:p-8"
-          >
-            <CardTitle>Practical tools for everyday life</CardTitle>
-            <Bullets items={PRACTICAL} />
+          <Reveal index={2} className="noise-overlay relative overflow-hidden rounded-2xl bg-[#212121] p-6 md:p-8">
+            <CardTitle>{c.expect.card3Title}</CardTitle>
+            <Bullets items={c.expect.practical} />
           </Reveal>
 
-          <Reveal
-            index={3}
-            className="noise-overlay relative overflow-hidden rounded-2xl bg-[#212121] p-6 md:p-8"
-          >
-            <CardTitle>Insights from sex therapy</CardTitle>
-            <p className="mt-4 text-primary/70 text-[13px] sm:text-sm leading-[1.55]">
-              Sexual intimacy is deeply tied to emotional safety. Gently, and at a
-              pace that works for both of you:
-            </p>
-            <Bullets items={SEX_THERAPY} />
+          <Reveal index={3} className="noise-overlay relative overflow-hidden rounded-2xl bg-[#212121] p-6 md:p-8">
+            <CardTitle>{c.expect.card4Title}</CardTitle>
+            <p className="mt-4 text-primary/70 text-[13px] sm:text-sm leading-[1.55]">{c.expect.card4Intro}</p>
+            <Bullets items={c.expect.sexTherapy} />
           </Reveal>
         </div>
 
@@ -144,9 +98,8 @@ export default function WhatToExpect() {
             className="relative p-6 md:p-10 text-xl sm:text-2xl md:text-3xl font-normal leading-[1.3] max-w-3xl"
             style={{ color: TEXT_COLOR }}
           >
-            A relationship that feels more stable, alive, and{' '}
-            <span className="font-serif italic">deeply chosen</span>, even in the
-            hard stretches.
+            {c.expect.banner} <span className="font-serif italic">{c.expect.bannerItalic}</span>
+            {c.expect.bannerAfter}
           </p>
         </Reveal>
       </div>

@@ -1,7 +1,11 @@
 import { Link } from 'react-router-dom'
 import { NAV } from '../nav'
+import { useLang } from '../i18n/lang'
+import { useContent } from '../i18n/content'
 
 export default function Footer() {
+  const { l } = useLang()
+  const c = useContent()
   return (
     <footer className="bg-[#0a0a0a] border-t border-white/10 px-4 sm:px-6 md:px-10 lg:px-14 py-14 sm:py-16">
       <div className="max-w-6xl mx-auto">
@@ -9,32 +13,21 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-1">
-              <span
-                className="text-2xl font-medium tracking-[-0.05em]"
-                style={{ color: '#E1E0CC' }}
-              >
+              <span className="text-2xl font-medium tracking-[-0.05em]" style={{ color: '#E1E0CC' }}>
                 Brandt
               </span>
             </div>
-            <p className="mt-3 text-primary/60 text-sm leading-[1.6] max-w-xs">
-              Relationship coaching for couples and individuals. Online worldwide,
-              and in person in Paphos &amp; Vienna.
-            </p>
+            <p className="mt-3 text-primary/60 text-sm leading-[1.6] max-w-xs">{c.footer.tagline}</p>
           </div>
 
           {/* Navigate */}
           <div>
-            <p className="text-primary/50 text-[11px] uppercase tracking-[0.22em] mb-4">
-              Navigate
-            </p>
+            <p className="text-primary/50 text-[11px] uppercase tracking-[0.22em] mb-4">{c.footer.navigate}</p>
             <ul className="space-y-2.5">
-              {NAV.map((item) => (
-                <li key={item.to}>
-                  <Link
-                    to={item.to}
-                    className="text-primary/75 hover:text-primary transition-colors text-sm"
-                  >
-                    {item.label}
+              {NAV.map((n) => (
+                <li key={n.to}>
+                  <Link to={l(n.to)} className="text-primary/75 hover:text-primary transition-colors text-sm">
+                    {c.nav[n.key]}
                   </Link>
                 </li>
               ))}
@@ -43,25 +36,18 @@ export default function Footer() {
 
           {/* Sessions */}
           <div>
-            <p className="text-primary/50 text-[11px] uppercase tracking-[0.22em] mb-4">
-              Sessions
-            </p>
+            <p className="text-primary/50 text-[11px] uppercase tracking-[0.22em] mb-4">{c.footer.sessions}</p>
             <ul className="space-y-2.5 text-sm text-primary/75">
-              <li>Online worldwide</li>
-              <li>Paphos &amp; Vienna</li>
-              <li>English &amp; German</li>
+              {c.footer.sessionsItems.map((s) => (
+                <li key={s}>{s}</li>
+              ))}
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <p className="text-primary/50 text-[11px] uppercase tracking-[0.22em] mb-4">
-              Contact
-            </p>
-            <a
-              href="mailto:lb@louisabrandt.com"
-              className="text-primary/75 hover:text-primary transition-colors text-sm"
-            >
+            <p className="text-primary/50 text-[11px] uppercase tracking-[0.22em] mb-4">{c.footer.contact}</p>
+            <a href="mailto:lb@louisabrandt.com" className="text-primary/75 hover:text-primary transition-colors text-sm">
               lb@louisabrandt.com
             </a>
           </div>
@@ -69,13 +55,13 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-xs text-primary/45">
-          <p>© 2026 Louisa Brandt. All rights reserved.</p>
+          <p>{c.footer.rights}</p>
           <div className="flex items-center gap-5">
             <a href="/impressum" className="hover:text-primary/70 transition-colors">
-              Impressum
+              {c.footer.imprint}
             </a>
             <a href="/datenschutz" className="hover:text-primary/70 transition-colors">
-              Datenschutz
+              {c.footer.privacy}
             </a>
           </div>
         </div>

@@ -3,10 +3,12 @@ import Navbar from '../components/Navbar'
 import PrimaryCTA from '../components/PrimaryCTA'
 import WordsPullUp from '../components/WordsPullUp'
 import { HERO_VIDEO_URL, TEXT_COLOR } from '../constants'
+import { useContent } from '../i18n/content'
 
 const EASE = [0.16, 1, 0.3, 1] as const
 
 export default function Hero() {
+  const c = useContent()
   return (
     <section className="h-screen w-full p-4 md:p-6 bg-[#0a0a0a]">
       <div className="relative h-full w-full overflow-hidden rounded-2xl md:rounded-[2rem]">
@@ -47,8 +49,8 @@ export default function Hero() {
                 className="text-2xl sm:text-3xl md:text-4xl font-normal leading-[1.05] tracking-[-0.01em]"
                 style={{ color: TEXT_COLOR }}
               >
-                Stronger relationships,{' '}
-                <span className="font-serif italic">built together.</span>
+                {c.hero.headline}{' '}
+                <span className="font-serif italic">{c.hero.headlineItalic}</span>
               </motion.h1>
 
               <motion.p
@@ -58,8 +60,7 @@ export default function Hero() {
                 className="text-primary/85 text-sm sm:text-base"
                 style={{ lineHeight: 1.35 }}
               >
-                A steady, close relationship isn&apos;t down to luck. It&apos;s
-                something you can learn to build.
+                {c.hero.sub1}
               </motion.p>
 
               <motion.p
@@ -69,10 +70,7 @@ export default function Hero() {
                 className="text-primary/70 text-xs sm:text-sm"
                 style={{ lineHeight: 1.5 }}
               >
-                Relationship coaching for couples and individuals who want deeper
-                connection, better communication, and lasting stability. Online
-                worldwide, and in person in Paphos and Vienna. In English and
-                German.
+                {c.hero.sub2}
               </motion.p>
 
               <motion.div

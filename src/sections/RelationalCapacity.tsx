@@ -2,48 +2,12 @@ import { motion } from 'framer-motion'
 import SectionLabel from '../components/SectionLabel'
 import Reveal from '../components/Reveal'
 import { TEXT_COLOR } from '../constants'
-
-interface Capacity {
-  title: string
-  description: string
-}
-
-const CAPACITIES: Capacity[] = [
-  {
-    title: 'Self-awareness',
-    description:
-      'Seeing the patterns you learned long before this relationship, and how they surface under pressure.',
-  },
-  {
-    title: 'Emotional regulation',
-    description:
-      'Staying steady in charged moments, instead of flooding, escalating, or shutting down.',
-  },
-  {
-    title: 'Honest conversation',
-    description:
-      'Speaking so you can actually be heard, and listening for what sits beneath the words.',
-  },
-  {
-    title: 'Roles & power',
-    description:
-      'Seeing the dynamics you fall into together: who pursues, who withdraws, who holds control.',
-  },
-  {
-    title: 'Boundaries & repair',
-    description:
-      'Knowing where you end and the other begins, and how to find your way back after a rupture.',
-  },
-  {
-    title: 'Intimacy & desire',
-    description:
-      'Reconnecting emotional safety with physical closeness, at a pace that works for both of you.',
-  },
-]
+import { useContent } from '../i18n/content'
 
 const EASE = [0.16, 1, 0.3, 1] as const
 
 export default function RelationalCapacity() {
+  const c = useContent()
   return (
     <section
       id="relational-capacity"
@@ -51,7 +15,7 @@ export default function RelationalCapacity() {
     >
       <div className="max-w-6xl mx-auto">
         <SectionLabel align="start" className="mb-5 sm:mb-6">
-          Relational capacity
+          {c.relCap.eyebrow}
         </SectionLabel>
 
         <motion.h2
@@ -61,30 +25,25 @@ export default function RelationalCapacity() {
           transition={{ duration: 0.7, ease: EASE }}
           className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-primary max-w-3xl leading-[1.05]"
         >
-          The inner structure, <span className="font-serif italic">in practice.</span>
+          {c.relCap.heading} <span className="font-serif italic">{c.relCap.headingItalic}</span>
         </motion.h2>
 
         <p className="mt-6 max-w-2xl text-sm md:text-[15px] leading-[1.6] text-primary/70">
-          It isn&apos;t one single skill, but a set of capacities: the inner
-          ground that lets you stay present in closeness, conflict and desire at
-          the same time. This is what we build, together.
+          {c.relCap.intro}
         </p>
 
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
-          {CAPACITIES.map((cap, i) => (
+          {c.relCap.items.map((cap, i) => (
             <Reveal
               key={cap.title}
               index={i}
               className="rounded-2xl bg-[#101010] p-6 flex flex-col min-h-[180px]"
             >
-              <h3
-                className="text-base sm:text-lg font-medium"
-                style={{ color: TEXT_COLOR }}
-              >
+              <h3 className="text-base sm:text-lg font-medium" style={{ color: TEXT_COLOR }}>
                 {cap.title}
               </h3>
               <p className="mt-2 text-primary/70 text-[13px] sm:text-sm leading-[1.55]">
-                {cap.description}
+                {cap.desc}
               </p>
             </Reveal>
           ))}

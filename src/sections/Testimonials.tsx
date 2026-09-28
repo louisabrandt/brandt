@@ -1,38 +1,9 @@
 import SectionLabel from '../components/SectionLabel'
 import Reveal from '../components/Reveal'
-
-interface Testimonial {
-  before: string
-  emphasis: string
-  after: string
-  author: string
-}
-
-const TESTIMONIALS: Testimonial[] = [
-  {
-    before:
-      "We came in stuck in the same argument we'd had for years. The work never tried to fix us. It helped us ",
-    emphasis: 'see what was really happening between us',
-    after: ', and slowly start responding differently.',
-    author: 'M. & T. (example)',
-  },
-  {
-    before: 'What I valued most was ',
-    emphasis: 'how grounded it felt',
-    after:
-      '. No pressure to perform or change overnight. Just noticing what really happens, and learning to stay.',
-    author: 'C. R. (example)',
-  },
-  {
-    before:
-      'As an international couple, we kept misreading each other across two cultures. This finally ',
-    emphasis: 'gave us words for it',
-    after: '.',
-    author: 'A. & L. (example)',
-  },
-]
+import { useContent } from '../i18n/content'
 
 export default function Testimonials() {
+  const c = useContent()
   return (
     <section
       id="testimonials"
@@ -40,15 +11,15 @@ export default function Testimonials() {
     >
       <div className="max-w-6xl mx-auto">
         <SectionLabel tone="ink" align="start" className="mb-5 sm:mb-6">
-          Client voices
+          {c.testimonials.eyebrow}
         </SectionLabel>
 
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal text-[#23201a] max-w-2xl mb-10 leading-[1.05]">
-          What people carry out of the work.
+          {c.testimonials.heading}
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
-          {TESTIMONIALS.map((t, i) => (
+          {c.testimonials.items.map((t, i) => (
             <Reveal
               key={t.author}
               index={i}
@@ -64,9 +35,7 @@ export default function Testimonials() {
           ))}
         </div>
 
-        <p className="mt-6 text-[#23201a]/45 text-xs">
-          Example placeholders. Real, consented client voices will replace these.
-        </p>
+        <p className="mt-6 text-[#23201a]/45 text-xs">{c.testimonials.note}</p>
       </div>
     </section>
   )

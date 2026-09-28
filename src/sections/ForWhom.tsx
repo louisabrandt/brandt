@@ -1,21 +1,15 @@
 import WordsPullUpMultiStyle, { type Segment } from '../components/WordsPullUpMultiStyle'
 import SectionLabel from '../components/SectionLabel'
 import Reveal from '../components/Reveal'
-
-const HEADING: Segment[] = [
-  { text: 'You can feel it:', className: 'font-normal' },
-  { text: 'something keeps repeating.', className: 'italic font-serif' },
-]
-
-const THEMES = [
-  'The same argument on repeat, whether it ends in raised voices or silence',
-  'A quiet distance, even when you both want it to work',
-  'Trust that got shaken, and the slow work of earning it back',
-  'Closeness and desire that have gone quiet',
-  'Big transitions: moving in together, marriage, a baby, a move abroad',
-]
+import { useContent } from '../i18n/content'
 
 export default function ForWhom() {
+  const c = useContent()
+  const heading: Segment[] = [
+    { text: c.forWhom.head1, className: 'font-normal' },
+    { text: c.forWhom.headItalic, className: 'italic font-serif' },
+  ]
+
   return (
     <section
       id="for-whom"
@@ -26,27 +20,23 @@ export default function ForWhom() {
           {/* Left — intro */}
           <div className="lg:col-span-5">
             <SectionLabel tone="ink" align="start" className="mb-5 sm:mb-6">
-              Does this sound familiar?
+              {c.forWhom.eyebrow}
             </SectionLabel>
             <div className="text-2xl sm:text-3xl md:text-4xl font-normal text-[#23201a] leading-[1.05]">
-              <WordsPullUpMultiStyle
-                segments={HEADING}
-                className="!justify-start text-left"
-              />
+              <WordsPullUpMultiStyle segments={heading} className="!justify-start text-left" />
             </div>
             <p className="mt-6 max-w-md text-sm md:text-[15px] leading-[1.65] text-[#23201a]/75">
-              For couples and individuals who want to understand what keeps
-              happening between them, instead of just working around it.
+              {c.forWhom.intro}
             </p>
           </div>
 
           {/* Right — common themes list */}
           <div className="lg:col-span-7">
             <p className="text-[#23201a]/50 text-[11px] uppercase tracking-[0.22em] mb-2">
-              Common themes
+              {c.forWhom.themesLabel}
             </p>
             <ul className="border-t border-[#23201a]/12">
-              {THEMES.map((theme, i) => (
+              {c.forWhom.themes.map((theme, i) => (
                 <li
                   key={theme}
                   className="flex items-baseline gap-4 sm:gap-5 py-4 border-b border-[#23201a]/12"
@@ -69,7 +59,7 @@ export default function ForWhom() {
           className="noise-overlay relative overflow-hidden rounded-2xl bg-[#1b1b1b] p-6 md:p-8 mt-10 lg:mt-12"
         >
           <p className="text-primary/60 text-[11px] sm:text-xs uppercase tracking-[0.22em] mb-5">
-            For internationals &amp; expats
+            {c.forWhom.expatEyebrow}
           </p>
           <div className="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-6 lg:gap-10 items-center">
             <div
@@ -78,22 +68,17 @@ export default function ForWhom() {
             >
               <img
                 src="/illustrations/forwhom-distance.webp"
-                alt="Two people connected by a thread across a distance"
+                alt=""
                 loading="lazy"
                 className="absolute inset-0 h-full w-full object-contain"
               />
             </div>
             <div>
               <h3 className="text-primary text-xl sm:text-2xl font-normal leading-snug">
-                Love across borders carries its own weight.
+                {c.forWhom.expatHeading}
               </h3>
               <p className="mt-4 text-primary/70 text-sm sm:text-[15px] leading-[1.65]">
-                Binational and international couples move between different
-                languages, cultures and unspoken expectations. Relocation can cut
-                you off from the friends, family and routines that once held you,
-                and place all of that weight on the relationship itself. It&apos;s a
-                frequent focus of the work, and a big reason many international
-                couples reach out.
+                {c.forWhom.expatText}
               </p>
             </div>
           </div>

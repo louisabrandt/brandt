@@ -1,5 +1,6 @@
 import { useState, type FormEvent } from 'react'
 import { ArrowRight, Check } from 'lucide-react'
+import { useContent } from '../i18n/content'
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
@@ -14,6 +15,7 @@ const FIELD_CLASS =
 /** Course waitlist form (Netlify Forms). Pass `course` to record which course
  *  the signup came from. */
 export default function Waitlist({ course = 'General' }: { course?: string }) {
+  const c = useContent()
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [error, setError] = useState('')
@@ -23,7 +25,7 @@ export default function Waitlist({ course = 'General' }: { course?: string }) {
   async function handleSubmit(e: FormEvent) {
     e.preventDefault()
     if (!EMAIL_RE.test(email)) {
-      setError('Please enter a valid email address.')
+      setError(c.waitlist.invalidEmail)
       return
     }
     setError('')
@@ -36,7 +38,7 @@ export default function Waitlist({ course = 'General' }: { course?: string }) {
       })
       setSubmitted(true)
     } catch {
-      setError('Something went wrong. Please email lb@louisabrandt.com.')
+      setError(c.waitlist.error)
     } finally {
       setSubmitting(false)
     }
@@ -48,11 +50,8 @@ export default function Waitlist({ course = 'General' }: { course?: string }) {
         <span className="flex items-center justify-center h-10 w-10 rounded-full bg-primary/10">
           <Check className="h-4 w-4 text-primary" strokeWidth={1.5} />
         </span>
-        <h3 className="text-primary text-lg font-normal">You&apos;re on the list.</h3>
-        <p className="text-primary/70 text-sm leading-[1.6] max-w-md">
-          I&apos;ll be in touch when the next course opens. Just the date and how
-          to start.
-        </p>
+        <h3 className="text-primary text-lg font-normal">{c.waitlist.successTitle}</h3>
+        <p className="text-primary/70 text-sm leading-[1.6] max-w-md">{c.waitlist.successText}</p>
       </div>
     )
   }
@@ -77,20 +76,20 @@ export default function Waitlist({ course = 'General' }: { course?: string }) {
         <input
           className={FIELD_CLASS}
           name="name"
-          placeholder="First name (optional)"
+          placeholder={c.waitlist.namePlaceholder}
           value={name}
           onChange={(e) => setName(e.target.value)}
-          aria-label="First name"
+          aria-label={c.waitlist.namePlaceholder}
         />
         <input
           type="email"
           className={FIELD_CLASS}
           name="email"
-          placeholder="Email"
+          placeholder={c.waitlist.emailPlaceholder}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          aria-label="Email"
+          aria-label={c.waitlist.emailPlaceholder}
         />
       </div>
       {error && (
@@ -103,7 +102,7 @@ export default function Waitlist({ course = 'General' }: { course?: string }) {
         disabled={submitting}
         className="group mt-1 inline-flex items-center gap-2 hover:gap-3 transition-all duration-300 bg-[#B4552E] hover:bg-[#9E4826] rounded-full pl-5 pr-1.5 py-1.5 text-[#F3ECDE] font-medium text-sm sm:text-base self-start disabled:opacity-60"
       >
-        <span>{submitting ? 'Joining…' : 'Join the waitlist'}</span>
+        <span>{submitting ? c.waitlist.joining : c.waitlist.button}</span>
         <span className="flex items-center justify-center bg-[#7C3A1E] rounded-full w-9 h-9 sm:w-10 sm:h-10 transition-transform duration-300 group-hover:scale-110">
           <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-[#F3ECDE]" strokeWidth={1.5} />
         </span>

@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from 'react'
 import { ArrowRight, Check } from 'lucide-react'
 import SectionLabel from '../components/SectionLabel'
+import { useContent } from '../i18n/content'
 
 const FIELD_CLASS =
   'w-full bg-transparent border-b border-primary/20 px-0 py-3 text-primary placeholder:text-primary/40 text-sm focus:outline-none focus:border-primary/50 transition-colors'
@@ -13,6 +14,7 @@ const encode = (data: Record<string, string>) =>
     .join('&')
 
 export default function Contact() {
+  const c = useContent()
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [email, setEmail] = useState('')
@@ -25,34 +27,24 @@ export default function Contact() {
   async function handleSubmit(e: FormEvent) {
     e.preventDefault()
     if (!firstName.trim() || !lastName.trim() || !message.trim()) {
-      setError('Please add your name and a short message.')
+      setError(c.contact.errName)
       return
     }
     if (!EMAIL_RE.test(email)) {
-      setError('Please enter a valid email address.')
+      setError(c.contact.errEmail)
       return
     }
     setError('')
     setSubmitting(true)
     try {
-      // Netlify Forms: POST the encoded fields to the site root.
       await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode({
-          'form-name': 'contact',
-          firstName,
-          lastName,
-          email,
-          phone,
-          message,
-        }),
+        body: encode({ 'form-name': 'contact', firstName, lastName, email, phone, message }),
       })
       setSubmitted(true)
     } catch {
-      setError(
-        'Something went wrong sending your message. Please email lb@louisabrandt.com directly.',
-      )
+      setError(c.contact.errSend)
     } finally {
       setSubmitting(false)
     }
@@ -65,41 +57,29 @@ export default function Contact() {
     >
       <div className="max-w-6xl mx-auto">
         <SectionLabel align="start" className="mb-5 sm:mb-6">
-          Contact
+          {c.contact.eyebrow}
         </SectionLabel>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Left — intro + meta */}
           <div className="lg:col-span-5">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-primary leading-[1.05] max-w-xl">
-              Ready to take the next step for your relationship?
+              {c.contact.heading}
             </h2>
             <p className="mt-6 max-w-md text-sm md:text-[15px] leading-[1.65] text-primary/70">
-              Tell me a little about your situation, and I&apos;ll get back to you
-              personally. The first conversation is a no-pressure way to see
-              whether this work fits.
+              {c.contact.intro}
             </p>
 
             <div className="mt-10 space-y-4 text-sm">
               <div>
-                <p className="text-primary/50 text-[11px] uppercase tracking-[0.22em]">
-                  Email
-                </p>
-                <a
-                  href="mailto:lb@louisabrandt.com"
-                  className="text-primary hover:text-primary/70 transition-colors"
-                >
+                <p className="text-primary/50 text-[11px] uppercase tracking-[0.22em]">{c.contact.emailLabel}</p>
+                <a href="mailto:lb@louisabrandt.com" className="text-primary hover:text-primary/70 transition-colors">
                   lb@louisabrandt.com
                 </a>
               </div>
               <div>
-                <p className="text-primary/50 text-[11px] uppercase tracking-[0.22em]">
-                  Sessions
-                </p>
-                <p className="text-primary/80 leading-[1.6]">
-                  Online worldwide · in person in Paphos &amp; Vienna · in
-                  English &amp; German
-                </p>
+                <p className="text-primary/50 text-[11px] uppercase tracking-[0.22em]">{c.contact.sessionsLabel}</p>
+                <p className="text-primary/80 leading-[1.6]">{c.contact.sessionsText}</p>
               </div>
             </div>
           </div>
@@ -112,13 +92,8 @@ export default function Contact() {
                   <span className="flex items-center justify-center h-11 w-11 rounded-full bg-primary/10">
                     <Check className="h-5 w-5 text-primary" strokeWidth={1.5} />
                   </span>
-                  <h3 className="text-primary text-xl font-normal">
-                    Thank you — I&apos;ve received your message.
-                  </h3>
-                  <p className="text-primary/70 text-sm leading-[1.6] max-w-md">
-                    I&apos;ll get back to you personally. Everything is
-                    confidential from the first contact.
-                  </p>
+                  <h3 className="text-primary text-xl font-normal">{c.contact.successTitle}</h3>
+                  <p className="text-primary/70 text-sm leading-[1.6] max-w-md">{c.contact.successText}</p>
                 </div>
               ) : (
                 <form
@@ -129,12 +104,10 @@ export default function Contact() {
                   onSubmit={handleSubmit}
                   className="flex flex-col gap-5"
                 >
-                  {/* Netlify Forms plumbing */}
                   <input type="hidden" name="form-name" value="contact" />
                   <p className="hidden">
                     <label>
-                      Don&apos;t fill this out if you&apos;re human:{' '}
-                      <input name="bot-field" />
+                      Don&apos;t fill this out if you&apos;re human: <input name="bot-field" />
                     </label>
                   </p>
 
@@ -142,49 +115,49 @@ export default function Contact() {
                     <input
                       className={FIELD_CLASS}
                       name="firstName"
-                      placeholder="First name"
+                      placeholder={c.contact.first}
                       value={firstName}
                       onChange={(e) => setFirstName(e.target.value)}
                       required
-                      aria-label="First name"
+                      aria-label={c.contact.first}
                     />
                     <input
                       className={FIELD_CLASS}
                       name="lastName"
-                      placeholder="Last name"
+                      placeholder={c.contact.last}
                       value={lastName}
                       onChange={(e) => setLastName(e.target.value)}
                       required
-                      aria-label="Last name"
+                      aria-label={c.contact.last}
                     />
                   </div>
                   <input
                     type="email"
                     className={FIELD_CLASS}
                     name="email"
-                    placeholder="Email"
+                    placeholder={c.contact.email}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    aria-label="Email"
+                    aria-label={c.contact.email}
                   />
                   <input
                     type="tel"
                     className={FIELD_CLASS}
                     name="phone"
-                    placeholder="Phone (optional)"
+                    placeholder={c.contact.phone}
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    aria-label="Phone (optional)"
+                    aria-label={c.contact.phone}
                   />
                   <textarea
                     className={`${FIELD_CLASS} min-h-[110px] resize-y`}
                     name="message"
-                    placeholder="Briefly, what brings you here?"
+                    placeholder={c.contact.message}
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     required
-                    aria-label="Message"
+                    aria-label={c.contact.message}
                   />
 
                   {error && (
@@ -198,21 +171,13 @@ export default function Contact() {
                     disabled={submitting}
                     className="group mt-1 inline-flex items-center gap-2 hover:gap-3 transition-all duration-300 bg-[#B4552E] hover:bg-[#9E4826] rounded-full pl-5 pr-1.5 py-1.5 text-[#F3ECDE] font-medium text-sm sm:text-base self-start disabled:opacity-60"
                   >
-                    <span>
-                      {submitting ? 'Sending…' : 'Book a first conversation'}
-                    </span>
+                    <span>{submitting ? c.contact.sending : c.contact.submit}</span>
                     <span className="flex items-center justify-center bg-[#7C3A1E] rounded-full w-9 h-9 sm:w-10 sm:h-10 transition-transform duration-300 group-hover:scale-110">
-                      <ArrowRight
-                        className="w-4 h-4 sm:w-5 sm:h-5 text-[#F3ECDE]"
-                        strokeWidth={1.5}
-                      />
+                      <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-[#F3ECDE]" strokeWidth={1.5} />
                     </span>
                   </button>
 
-                  <p className="text-primary/45 text-xs leading-[1.6]">
-                    60 min, online or in person. No obligation, and confidential
-                    from the very first message.
-                  </p>
+                  <p className="text-primary/45 text-xs leading-[1.6]">{c.contact.trust}</p>
                 </form>
               )}
             </div>

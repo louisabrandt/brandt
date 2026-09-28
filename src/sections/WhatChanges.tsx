@@ -2,17 +2,12 @@ import { motion } from 'framer-motion'
 import { Check } from 'lucide-react'
 import SectionLabel from '../components/SectionLabel'
 import Reveal from '../components/Reveal'
-
-const OUTCOMES = [
-  'Less constant stress and overwhelm',
-  'More steadiness, in conflict and in closeness',
-  'More warmth and presence for each other',
-  'Stronger resilience and lasting wellbeing',
-]
+import { useContent } from '../i18n/content'
 
 const EASE = [0.16, 1, 0.3, 1] as const
 
 export default function WhatChanges() {
+  const c = useContent()
   return (
     <section
       id="what-changes"
@@ -20,7 +15,7 @@ export default function WhatChanges() {
     >
       <div className="max-w-6xl mx-auto">
         <SectionLabel tone="ink" align="start" className="mb-5 sm:mb-6">
-          What changes
+          {c.whatChanges.eyebrow}
         </SectionLabel>
 
         <motion.h2
@@ -30,31 +25,26 @@ export default function WhatChanges() {
           transition={{ duration: 0.7, ease: EASE }}
           className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-[#23201a] max-w-3xl leading-[1.05]"
         >
-          What tends to shift over time.
+          {c.whatChanges.heading}
         </motion.h2>
 
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
-          {OUTCOMES.map((outcome, i) => (
+          {c.whatChanges.outcomes.map((outcome, i) => (
             <Reveal
               key={outcome}
               index={i}
               className="rounded-2xl bg-[#f5f0e6] border border-[#23201a]/8 p-6 flex flex-col gap-4 min-h-[160px]"
             >
               <Check className="h-5 w-5 text-[#5e6b4a]" strokeWidth={1.75} />
-              <p className="text-[#23201a]/80 text-sm sm:text-[15px] leading-[1.5]">
-                {outcome}
-              </p>
+              <p className="text-[#23201a]/80 text-sm sm:text-[15px] leading-[1.5]">{outcome}</p>
             </Reveal>
           ))}
         </div>
 
         <div className="mt-10 grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-8 lg:gap-12 items-center">
           <p className="max-w-2xl text-lg sm:text-xl md:text-2xl font-normal text-[#23201a]/85 leading-[1.4]">
-            The relationship stops running on old, automatic scripts, and starts
-            being shaped by{' '}
-            <span className="font-serif italic">
-              awareness, choice, and shared responsibility.
-            </span>
+            {c.whatChanges.closing}{' '}
+            <span className="font-serif italic">{c.whatChanges.closingItalic}</span>
           </p>
           <div
             className="relative overflow-hidden rounded-2xl aspect-[16/9] ring-1 ring-[#23201a]/10"
@@ -62,7 +52,7 @@ export default function WhatChanges() {
           >
             <img
               src="/illustrations/whatchanges-resolve.webp"
-              alt="A tangled thread easing into a smooth, ordered line"
+              alt=""
               loading="lazy"
               className="absolute inset-0 h-full w-full object-contain"
             />

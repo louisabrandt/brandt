@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { NAV } from '../nav'
+import { useLang } from '../i18n/lang'
+import { useContent } from '../i18n/content'
+import LangSwitch from './LangSwitch'
 
 function NavLink({ label, to }: { label: string; to: string }) {
   const [hover, setHover] = useState(false)
@@ -19,17 +22,20 @@ function NavLink({ label, to }: { label: string; to: string }) {
 
 /** Black pill hanging from the top edge — the locked navbar component. */
 export default function Navbar() {
+  const { l } = useLang()
+  const c = useContent()
   return (
     <nav className="absolute top-0 left-1/2 -translate-x-1/2 z-20">
-      <div className="flex items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 bg-black rounded-b-2xl md:rounded-b-3xl px-5 py-2 md:px-8">
-        {NAV.map((item) => (
-          <span
-            key={item.to}
-            className="text-[11px] sm:text-xs md:text-sm font-light"
-          >
-            <NavLink label={item.label} to={item.to} />
+      <div className="flex items-center gap-4 sm:gap-6 md:gap-8 bg-black rounded-b-2xl md:rounded-b-3xl px-5 py-2 md:px-8">
+        {NAV.map((n) => (
+          <span key={n.to} className="text-[11px] sm:text-xs md:text-sm font-light">
+            <NavLink label={c.nav[n.key]} to={l(n.to)} />
           </span>
         ))}
+        <span className="hidden sm:block h-3 w-px bg-white/20" />
+        <div className="hidden sm:block">
+          <LangSwitch />
+        </div>
       </div>
     </nav>
   )

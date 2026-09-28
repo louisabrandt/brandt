@@ -1,9 +1,10 @@
-/** Site-wide primary navigation — the multi-page map. */
+/** Site-wide primary navigation — the multi-page map. Labels come from the
+ *  content dictionary via `key`; paths are language-neutral (localized at use). */
 export const NAV = [
-  { label: 'About', to: '/about' },
-  { label: 'Coaching', to: '/coaching' },
-  { label: 'Courses', to: '/courses' },
-  { label: 'Contact', to: '/contact' },
+  { key: 'about', to: '/about' },
+  { key: 'coaching', to: '/coaching' },
+  { key: 'courses', to: '/courses' },
+  { key: 'contact', to: '/contact' },
 ] as const
 
 /** Where every primary "book" call-to-action leads. */

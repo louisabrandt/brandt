@@ -1,5 +1,6 @@
 import { MotionConfig } from 'framer-motion'
 import { Navigate, Route, Routes } from 'react-router-dom'
+import { LanguageProvider } from './i18n/lang'
 import ScrollToTop from './components/ScrollToTop'
 import Home from './pages/Home'
 import AboutPage from './pages/About'
@@ -10,17 +11,27 @@ import CourseDetail from './pages/CourseDetail'
 
 export default function App() {
   return (
-    <MotionConfig reducedMotion="user">
-      <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/coaching" element={<Coaching />} />
-        <Route path="/courses" element={<CoursesPage />} />
-        <Route path="/courses/:slug" element={<CourseDetail />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
-    </MotionConfig>
+    <LanguageProvider>
+      <MotionConfig reducedMotion="user">
+        <ScrollToTop />
+        <Routes>
+          {/* German (default) */}
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/coaching" element={<Coaching />} />
+          <Route path="/courses" element={<CoursesPage />} />
+          <Route path="/courses/:slug" element={<CourseDetail />} />
+          <Route path="/contact" element={<ContactPage />} />
+          {/* English */}
+          <Route path="/en" element={<Home />} />
+          <Route path="/en/about" element={<AboutPage />} />
+          <Route path="/en/coaching" element={<Coaching />} />
+          <Route path="/en/courses" element={<CoursesPage />} />
+          <Route path="/en/courses/:slug" element={<CourseDetail />} />
+          <Route path="/en/contact" element={<ContactPage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </MotionConfig>
+    </LanguageProvider>
   )
 }

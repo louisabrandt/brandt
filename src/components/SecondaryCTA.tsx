@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
+import { useLang } from '../i18n/lang'
 
 interface SecondaryCTAProps {
   label: string
@@ -19,13 +20,14 @@ export default function SecondaryCTA({
   tone = 'dark',
   className = '',
 }: SecondaryCTAProps) {
+  const { l } = useLang()
   const styles =
     tone === 'paper'
       ? 'border-[#23201a]/25 text-[#23201a] hover:bg-[#23201a]/[0.06]'
       : 'border-primary/25 text-primary hover:bg-primary/[0.08]'
   return (
     <Link
-      to={to}
+      to={l(to)}
       className={`group inline-flex items-center gap-2 hover:gap-3 transition-all duration-300 rounded-full border px-5 py-[0.65rem] font-medium text-sm sm:text-base ${styles} ${className}`}
     >
       <span>{label}</span>

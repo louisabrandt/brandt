@@ -13,12 +13,7 @@ export default function AboutPage() {
         <About />
         <Approach />
         <RelationalCapacity />
-        <CtaBand
-          heading="Ready to understand your patterns?"
-          text="The first conversation is a calm, no-pressure way to see whether this work fits. No obligation, and confidential from the very first message."
-          secondaryLabel="Explore the courses"
-          secondaryTo="/courses"
-        />
+        <CtaBand variant="about" secondary="courses" />
         <Footer />
       </main>
     </>
