@@ -289,17 +289,17 @@ export const COURSES: Course[] = [
       description:
         'Lernen, zu benennen, was du brauchst, und es zu hören, damit Liebe wirklich ankommt, über eure unterschiedlichen Sprachen hinweg.',
       intro:
-        'Den meisten von uns wurde nie beigebracht, klar zu sagen, was wir brauchen, also deuten wir an, halten zurück oder hoffen, der andere würde es einfach wissen. Und wir geben und empfangen Liebe unterschiedlich, was bedeutet, dass Fürsorge angeboten werden kann und trotzdem nicht ankommt. In diesem Kurs geht es darum, deine Bedürfnisse ohne Entschuldigung zu benennen, die deines Partners unter seinen Worten zu hören und die Lücke zu schließen zwischen der Liebe, die gegeben wird, und der, die ankommt.',
+        'Den meisten von uns wurde nie beigebracht, klar zu sagen, was wir brauchen, also deuten wir an, halten zurück oder hoffen, der andere würde es einfach wissen. Und wir geben und empfangen Liebe unterschiedlich, was bedeutet, dass Fürsorge angeboten werden kann und trotzdem nicht ankommt. In diesem Kurs geht es darum, deine Bedürfnisse ohne Entschuldigung zu benennen, die deines Gegenübers unter den Worten zu hören und die Lücke zu schließen zwischen der Liebe, die gegeben wird, und der, die ankommt.',
       learn: [
         'Benennen, was du brauchst, klar und ohne Entschuldigung',
         'Warum Andeuten und Hoffen die Nähe leise aushöhlt',
         'Wie ihr Liebe jeweils gebt und empfangt, und wo ihr euch verfehlt',
-        'Das Bedürfnis unter den Worten deines Partners hören',
+        'Das Bedürfnis unter den Worten deines Gegenübers hören',
         'So bitten, dass der andere wirklich antworten kann',
       ],
       format: 'Online · begleitete Übung und echte Formulierungen',
       forWhom:
-        'Für alle, die schwer um das bitten können, was sie brauchen, oder sich trotz aller Mühe des Partners ungesehen fühlen.',
+        'Für alle, die schwer um das bitten können, was sie brauchen, oder sich trotz aller Mühe des Gegenübers ungesehen fühlen.',
       audience: 'Für Paare & Einzelne',
     },
   },
@@ -370,22 +370,22 @@ export const COURSES: Course[] = [
       audience: 'For couples & individuals',
     },
     de: {
-      title: 'In seine Welt',
+      title: 'In die Welt des anderen',
       tag: 'Empathie & Einstimmung',
       description:
-        'Die Praxis, den anderen wirklich zu verstehen: unter seinen Worten lesen und gute Absicht annehmen.',
+        'Die Praxis, das Gegenüber wirklich zu verstehen: unter den Worten lesen und gute Absicht annehmen.',
       intro:
-        'Empathie ist nicht Zustimmen, und sie ist nicht Reparieren. Sie ist die Bereitschaft, für einen Moment in die Welt des anderen zu treten und zu sehen, warum das, was er tut, für ihn Sinn ergibt. Sie ist eines der Mächtigsten, das du in eine Beziehung bringen kannst, und eines der ersten, das unter Stress verloren geht. Dieser Kurs ist eine Praxis: unter den Worten lesen, deine Annahmen prüfen und deinem Partner dort begegnen, wo er wirklich ist.',
+        'Empathie ist nicht Zustimmen, und sie ist nicht Reparieren. Sie ist die Bereitschaft, für einen Moment in die Welt des anderen zu treten und zu sehen, warum es für die andere Person Sinn ergibt. Sie ist eines der Mächtigsten, das du in eine Beziehung bringen kannst, und eines der ersten, das unter Stress verloren geht. Dieser Kurs ist eine Praxis: unter den Worten lesen, deine Annahmen prüfen und deinem Gegenüber dort begegnen, wo es wirklich ist.',
       learn: [
         'Was Empathie ist, und was nicht (Zustimmen, Reparieren, Aufsaugen)',
-        'Unter den Worten deines Partners das Gefühl darunter lesen',
+        'Unter den Worten deines Gegenübers das Gefühl darunter lesen',
         'Die Annahmen und Geschichten bemerken, die du leise ergänzt',
         'Gute Absicht annehmen, ohne dich selbst aufzugeben',
         'In Konflikten empathisch bleiben, wenn es am meisten zählt',
       ],
       format: 'Online · begleitete Übung, allein oder zu zweit',
       forWhom:
-        'Für alle, die ihren Partner tiefer verstehen wollen, gerade wenn es schwerfällt.',
+        'Für alle, die ihr Gegenüber tiefer verstehen wollen, gerade wenn es schwerfällt.',
       audience: 'Für Paare & Einzelne',
     },
   },
@@ -423,7 +423,7 @@ export const COURSES: Course[] = [
       learn: [
         'Die Bindungsstile, ohne die Etiketten als Urteil',
         'Dein Reflex unter Bedrohung: verfolgen, zurückziehen oder wappnen',
-        'Warum du und dein Partner euch so präzise triggert',
+        'Warum ihr euch gegenseitig so präzise triggert',
         'Dem Bedürfnis unter dem Muster begegnen, bei dir und beim anderen',
         'Eine neue Reaktion üben, bis sie verfügbar wird',
       ],
