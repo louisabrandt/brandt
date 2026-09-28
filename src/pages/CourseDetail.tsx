@@ -130,8 +130,8 @@ export default function CourseDetail() {
           </h2>
           <p className="mt-3 text-primary/70 text-sm sm:text-[15px] leading-[1.6] max-w-md">
             Add your email to hear when{' '}
-            <span className="font-serif italic">{course.title}</span> next opens —
-            no spam, just the date and how to start, for individuals or couples.
+            <span className="font-serif italic">{course.title}</span> next opens.
+            No spam, just the date and how to start, for individuals or couples.
           </p>
           <div className="mt-6 max-w-xl">
             <Waitlist course={course.title} />
@@ -145,7 +145,7 @@ export default function CourseDetail() {
             href="/#contact"
             className="text-[#23201a] underline decoration-[#23201a]/30 underline-offset-2 hover:decoration-[#23201a] transition inline-flex items-center gap-1"
           >
-            Book a one-on-one initial consultation
+            Book a one-on-one first conversation
             <ArrowRight className="h-3.5 w-3.5 -rotate-45" strokeWidth={1.5} />
           </a>
         </p>

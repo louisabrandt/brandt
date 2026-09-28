@@ -1,6 +1,5 @@
 import { useState, type FormEvent } from 'react'
 import { ArrowRight, Check } from 'lucide-react'
-import { TEXT_COLOR } from '../constants'
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
@@ -51,8 +50,8 @@ export default function Waitlist({ course = 'General' }: { course?: string }) {
         </span>
         <h3 className="text-primary text-lg font-normal">You&apos;re on the list.</h3>
         <p className="text-primary/70 text-sm leading-[1.6] max-w-md">
-          I&apos;ll be in touch when the next course opens — just the date and
-          how to start.
+          I&apos;ll be in touch when the next course opens. Just the date and how
+          to start.
         </p>
       </div>
     )
@@ -102,15 +101,11 @@ export default function Waitlist({ course = 'General' }: { course?: string }) {
       <button
         type="submit"
         disabled={submitting}
-        className="group mt-1 inline-flex items-center gap-2 hover:gap-3 transition-all duration-300 bg-primary rounded-full pl-5 pr-1.5 py-1.5 text-black font-medium text-sm sm:text-base self-start disabled:opacity-60"
+        className="group mt-1 inline-flex items-center gap-2 hover:gap-3 transition-all duration-300 bg-[#B4552E] hover:bg-[#9E4826] rounded-full pl-5 pr-1.5 py-1.5 text-[#F3ECDE] font-medium text-sm sm:text-base self-start disabled:opacity-60"
       >
         <span>{submitting ? 'Joining…' : 'Join the waitlist'}</span>
-        <span className="flex items-center justify-center bg-black rounded-full w-9 h-9 sm:w-10 sm:h-10 transition-transform duration-300 group-hover:scale-110">
-          <ArrowRight
-            className="w-4 h-4 sm:w-5 sm:h-5"
-            strokeWidth={1.5}
-            style={{ color: TEXT_COLOR }}
-          />
+        <span className="flex items-center justify-center bg-[#7C3A1E] rounded-full w-9 h-9 sm:w-10 sm:h-10 transition-transform duration-300 group-hover:scale-110">
+          <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-[#F3ECDE]" strokeWidth={1.5} />
         </span>
       </button>
     </form>

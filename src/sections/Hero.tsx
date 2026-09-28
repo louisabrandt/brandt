@@ -59,8 +59,8 @@ export default function Hero() {
                 className="text-primary/85 text-sm sm:text-base"
                 style={{ lineHeight: 1.35 }}
               >
-                Becoming relationship-capable isn&apos;t luck — it&apos;s an inner
-                structure.
+                A steady, close relationship isn&apos;t down to luck. It&apos;s
+                something you can learn to build.
               </motion.p>
 
               <motion.p
@@ -70,10 +70,10 @@ export default function Hero() {
                 className="text-primary/70 text-xs sm:text-sm"
                 style={{ lineHeight: 1.5 }}
               >
-                Relational coaching for couples and individuals who want deeper
+                Relationship coaching for couples and individuals who want deeper
                 connection, better communication, and lasting stability. Online
-                worldwide — and in person in Paphos &amp; Vienna. In English
-                &amp; German.
+                worldwide, and in person in Paphos and Vienna. In English and
+                German.
               </motion.p>
 
               <motion.div

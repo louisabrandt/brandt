@@ -14,9 +14,9 @@ interface Step {
 const STEPS: Step[] = [
   {
     number: '01',
-    title: 'Book an initial consultation',
+    title: 'Book a first conversation',
     description:
-      'A low-pressure first conversation to understand your situation and see whether this work fits — with no obligation to continue.',
+      'A calm, low-pressure first talk to understand your situation and see whether this work fits. There is no obligation to continue.',
     image: '/illustrations/how-01-consultation.webp',
     accent: '#807e4d',
   },
@@ -24,7 +24,7 @@ const STEPS: Step[] = [
     number: '02',
     title: 'We make the patterns visible',
     description:
-      'Together we map how you each respond in closeness, conflict and intimacy — building one honest, shared picture of what is really happening.',
+      "Together we map how you each respond in closeness, conflict and intimacy, and build one honest, shared picture of what's really happening.",
     image: '/illustrations/how-02-patterns.webp',
     accent: '#e4a031',
   },
@@ -32,7 +32,7 @@ const STEPS: Step[] = [
     number: '03',
     title: 'Structured, ongoing work',
     description:
-      'Concrete tools and steps, at a pace that works for both of you — turning insight into choice, and repetition into lasting change.',
+      'Concrete tools and steps, at a pace that works for both of you, turning insight into choice and repetition into lasting change.',
     image: '/illustrations/how-03-work.webp',
     accent: '#d16535',
   },

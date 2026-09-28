@@ -13,7 +13,7 @@ const CAPACITIES: Capacity[] = [
   {
     title: 'Self-awareness',
     description:
-      'Recognising the patterns you learned long before this relationship — and how they surface under pressure.',
+      'Seeing the patterns you learned long before this relationship, and how they surface under pressure.',
   },
   {
     title: 'Emotional regulation',
@@ -23,7 +23,7 @@ const CAPACITIES: Capacity[] = [
   {
     title: 'Honest conversation',
     description:
-      'Speaking so you can be heard — and listening for what lives beneath the words.',
+      'Speaking so you can actually be heard, and listening for what sits beneath the words.',
   },
   {
     title: 'Roles & power',
@@ -33,7 +33,7 @@ const CAPACITIES: Capacity[] = [
   {
     title: 'Boundaries & repair',
     description:
-      'Knowing where you end and the other begins — and how to find your way back after rupture.',
+      'Knowing where you end and the other begins, and how to find your way back after a rupture.',
   },
   {
     title: 'Intimacy & desire',
@@ -66,10 +66,9 @@ export default function RelationalCapacity() {
         </motion.h2>
 
         <p className="mt-6 max-w-2xl text-sm md:text-[15px] leading-[1.6] text-primary/70">
-          Becoming relationship-capable isn&apos;t one skill but a set of
-          capacities — the inner structure that lets you stay present in
-          closeness, conflict and desire at the same time. This is what we
-          develop, together.
+          It isn&apos;t one single skill, but a set of capacities: the inner
+          ground that lets you stay present in closeness, conflict and desire at
+          the same time. This is what we build, together.
         </p>
 
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">

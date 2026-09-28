@@ -1,7 +1,6 @@
 import { useState, type FormEvent } from 'react'
 import { ArrowRight, Check } from 'lucide-react'
 import SectionLabel from '../components/SectionLabel'
-import { TEXT_COLOR } from '../constants'
 
 const FIELD_CLASS =
   'w-full bg-transparent border-b border-primary/20 px-0 py-3 text-primary placeholder:text-primary/40 text-sm focus:outline-none focus:border-primary/50 transition-colors'
@@ -75,10 +74,10 @@ export default function Contact() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-primary leading-[1.05] max-w-xl">
               Ready to take the next step for your relationship?
             </h2>
-            <p className="mt-6 max-w-md text-sm md:text-[15px] leading-[1.6] text-primary/70">
-              Tell me briefly about your situation — I&apos;ll get back to you
-              personally. The initial consultation is a no-pressure first
-              conversation to see whether this work fits.
+            <p className="mt-6 max-w-md text-sm md:text-[15px] leading-[1.65] text-primary/70">
+              Tell me a little about your situation, and I&apos;ll get back to you
+              personally. The first conversation is a no-pressure way to see
+              whether this work fits.
             </p>
 
             <div className="mt-10 space-y-4 text-sm">
@@ -197,19 +196,23 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="group mt-1 inline-flex items-center gap-2 hover:gap-3 transition-all duration-300 bg-primary rounded-full pl-5 pr-1.5 py-1.5 text-black font-medium text-sm sm:text-base self-start disabled:opacity-60"
+                    className="group mt-1 inline-flex items-center gap-2 hover:gap-3 transition-all duration-300 bg-[#B4552E] hover:bg-[#9E4826] rounded-full pl-5 pr-1.5 py-1.5 text-[#F3ECDE] font-medium text-sm sm:text-base self-start disabled:opacity-60"
                   >
                     <span>
-                      {submitting ? 'Sending…' : 'Book an Initial Consultation'}
+                      {submitting ? 'Sending…' : 'Book a first conversation'}
                     </span>
-                    <span className="flex items-center justify-center bg-black rounded-full w-9 h-9 sm:w-10 sm:h-10 transition-transform duration-300 group-hover:scale-110">
+                    <span className="flex items-center justify-center bg-[#7C3A1E] rounded-full w-9 h-9 sm:w-10 sm:h-10 transition-transform duration-300 group-hover:scale-110">
                       <ArrowRight
-                        className="w-4 h-4 sm:w-5 sm:h-5"
+                        className="w-4 h-4 sm:w-5 sm:h-5 text-[#F3ECDE]"
                         strokeWidth={1.5}
-                        style={{ color: TEXT_COLOR }}
                       />
                     </span>
                   </button>
+
+                  <p className="text-primary/45 text-xs leading-[1.6]">
+                    60 min, online or in person. No obligation, and confidential
+                    from the very first message.
+                  </p>
                 </form>
               )}
             </div>

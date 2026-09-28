@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ArrowRight, Asterisk } from 'lucide-react'
-import { TEXT_COLOR } from '../constants'
 
 const LINKS = [
   { label: 'About', href: '#about' },
@@ -56,15 +55,11 @@ export default function StickyHeader() {
 
             <a
               href="#contact"
-              className="group inline-flex items-center gap-1.5 hover:gap-2.5 transition-all duration-300 bg-primary rounded-full pl-4 pr-1 py-1 text-black font-medium text-xs sm:text-sm"
+              className="group inline-flex items-center gap-1.5 hover:gap-2.5 transition-all duration-300 bg-[#B4552E] hover:bg-[#9E4826] rounded-full pl-4 pr-1 py-1 text-[#F3ECDE] font-medium text-xs sm:text-sm"
             >
-              <span>Book a consultation</span>
-              <span className="flex items-center justify-center bg-black rounded-full w-7 h-7 transition-transform duration-300 group-hover:scale-110">
-                <ArrowRight
-                  className="w-3.5 h-3.5"
-                  strokeWidth={1.5}
-                  style={{ color: TEXT_COLOR }}
-                />
+              <span>Book a first conversation</span>
+              <span className="flex items-center justify-center bg-[#7C3A1E] rounded-full w-7 h-7 transition-transform duration-300 group-hover:scale-110">
+                <ArrowRight className="w-3.5 h-3.5 text-[#F3ECDE]" strokeWidth={1.5} />
               </span>
             </a>
           </div>

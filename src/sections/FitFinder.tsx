@@ -15,8 +15,8 @@ const QUESTIONS: Question[] = [
   {
     q: "What's weighing on you most right now?",
     options: [
-      { label: 'Trust has been broken — or slowly worn away.', key: 'trust' },
-      { label: "I don't feel enough — in myself or the relationship.", key: 'selfworth' },
+      { label: 'Trust has been broken, or slowly worn away.', key: 'trust' },
+      { label: "I don't feel enough, in myself or in us.", key: 'selfworth' },
       { label: "I give too much, and can't say no.", key: 'boundaries' },
       { label: 'We keep having the same argument.', key: 'conflict' },
       { label: "We've grown distant and I don't know why.", key: 'attachment' },
@@ -29,7 +29,7 @@ const QUESTIONS: Question[] = [
       { label: 'struggle to feel safe or trust again', key: 'trust' },
       { label: 'turn on yourself and feel small', key: 'selfworth' },
       { label: 'over-function, then resent it', key: 'boundaries' },
-      { label: 'escalate — or shut down', key: 'conflict' },
+      { label: 'escalate, or shut down', key: 'conflict' },
       { label: 'pull away, or hold on too tight', key: 'attachment' },
       { label: 'lose the physical connection', key: 'desire' },
     ],
@@ -42,7 +42,7 @@ const QUESTIONS: Question[] = [
       { label: 'Protecting your energy without guilt', key: 'boundaries' },
       { label: 'Feeling truly heard in a disagreement', key: 'conflict' },
       { label: 'Understanding why you connect the way you do', key: 'attachment' },
-      { label: 'Wanting — and being wanted — again', key: 'desire' },
+      { label: 'Wanting, and being wanted, again', key: 'desire' },
     ],
   },
 ]
@@ -100,7 +100,7 @@ export default function FitFinder() {
               >
                 <div className="flex items-center gap-3 mb-6">
                   <span className="text-primary/50 text-xs tabular-nums">
-                    {String(step + 1).padStart(2, '0')} — {String(QUESTIONS.length).padStart(2, '0')}
+                    {String(step + 1).padStart(2, '0')} / {String(QUESTIONS.length).padStart(2, '0')}
                   </span>
                   <div className="flex-1 h-px bg-white/10 relative">
                     <div
@@ -135,8 +135,8 @@ export default function FitFinder() {
                 className="flex flex-col flex-1"
               >
                 <p className="text-primary/60 text-sm mb-5">
-                  Based on your answers, here&apos;s where I&apos;d start — though
-                  every course and a 1:1 remain open to you.
+                  Based on your answers, here&apos;s where I&apos;d start. Every
+                  course, and working one to one, stays open to you.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -159,11 +159,11 @@ export default function FitFinder() {
                     </p>
                     <Link
                       to={`/courses/${course.slug}`}
-                      className="group mt-5 inline-flex items-center gap-2 hover:gap-3 transition-all duration-300 bg-primary rounded-full pl-5 pr-1.5 py-1.5 text-black font-medium text-sm self-start"
+                      className="group mt-5 inline-flex items-center gap-2 hover:gap-3 transition-all duration-300 bg-[#B4552E] hover:bg-[#9E4826] rounded-full pl-5 pr-1.5 py-1.5 text-[#F3ECDE] font-medium text-sm self-start"
                     >
                       <span>Explore the course</span>
-                      <span className="flex items-center justify-center bg-black rounded-full w-9 h-9 transition-transform duration-300 group-hover:scale-110">
-                        <ArrowRight className="w-4 h-4" strokeWidth={1.5} style={{ color: TEXT_COLOR }} />
+                      <span className="flex items-center justify-center bg-[#7C3A1E] rounded-full w-9 h-9 transition-transform duration-300 group-hover:scale-110">
+                        <ArrowRight className="w-4 h-4 text-[#F3ECDE]" strokeWidth={1.5} />
                       </span>
                     </Link>
                   </div>
@@ -178,13 +178,13 @@ export default function FitFinder() {
                     </h3>
                     <p className="mt-2 text-primary/55 text-sm leading-[1.6] flex-1">
                       Prefer to work through this personally, and at your own
-                      depth? Begin with a low-pressure initial consultation.
+                      depth? Start with a calm, low-pressure first conversation.
                     </p>
                     <a
                       href="#contact"
                       className="group mt-5 inline-flex items-center gap-1.5 text-sm text-primary/70 hover:text-primary transition-colors self-start"
                     >
-                      <span>Book an Initial Consultation</span>
+                      <span>Book a first conversation</span>
                       <ArrowRight
                         className="w-3.5 h-3.5 -rotate-45 transition-transform duration-300 group-hover:translate-x-0.5"
                         strokeWidth={1.5}

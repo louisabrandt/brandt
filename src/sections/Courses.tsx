@@ -33,10 +33,10 @@ export default function Courses() {
         </motion.h2>
 
         <p className="mt-6 max-w-2xl text-sm md:text-[15px] leading-[1.6] text-primary/70">
-          Focused, evidence-based courses on the dynamics that shape
-          relationships — so you can understand your patterns and practise
-          responding differently. Every course is bookable for individuals or
-          couples, online.
+          Prefer to go at your own pace? Focused, evidence-based courses on the
+          dynamics that shape relationships, so you can understand your patterns
+          and practise responding differently. Every course works for individuals
+          or couples, online.
         </p>
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
@@ -97,8 +97,8 @@ export default function Courses() {
                 Join the waitlist
               </h3>
               <p className="mt-3 text-primary/70 text-sm sm:text-[15px] leading-[1.6] max-w-md">
-                Add your email to hear when the next course opens — no spam,
-                just the date and how to start, for individuals or couples.
+                Add your email to hear when the next course opens. No spam, just
+                the date and how to start, for individuals or couples.
               </p>
             </div>
             <Waitlist />

@@ -1,20 +1,18 @@
 import StickyHeader from './components/StickyHeader'
 import Hero from './sections/Hero'
 import TrustBar from './sections/TrustBar'
-import About from './sections/About'
-import Ethos from './sections/Ethos'
-import WhyRelationalWork from './sections/WhyRelationalWork'
 import ForWhom from './sections/ForWhom'
+import About from './sections/About'
 import Approach from './sections/Approach'
 import RelationalCapacity from './sections/RelationalCapacity'
 import WhatToExpect from './sections/WhatToExpect'
-import FitFinder from './sections/FitFinder'
+import Testimonials from './sections/Testimonials'
 import Services from './sections/Services'
+import FitFinder from './sections/FitFinder'
 import Courses from './sections/Courses'
 import WhatChanges from './sections/WhatChanges'
-import Testimonials from './sections/Testimonials'
-import FAQ from './sections/FAQ'
 import HowItWorks from './sections/HowItWorks'
+import FAQ from './sections/FAQ'
 import Contact from './sections/Contact'
 import Footer from './sections/Footer'
 
@@ -23,22 +21,25 @@ export default function Landing() {
     <>
       <StickyHeader />
       <main className="bg-[#0a0a0a] overflow-x-hidden">
+        {/* Arrival */}
         <Hero />
         <TrustBar />
-        <About />
-        <Ethos />
-        <WhyRelationalWork />
+        {/* Recognition → trust → method */}
         <ForWhom />
+        <About />
         <Approach />
+        {/* Depth of the method */}
         <RelationalCapacity />
         <WhatToExpect />
-        <FitFinder />
-        <Services />
-        <Courses />
-        <WhatChanges />
+        {/* Proof, then the ways to work */}
         <Testimonials />
-        <FAQ />
+        <Services />
+        <FitFinder />
+        <Courses />
+        {/* Outcome → getting started → objections → contact */}
+        <WhatChanges />
         <HowItWorks />
+        <FAQ />
         <Contact />
         <Footer />
       </main>

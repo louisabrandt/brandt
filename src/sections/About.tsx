@@ -6,13 +6,13 @@ import AnimatedLetter from '../components/AnimatedLetter'
 import SectionLabel from '../components/SectionLabel'
 
 const HEADING_SEGMENTS: Segment[] = [
-  { text: "I'm Louisa Brandt —", className: 'font-normal' },
+  { text: "I'm Louisa Brandt,", className: 'font-normal' },
   { text: 'M.Sc. in Psychology,', className: 'italic font-serif' },
-  { text: 'a relational dynamics coach.', className: 'font-normal' },
+  { text: 'a relational coach.', className: 'font-normal' },
 ]
 
 const LEAD_TEXT =
-  "I don't see relationships as problems to be solved, but as living paradoxes to be held. Most of what shows up between two people — distance, recurring conflict, the slow loss of closeness — is rarely a matter of communication skills alone. It's rooted in how closeness, responsibility and vulnerability were learned, long before this relationship began."
+  "Most of what shows up between two people, the distance, the same argument on repeat, the slow fading of closeness, is rarely about communication skills alone. It usually goes back to how each of you learned to do closeness, trust and vulnerability, long before you ever met."
 
 const CREDENTIALS: [string, string, string][] = [
   ['M.Sc.', 'Psychology', 'Clinical Psychology & Psychotherapy focus'],
@@ -86,11 +86,11 @@ export default function About() {
           transition={{ duration: 0.7, ease: EASE }}
           className="text-[#23201a]/70 text-sm sm:text-base max-w-2xl mx-auto mt-6 leading-[1.6]"
         >
-          My work is grounded in contemporary psychological research and clinical
-          training: attachment theory, relational systems thinking, emotional
-          regulation, and current relationship science, including the Gottman
-          Method. It takes place in a real-life-oriented setting — without therapy
-          jargon, blame narratives, or self-optimization rhetoric.
+          My work is grounded in psychological research and clinical training:
+          attachment theory, relational systems thinking, emotional regulation,
+          and current relationship science, including the Gottman Method. It stays
+          practical and down to earth, with no therapy jargon, no blame, and no
+          self-optimization talk.
         </motion.p>
 
         {/* Credentials grid */}

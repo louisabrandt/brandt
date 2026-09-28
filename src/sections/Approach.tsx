@@ -1,6 +1,22 @@
 import { motion } from 'framer-motion'
 import { Asterisk } from 'lucide-react'
 import SectionLabel from '../components/SectionLabel'
+import Reveal from '../components/Reveal'
+
+const THIS_IS = [
+  'Attachment patterns, and what first set them in motion',
+  'Staying steady when feelings run high',
+  'Repairing after a fight, not just avoiding the next one',
+  'Turning toward each other instead of away',
+  'Boundaries and responsibility that actually hold',
+]
+
+const THIS_IS_NOT = [
+  'Quick fixes',
+  'Blame, or hunting for a culprit',
+  'Self-optimization',
+  'Performing vulnerability',
+]
 
 const CONCEPTS = [
   'Attachment',
@@ -15,47 +31,102 @@ export default function Approach() {
   return (
     <section
       id="approach"
-      className="bg-[#0a0a0a] px-4 sm:px-6 md:px-10 lg:px-14 py-20 sm:py-24 md:py-28"
+      className="bg-[#efe9de] px-4 sm:px-6 md:px-10 lg:px-14 py-20 sm:py-24 md:py-28"
     >
-      <div className="max-w-3xl mx-auto text-center">
-        <SectionLabel className="mb-6">My approach</SectionLabel>
+      <div className="max-w-6xl mx-auto">
+        {/* Rationale */}
+        <div className="max-w-3xl mx-auto text-center">
+          <SectionLabel tone="ink" className="mb-6">
+            How I work
+          </SectionLabel>
 
-        <motion.h2
-          initial={{ y: 20, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 0.7, ease: EASE }}
-          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-primary leading-[1.05]"
-        >
-          Structured and calm. We make the patterns visible.
-        </motion.h2>
+          <motion.h2
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true, margin: '-80px' }}
+            transition={{ duration: 0.7, ease: EASE }}
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-[#23201a] leading-[1.05]"
+          >
+            First we see the pattern clearly. Then we work with it.
+          </motion.h2>
 
-        <div className="mt-8 space-y-5 text-sm md:text-[15px] leading-[1.6] text-primary/70">
-          <p>
-            My approach is evidence-based and integrative. I work with attachment
-            dynamics, emotional regulation, and relational systems thinking,
-            informed by the Gottman Method and current relationship research.
-          </p>
-          <p>
-            We make the patterns visible — how each of you responds under
-            pressure, in closeness, in conflict — and translate that insight into
-            concrete, workable steps. The goal is not to{' '}
-            <span className="font-serif italic">fix</span> anyone or optimize
-            behavior, but to create choice where repetition once was — so the
-            relationship is driven by awareness and agency rather than unconscious
-            scripts.
-          </p>
+          <div className="mt-8 space-y-5 text-sm md:text-[15px] leading-[1.7] text-[#23201a]/75">
+            <p>
+              I don&apos;t treat a relationship as a problem to be fixed. I treat
+              it as something alive, full of tensions worth understanding: closeness
+              and freedom, safety and desire, strength and softness.
+            </p>
+            <p>
+              Most of us were never shown how to hold those tensions, so under
+              stress we fall back on what we learned early. We push harder, we go
+              quiet, or we reach for control, usually without meaning to.
+            </p>
+            <p className="text-[#23201a]/90">
+              The work begins by making that visible. Together we look at how each
+              of you responds when it matters most, and we build the capacity to
+              stay present in closeness, in conflict, and in the responsibility
+              that comes with both. Steady, honest relationships turn out to be one
+              of the strongest things we have for our wellbeing. They lower daily
+              stress, ease isolation, and help us recover when life gets hard.
+            </p>
+          </div>
         </div>
 
-        {/* Concept pills */}
-        <div className="mt-9 flex flex-wrap justify-center gap-3">
+        {/* This is / this is not */}
+        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+          <Reveal
+            index={0}
+            className="rounded-2xl bg-[#f5f0e6] border border-[#23201a]/8 p-6 md:p-8"
+          >
+            <h3 className="text-[#23201a] text-lg sm:text-xl font-medium">
+              This is the <span className="font-serif italic">work.</span>
+            </h3>
+            <ul className="mt-5 space-y-3">
+              {THIS_IS.map((item) => (
+                <li key={item} className="flex items-start gap-2.5">
+                  <Asterisk
+                    className="h-3.5 w-3.5 mt-1 shrink-0 text-[#5e6b4a]"
+                    strokeWidth={1.5}
+                  />
+                  <span className="text-[#23201a]/80 text-sm sm:text-[15px] leading-[1.5]">
+                    {item}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+
+          <Reveal
+            index={1}
+            className="rounded-2xl bg-[#efe4d6] border border-[#23201a]/8 p-6 md:p-8"
+          >
+            <h3 className="text-[#23201a]/60 text-lg sm:text-xl font-medium">
+              This is not.
+            </h3>
+            <ul className="mt-5 space-y-3">
+              {THIS_IS_NOT.map((item) => (
+                <li key={item} className="flex items-start gap-2.5">
+                  <span className="mt-0.5 shrink-0 text-[#23201a]/30 text-sm leading-none">
+                    ×
+                  </span>
+                  <span className="text-[#23201a]/50 text-sm sm:text-[15px] leading-[1.5]">
+                    {item}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+        </div>
+
+        {/* Concept pills + confidentiality */}
+        <div className="mt-10 flex flex-wrap justify-center gap-3">
           {CONCEPTS.map((concept) => (
             <span
               key={concept}
-              className="liquid-glass flex items-center gap-2 rounded-full px-4 py-2 text-[13px] text-primary/85"
+              className="flex items-center gap-2 rounded-full border border-[#23201a]/15 bg-[#f5f0e6] px-4 py-2 text-[13px] text-[#23201a]/85"
             >
               <Asterisk
-                className="h-3 w-3 shrink-0 text-primary/60"
+                className="h-3 w-3 shrink-0 text-[#23201a]/50"
                 strokeWidth={1.5}
               />
               {concept}
@@ -63,9 +134,9 @@ export default function Approach() {
           ))}
         </div>
 
-        <p className="mt-9 text-primary/50 text-xs">
-          Everything is held with discretion. Confidentiality applies from the
-          first contact.
+        <p className="mt-8 text-center text-[#23201a]/55 text-xs">
+          Everything stays between us. Confidentiality holds from the very first
+          message.
         </p>
       </div>
     </section>

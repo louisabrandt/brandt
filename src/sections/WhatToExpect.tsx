@@ -7,15 +7,15 @@ import { FEATURE_VIDEO_URL, TEXT_COLOR } from '../constants'
 const EASE = [0.16, 1, 0.3, 1] as const
 
 const PRACTICAL = [
-  'Break the “devil’s cycle” of blame and withdrawal',
-  'Turn conflict into connecting conversation',
-  'Rebuild respect, affection, and emotional availability',
+  'Step out of the blame-and-withdraw cycle',
+  'Turn conflict into a conversation that connects',
+  'Rebuild respect, warmth, and real presence',
 ]
 
 const SEX_THERAPY = [
-  'Bridge differences in desire — without pressure or blame',
+  'Bridge differences in desire, without pressure or blame',
   'Sensate Focus: rebuilding presence, easing performance anxiety',
-  'Open, shame-free communication about needs and boundaries',
+  'Open, shame-free talk about needs and boundaries',
   'Reconnect emotional closeness with physical intimacy',
 ]
 
@@ -72,10 +72,10 @@ export default function WhatToExpect() {
         </motion.h2>
 
         <p className="mt-6 max-w-3xl text-sm md:text-[15px] leading-[1.6] text-primary/70">
-          We integrate the evidence-based Gottman Method with key insights and
-          practical tools from sex therapy — a holistic approach that addresses
-          both the emotional foundation of your relationship and the physical,
-          intimate connection between you.
+          We bring together the evidence-based Gottman Method and practical tools
+          from sex therapy. It&apos;s a whole-picture approach that holds both the
+          emotional foundation of your relationship and the physical, intimate
+          connection between you.
         </p>
 
         {/* Themed bento */}
@@ -86,9 +86,9 @@ export default function WhatToExpect() {
           >
             <CardTitle>Clarity about your relationship</CardTitle>
             <p className="mt-4 text-primary/75 text-sm sm:text-[15px] leading-[1.6]">
-              An honest, compassionate and non-judgmental look at what is really
-              happening between you — your strengths, recurring patterns, and the
-              hidden dynamics beneath them, including how emotional safety and
+              An honest, warm and non-judgmental look at what is really happening
+              between you: your strengths, the patterns that keep repeating, and
+              the hidden dynamics beneath them, including how emotional safety and
               attachment shape your connection. You leave with a clear, shared
               understanding to build on.
             </p>
@@ -100,11 +100,11 @@ export default function WhatToExpect() {
           >
             <CardTitle>Support during difficult times</CardTitle>
             <p className="mt-4 text-primary/75 text-sm sm:text-[15px] leading-[1.6]">
-              A safe space for painful challenges — infidelity, broken trust, old
-              wounds, trauma, or major life stress. We address them respectfully
-              and constructively, including how they affect closeness and
-              intimacy, and begin healing both the emotional and physical bond
-              gently, step by step.
+              A safe space for the hardest things: infidelity, broken trust, old
+              wounds, trauma, or heavy life stress. We meet them respectfully and
+              constructively, including how they affect closeness and intimacy,
+              and begin healing both the emotional and physical bond gently, step
+              by step.
             </p>
           </Reveal>
 
@@ -148,8 +148,8 @@ export default function WhatToExpect() {
             style={{ color: TEXT_COLOR }}
           >
             A relationship that feels more stable, alive, and{' '}
-            <span className="font-serif italic">deeply chosen</span> — even during
-            challenging periods.
+            <span className="font-serif italic">deeply chosen</span>, even in the
+            hard stretches.
           </p>
         </Reveal>
       </div>
