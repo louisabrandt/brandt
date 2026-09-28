@@ -1,9 +1,13 @@
 import PrimaryCTA from '../components/PrimaryCTA'
+import SecondaryCTA from '../components/SecondaryCTA'
 
 interface CtaBandProps {
   heading?: string
   text?: string
   tone?: 'paper' | 'dark'
+  /** Optional second, lower-emphasis action. */
+  secondaryLabel?: string
+  secondaryTo?: string
 }
 
 /** A calm closing call-to-action band, reused at the foot of several pages. */
@@ -11,6 +15,8 @@ export default function CtaBand({
   heading = 'Not sure where to start?',
   text = 'The first conversation is a calm, no-pressure way to see whether this work fits. No obligation, and confidential from the very first message.',
   tone = 'paper',
+  secondaryLabel,
+  secondaryTo,
 }: CtaBandProps) {
   const isPaper = tone === 'paper'
   const bg = isPaper ? 'bg-[#efe9de]' : 'bg-[#0a0a0a]'
@@ -28,8 +34,15 @@ export default function CtaBand({
         <p className={`mt-5 max-w-xl mx-auto text-sm md:text-[15px] leading-[1.7] ${body}`}>
           {text}
         </p>
-        <div className="mt-8 flex justify-center">
+        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
           <PrimaryCTA />
+          {secondaryLabel && secondaryTo && (
+            <SecondaryCTA
+              label={secondaryLabel}
+              to={secondaryTo}
+              tone={isPaper ? 'paper' : 'dark'}
+            />
+          )}
         </div>
       </div>
     </section>

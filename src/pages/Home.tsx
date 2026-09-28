@@ -19,7 +19,10 @@ export default function Home() {
         <ApproachTeaser />
         <Testimonials />
         <Paths />
-        <CtaBand />
+        <CtaBand
+          secondaryLabel="Explore the courses"
+          secondaryTo="/courses"
+        />
         <Footer />
       </main>
     </>
