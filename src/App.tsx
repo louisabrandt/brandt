@@ -9,6 +9,7 @@ import ForWhom from './sections/ForWhom'
 import Approach from './sections/Approach'
 import RelationalCapacity from './sections/RelationalCapacity'
 import WhatToExpect from './sections/WhatToExpect'
+import FitFinder from './sections/FitFinder'
 import Services from './sections/Services'
 import Courses from './sections/Courses'
 import WhatChanges from './sections/WhatChanges'
@@ -32,6 +33,7 @@ export default function App() {
         <Approach />
         <RelationalCapacity />
         <WhatToExpect />
+        <FitFinder />
         <Services />
         <Courses />
         <WhatChanges />
