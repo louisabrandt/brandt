@@ -299,6 +299,18 @@ export const en = {
     waitlistHeading: 'Join the waitlist',
     waitlistText: 'Add your email to hear when the next course opens. No spam, just the date and how to start, for individuals or couples.',
   },
+  courseMeta: {
+    format: 'Online · 60-min live session · workbook & exercises',
+    priceLabel: 'Price',
+    individual: 'Individual €90',
+    couple: 'Couple €140',
+    priceShort: 'from €90',
+    book: 'Book this course',
+    vat: 'Guide prices · a VAT note will follow.',
+    bookableNote: 'Every course is bookable on its own, for individuals or couples. Afterwards you decide whether to go deeper in coaching.',
+    upsell: 'Want to keep going after the course? We can continue in ',
+    upsellLink: 'one-to-one coaching',
+  },
   waitlist: {
     namePlaceholder: 'First name (optional)',
     emailPlaceholder: 'Email',
@@ -368,6 +380,7 @@ export const en = {
     errName: 'Please add your name and a short message.',
     errEmail: 'Please enter a valid email address.',
     errSend: 'Something went wrong sending your message. Please email lb@louisabrandt.com directly.',
+    coursePrefill: "I'm interested in the course: ",
   },
   courseDetail: {
     courses: 'Courses',
@@ -695,6 +708,18 @@ export const de: Content = {
     waitlistHeading: 'Auf die Warteliste',
     waitlistText: 'Trag deine E-Mail ein und erfahre, wann der nächste Kurs öffnet. Kein Spam, nur der Termin und wie es losgeht, für Einzelne oder Paare.',
   },
+  courseMeta: {
+    format: 'Online · 60 Min. Live-Session · Unterlagen & Übungen',
+    priceLabel: 'Preis',
+    individual: 'Einzel 90 €',
+    couple: 'Paar 140 €',
+    priceShort: 'ab 90 €',
+    book: 'Kurs buchen',
+    vat: 'Richtpreise · Hinweis zur USt. folgt.',
+    bookableNote: 'Jeder Kurs ist einzeln buchbar, für Einzelne oder Paare. Danach entscheidet ihr, ob ihr mit mir vertiefen möchtet.',
+    upsell: 'Nach dem Kurs weitergehen? Wir können im ',
+    upsellLink: 'Einzelcoaching',
+  },
   waitlist: {
     namePlaceholder: 'Vorname (optional)',
     emailPlaceholder: 'E-Mail',
@@ -764,6 +789,7 @@ export const de: Content = {
     errName: 'Bitte gib deinen Namen und eine kurze Nachricht an.',
     errEmail: 'Bitte gib eine gültige E-Mail-Adresse ein.',
     errSend: 'Beim Senden ist etwas schiefgelaufen. Bitte schreib direkt an lb@louisabrandt.com.',
+    coursePrefill: 'Ich interessiere mich für den Kurs: ',
   },
   courseDetail: {
     courses: 'Kurse',

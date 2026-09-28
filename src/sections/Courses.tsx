@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { ArrowUpRight } from 'lucide-react'
 import SectionLabel from '../components/SectionLabel'
 import Reveal from '../components/Reveal'
-import Waitlist from '../components/Waitlist'
 import { TEXT_COLOR } from '../constants'
 import { COURSES, courseIllustration, courseText } from '../courses'
 import { useLang } from '../i18n/lang'
@@ -41,7 +40,10 @@ export default function Courses() {
         <p className="mt-6 max-w-2xl text-sm md:text-[15px] leading-[1.6] text-primary/70">
           {c.coursesSection.intro}
         </p>
-        <p className="mt-4 max-w-2xl text-sm md:text-[15px] leading-[1.6] text-primary/60">
+        <p className="mt-3 max-w-2xl text-sm md:text-[15px] leading-[1.6] text-primary/55">
+          {c.courseMeta.format} · {c.courseMeta.individual} · {c.courseMeta.couple}
+        </p>
+        <p className="mt-3 max-w-2xl text-sm md:text-[15px] leading-[1.6] text-primary/60">
           {c.coursesSection.topicIntro}
           <Link
             to={l('/contact')}
@@ -73,7 +75,10 @@ export default function Courses() {
                     />
                   </div>
                   <div className="p-6 flex flex-col flex-1">
-                    <span className="text-primary/45 text-[10px] uppercase tracking-[0.16em]">{t.tag}</span>
+                    <div className="flex items-baseline justify-between gap-2">
+                      <span className="text-primary/45 text-[10px] uppercase tracking-[0.16em]">{t.tag}</span>
+                      <span className="text-primary/70 text-xs tabular-nums shrink-0">{c.courseMeta.priceShort}</span>
+                    </div>
                     <h3 className="mt-3 text-lg font-medium" style={{ color: TEXT_COLOR }}>
                       {t.title}
                     </h3>
@@ -94,23 +99,9 @@ export default function Courses() {
           })}
         </div>
 
-        {/* Waitlist */}
-        <Reveal
-          index={0}
-          className="noise-overlay relative overflow-hidden rounded-2xl bg-[#212121] p-6 md:p-8 mt-4 md:mt-5"
-        >
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
-            <div>
-              <h3 className="text-primary text-xl sm:text-2xl font-normal leading-snug">
-                {c.coursesSection.waitlistHeading}
-              </h3>
-              <p className="mt-3 text-primary/70 text-sm sm:text-[15px] leading-[1.6] max-w-md">
-                {c.coursesSection.waitlistText}
-              </p>
-            </div>
-            <Waitlist />
-          </div>
-        </Reveal>
+        <p className="mt-8 max-w-2xl text-primary/55 text-sm leading-[1.6]">
+          {c.courseMeta.bookableNote}
+        </p>
       </div>
     </section>
   )

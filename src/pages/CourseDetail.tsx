@@ -1,7 +1,6 @@
 import { Link, useParams } from 'react-router-dom'
 import { ArrowRight, ArrowUpRight, Check } from 'lucide-react'
 import Footer from '../sections/Footer'
-import Waitlist from '../components/Waitlist'
 import LangSwitch from '../components/LangSwitch'
 import { COURSES, courseBySlug, courseIllustration, courseText } from '../courses'
 import { useLang } from '../i18n/lang'
@@ -78,11 +77,11 @@ export default function CourseDetail() {
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 text-sm border-y border-[#23201a]/12 py-6">
           <div>
             <p className="text-[#23201a]/45 text-[11px] uppercase tracking-[0.22em] mb-1">{c.courseDetail.format}</p>
-            <p className="text-[#23201a]/80">{t.format}</p>
+            <p className="text-[#23201a]/80">{c.courseMeta.format}</p>
           </div>
           <div>
-            <p className="text-[#23201a]/45 text-[11px] uppercase tracking-[0.22em] mb-1">{c.courseDetail.bookable}</p>
-            <p className="text-[#23201a]/80">{t.audience}</p>
+            <p className="text-[#23201a]/45 text-[11px] uppercase tracking-[0.22em] mb-1">{c.courseMeta.priceLabel}</p>
+            <p className="text-[#23201a]/80">{c.courseMeta.individual} · {c.courseMeta.couple}</p>
           </div>
           <div>
             <p className="text-[#23201a]/45 text-[11px] uppercase tracking-[0.22em] mb-1">{c.courseDetail.whoFor}</p>
@@ -101,30 +100,40 @@ export default function CourseDetail() {
           ))}
         </ul>
 
-        {/* Waitlist — dark accent card on the light page */}
+        {/* Booking — dark accent card on the light page */}
         <div className="noise-overlay relative overflow-hidden rounded-2xl bg-[#141414] p-6 md:p-8 mt-14">
-          <h2 className="text-primary text-xl sm:text-2xl font-normal leading-snug">
-            {c.courseDetail.waitlistHeading}
-          </h2>
-          <p className="mt-3 text-primary/70 text-sm sm:text-[15px] leading-[1.6] max-w-md">
-            {c.courseDetail.waitlistText1}{' '}
-            <span className="font-serif italic">{t.title}</span> {c.courseDetail.waitlistText2}
+          <p className="text-primary/45 text-[11px] uppercase tracking-[0.22em] mb-3">
+            {c.courseMeta.priceLabel}
           </p>
-          <div className="mt-6 max-w-xl">
-            <Waitlist course={course.slug} />
+          <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+            <span className="text-primary text-2xl font-medium">{c.courseMeta.individual}</span>
+            <span className="text-primary/40">·</span>
+            <span className="text-primary text-2xl font-medium">{c.courseMeta.couple}</span>
           </div>
+          <p className="mt-2 text-primary/60 text-sm">{c.courseMeta.format}</p>
+          <Link
+            to={`${l('/contact')}?kurs=${encodeURIComponent(t.title)}`}
+            className="group mt-6 inline-flex items-center gap-2 hover:gap-3 transition-all duration-300 bg-[#B4552E] hover:bg-[#9E4826] rounded-full pl-5 pr-1.5 py-1.5 text-[#F3ECDE] font-medium text-sm self-start"
+          >
+            <span>{c.courseMeta.book}</span>
+            <span className="flex items-center justify-center bg-[#7C3A1E] rounded-full w-9 h-9 transition-transform duration-300 group-hover:scale-110">
+              <ArrowRight className="w-4 h-4 text-[#F3ECDE]" strokeWidth={1.5} />
+            </span>
+          </Link>
+          <p className="mt-3 text-primary/40 text-[11px]">{c.courseMeta.vat}</p>
         </div>
 
-        {/* Or 1:1 */}
+        {/* Deepen 1:1 */}
         <p className="mt-8 text-[#23201a]/65 text-sm leading-[1.6]">
-          {c.courseDetail.or1}{' '}
+          {c.courseMeta.upsell}
           <Link
-            to={l('/contact')}
+            to={l('/coaching')}
             className="text-[#23201a] underline decoration-[#23201a]/30 underline-offset-2 hover:decoration-[#23201a] transition inline-flex items-center gap-1"
           >
-            {c.courseDetail.book1to1}
+            {c.courseMeta.upsellLink}
             <ArrowRight className="h-3.5 w-3.5 -rotate-45" strokeWidth={1.5} />
           </Link>
+          .
         </p>
 
         {/* Other courses */}

@@ -1,4 +1,5 @@
-import { useState, type FormEvent } from 'react'
+import { useState, useEffect, type FormEvent } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { ArrowRight, Check } from 'lucide-react'
 import SectionLabel from '../components/SectionLabel'
 import { useContent } from '../i18n/content'
@@ -23,6 +24,13 @@ export default function Contact() {
   const [error, setError] = useState('')
   const [submitting, setSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
+  const [searchParams] = useSearchParams()
+
+  // Prefill the message when arriving from a course's "book" button.
+  useEffect(() => {
+    const kurs = searchParams.get('kurs')
+    if (kurs) setMessage((m) => (m ? m : c.contact.coursePrefill + kurs))
+  }, [searchParams, c.contact.coursePrefill])
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault()
