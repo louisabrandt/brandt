@@ -98,8 +98,8 @@ export default function Contact() {
                   Sessions
                 </p>
                 <p className="text-primary/80 leading-[1.6]">
-                  Online worldwide · in person in Paphos, Vienna, Berlin &amp;
-                  Miami · in English &amp; German
+                  Online worldwide · in person in Paphos &amp; Vienna · in
+                  English &amp; German
                 </p>
               </div>
             </div>

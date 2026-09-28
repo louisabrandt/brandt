@@ -11,6 +11,24 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Respect users who prefer reduced motion (framer handled via MotionConfig) */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-marquee-left,
+  .animate-marquee-right {
+    animation: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 /* Offset anchor jumps so sections clear the sticky header */
 section[id] {
   scroll-margin-top: 5rem;

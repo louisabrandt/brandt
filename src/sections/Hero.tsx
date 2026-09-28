@@ -72,8 +72,8 @@ export default function Hero() {
               >
                 Relational coaching for couples and individuals who want deeper
                 connection, better communication, and lasting stability. Online
-                worldwide — and in person in Paphos, Vienna, Berlin &amp;
-                Miami. In English &amp; German.
+                worldwide — and in person in Paphos &amp; Vienna. In English
+                &amp; German.
               </motion.p>
 
               <motion.div

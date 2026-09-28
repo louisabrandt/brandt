@@ -1,3 +1,4 @@
+import { MotionConfig } from 'framer-motion'
 import StickyHeader from './components/StickyHeader'
 import Hero from './sections/Hero'
 import TrustBar from './sections/TrustBar'
@@ -5,7 +6,6 @@ import About from './sections/About'
 import Ethos from './sections/Ethos'
 import WhyRelationalWork from './sections/WhyRelationalWork'
 import ForWhom from './sections/ForWhom'
-import Locations from './sections/Locations'
 import Approach from './sections/Approach'
 import RelationalCapacity from './sections/RelationalCapacity'
 import WhatToExpect from './sections/WhatToExpect'
@@ -19,7 +19,7 @@ import Footer from './sections/Footer'
 
 export default function App() {
   return (
-    <>
+    <MotionConfig reducedMotion="user">
       <StickyHeader />
       <main className="bg-[#0a0a0a] overflow-x-hidden">
         <Hero />
@@ -28,7 +28,6 @@ export default function App() {
         <Ethos />
         <WhyRelationalWork />
         <ForWhom />
-        <Locations />
         <Approach />
         <RelationalCapacity />
         <WhatToExpect />
@@ -40,6 +39,6 @@ export default function App() {
         <Contact />
         <Footer />
       </main>
-    </>
+    </MotionConfig>
   )
 }

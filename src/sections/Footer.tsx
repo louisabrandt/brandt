@@ -27,7 +27,7 @@ export default function Footer() {
             </div>
             <p className="mt-3 text-primary/60 text-sm leading-[1.6] max-w-xs">
               Relational coaching for couples and individuals. Online worldwide
-              and in person across Europe &amp; Miami.
+              online and in person in Paphos &amp; Vienna.
             </p>
           </div>
 
@@ -57,8 +57,7 @@ export default function Footer() {
             </p>
             <ul className="space-y-2.5 text-sm text-primary/75">
               <li>Online worldwide</li>
-              <li>Paphos · Vienna</li>
-              <li>Berlin · Miami</li>
+              <li>Paphos &amp; Vienna</li>
               <li>English &amp; German</li>
             </ul>
           </div>

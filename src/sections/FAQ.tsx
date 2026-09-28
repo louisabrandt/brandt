@@ -28,7 +28,7 @@ const FAQS: QA[] = [
   },
   {
     q: 'Online or in person?',
-    a: 'Both. Sessions take place online worldwide, or in person in Paphos, Vienna, Berlin and Miami.',
+    a: 'Both. Sessions take place online worldwide, or in person in Paphos and Vienna.',
   },
   {
     q: 'Which languages?',
