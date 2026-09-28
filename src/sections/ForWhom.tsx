@@ -1,4 +1,3 @@
-import { Asterisk } from 'lucide-react'
 import WordsPullUpMultiStyle, { type Segment } from '../components/WordsPullUpMultiStyle'
 import SectionLabel from '../components/SectionLabel'
 import Reveal from '../components/Reveal'
@@ -50,12 +49,8 @@ export default function ForWhom() {
               {THEMES.map((theme) => (
                 <li
                   key={theme}
-                  className="flex items-start gap-3 py-4 border-b border-[#23201a]/12"
+                  className="py-4 border-b border-[#23201a]/12"
                 >
-                  <Asterisk
-                    className="h-4 w-4 mt-0.5 shrink-0 text-[#5e6b4a]"
-                    strokeWidth={1.5}
-                  />
                   <span className="text-[#23201a]/85 text-sm sm:text-base leading-[1.5]">
                     {theme}
                   </span>

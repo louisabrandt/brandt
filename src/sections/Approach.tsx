@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Asterisk } from 'lucide-react'
+import { Check } from 'lucide-react'
 import SectionLabel from '../components/SectionLabel'
 import Reveal from '../components/Reveal'
 
@@ -84,9 +84,9 @@ export default function Approach() {
             <ul className="mt-5 space-y-3">
               {THIS_IS.map((item) => (
                 <li key={item} className="flex items-start gap-2.5">
-                  <Asterisk
-                    className="h-3.5 w-3.5 mt-1 shrink-0 text-[#5e6b4a]"
-                    strokeWidth={1.5}
+                  <Check
+                    className="h-4 w-4 mt-0.5 shrink-0 text-[#5e6b4a]"
+                    strokeWidth={1.75}
                   />
                   <span className="text-[#23201a]/80 text-sm sm:text-[15px] leading-[1.5]">
                     {item}
@@ -123,12 +123,8 @@ export default function Approach() {
           {CONCEPTS.map((concept) => (
             <span
               key={concept}
-              className="flex items-center gap-2 rounded-full border border-[#23201a]/15 bg-[#f5f0e6] px-4 py-2 text-[13px] text-[#23201a]/85"
+              className="rounded-full border border-[#23201a]/15 bg-[#f5f0e6] px-4 py-2 text-[13px] text-[#23201a]/85"
             >
-              <Asterisk
-                className="h-3 w-3 shrink-0 text-[#23201a]/50"
-                strokeWidth={1.5}
-              />
               {concept}
             </span>
           ))}

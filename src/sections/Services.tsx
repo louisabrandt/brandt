@@ -1,4 +1,4 @@
-import { Asterisk, Check } from 'lucide-react'
+import { Check } from 'lucide-react'
 import WordsPullUpMultiStyle, { type Segment } from '../components/WordsPullUpMultiStyle'
 import SectionLabel from '../components/SectionLabel'
 import Reveal from '../components/Reveal'
@@ -70,11 +70,9 @@ const OFFERINGS: Offering[] = [
 const PRICING = ['60 min · €170', '90 min · €240', '120 min · €320']
 
 function CardHead({ number, tone }: { number: string; tone: 'dark' | 'paper' }) {
-  const aster = tone === 'paper' ? 'text-[#5e6b4a]' : 'text-primary/70'
-  const num = tone === 'paper' ? 'text-[#23201a]/50' : 'text-primary/50'
+  const num = tone === 'paper' ? 'text-[#23201a]/45' : 'text-primary/45'
   return (
-    <div className="flex items-start justify-between">
-      <Asterisk className={`h-4 w-4 ${aster}`} strokeWidth={1.5} />
+    <div className="flex items-start justify-end">
       <span className={`text-xs sm:text-sm tabular-nums ${num}`}>{number}</span>
     </div>
   )

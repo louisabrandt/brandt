@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { ArrowUpRight, Asterisk } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 import SectionLabel from '../components/SectionLabel'
 import Reveal from '../components/Reveal'
 import Waitlist from '../components/Waitlist'
@@ -58,14 +58,11 @@ export default function Courses() {
                   />
                 </div>
                 <div className="p-6 flex flex-col flex-1">
-                  <div className="flex items-center justify-between gap-2">
-                    <Asterisk className="h-4 w-4 text-primary/70" strokeWidth={1.5} />
-                    <span className="text-primary/45 text-[10px] uppercase tracking-[0.16em] text-right">
-                      {course.tag}
-                    </span>
-                  </div>
+                  <span className="text-primary/45 text-[10px] uppercase tracking-[0.16em]">
+                    {course.tag}
+                  </span>
                   <h3
-                    className="mt-4 text-lg font-medium"
+                    className="mt-3 text-lg font-medium"
                     style={{ color: TEXT_COLOR }}
                   >
                     {course.title}

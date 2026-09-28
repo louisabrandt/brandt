@@ -1,9 +1,6 @@
-import { Asterisk } from 'lucide-react'
-
 function Pill({ label }: { label: string }) {
   return (
-    <div className="liquid-glass flex h-12 md:h-14 shrink-0 items-center gap-2 rounded-full px-4 text-[13px] text-primary/85 whitespace-nowrap">
-      <Asterisk className="h-3 w-3 shrink-0 text-primary/60" strokeWidth={1.5} />
+    <div className="liquid-glass flex h-12 md:h-14 shrink-0 items-center rounded-full px-5 text-[13px] text-primary/85 whitespace-nowrap">
       <span>{label}</span>
     </div>
   )

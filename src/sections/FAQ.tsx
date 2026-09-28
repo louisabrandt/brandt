@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { Asterisk } from 'lucide-react'
+import { Plus } from 'lucide-react'
 import SectionLabel from '../components/SectionLabel'
 import PrimaryCTA from '../components/PrimaryCTA'
 
@@ -75,9 +75,9 @@ function FaqItem({
         <span className="text-[#23201a]/90 group-hover:text-[#23201a] transition-colors text-base sm:text-lg font-normal">
           {item.q}
         </span>
-        <Asterisk
-          className={`h-4 w-4 shrink-0 text-[#5e6b4a] transition-transform duration-300 ${
-            isOpen ? 'rotate-90' : ''
+        <Plus
+          className={`h-4 w-4 shrink-0 text-[#23201a]/50 transition-transform duration-300 ${
+            isOpen ? 'rotate-45' : ''
           }`}
           strokeWidth={1.5}
         />

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Link, NavLink } from 'react-router-dom'
-import { ArrowRight, Asterisk } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { NAV, BOOK_TO } from '../nav'
 
 /** Slim header that fades in once the hero is scrolled past — a persistent,
@@ -32,7 +32,6 @@ export default function StickyHeader() {
               className="flex items-center gap-0.5 text-primary text-lg font-medium tracking-[-0.04em]"
             >
               Brandt
-              <Asterisk className="h-2.5 w-2.5 text-primary/70" strokeWidth={1.5} />
             </Link>
 
             <nav className="hidden md:flex items-center gap-7 text-sm text-primary/70">

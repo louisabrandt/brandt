@@ -1,4 +1,3 @@
-import { Asterisk } from 'lucide-react'
 import SectionLabel from '../components/SectionLabel'
 import Reveal from '../components/Reveal'
 
@@ -55,8 +54,7 @@ export default function Testimonials() {
               index={i}
               className="rounded-2xl bg-[#f5f0e6] border border-[#23201a]/8 p-6 md:p-7 flex flex-col"
             >
-              <Asterisk className="h-4 w-4 text-[#5e6b4a]" strokeWidth={1.5} />
-              <p className="mt-4 text-[15px] leading-[1.65] text-[#23201a]/85 flex-1">
+              <p className="text-[15px] leading-[1.65] text-[#23201a]/85 flex-1">
                 {t.before}
                 <span className="font-serif italic">{t.emphasis}</span>
                 {t.after}

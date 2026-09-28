@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import { Asterisk } from 'lucide-react'
 import SectionLabel from '../components/SectionLabel'
 import Reveal from '../components/Reveal'
 import { TEXT_COLOR } from '../constants'
@@ -78,9 +77,8 @@ export default function RelationalCapacity() {
               index={i}
               className="rounded-2xl bg-[#101010] p-6 flex flex-col min-h-[180px]"
             >
-              <Asterisk className="h-4 w-4 text-primary/70" strokeWidth={1.5} />
               <h3
-                className="mt-5 text-base sm:text-lg font-medium"
+                className="text-base sm:text-lg font-medium"
                 style={{ color: TEXT_COLOR }}
               >
                 {cap.title}

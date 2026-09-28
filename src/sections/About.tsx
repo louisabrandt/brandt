@@ -1,6 +1,5 @@
 import { Fragment, useRef } from 'react'
 import { motion, useScroll } from 'framer-motion'
-import { Asterisk } from 'lucide-react'
 import WordsPullUpMultiStyle, { type Segment } from '../components/WordsPullUpMultiStyle'
 import AnimatedLetter from '../components/AnimatedLetter'
 import SectionLabel from '../components/SectionLabel'
@@ -94,11 +93,10 @@ export default function About() {
         </motion.p>
 
         {/* Credentials grid */}
-        <div className="mt-12 sm:mt-14 max-w-2xl mx-auto grid grid-cols-[auto_auto_1fr_auto] items-center gap-x-3 gap-y-3 text-[11px] sm:text-xs text-left border-t border-[#23201a]/12 pt-8">
+        <div className="mt-12 sm:mt-14 max-w-2xl mx-auto grid grid-cols-[auto_1fr_auto] items-center gap-x-4 gap-y-3 text-[11px] sm:text-xs text-left border-t border-[#23201a]/12 pt-8">
           {CREDENTIALS.map(([marker, mid, detail]) => (
             <div key={marker} className="contents">
               <span className="text-[#23201a] font-normal">{marker}</span>
-              <Asterisk className="h-3 w-3 text-[#23201a]/50" strokeWidth={1.5} />
               <span className="text-[#23201a]/70">{mid}</span>
               <span className="text-[#23201a]/55 text-right">{detail}</span>
             </div>

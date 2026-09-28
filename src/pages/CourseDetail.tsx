@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { ArrowRight, ArrowUpRight, Asterisk, Check } from 'lucide-react'
+import { ArrowRight, ArrowUpRight, Check } from 'lucide-react'
 import Footer from '../sections/Footer'
 import Waitlist from '../components/Waitlist'
 import { COURSES, courseBySlug, courseIllustration } from '../courses'
@@ -36,7 +36,6 @@ export default function CourseDetail() {
             className="flex items-center gap-0.5 text-[#23201a] text-lg font-medium tracking-[-0.04em]"
           >
             Brandt
-            <Asterisk className="h-2.5 w-2.5 text-[#23201a]/60" strokeWidth={1.5} />
           </Link>
           <div className="flex items-center gap-5 text-sm">
             <a

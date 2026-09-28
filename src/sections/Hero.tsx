@@ -33,7 +33,6 @@ export default function Hero() {
             <div className="col-span-12 lg:col-span-7">
               <WordsPullUp
                 text="Brandt"
-                showAsterisk
                 color={TEXT_COLOR}
                 className="text-[26vw] sm:text-[24vw] md:text-[20vw] lg:text-[17vw] xl:text-[16vw] font-medium leading-[0.85] tracking-[-0.07em]"
               />

@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import { Asterisk } from 'lucide-react'
 import { NAV } from '../nav'
 
 export default function Footer() {
@@ -16,7 +15,6 @@ export default function Footer() {
               >
                 Brandt
               </span>
-              <Asterisk className="h-3 w-3 text-primary/70" strokeWidth={1.5} />
             </div>
             <p className="mt-3 text-primary/60 text-sm leading-[1.6] max-w-xs">
               Relationship coaching for couples and individuals. Online worldwide,

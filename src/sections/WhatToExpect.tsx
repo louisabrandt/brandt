@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Asterisk } from 'lucide-react'
+import { Check } from 'lucide-react'
 import SectionLabel from '../components/SectionLabel'
 import Reveal from '../components/Reveal'
 import { FEATURE_VIDEO_URL, TEXT_COLOR } from '../constants'
@@ -21,12 +21,9 @@ const SEX_THERAPY = [
 
 function CardTitle({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex items-start gap-2.5">
-      <Asterisk className="h-4 w-4 mt-1 shrink-0 text-primary/70" strokeWidth={1.5} />
-      <h3 className="text-lg sm:text-xl font-medium" style={{ color: TEXT_COLOR }}>
-        {children}
-      </h3>
-    </div>
+    <h3 className="text-lg sm:text-xl font-medium" style={{ color: TEXT_COLOR }}>
+      {children}
+    </h3>
   )
 }
 
@@ -35,9 +32,9 @@ function Bullets({ items }: { items: string[] }) {
     <ul className="mt-4 space-y-2.5">
       {items.map((item) => (
         <li key={item} className="flex items-start gap-2.5">
-          <Asterisk
-            className="h-3 w-3 mt-1.5 shrink-0 text-primary/55"
-            strokeWidth={1.5}
+          <Check
+            className="h-4 w-4 mt-0.5 shrink-0 text-[#8A9A76]"
+            strokeWidth={1.75}
           />
           <span className="text-primary/75 text-[13px] sm:text-sm leading-[1.5]">
             {item}

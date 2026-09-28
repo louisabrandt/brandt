@@ -1,4 +1,3 @@
-import { Asterisk } from 'lucide-react'
 import SectionLabel from '../components/SectionLabel'
 import Reveal from '../components/Reveal'
 import { TEXT_COLOR } from '../constants'
@@ -79,12 +78,8 @@ export default function HowItWorks() {
               </div>
 
               <div className="p-6 md:p-8 flex flex-col flex-1">
-                <Asterisk
-                  className="h-4 w-4 text-primary/60"
-                  strokeWidth={1.5}
-                />
                 <h3
-                  className="mt-5 text-lg font-medium leading-snug"
+                  className="text-lg font-medium leading-snug"
                   style={{ color: TEXT_COLOR }}
                 >
                   {step.title}

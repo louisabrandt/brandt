@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { ArrowRight, Asterisk, Menu, X } from 'lucide-react'
+import { ArrowRight, Menu, X } from 'lucide-react'
 import { NAV, BOOK_TO } from '../nav'
 
 /** Persistent top navigation for the sub-pages (solid dark bar). */
@@ -15,7 +15,6 @@ export default function SiteHeader() {
           className="flex items-center gap-0.5 text-primary text-lg font-medium tracking-[-0.04em]"
         >
           Brandt
-          <Asterisk className="h-2.5 w-2.5 text-primary/70" strokeWidth={1.5} />
         </Link>
 
         <nav className="hidden md:flex items-center gap-7 text-sm">
