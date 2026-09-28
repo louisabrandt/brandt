@@ -5,7 +5,7 @@ import SectionLabel from '../components/SectionLabel'
 import Reveal from '../components/Reveal'
 import Waitlist from '../components/Waitlist'
 import { TEXT_COLOR } from '../constants'
-import { COURSES } from '../courses'
+import { COURSES, courseIllustration } from '../courses'
 
 const EASE = [0.16, 1, 0.3, 1] as const
 
@@ -44,30 +44,43 @@ export default function Courses() {
             <Reveal key={course.key} index={i}>
               <Link
                 to={`/courses/${course.slug}`}
-                className="group h-full rounded-2xl bg-[#101010] p-6 flex flex-col min-h-[200px] hover:bg-[#141414] transition-colors"
+                className="group h-full rounded-2xl bg-[#101010] flex flex-col overflow-hidden hover:bg-[#141414] transition-colors"
               >
-                <div className="flex items-center justify-between gap-2">
-                  <Asterisk className="h-4 w-4 text-primary/70" strokeWidth={1.5} />
-                  <span className="text-primary/45 text-[10px] uppercase tracking-[0.16em] text-right">
-                    {course.tag}
+                <div
+                  className="relative aspect-[5/4] overflow-hidden"
+                  style={{ backgroundColor: course.accent }}
+                >
+                  <img
+                    src={courseIllustration(course.slug)}
+                    alt=""
+                    loading="lazy"
+                    className="absolute inset-0 h-full w-full object-contain transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                  />
+                </div>
+                <div className="p-6 flex flex-col flex-1">
+                  <div className="flex items-center justify-between gap-2">
+                    <Asterisk className="h-4 w-4 text-primary/70" strokeWidth={1.5} />
+                    <span className="text-primary/45 text-[10px] uppercase tracking-[0.16em] text-right">
+                      {course.tag}
+                    </span>
+                  </div>
+                  <h3
+                    className="mt-4 text-lg font-medium"
+                    style={{ color: TEXT_COLOR }}
+                  >
+                    {course.title}
+                  </h3>
+                  <p className="mt-2 text-primary/70 text-[13px] sm:text-sm leading-[1.55] flex-1">
+                    {course.description}
+                  </p>
+                  <span className="mt-4 inline-flex items-center gap-1.5 text-xs text-primary/60 group-hover:text-primary transition-colors">
+                    Explore the course
+                    <ArrowUpRight
+                      className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                      strokeWidth={1.5}
+                    />
                   </span>
                 </div>
-                <h3
-                  className="mt-5 text-lg font-medium"
-                  style={{ color: TEXT_COLOR }}
-                >
-                  {course.title}
-                </h3>
-                <p className="mt-2 text-primary/70 text-[13px] sm:text-sm leading-[1.55] flex-1">
-                  {course.description}
-                </p>
-                <span className="mt-4 inline-flex items-center gap-1.5 text-xs text-primary/60 group-hover:text-primary transition-colors">
-                  Explore the course
-                  <ArrowUpRight
-                    className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                    strokeWidth={1.5}
-                  />
-                </span>
               </Link>
             </Reveal>
           ))}

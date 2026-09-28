@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import { ArrowRight, ArrowUpRight, Asterisk, Check } from 'lucide-react'
 import Footer from '../sections/Footer'
 import Waitlist from '../components/Waitlist'
-import { COURSES, courseBySlug } from '../courses'
+import { COURSES, courseBySlug, courseIllustration } from '../courses'
 
 export default function CourseDetail() {
   const { slug } = useParams()
@@ -73,6 +73,18 @@ export default function CourseDetail() {
         <p className="mt-6 text-[#23201a]/80 text-base md:text-lg leading-[1.65]">
           {course.intro}
         </p>
+
+        {/* Illustration */}
+        <div
+          className="mt-10 relative overflow-hidden rounded-2xl aspect-[16/10] sm:aspect-[2/1] ring-1 ring-[#23201a]/8"
+          style={{ backgroundColor: course.accent }}
+        >
+          <img
+            src={courseIllustration(course.slug)}
+            alt={`${course.title} — hand-drawn illustration`}
+            className="absolute inset-0 h-full w-full object-contain"
+          />
+        </div>
 
         {/* Meta */}
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 text-sm border-y border-[#23201a]/12 py-6">
@@ -148,8 +160,20 @@ export default function CourseDetail() {
               <Link
                 key={c.slug}
                 to={`/courses/${c.slug}`}
-                className="group rounded-2xl bg-[#f5f0e6] border border-[#23201a]/8 p-5 hover:bg-[#efe7d8] hover:border-[#23201a]/15 transition-colors flex flex-col"
+                className="group rounded-2xl bg-[#f5f0e6] border border-[#23201a]/8 overflow-hidden hover:border-[#23201a]/15 transition-colors flex flex-col"
               >
+                <div
+                  className="relative aspect-[5/4] overflow-hidden"
+                  style={{ backgroundColor: c.accent }}
+                >
+                  <img
+                    src={courseIllustration(c.slug)}
+                    alt=""
+                    loading="lazy"
+                    className="absolute inset-0 h-full w-full object-contain transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                  />
+                </div>
+                <div className="p-5 flex flex-col flex-1">
                 <span className="text-[#23201a]/45 text-[10px] uppercase tracking-[0.16em]">
                   {c.tag}
                 </span>
@@ -163,6 +187,7 @@ export default function CourseDetail() {
                     strokeWidth={1.5}
                   />
                 </span>
+                </div>
               </Link>
             ))}
           </div>

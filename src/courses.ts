@@ -29,13 +29,20 @@ export interface Course {
   forWhom: string
   audience: string
   primary?: boolean
+  /** Dominant warm background tone of the course illustration (for tinting). */
+  accent: string
 }
+
+/** Path to a course's hand-drawn thread illustration. */
+export const courseIllustration = (slug: string): string =>
+  `/illustrations/${slug}.webp`
 
 export const COURSES: Course[] = [
   {
     key: 'trust',
     primary: true,
     slug: 'rebuilding-trust',
+    accent: '#643948',
     title: 'Rebuilding Trust',
     tag: 'After betrayal or slow erosion',
     description:
@@ -57,6 +64,7 @@ export const COURSES: Course[] = [
     key: 'selfworth',
     primary: true,
     slug: 'the-ground-you-stand-on',
+    accent: '#d48f7e',
     title: 'The Ground You Stand On',
     tag: 'Self-worth & self-care',
     description:
@@ -79,6 +87,7 @@ export const COURSES: Course[] = [
   {
     key: 'selfworth',
     slug: 'finding-your-purpose',
+    accent: '#e39e25',
     title: 'Finding Your Purpose',
     tag: 'Purpose & direction',
     description:
@@ -100,6 +109,7 @@ export const COURSES: Course[] = [
     key: 'boundaries',
     primary: true,
     slug: 'boundaries-without-walls',
+    accent: '#67673d',
     title: 'Boundaries Without Walls',
     tag: 'Limits & over-giving',
     description:
@@ -122,6 +132,7 @@ export const COURSES: Course[] = [
     key: 'conflict',
     primary: true,
     slug: 'beneath-the-argument',
+    accent: '#be5b2e',
     title: 'Beneath the Argument',
     tag: 'Communication & conflict',
     description:
@@ -143,6 +154,7 @@ export const COURSES: Course[] = [
   {
     key: 'conflict',
     slug: 'say-what-you-need',
+    accent: '#df9513',
     title: 'Say What You Need',
     tag: 'Needs & love languages',
     description:
@@ -164,6 +176,7 @@ export const COURSES: Course[] = [
   {
     key: 'conflict',
     slug: 'power-and-powerlessness',
+    accent: '#401a34',
     title: 'Power & Powerlessness',
     tag: 'Power & control',
     description:
@@ -185,6 +198,7 @@ export const COURSES: Course[] = [
   {
     key: 'conflict',
     slug: 'into-their-world',
+    accent: '#78744a',
     title: 'Into Their World',
     tag: 'Empathy & attunement',
     description:
@@ -207,6 +221,7 @@ export const COURSES: Course[] = [
     key: 'attachment',
     primary: true,
     slug: 'your-patterns-decoded',
+    accent: '#c55222',
     title: 'Your Patterns, Decoded',
     tag: 'Attachment',
     description:
@@ -228,6 +243,7 @@ export const COURSES: Course[] = [
   {
     key: 'attachment',
     slug: 'where-it-began',
+    accent: '#fdf1dc',
     title: 'Where It Began',
     tag: 'Childhood & origins',
     description:
@@ -250,6 +266,7 @@ export const COURSES: Course[] = [
     key: 'desire',
     primary: true,
     slug: 'desire-reconnected',
+    accent: '#cd7b67',
     title: 'Desire, Reconnected',
     tag: 'Intimacy & desire',
     description:
@@ -271,6 +288,7 @@ export const COURSES: Course[] = [
   {
     key: 'desire',
     slug: 'lets-talk-about-sex',
+    accent: '#2e1925',
     title: "Let's Talk About Sex",
     tag: 'Sex, pleasure & communication',
     description:
