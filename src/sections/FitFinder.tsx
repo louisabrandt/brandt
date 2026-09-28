@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { ArrowRight, Check } from 'lucide-react'
 import SectionLabel from '../components/SectionLabel'
 import { TEXT_COLOR } from '../constants'
-import { COURSES, courseByKey, type CourseKey } from '../courses'
+import { COURSES, primaryCourseByKey, type CourseKey } from '../courses'
 
 interface Question {
   q: string
@@ -64,7 +64,7 @@ export default function FitFinder() {
     (best, c) => (scores[c.key] > scores[best] ? c.key : best),
     COURSES[0].key,
   )
-  const course = courseByKey(topKey)
+  const course = primaryCourseByKey(topKey)
 
   function choose(key: CourseKey) {
     setScores((s) => ({ ...s, [key]: s[key] + 1 }))
