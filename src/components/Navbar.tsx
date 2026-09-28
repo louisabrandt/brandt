@@ -5,6 +5,7 @@ const NAV_ITEMS = [
   { label: 'Approach', href: '#approach' },
   { label: 'For Whom', href: '#for-whom' },
   { label: 'Services', href: '#services' },
+  { label: 'Courses', href: '#courses' },
   { label: 'FAQ', href: '#faq' },
   { label: 'Contact', href: '#contact' },
 ]

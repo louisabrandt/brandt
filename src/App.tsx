@@ -10,6 +10,7 @@ import Approach from './sections/Approach'
 import RelationalCapacity from './sections/RelationalCapacity'
 import WhatToExpect from './sections/WhatToExpect'
 import Services from './sections/Services'
+import Courses from './sections/Courses'
 import WhatChanges from './sections/WhatChanges'
 import Testimonials from './sections/Testimonials'
 import FAQ from './sections/FAQ'
@@ -32,6 +33,7 @@ export default function App() {
         <RelationalCapacity />
         <WhatToExpect />
         <Services />
+        <Courses />
         <WhatChanges />
         <Testimonials />
         <FAQ />
