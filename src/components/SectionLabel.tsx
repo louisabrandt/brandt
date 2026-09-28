@@ -1,5 +1,4 @@
 import type { ReactNode } from 'react'
-import { Asterisk } from 'lucide-react'
 
 interface SectionLabelProps {
   children: ReactNode
@@ -9,9 +8,27 @@ interface SectionLabelProps {
   className?: string
 }
 
+/** A small hand-drawn thread mark — the brand's signature, in place of a
+ *  generic bullet. Inherits the label's colour via currentColor. */
+function ThreadMark({ className = '' }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 30 8"
+      className={`h-2 w-[30px] ${className}`}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.2"
+      strokeLinecap="round"
+      aria-hidden="true"
+    >
+      <path d="M1 4 Q 4.5 0.5, 8 4 T 15 4 T 22 4 T 29 4" />
+    </svg>
+  )
+}
+
 /**
- * Eyebrow label, per the locked design system: uppercase, wide tracking,
- * flanked by the brand Asterisk motif. Used above every section.
+ * Eyebrow label: uppercase, wide tracking, flanked by the brand thread mark.
+ * Used above every section.
  */
 export default function SectionLabel({
   children,
@@ -19,16 +36,16 @@ export default function SectionLabel({
   tone = 'cream',
   className = '',
 }: SectionLabelProps) {
-  const color = tone === 'ink' ? 'text-[#23201a]/60' : 'text-primary/70'
+  const color = tone === 'ink' ? 'text-[#23201a]/55' : 'text-primary/65'
   return (
     <div
-      className={`flex items-center gap-2 text-[10px] sm:text-[11px] uppercase tracking-[0.22em] ${color} ${
+      className={`flex items-center gap-2.5 text-[10px] sm:text-[11px] uppercase tracking-[0.24em] ${color} ${
         align === 'center' ? 'justify-center' : 'justify-start'
       } ${className}`}
     >
-      <Asterisk className="h-3 w-3" strokeWidth={1.5} />
+      <ThreadMark className="opacity-80" />
       <span>{children}</span>
-      <Asterisk className="h-3 w-3" strokeWidth={1.5} />
+      <ThreadMark className="opacity-80 -scale-x-100" />
     </div>
   )
 }

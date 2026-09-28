@@ -1,7 +1,8 @@
-// Build-time prerender: render the homepage and each course detail route to its
-// own static HTML (with per-page title/meta/canonical/JSON-LD), so crawlers and
-// AI/LLM agents get every page's full content without executing JavaScript.
-// The client then hydrates whichever page was served.
+// Build-time prerender: render the home page, each top-level page, and each
+// course detail route to its own static HTML (with per-page title/meta/
+// canonical), so crawlers and AI/LLM agents get every page's full content
+// without executing JavaScript. The client then hydrates whichever page was
+// served.
 import { readFileSync, writeFileSync, mkdirSync, rmSync } from 'node:fs'
 
 const BASE = 'https://louisabrandt.com'
@@ -29,16 +30,69 @@ const esc = (s) =>
 // Replace a whole tag (whitespace/format tolerant, no `>` inside the tag).
 const swap = (html, regex, replacement) => html.replace(regex, () => replacement)
 
-// 1) Homepage — keep its rich head as built; just inject the rendered app.
-writeFileSync(indexPath, inject(template, render('/')))
-console.log('Prerendered /')
+// Apply per-page <head> metadata (title, description, canonical, og, twitter).
+const withHead = (html, { title, desc, canonical }) => {
+  let h = html
+  h = swap(h, /<title>[\s\S]*?<\/title>/, `<title>${esc(title)}</title>`)
+  h = swap(h, /<meta\s+name="description"[^>]*>/, `<meta name="description" content="${esc(desc)}" />`)
+  h = swap(h, /<link\s+rel="canonical"[^>]*>/, `<link rel="canonical" href="${canonical}" />`)
+  h = swap(h, /<meta\s+property="og:url"[^>]*>/, `<meta property="og:url" content="${canonical}" />`)
+  h = swap(h, /<meta\s+property="og:title"[^>]*>/, `<meta property="og:title" content="${esc(title)}" />`)
+  h = swap(h, /<meta\s+property="og:description"[^>]*>/, `<meta property="og:description" content="${esc(desc)}" />`)
+  h = swap(h, /<meta\s+name="twitter:title"[^>]*>/, `<meta name="twitter:title" content="${esc(title)}" />`)
+  h = swap(h, /<meta\s+name="twitter:description"[^>]*>/, `<meta name="twitter:description" content="${esc(desc)}" />`)
+  return h
+}
 
-// 2) Course detail pages.
+const writePage = (path, html) => {
+  if (path === '/') {
+    writeFileSync(indexPath, html)
+  } else {
+    const dir = new URL(`./dist${path}/`, import.meta.url)
+    mkdirSync(dir, { recursive: true })
+    writeFileSync(new URL('index.html', dir), html)
+  }
+  console.log(`Prerendered ${path}`)
+}
+
+// 1) Home — keep the template's rich head; just inject the rendered app.
+writePage('/', inject(template, render('/')))
+
+// 2) Top-level pages.
+const PAGES = [
+  {
+    path: '/about',
+    title: 'About Louisa Brandt — M.Sc. Psychology, relationship coach',
+    desc: 'How I work with couples and individuals: attachment, emotional regulation, the Gottman Method and sex therapy, without the jargon. Online worldwide, and in person in Paphos and Vienna.',
+  },
+  {
+    path: '/coaching',
+    title: 'Coaching with Louisa Brandt — couples & individuals',
+    desc: 'One-to-one relationship coaching: sessions, packages, and what to expect. The Gottman Method integrated with sex therapy. Online worldwide, or in person in Paphos and Vienna.',
+  },
+  {
+    path: '/courses',
+    title: 'Courses — relationship psychoeducation | Brandt',
+    desc: 'Focused, evidence-based courses on the patterns that shape relationships. Take the short quiz to find your fit. For individuals or couples, online.',
+  },
+  {
+    path: '/contact',
+    title: 'Contact & booking — Brandt',
+    desc: 'Book a first conversation with Louisa Brandt. No obligation, confidential from the first message. Online worldwide, or in person in Paphos and Vienna.',
+  },
+]
+
+for (const p of PAGES) {
+  const canonical = `${BASE}${p.path}/`
+  const html = inject(withHead(template, { title: p.title, desc: p.desc, canonical }), render(p.path))
+  writePage(p.path, html)
+}
+
+// 3) Course detail pages.
 for (const c of COURSES) {
   const url = `/courses/${c.slug}`
   const canonical = `${BASE}${url}/`
   const title = `${c.title} — a Brandt course`
-  const desc = c.description
 
   const jsonld = JSON.stringify({
     '@context': 'https://schema.org',
@@ -56,30 +110,18 @@ for (const c of COURSES) {
     },
   })
 
-  let html = template
-  html = swap(html, /<title>[\s\S]*?<\/title>/, `<title>${esc(title)}</title>`)
-  html = swap(html, /<meta\s+name="description"[^>]*>/, `<meta name="description" content="${esc(desc)}" />`)
-  html = swap(html, /<link\s+rel="canonical"[^>]*>/, `<link rel="canonical" href="${canonical}" />`)
-  html = swap(html, /<meta\s+property="og:url"[^>]*>/, `<meta property="og:url" content="${canonical}" />`)
-  html = swap(html, /<meta\s+property="og:title"[^>]*>/, `<meta property="og:title" content="${esc(title)}" />`)
-  html = swap(html, /<meta\s+property="og:description"[^>]*>/, `<meta property="og:description" content="${esc(desc)}" />`)
-  html = swap(html, /<meta\s+name="twitter:title"[^>]*>/, `<meta name="twitter:title" content="${esc(title)}" />`)
-  html = swap(html, /<meta\s+name="twitter:description"[^>]*>/, `<meta name="twitter:description" content="${esc(desc)}" />`)
+  let html = withHead(template, { title, desc: c.description, canonical })
   html = swap(html, /<script type="application\/ld\+json">[\s\S]*?<\/script>/, `<script type="application/ld+json">${jsonld}</script>`)
-
   html = inject(html, render(url))
-
-  const dir = new URL(`./dist/courses/${c.slug}/`, import.meta.url)
-  mkdirSync(dir, { recursive: true })
-  writeFileSync(new URL('index.html', dir), html)
-  console.log(`Prerendered ${url}`)
+  writePage(url, html)
 }
 
-// 3) Generate sitemap.xml from the prerendered routes (homepage + all courses).
+// 4) Generate sitemap.xml from every prerendered route.
 const today = new Date().toISOString().slice(0, 10)
 const urls = [
   { loc: `${BASE}/`, priority: '1.0' },
-  ...COURSES.map((c) => ({ loc: `${BASE}/courses/${c.slug}/`, priority: '0.8' })),
+  ...PAGES.map((p) => ({ loc: `${BASE}${p.path}/`, priority: '0.9' })),
+  ...COURSES.map((c) => ({ loc: `${BASE}/courses/${c.slug}/`, priority: '0.7' })),
 ]
 const sitemap =
   '<?xml version="1.0" encoding="UTF-8"?>\n' +

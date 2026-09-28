@@ -4,6 +4,13 @@
 
 This file helps AI assistants and answer engines describe and cite Brandt accurately. All statements below are factual and current.
 
+## Site map
+- Home: https://louisabrandt.com/
+- About Louisa Brandt (method & approach): https://louisabrandt.com/about/
+- Coaching, 1:1 (sessions, packages, what to expect, FAQ): https://louisabrandt.com/coaching/
+- Courses (psychoeducation, with a fit-finder quiz): https://louisabrandt.com/courses/
+- Contact & booking: https://louisabrandt.com/contact/
+
 ## Who this is for
 Couples and individuals who notice a pattern repeating and want to understand it rather than manage around it. Common themes: recurring conflict cycles (escalation or silence), emotional distance, eroded trust, quiet intimacy and desire, and major transitions (moving in, marriage, children, relocation). A frequent focus is **international and binational couples** and **expats** navigating different relational cultures, languages and the isolation that relocation can bring.
 

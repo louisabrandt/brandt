@@ -1,0 +1,3 @@
+# Prerendered pages and static files are served first; anything else falls
+# back to the app shell so client-side routing can resolve it.
+/*    /index.html   200

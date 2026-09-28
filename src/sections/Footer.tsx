@@ -1,14 +1,6 @@
+import { Link } from 'react-router-dom'
 import { Asterisk } from 'lucide-react'
-
-const NAV = [
-  { label: 'About', href: '#about' },
-  { label: 'Approach', href: '#approach' },
-  { label: 'For Whom', href: '#for-whom' },
-  { label: 'Services', href: '#services' },
-  { label: 'Courses', href: '#courses' },
-  { label: 'FAQ', href: '#faq' },
-  { label: 'Contact', href: '#contact' },
-]
+import { NAV } from '../nav'
 
 export default function Footer() {
   return (
@@ -27,8 +19,8 @@ export default function Footer() {
               <Asterisk className="h-3 w-3 text-primary/70" strokeWidth={1.5} />
             </div>
             <p className="mt-3 text-primary/60 text-sm leading-[1.6] max-w-xs">
-              Relational coaching for couples and individuals. Online worldwide
-              online and in person in Paphos &amp; Vienna.
+              Relationship coaching for couples and individuals. Online worldwide,
+              and in person in Paphos &amp; Vienna.
             </p>
           </div>
 
@@ -39,13 +31,13 @@ export default function Footer() {
             </p>
             <ul className="space-y-2.5">
               {NAV.map((item) => (
-                <li key={item.label}>
-                  <a
-                    href={item.href}
+                <li key={item.to}>
+                  <Link
+                    to={item.to}
                     className="text-primary/75 hover:text-primary transition-colors text-sm"
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

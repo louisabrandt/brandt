@@ -1,17 +1,11 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
+import { Link, NavLink } from 'react-router-dom'
 import { ArrowRight, Asterisk } from 'lucide-react'
-
-const LINKS = [
-  { label: 'About', href: '#about' },
-  { label: 'Approach', href: '#approach' },
-  { label: 'Services', href: '#services' },
-  { label: 'Courses', href: '#courses' },
-  { label: 'FAQ', href: '#faq' },
-]
+import { NAV, BOOK_TO } from '../nav'
 
 /** Slim header that fades in once the hero is scrolled past — a persistent,
- *  calm CTA anchor. */
+ *  calm nav + CTA anchor for the immersive home page. */
 export default function StickyHeader() {
   const [show, setShow] = useState(false)
 
@@ -33,35 +27,37 @@ export default function StickyHeader() {
           className="fixed top-0 inset-x-0 z-50 bg-[#0a0a0a]/85 backdrop-blur-md border-b border-primary/10"
         >
           <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-10 lg:px-14 h-14 flex items-center justify-between gap-4">
-            <a
-              href="#"
+            <Link
+              to="/"
               className="flex items-center gap-0.5 text-primary text-lg font-medium tracking-[-0.04em]"
             >
               Brandt
               <Asterisk className="h-2.5 w-2.5 text-primary/70" strokeWidth={1.5} />
-            </a>
+            </Link>
 
             <nav className="hidden md:flex items-center gap-7 text-sm text-primary/70">
-              {LINKS.map((l) => (
-                <a
-                  key={l.label}
-                  href={l.href}
-                  className="hover:text-primary transition-colors"
+              {NAV.map((l) => (
+                <NavLink
+                  key={l.to}
+                  to={l.to}
+                  className={({ isActive }) =>
+                    isActive ? 'text-primary' : 'hover:text-primary transition-colors'
+                  }
                 >
                   {l.label}
-                </a>
+                </NavLink>
               ))}
             </nav>
 
-            <a
-              href="#contact"
+            <Link
+              to={BOOK_TO}
               className="group inline-flex items-center gap-1.5 hover:gap-2.5 transition-all duration-300 bg-[#B4552E] hover:bg-[#9E4826] rounded-full pl-4 pr-1 py-1 text-[#F3ECDE] font-medium text-xs sm:text-sm"
             >
               <span>Book a first conversation</span>
               <span className="flex items-center justify-center bg-[#7C3A1E] rounded-full w-7 h-7 transition-transform duration-300 group-hover:scale-110">
                 <ArrowRight className="w-3.5 h-3.5 text-[#F3ECDE]" strokeWidth={1.5} />
               </span>
-            </a>
+            </Link>
           </div>
         </motion.header>
       )}

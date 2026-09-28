@@ -180,8 +180,8 @@ export default function FitFinder() {
                       Prefer to work through this personally, and at your own
                       depth? Start with a calm, low-pressure first conversation.
                     </p>
-                    <a
-                      href="#contact"
+                    <Link
+                      to="/contact"
                       className="group mt-5 inline-flex items-center gap-1.5 text-sm text-primary/70 hover:text-primary transition-colors self-start"
                     >
                       <span>Book a first conversation</span>
@@ -189,7 +189,7 @@ export default function FitFinder() {
                         className="w-3.5 h-3.5 -rotate-45 transition-transform duration-300 group-hover:translate-x-0.5"
                         strokeWidth={1.5}
                       />
-                    </a>
+                    </Link>
                   </div>
                 </div>
 
