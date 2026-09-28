@@ -1,12 +1,13 @@
-// Build-time prerender: render the app to static HTML and inject it into
-// dist/index.html, so crawlers and AI/LLM agents get the full content without
-// executing JavaScript. The client then hydrates this markup.
-import { readFileSync, writeFileSync, rmSync } from 'node:fs'
+// Build-time prerender: render the homepage and each course detail route to its
+// own static HTML (with per-page title/meta/canonical/JSON-LD), so crawlers and
+// AI/LLM agents get every page's full content without executing JavaScript.
+// The client then hydrates whichever page was served.
+import { readFileSync, writeFileSync, mkdirSync, rmSync } from 'node:fs'
+
+const BASE = 'https://louisabrandt.com'
 
 const serverEntry = new URL('./dist-server/entry-server.js', import.meta.url)
-const { render } = await import(serverEntry.href)
-
-const appHtml = render()
+const { render, COURSES } = await import(serverEntry.href)
 
 const indexPath = new URL('./dist/index.html', import.meta.url)
 const template = readFileSync(indexPath, 'utf8')
@@ -15,13 +16,64 @@ if (!template.includes('<div id="root"></div>')) {
   throw new Error('prerender: could not find empty #root in dist/index.html')
 }
 
-const html = template.replace(
-  '<div id="root"></div>',
-  `<div id="root">${appHtml}</div>`,
-)
-writeFileSync(indexPath, html)
+const inject = (html, app) =>
+  html.replace('<div id="root"></div>', () => `<div id="root">${app}</div>`)
 
-// Clean up the intermediate SSR bundle.
+const esc = (s) =>
+  String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+
+// Replace a whole tag (whitespace/format tolerant, no `>` inside the tag).
+const swap = (html, regex, replacement) => html.replace(regex, () => replacement)
+
+// 1) Homepage — keep its rich head as built; just inject the rendered app.
+writeFileSync(indexPath, inject(template, render('/')))
+console.log('Prerendered /')
+
+// 2) Course detail pages.
+for (const c of COURSES) {
+  const url = `/courses/${c.slug}`
+  const canonical = `${BASE}${url}/`
+  const title = `${c.title} — a Brandt course`
+  const desc = c.description
+
+  const jsonld = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name: c.title,
+    description: c.description,
+    about: c.tag,
+    url: canonical,
+    inLanguage: ['en', 'de'],
+    provider: { '@type': 'Person', name: 'Louisa Brandt', url: `${BASE}/` },
+    offers: {
+      '@type': 'Offer',
+      category: 'Online course',
+      availability: 'https://schema.org/PreOrder',
+    },
+  })
+
+  let html = template
+  html = swap(html, /<title>[\s\S]*?<\/title>/, `<title>${esc(title)}</title>`)
+  html = swap(html, /<meta\s+name="description"[^>]*>/, `<meta name="description" content="${esc(desc)}" />`)
+  html = swap(html, /<link\s+rel="canonical"[^>]*>/, `<link rel="canonical" href="${canonical}" />`)
+  html = swap(html, /<meta\s+property="og:url"[^>]*>/, `<meta property="og:url" content="${canonical}" />`)
+  html = swap(html, /<meta\s+property="og:title"[^>]*>/, `<meta property="og:title" content="${esc(title)}" />`)
+  html = swap(html, /<meta\s+property="og:description"[^>]*>/, `<meta property="og:description" content="${esc(desc)}" />`)
+  html = swap(html, /<meta\s+name="twitter:title"[^>]*>/, `<meta name="twitter:title" content="${esc(title)}" />`)
+  html = swap(html, /<meta\s+name="twitter:description"[^>]*>/, `<meta name="twitter:description" content="${esc(desc)}" />`)
+  html = swap(html, /<script type="application\/ld\+json">[\s\S]*?<\/script>/, `<script type="application/ld+json">${jsonld}</script>`)
+
+  html = inject(html, render(url))
+
+  const dir = new URL(`./dist/courses/${c.slug}/`, import.meta.url)
+  mkdirSync(dir, { recursive: true })
+  writeFileSync(new URL('index.html', dir), html)
+  console.log(`Prerendered ${url}`)
+}
+
 rmSync(new URL('./dist-server', import.meta.url), { recursive: true, force: true })
-
-console.log(`Prerendered dist/index.html (${appHtml.length} chars of static markup).`)
+console.log('Prerender complete.')

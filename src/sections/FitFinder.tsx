@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import { ArrowRight, Check } from 'lucide-react'
 import SectionLabel from '../components/SectionLabel'
 import { TEXT_COLOR } from '../constants'
@@ -156,15 +157,15 @@ export default function FitFinder() {
                     <p className="mt-2 text-primary/75 text-sm leading-[1.6] flex-1">
                       {course.description}
                     </p>
-                    <a
-                      href="#courses"
+                    <Link
+                      to={`/courses/${course.slug}`}
                       className="group mt-5 inline-flex items-center gap-2 hover:gap-3 transition-all duration-300 bg-primary rounded-full pl-5 pr-1.5 py-1.5 text-black font-medium text-sm self-start"
                     >
-                      <span>Join the waitlist</span>
+                      <span>Explore the course</span>
                       <span className="flex items-center justify-center bg-black rounded-full w-9 h-9 transition-transform duration-300 group-hover:scale-110">
                         <ArrowRight className="w-4 h-4" strokeWidth={1.5} style={{ color: TEXT_COLOR }} />
                       </span>
-                    </a>
+                    </Link>
                   </div>
 
                   {/* Optional 1:1 */}

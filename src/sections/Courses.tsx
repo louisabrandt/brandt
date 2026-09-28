@@ -1,124 +1,13 @@
-import { useState, type FormEvent } from 'react'
 import { motion } from 'framer-motion'
-import { ArrowRight, Asterisk, Check } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { ArrowUpRight, Asterisk } from 'lucide-react'
 import SectionLabel from '../components/SectionLabel'
 import Reveal from '../components/Reveal'
+import Waitlist from '../components/Waitlist'
 import { TEXT_COLOR } from '../constants'
 import { COURSES } from '../courses'
 
-const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-
-const encode = (data: Record<string, string>) =>
-  Object.keys(data)
-    .map((k) => encodeURIComponent(k) + '=' + encodeURIComponent(data[k]))
-    .join('&')
-
 const EASE = [0.16, 1, 0.3, 1] as const
-
-const FIELD_CLASS =
-  'w-full bg-transparent border-b border-primary/20 px-0 py-3 text-primary placeholder:text-primary/40 text-sm focus:outline-none focus:border-primary/50 transition-colors'
-
-function Waitlist() {
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [error, setError] = useState('')
-  const [submitting, setSubmitting] = useState(false)
-  const [submitted, setSubmitted] = useState(false)
-
-  async function handleSubmit(e: FormEvent) {
-    e.preventDefault()
-    if (!EMAIL_RE.test(email)) {
-      setError('Please enter a valid email address.')
-      return
-    }
-    setError('')
-    setSubmitting(true)
-    try {
-      await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode({ 'form-name': 'waitlist', name, email }),
-      })
-      setSubmitted(true)
-    } catch {
-      setError('Something went wrong. Please email lb@louisabrandt.com.')
-    } finally {
-      setSubmitting(false)
-    }
-  }
-
-  if (submitted) {
-    return (
-      <div className="flex flex-col items-start gap-3 py-2">
-        <span className="flex items-center justify-center h-10 w-10 rounded-full bg-primary/10">
-          <Check className="h-4 w-4 text-primary" strokeWidth={1.5} />
-        </span>
-        <h3 className="text-primary text-lg font-normal">You&apos;re on the list.</h3>
-        <p className="text-primary/70 text-sm leading-[1.6] max-w-md">
-          I&apos;ll be in touch when the next cohort opens — just the date and how
-          to join.
-        </p>
-      </div>
-    )
-  }
-
-  return (
-    <form
-      name="waitlist"
-      method="POST"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
-      onSubmit={handleSubmit}
-      className="flex flex-col gap-4"
-    >
-      <input type="hidden" name="form-name" value="waitlist" />
-      <p className="hidden">
-        <label>
-          Don&apos;t fill this out: <input name="bot-field" />
-        </label>
-      </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <input
-          className={FIELD_CLASS}
-          name="name"
-          placeholder="First name (optional)"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          aria-label="First name"
-        />
-        <input
-          type="email"
-          className={FIELD_CLASS}
-          name="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-          aria-label="Email"
-        />
-      </div>
-      {error && (
-        <p className="text-primary/70 text-xs" role="alert">
-          {error}
-        </p>
-      )}
-      <button
-        type="submit"
-        disabled={submitting}
-        className="group mt-1 inline-flex items-center gap-2 hover:gap-3 transition-all duration-300 bg-primary rounded-full pl-5 pr-1.5 py-1.5 text-black font-medium text-sm sm:text-base self-start disabled:opacity-60"
-      >
-        <span>{submitting ? 'Joining…' : 'Join the waitlist'}</span>
-        <span className="flex items-center justify-center bg-black rounded-full w-9 h-9 sm:w-10 sm:h-10 transition-transform duration-300 group-hover:scale-110">
-          <ArrowRight
-            className="w-4 h-4 sm:w-5 sm:h-5"
-            strokeWidth={1.5}
-            style={{ color: TEXT_COLOR }}
-          />
-        </span>
-      </button>
-    </form>
-  )
-}
 
 export default function Courses() {
   return (
@@ -145,33 +34,41 @@ export default function Courses() {
 
         <p className="mt-6 max-w-2xl text-sm md:text-[15px] leading-[1.6] text-primary/70">
           Focused, evidence-based courses on the dynamics that shape
-          relationships — taught in small cohorts, so you can understand your
-          patterns and practise responding differently, alongside others walking
-          the same path.
+          relationships — so you can understand your patterns and practise
+          responding differently. Every course is bookable for individuals or
+          couples, online.
         </p>
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
           {COURSES.map((course, i) => (
-            <Reveal
-              key={course.key}
-              index={i}
-              className="rounded-2xl bg-[#101010] p-6 flex flex-col min-h-[200px]"
-            >
-              <div className="flex items-center justify-between gap-2">
-                <Asterisk className="h-4 w-4 text-primary/70" strokeWidth={1.5} />
-                <span className="text-primary/45 text-[10px] uppercase tracking-[0.16em] text-right">
-                  {course.tag}
-                </span>
-              </div>
-              <h3
-                className="mt-5 text-lg font-medium"
-                style={{ color: TEXT_COLOR }}
+            <Reveal key={course.key} index={i}>
+              <Link
+                to={`/courses/${course.slug}`}
+                className="group h-full rounded-2xl bg-[#101010] p-6 flex flex-col min-h-[200px] hover:bg-[#141414] transition-colors"
               >
-                {course.title}
-              </h3>
-              <p className="mt-2 text-primary/70 text-[13px] sm:text-sm leading-[1.55]">
-                {course.description}
-              </p>
+                <div className="flex items-center justify-between gap-2">
+                  <Asterisk className="h-4 w-4 text-primary/70" strokeWidth={1.5} />
+                  <span className="text-primary/45 text-[10px] uppercase tracking-[0.16em] text-right">
+                    {course.tag}
+                  </span>
+                </div>
+                <h3
+                  className="mt-5 text-lg font-medium"
+                  style={{ color: TEXT_COLOR }}
+                >
+                  {course.title}
+                </h3>
+                <p className="mt-2 text-primary/70 text-[13px] sm:text-sm leading-[1.55] flex-1">
+                  {course.description}
+                </p>
+                <span className="mt-4 inline-flex items-center gap-1.5 text-xs text-primary/60 group-hover:text-primary transition-colors">
+                  Explore the course
+                  <ArrowUpRight
+                    className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                    strokeWidth={1.5}
+                  />
+                </span>
+              </Link>
             </Reveal>
           ))}
         </div>
@@ -187,8 +84,8 @@ export default function Courses() {
                 Join the waitlist
               </h3>
               <p className="mt-3 text-primary/70 text-sm sm:text-[15px] leading-[1.6] max-w-md">
-                Courses run in small cohorts. Add your email to hear when the next
-                one opens — no spam, just the date and how to join.
+                Add your email to hear when the next course opens — no spam,
+                just the date and how to start, for individuals or couples.
               </p>
             </div>
             <Waitlist />
