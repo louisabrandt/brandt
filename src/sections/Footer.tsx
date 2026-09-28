@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { NAV } from '../nav'
 import { useLang } from '../i18n/lang'
 import { useContent } from '../i18n/content'
+import NewsletterSignup from '../components/NewsletterSignup'
 
 export default function Footer() {
   const { l } = useLang()
@@ -9,6 +10,17 @@ export default function Footer() {
   return (
     <footer className="bg-[#0a0a0a] border-t border-white/10 px-4 sm:px-6 md:px-10 lg:px-14 py-14 sm:py-16">
       <div className="max-w-6xl mx-auto">
+        {/* Newsletter / stay in touch (also the waitlist for group formats) */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-center pb-12 mb-12 border-b border-white/10">
+          <div>
+            <p className="text-primary text-lg font-medium">{c.newsletter.heading}</p>
+            <p className="mt-2 text-primary/60 text-sm leading-[1.6] max-w-md">{c.newsletter.text}</p>
+          </div>
+          <div className="lg:justify-self-end w-full lg:max-w-sm">
+            <NewsletterSignup />
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           {/* Brand */}
           <div className="lg:col-span-1">
