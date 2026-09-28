@@ -73,18 +73,31 @@ export default function ForWhom() {
           <p className="text-primary/60 text-[11px] sm:text-xs uppercase tracking-[0.22em] mb-5">
             For internationals &amp; expats
           </p>
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-4 lg:gap-10 items-start">
-            <h3 className="text-primary text-xl sm:text-2xl font-normal leading-snug">
-              Relationships abroad carry their own weight.
-            </h3>
-            <p className="text-primary/70 text-sm sm:text-[15px] leading-[1.6]">
-              Binational and international couples navigate different relational
-              cultures, languages, and expectations. Relocation can isolate a
-              couple from the friends, family and routines that once held them —
-              and place all that weight on the relationship itself. This is a
-              frequent focus of the work, and a reason many international couples
-              reach out.
-            </p>
+          <div className="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-6 lg:gap-10 items-center">
+            <div
+              className="relative overflow-hidden rounded-xl aspect-[16/10]"
+              style={{ backgroundColor: '#fef3c1' }}
+            >
+              <img
+                src="/illustrations/forwhom-distance.webp"
+                alt="Two figures connected by a thread across a distance"
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-contain"
+              />
+            </div>
+            <div>
+              <h3 className="text-primary text-xl sm:text-2xl font-normal leading-snug">
+                Relationships abroad carry their own weight.
+              </h3>
+              <p className="mt-4 text-primary/70 text-sm sm:text-[15px] leading-[1.6]">
+                Binational and international couples navigate different relational
+                cultures, languages, and expectations. Relocation can isolate a
+                couple from the friends, family and routines that once held them —
+                and place all that weight on the relationship itself. This is a
+                frequent focus of the work, and a reason many international couples
+                reach out.
+              </p>
+            </div>
           </div>
         </Reveal>
       </div>

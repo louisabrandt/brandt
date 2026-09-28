@@ -48,13 +48,26 @@ export default function WhatChanges() {
           ))}
         </div>
 
-        <p className="mt-10 max-w-3xl text-lg sm:text-xl md:text-2xl font-normal text-primary/85 leading-[1.4]">
-          Relationships stop running on old, automatic scripts — and start being
-          shaped by{' '}
-          <span className="font-serif italic">
-            awareness, choice, and shared responsibility.
-          </span>
-        </p>
+        <div className="mt-10 grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-8 lg:gap-12 items-center">
+          <p className="max-w-2xl text-lg sm:text-xl md:text-2xl font-normal text-primary/85 leading-[1.4]">
+            Relationships stop running on old, automatic scripts — and start being
+            shaped by{' '}
+            <span className="font-serif italic">
+              awareness, choice, and shared responsibility.
+            </span>
+          </p>
+          <div
+            className="relative overflow-hidden rounded-2xl aspect-[16/9] ring-1 ring-primary/10"
+            style={{ backgroundColor: '#f2b79e' }}
+          >
+            <img
+              src="/illustrations/whatchanges-resolve.webp"
+              alt="A tangled thread resolving into a smooth, ordered line"
+              loading="lazy"
+              className="absolute inset-0 h-full w-full object-contain"
+            />
+          </div>
+        </div>
       </div>
     </section>
   )

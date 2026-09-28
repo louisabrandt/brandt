@@ -7,6 +7,8 @@ interface Step {
   number: string
   title: string
   description: string
+  image: string
+  accent: string
 }
 
 const STEPS: Step[] = [
@@ -15,18 +17,24 @@ const STEPS: Step[] = [
     title: 'Book an initial consultation',
     description:
       'A low-pressure first conversation to understand your situation and see whether this work fits — with no obligation to continue.',
+    image: '/illustrations/how-01-consultation.webp',
+    accent: '#807e4d',
   },
   {
     number: '02',
     title: 'We make the patterns visible',
     description:
       'Together we map how you each respond in closeness, conflict and intimacy — building one honest, shared picture of what is really happening.',
+    image: '/illustrations/how-02-patterns.webp',
+    accent: '#e4a031',
   },
   {
     number: '03',
     title: 'Structured, ongoing work',
     description:
       'Concrete tools and steps, at a pace that works for both of you — turning insight into choice, and repetition into lasting change.',
+    image: '/illustrations/how-03-work.webp',
+    accent: '#d16535',
   },
 ]
 
@@ -50,30 +58,41 @@ export default function HowItWorks() {
             <Reveal
               key={step.number}
               index={i}
-              className="rounded-2xl bg-[#101010] p-6 md:p-8 flex flex-col min-h-[220px]"
+              className="rounded-2xl bg-[#101010] overflow-hidden flex flex-col"
             >
-              <div className="flex items-center justify-between">
+              <div
+                className="relative aspect-[16/10] overflow-hidden"
+                style={{ backgroundColor: step.accent }}
+              >
+                <img
+                  src={step.image}
+                  alt=""
+                  loading="lazy"
+                  className="absolute inset-0 h-full w-full object-contain"
+                />
                 <span
-                  className="text-4xl sm:text-5xl font-light tracking-tight text-primary/25 tabular-nums"
+                  className="absolute top-4 left-5 text-4xl sm:text-5xl font-light tracking-tight text-[#0a0a0a]/35 tabular-nums"
                   aria-hidden="true"
                 >
                   {step.number}
                 </span>
+              </div>
+
+              <div className="p-6 md:p-8 flex flex-col flex-1">
                 <Asterisk
                   className="h-4 w-4 text-primary/60"
                   strokeWidth={1.5}
                 />
+                <h3
+                  className="mt-5 text-lg font-medium leading-snug"
+                  style={{ color: TEXT_COLOR }}
+                >
+                  {step.title}
+                </h3>
+                <p className="mt-3 text-primary/70 text-sm leading-[1.6] flex-1">
+                  {step.description}
+                </p>
               </div>
-
-              <h3
-                className="mt-6 text-lg font-medium leading-snug"
-                style={{ color: TEXT_COLOR }}
-              >
-                {step.title}
-              </h3>
-              <p className="mt-3 text-primary/70 text-sm leading-[1.6] flex-1">
-                {step.description}
-              </p>
             </Reveal>
           ))}
         </div>
