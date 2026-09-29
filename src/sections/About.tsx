@@ -37,6 +37,17 @@ export default function About() {
           <WordsPullUpMultiStyle segments={headingSegments} />
         </div>
 
+        {/* Portrait */}
+        <motion.img
+          src="/louisa.webp"
+          alt="Louisa Brandt"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.8, ease: EASE }}
+          className="mt-10 sm:mt-14 w-full rounded-2xl object-cover ring-1 ring-[#23201a]/10"
+        />
+
         {/* Lead — scroll-linked character reveal */}
         <p
           ref={leadRef}
