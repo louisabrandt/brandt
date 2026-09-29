@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { ArrowRight, Menu, X } from 'lucide-react'
-import { NAV, BOOK_TO } from '../nav'
+import { NAV } from '../nav'
 import { useLang } from '../i18n/lang'
 import { useContent } from '../i18n/content'
 import LangSwitch from './LangSwitch'
+import BookLink from './BookLink'
 
 /** Persistent top navigation for the sub-pages (solid dark bar). */
 export default function SiteHeader() {
@@ -43,15 +44,12 @@ export default function SiteHeader() {
 
         <div className="flex items-center gap-4">
           <LangSwitch />
-          <Link
-            to={l(BOOK_TO)}
-            className="group hidden sm:inline-flex items-center gap-1.5 hover:gap-2.5 transition-all duration-300 bg-[#B4552E] hover:bg-[#9E4826] rounded-full pl-4 pr-1 py-1 text-[#F3ECDE] font-medium text-xs sm:text-sm"
-          >
+          <BookLink className="group hidden sm:inline-flex items-center gap-1.5 hover:gap-2.5 transition-all duration-300 bg-[#B4552E] hover:bg-[#9E4826] rounded-full pl-4 pr-1 py-1 text-[#F3ECDE] font-medium text-xs sm:text-sm">
             <span>{c.nav.book}</span>
             <span className="flex items-center justify-center bg-[#7C3A1E] rounded-full w-7 h-7 transition-transform duration-300 group-hover:scale-110">
               <ArrowRight className="w-3.5 h-3.5 text-[#F3ECDE]" strokeWidth={1.5} />
             </span>
-          </Link>
+          </BookLink>
 
           <button
             onClick={() => setOpen((v) => !v)}
@@ -80,14 +78,13 @@ export default function SiteHeader() {
                 {label(n.key)}
               </NavLink>
             ))}
-            <Link
-              to={l(BOOK_TO)}
+            <BookLink
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex items-center gap-2 bg-[#B4552E] rounded-full px-5 py-2.5 text-[#F3ECDE] font-medium text-sm self-start"
             >
               {c.nav.book}
               <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
-            </Link>
+            </BookLink>
           </nav>
         </div>
       )}

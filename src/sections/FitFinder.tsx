@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { ArrowRight, ArrowUpRight } from 'lucide-react'
 import SectionLabel from '../components/SectionLabel'
+import BookLink from '../components/BookLink'
 import { TEXT_COLOR } from '../constants'
 import { COURSES, courseBySlug, courseText } from '../courses'
 import { useLang } from '../i18n/lang'
@@ -177,16 +178,13 @@ export default function FitFinder() {
                     </span>
                     <h3 className="mt-5 text-lg sm:text-xl font-medium text-primary/70">{c.fit.oneToOneTitle}</h3>
                     <p className="mt-2 text-primary/55 text-sm leading-[1.6] flex-1">{c.fit.oneToOneText}</p>
-                    <Link
-                      to={l('/contact')}
-                      className="group mt-5 inline-flex items-center gap-1.5 text-sm text-primary/70 hover:text-primary transition-colors self-start"
-                    >
+                    <BookLink className="group mt-5 inline-flex items-center gap-1.5 text-sm text-primary/70 hover:text-primary transition-colors self-start">
                       <span>{c.fit.oneToOneCta}</span>
                       <ArrowRight
                         className="w-3.5 h-3.5 -rotate-45 transition-transform duration-300 group-hover:translate-x-0.5"
                         strokeWidth={1.5}
                       />
-                    </Link>
+                    </BookLink>
                   </div>
                 </div>
 

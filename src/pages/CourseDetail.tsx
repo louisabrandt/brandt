@@ -3,6 +3,7 @@ import { ArrowRight, ArrowUpRight, Check } from 'lucide-react'
 import Footer from '../sections/Footer'
 import LangSwitch from '../components/LangSwitch'
 import { COURSES, courseBySlug, courseIllustration, courseText } from '../courses'
+import { BOOKING, hasUrl } from '../booking'
 import { useLang } from '../i18n/lang'
 import { useContent } from '../i18n/content'
 
@@ -111,15 +112,50 @@ export default function CourseDetail() {
             <span className="text-primary text-2xl font-medium">{c.courseMeta.couple}</span>
           </div>
           <p className="mt-2 text-primary/60 text-sm">{c.courseMeta.format}</p>
-          <Link
-            to={`${l('/contact')}?kurs=${encodeURIComponent(t.title)}`}
-            className="group mt-6 inline-flex items-center gap-2 hover:gap-3 transition-all duration-300 bg-[#B4552E] hover:bg-[#9E4826] rounded-full pl-5 pr-1.5 py-1.5 text-[#F3ECDE] font-medium text-sm self-start"
-          >
-            <span>{c.courseMeta.book}</span>
-            <span className="flex items-center justify-center bg-[#7C3A1E] rounded-full w-9 h-9 transition-transform duration-300 group-hover:scale-110">
-              <ArrowRight className="w-4 h-4 text-[#F3ECDE]" strokeWidth={1.5} />
-            </span>
-          </Link>
+
+          {(() => {
+            const fallback = `${l('/contact')}?kurs=${encodeURIComponent(t.title)}`
+            const pill =
+              'group inline-flex items-center gap-2 hover:gap-3 transition-all duration-300 rounded-full pl-5 pr-1.5 py-1.5 font-medium text-sm'
+            const circle =
+              'flex items-center justify-center rounded-full w-9 h-9 transition-transform duration-300 group-hover:scale-110'
+            const btn = (url: string, label: string, filled: boolean) => {
+              const external = hasUrl(url)
+              const href = external ? url : fallback
+              const cls = filled
+                ? `${pill} bg-[#B4552E] hover:bg-[#9E4826] text-[#F3ECDE]`
+                : `${pill} border border-primary/25 text-primary hover:bg-primary/[0.08] pr-5`
+              const inner = (
+                <>
+                  <span>{label}</span>
+                  {filled && (
+                    <span className={`${circle} bg-[#7C3A1E]`}>
+                      <ArrowRight className="w-4 h-4 text-[#F3ECDE]" strokeWidth={1.5} />
+                    </span>
+                  )}
+                </>
+              )
+              return external ? (
+                <a href={href} target="_blank" rel="noopener noreferrer" className={cls}>
+                  {inner}
+                </a>
+              ) : (
+                <Link to={href} className={cls}>
+                  {inner}
+                </Link>
+              )
+            }
+            return (
+              <div className="mt-6 flex flex-col sm:flex-row gap-3">
+                {btn(BOOKING.courseIndividual, c.courseMeta.bookIndividual, true)}
+                {btn(BOOKING.courseCouple, c.courseMeta.bookCouple, false)}
+              </div>
+            )
+          })()}
+
+          {(hasUrl(BOOKING.courseIndividual) || hasUrl(BOOKING.courseCouple)) && (
+            <p className="mt-3 text-primary/50 text-[11px]">{c.courseMeta.bookingInfo}</p>
+          )}
           <p className="mt-3 text-primary/40 text-[11px]">{c.courseMeta.vat}</p>
         </div>
 
