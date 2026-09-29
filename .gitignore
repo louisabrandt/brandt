@@ -4,3 +4,6 @@ dist-server
 .tooling
 *.local
 .DS_Store
+
+# Legal drafts (not for publishing)
+legal-ENTWURF-*.md
