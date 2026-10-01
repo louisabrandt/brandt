@@ -10,9 +10,9 @@
  *  - courseCouple:     60-min themed course, couple       (Stripe, 140 €)
  */
 export const BOOKING = {
-  intro: '',
-  courseIndividual: '',
-  courseCouple: '',
+  intro: 'https://cal.com/louisabrandt/kennenlernen',
+  courseIndividual: 'https://cal.com/louisabrandt/kurs-einzel',
+  courseCouple: 'https://cal.com/louisabrandt/kurs-paar',
 }
 
 export const hasUrl = (u: string) => u.trim().length > 0

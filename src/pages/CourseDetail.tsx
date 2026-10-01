@@ -121,7 +121,9 @@ export default function CourseDetail() {
               'flex items-center justify-center rounded-full w-9 h-9 transition-transform duration-300 group-hover:scale-110'
             const btn = (url: string, label: string, filled: boolean) => {
               const external = hasUrl(url)
-              const href = external ? url : fallback
+              const href = external
+                ? `${url}?thema=${encodeURIComponent(t.title)}`
+                : fallback
               const cls = filled
                 ? `${pill} bg-[#B4552E] hover:bg-[#9E4826] text-[#F3ECDE]`
                 : `${pill} border border-primary/25 text-primary hover:bg-primary/[0.08] pr-5`
