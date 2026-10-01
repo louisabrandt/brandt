@@ -216,7 +216,7 @@ export const en = {
       { number: '04', title: 'Groups & Workshops', tagline: 'Guided group formats', description: 'Facilitated work in small, curated groups around one relational theme. Available for groups and organizations on request.', meta: 'on request', price: 'On request' },
     ],
     pricing: ['60 min · €170', '90 min · €240', '120 min · €320'],
-    pricingNote: 'Guide prices per session. A note on VAT will follow.',
+    pricingNote: 'Final prices per session. As a small business under §19 of the German VAT Act, no VAT is charged.',
     priceLabel: 'Per session',
     cta: 'Book a free intro call',
     trust: 'Confidential from the very first message.',
@@ -309,7 +309,7 @@ export const en = {
     bookIndividual: 'Book as an individual',
     bookCouple: 'Book as a couple',
     bookingInfo: 'Pay securely online. Free rescheduling up to 24 h before the session.',
-    vat: 'Guide prices · a VAT note will follow.',
+    vat: 'Final prices · no VAT (small-business scheme, §19 German VAT Act).',
     bookableNote: 'Every course is bookable on its own, for individuals or couples. Afterwards you decide whether to go deeper in coaching.',
     upsell: 'Want to keep going after the course? We can continue in ',
     upsellLink: 'one-to-one coaching',
@@ -423,6 +423,7 @@ export const en = {
     rights: '© 2026 Louisa Brandt. All rights reserved.',
     imprint: 'Impressum',
     privacy: 'Datenschutz',
+    terms: 'AGB',
   },
 }
 
@@ -639,7 +640,7 @@ export const de: Content = {
       { number: '04', title: 'Gruppen & Workshops', tagline: 'Begleitete Formate', description: 'Begleitete Arbeit in kleinen, kuratierten Gruppen zu einem Beziehungsthema. Auf Anfrage auch für Organisationen.', meta: 'auf Anfrage', price: 'auf Anfrage' },
     ],
     pricing: ['60 Min. · 170 €', '90 Min. · 240 €', '120 Min. · 320 €'],
-    pricingNote: 'Richtpreise pro Sitzung. Ein Hinweis zur Umsatzsteuer folgt.',
+    pricingNote: 'Endpreise pro Sitzung. Als Kleinunternehmerin nach §19 UStG wird keine Umsatzsteuer ausgewiesen.',
     priceLabel: 'Pro Sitzung',
     cta: 'Kostenloses Erstgespräch buchen',
     trust: 'Vertraulich ab der allerersten Nachricht.',
@@ -732,7 +733,7 @@ export const de: Content = {
     bookIndividual: 'Als Einzelperson buchen',
     bookCouple: 'Als Paar buchen',
     bookingInfo: 'Sichere Online-Zahlung. Kostenlose Umbuchung bis 24 Std. vor dem Termin.',
-    vat: 'Richtpreise · Hinweis zur USt. folgt.',
+    vat: 'Endpreise · keine USt. (Kleinunternehmerin nach §19 UStG).',
     bookableNote: 'Jeder Kurs ist einzeln buchbar, für Einzelne oder Paare. Danach entscheidet ihr, ob ihr mit mir vertiefen möchtet.',
     upsell: 'Nach dem Kurs weitergehen? Wir können im ',
     upsellLink: 'Einzelcoaching',
@@ -846,6 +847,7 @@ export const de: Content = {
     rights: '© 2026 Louisa Brandt. Alle Rechte vorbehalten.',
     imprint: 'Impressum',
     privacy: 'Datenschutz',
+    terms: 'AGB',
   },
 }
 

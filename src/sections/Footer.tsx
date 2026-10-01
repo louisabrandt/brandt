@@ -75,6 +75,9 @@ export default function Footer() {
             <a href="/datenschutz" className="hover:text-primary/70 transition-colors">
               {c.footer.privacy}
             </a>
+            <a href="/agb" className="hover:text-primary/70 transition-colors">
+              {c.footer.terms}
+            </a>
           </div>
         </div>
       </div>
