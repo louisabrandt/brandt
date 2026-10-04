@@ -4,6 +4,7 @@ import Footer from '../sections/Footer'
 import LangSwitch from '../components/LangSwitch'
 import { COURSES, courseBySlug, courseIllustration, courseText } from '../courses'
 import { BOOKING, hasUrl } from '../booking'
+import { trackEvent } from '../analytics'
 import { useLang } from '../i18n/lang'
 import { useContent } from '../i18n/content'
 
@@ -119,7 +120,7 @@ export default function CourseDetail() {
               'group inline-flex items-center gap-2 hover:gap-3 transition-all duration-300 rounded-full pl-5 pr-1.5 py-1.5 font-medium text-sm'
             const circle =
               'flex items-center justify-center rounded-full w-9 h-9 transition-transform duration-300 group-hover:scale-110'
-            const btn = (url: string, label: string, filled: boolean) => {
+            const btn = (url: string, label: string, filled: boolean, ev: string) => {
               const external = hasUrl(url)
               const href = external
                 ? `${url}?thema=${encodeURIComponent(t.title)}`
@@ -138,19 +139,25 @@ export default function CourseDetail() {
                 </>
               )
               return external ? (
-                <a href={href} target="_blank" rel="noopener noreferrer" className={cls}>
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={cls}
+                  onClick={() => trackEvent(ev)}
+                >
                   {inner}
                 </a>
               ) : (
-                <Link to={href} className={cls}>
+                <Link to={href} className={cls} onClick={() => trackEvent(ev)}>
                   {inner}
                 </Link>
               )
             }
             return (
               <div className="mt-6 flex flex-col sm:flex-row gap-3">
-                {btn(BOOKING.courseIndividual, c.courseMeta.bookIndividual, true)}
-                {btn(BOOKING.courseCouple, c.courseMeta.bookCouple, false)}
+                {btn(BOOKING.courseIndividual, c.courseMeta.bookIndividual, true, 'book: course individual')}
+                {btn(BOOKING.courseCouple, c.courseMeta.bookCouple, false, 'book: course couple')}
               </div>
             )
           })()}

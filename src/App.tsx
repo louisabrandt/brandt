@@ -2,6 +2,7 @@ import { MotionConfig } from 'framer-motion'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { LanguageProvider } from './i18n/lang'
 import ScrollToTop from './components/ScrollToTop'
+import Analytics from './components/Analytics'
 import Home from './pages/Home'
 import AboutPage from './pages/About'
 import Coaching from './pages/Coaching'
@@ -14,6 +15,7 @@ export default function App() {
     <LanguageProvider>
       <MotionConfig reducedMotion="user">
         <ScrollToTop />
+        <Analytics />
         <Routes>
           {/* German (default) */}
           <Route path="/" element={<Home />} />

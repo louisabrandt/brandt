@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import { BOOK_TO } from '../nav'
 import { BOOKING, hasUrl } from '../booking'
+import { trackEvent } from '../analytics'
 import { useLang } from '../i18n/lang'
 import { useContent } from '../i18n/content'
 
@@ -31,11 +32,17 @@ export default function PrimaryCTA({ label, to = BOOK_TO, className = '' }: Prim
     </>
   )
   return external ? (
-    <a href={BOOKING.intro} target="_blank" rel="noopener noreferrer" className={cls}>
+    <a
+      href={BOOKING.intro}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={cls}
+      onClick={() => trackEvent('book: intro call')}
+    >
       {inner}
     </a>
   ) : (
-    <Link to={l(to)} className={cls}>
+    <Link to={l(to)} className={cls} onClick={() => trackEvent('cta: contact')}>
       {inner}
     </Link>
   )
