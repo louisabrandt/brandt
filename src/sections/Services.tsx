@@ -17,9 +17,9 @@ interface Offering {
 
 function OfferingBody({ offering, tone }: { offering: Offering; tone: 'dark' | 'paper' }) {
   const title = tone === 'paper' ? 'text-[#23201a]' : ''
-  const tagline = tone === 'paper' ? 'text-[#23201a]/60' : 'text-primary/60'
+  const tagline = tone === 'paper' ? 'text-[#23201a]/65' : 'text-primary/60'
   const desc = tone === 'paper' ? 'text-[#23201a]/75' : 'text-primary/70'
-  const meta = tone === 'paper' ? 'text-[#23201a]/45' : 'text-primary/45'
+  const meta = tone === 'paper' ? 'text-[#23201a]/65' : 'text-primary/55'
   const price = tone === 'paper' ? 'text-[#23201a]' : 'text-primary'
   return (
     <>
@@ -45,7 +45,7 @@ export default function Services() {
   const c = useContent()
   const header: Segment[] = [
     { text: c.services.head1, className: 'text-[#23201a]' },
-    { text: c.services.head2, className: 'text-[#23201a]/45' },
+    { text: c.services.head2, className: 'text-[#23201a]/65' },
   ]
 
   return (
@@ -92,7 +92,7 @@ export default function Services() {
 
             <div className="mt-6 flex flex-col gap-2">
               <PrimaryCTA label={c.services.cta} />
-              <span className="text-primary/45 text-[11px]">{c.services.trust}</span>
+              <span className="text-primary/55 text-[11px]">{c.services.trust}</span>
             </div>
           </Reveal>
 
@@ -103,7 +103,7 @@ export default function Services() {
               index={i + 1}
               className="rounded-2xl bg-[#f5f0e6] border border-[#23201a]/8 p-6 flex flex-col min-h-[240px]"
             >
-              <span className="text-[#23201a]/40 text-xs tabular-nums">{o.number}</span>
+              <span className="text-[#23201a]/65 text-xs tabular-nums">{o.number}</span>
               <div className="mt-3 flex flex-col flex-1">
                 <OfferingBody offering={o} tone="paper" />
               </div>
@@ -114,7 +114,7 @@ export default function Services() {
         {/* Price reference + VAT note */}
         <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
           <div className="flex flex-wrap items-center gap-3">
-            <span className="text-[#23201a]/45 text-[11px] uppercase tracking-[0.18em]">
+            <span className="text-[#23201a]/65 text-[11px] uppercase tracking-[0.18em]">
               {c.services.priceLabel}
             </span>
             {c.services.pricing.map((p) => (
@@ -126,7 +126,7 @@ export default function Services() {
               </span>
             ))}
           </div>
-          <p className="text-[#23201a]/45 text-xs">{c.services.pricingNote}</p>
+          <p className="text-[#23201a]/65 text-xs">{c.services.pricingNote}</p>
         </div>
       </div>
     </section>

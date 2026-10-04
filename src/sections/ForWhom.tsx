@@ -32,7 +32,7 @@ export default function ForWhom() {
 
           {/* Right — common themes list */}
           <div className="lg:col-span-7">
-            <p className="text-[#23201a]/50 text-[11px] uppercase tracking-[0.22em] mb-2">
+            <p className="text-[#23201a]/65 text-[11px] uppercase tracking-[0.22em] mb-2">
               {c.forWhom.themesLabel}
             </p>
             <ul className="border-t border-[#23201a]/12">

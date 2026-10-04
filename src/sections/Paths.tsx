@@ -44,7 +44,7 @@ export default function Paths() {
                   />
                 </div>
                 <div className="p-6 md:p-8 flex flex-col flex-1">
-                  <span className="text-primary/45 text-[10px] uppercase tracking-[0.16em]">
+                  <span className="text-primary/55 text-[10px] uppercase tracking-[0.16em]">
                     {p.label}
                   </span>
                   <h3 className="mt-2 text-2xl sm:text-3xl font-medium" style={{ color: TEXT_COLOR }}>

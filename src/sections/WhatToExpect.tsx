@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Check } from 'lucide-react'
 import SectionLabel from '../components/SectionLabel'
+import LazyVideo from '../components/LazyVideo'
 import Reveal from '../components/Reveal'
 import { FEATURE_VIDEO_URL, TEXT_COLOR } from '../constants'
 import { useContent } from '../i18n/content'
@@ -85,14 +86,7 @@ export default function WhatToExpect() {
           index={4}
           className="noise-overlay relative overflow-hidden rounded-2xl mt-4 md:mt-5 min-h-[260px] flex items-end"
         >
-          <video
-            className="absolute inset-0 h-full w-full object-cover"
-            src={FEATURE_VIDEO_URL}
-            autoPlay
-            loop
-            muted
-            playsInline
-          />
+          <LazyVideo src={FEATURE_VIDEO_URL} className="absolute inset-0 h-full w-full" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/30" />
           <p
             className="relative p-6 md:p-10 text-xl sm:text-2xl md:text-3xl font-normal leading-[1.3] max-w-3xl"

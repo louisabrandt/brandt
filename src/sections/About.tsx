@@ -96,7 +96,7 @@ export default function About() {
             <div key={marker} className="contents">
               <span className="text-[#23201a] font-normal">{marker}</span>
               <span className="text-[#23201a]/70">{mid}</span>
-              <span className="text-[#23201a]/55 text-right">{detail}</span>
+              <span className="text-[#23201a]/65 text-right">{detail}</span>
             </div>
           ))}
         </div>

@@ -105,7 +105,7 @@ export default function FitFinder() {
                 className="flex flex-col flex-1"
               >
                 <div className="flex items-center gap-3 mb-6">
-                  <span className="text-primary/50 text-xs tabular-nums">
+                  <span className="text-primary/55 text-xs tabular-nums">
                     {String(step + 1).padStart(2, '0')} {c.fit.progressOf} {String(questions.length).padStart(2, '0')}
                   </span>
                   <div className="flex-1 h-px bg-white/10 relative">
@@ -117,7 +117,7 @@ export default function FitFinder() {
                   {step > 0 && (
                     <button
                       onClick={() => setStep((v) => Math.max(0, v - 1))}
-                      className="text-primary/40 hover:text-primary/70 text-xs transition-colors"
+                      className="text-primary/55 hover:text-primary/70 text-xs transition-colors"
                     >
                       {c.fit.back}
                     </button>
@@ -125,7 +125,7 @@ export default function FitFinder() {
                 </div>
 
                 <h3 className="text-primary text-lg sm:text-xl font-normal">{questions[step].q}</h3>
-                <p className="text-primary/45 text-[13px] mt-1.5 mb-5">{questions[step].hint}</p>
+                <p className="text-primary/55 text-[13px] mt-1.5 mb-5">{questions[step].hint}</p>
 
                 <div className="flex flex-col gap-3">
                   {questions[step].options.map((label, oIndex) => (
@@ -155,7 +155,7 @@ export default function FitFinder() {
                     <span className="text-[10px] uppercase tracking-[0.18em] text-primary/85 bg-[#B4552E]/25 rounded-full px-2.5 py-1 self-start">
                       {c.fit.bestFit}
                     </span>
-                    <p className="mt-5 text-primary/45 text-[10px] uppercase tracking-[0.16em]">{t.tag}</p>
+                    <p className="mt-5 text-primary/55 text-[10px] uppercase tracking-[0.16em]">{t.tag}</p>
                     <h3 className="mt-1 text-lg sm:text-xl font-medium" style={{ color: TEXT_COLOR }}>
                       {t.title}
                     </h3>
@@ -173,7 +173,7 @@ export default function FitFinder() {
 
                   {/* Optional 1:1 */}
                   <div className="relative overflow-hidden rounded-2xl bg-black border border-primary/10 p-6 md:p-7 flex flex-col">
-                    <span className="text-[10px] uppercase tracking-[0.18em] text-primary/50 border border-primary/15 rounded-full px-2.5 py-1 self-start">
+                    <span className="text-[10px] uppercase tracking-[0.18em] text-primary/55 border border-primary/15 rounded-full px-2.5 py-1 self-start">
                       {c.fit.orOneToOne}
                     </span>
                     <h3 className="mt-5 text-lg sm:text-xl font-medium text-primary/70">{c.fit.oneToOneTitle}</h3>
@@ -190,7 +190,7 @@ export default function FitFinder() {
 
                 {alternates.length > 0 && (
                   <div className="mt-5">
-                    <p className="text-primary/45 text-[11px] uppercase tracking-[0.18em] mb-3">{c.fit.alsoWorth}</p>
+                    <p className="text-primary/55 text-[11px] uppercase tracking-[0.18em] mb-3">{c.fit.alsoWorth}</p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {alternates.map((alt) => {
                         const at = courseText(alt, lang)
@@ -201,11 +201,11 @@ export default function FitFinder() {
                             className="group flex items-center justify-between gap-3 rounded-xl border border-primary/12 px-4 py-3 hover:border-primary/30 transition-colors"
                           >
                             <span className="min-w-0">
-                              <span className="block text-primary/45 text-[10px] uppercase tracking-[0.16em]">{at.tag}</span>
+                              <span className="block text-primary/55 text-[10px] uppercase tracking-[0.16em]">{at.tag}</span>
                               <span className="block text-primary/85 text-sm truncate">{at.title}</span>
                             </span>
                             <ArrowUpRight
-                              className="w-4 h-4 shrink-0 text-primary/40 group-hover:text-primary/80 transition-colors"
+                              className="w-4 h-4 shrink-0 text-primary/55 group-hover:text-primary/80 transition-colors"
                               strokeWidth={1.5}
                             />
                           </Link>
@@ -220,7 +220,7 @@ export default function FitFinder() {
                     setPicks([])
                     setStep(0)
                   }}
-                  className="mt-6 self-center text-primary/50 text-xs hover:text-primary/80 transition-colors"
+                  className="mt-6 self-center text-primary/55 text-xs hover:text-primary/80 transition-colors"
                 >
                   {c.fit.startOver}
                 </button>

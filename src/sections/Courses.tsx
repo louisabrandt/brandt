@@ -76,7 +76,7 @@ export default function Courses() {
                   </div>
                   <div className="p-6 flex flex-col flex-1">
                     <div className="flex items-baseline justify-between gap-2">
-                      <span className="text-primary/45 text-[10px] uppercase tracking-[0.16em]">{t.tag}</span>
+                      <span className="text-primary/55 text-[10px] uppercase tracking-[0.16em]">{t.tag}</span>
                       <span className="text-primary/70 text-xs tabular-nums shrink-0">{c.courseMeta.priceShort}</span>
                     </div>
                     <h3 className="mt-3 text-lg font-medium" style={{ color: TEXT_COLOR }}>

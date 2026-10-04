@@ -30,7 +30,7 @@ export default function Testimonials() {
                 <span className="font-serif italic">{t.emphasis}</span>
                 {t.after}
               </p>
-              <p className="mt-5 text-xs text-[#23201a]/55">{t.author}</p>
+              <p className="mt-5 text-xs text-[#23201a]/65">{t.author}</p>
             </Reveal>
           ))}
         </div>

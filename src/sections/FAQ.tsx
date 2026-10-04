@@ -22,7 +22,7 @@ function FaqItem({ item, isOpen, onToggle }: { item: QA; isOpen: boolean; onTogg
           {item.q}
         </span>
         <Plus
-          className={`h-4 w-4 shrink-0 text-[#23201a]/50 transition-transform duration-300 ${
+          className={`h-4 w-4 shrink-0 text-[#23201a]/65 transition-transform duration-300 ${
             isOpen ? 'rotate-45' : ''
           }`}
           strokeWidth={1.5}

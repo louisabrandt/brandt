@@ -18,7 +18,7 @@ export default function CourseDetail() {
     return (
       <div className="min-h-screen bg-[#efe9de] flex flex-col items-center justify-center text-center px-6">
         <h1 className="text-[#23201a] text-2xl font-normal">{c.courseDetail.notFound}</h1>
-        <Link to={l('/courses')} className="mt-4 text-[#23201a]/60 hover:text-[#23201a] text-sm">
+        <Link to={l('/courses')} className="mt-4 text-[#23201a]/65 hover:text-[#23201a] text-sm">
           {c.courseDetail.backAll}
         </Link>
       </div>
@@ -51,13 +51,13 @@ export default function CourseDetail() {
       <article className="max-w-3xl mx-auto px-4 sm:px-6 md:px-10 py-16 sm:py-20 md:py-24">
         <Link
           to={l('/courses')}
-          className="inline-flex items-center gap-1.5 text-[#23201a]/50 hover:text-[#23201a]/80 transition-colors text-sm"
+          className="inline-flex items-center gap-1.5 text-[#23201a]/65 hover:text-[#23201a]/80 transition-colors text-sm"
         >
           <ArrowUpRight className="h-3.5 w-3.5 -rotate-[135deg]" strokeWidth={1.5} />
           {c.courseDetail.courses}
         </Link>
 
-        <p className="mt-8 text-[#23201a]/50 text-[11px] uppercase tracking-[0.22em]">{t.tag}</p>
+        <p className="mt-8 text-[#23201a]/65 text-[11px] uppercase tracking-[0.22em]">{t.tag}</p>
         <h1 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-normal text-[#23201a] leading-[1.05] tracking-tight">
           {t.title}
         </h1>
@@ -78,15 +78,15 @@ export default function CourseDetail() {
         {/* Meta */}
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 text-sm border-y border-[#23201a]/12 py-6">
           <div>
-            <p className="text-[#23201a]/45 text-[11px] uppercase tracking-[0.22em] mb-1">{c.courseDetail.format}</p>
+            <p className="text-[#23201a]/65 text-[11px] uppercase tracking-[0.22em] mb-1">{c.courseDetail.format}</p>
             <p className="text-[#23201a]/80">{c.courseMeta.format}</p>
           </div>
           <div>
-            <p className="text-[#23201a]/45 text-[11px] uppercase tracking-[0.22em] mb-1">{c.courseMeta.priceLabel}</p>
+            <p className="text-[#23201a]/65 text-[11px] uppercase tracking-[0.22em] mb-1">{c.courseMeta.priceLabel}</p>
             <p className="text-[#23201a]/80">{c.courseMeta.individual} · {c.courseMeta.couple}</p>
           </div>
           <div>
-            <p className="text-[#23201a]/45 text-[11px] uppercase tracking-[0.22em] mb-1">{c.courseDetail.whoFor}</p>
+            <p className="text-[#23201a]/65 text-[11px] uppercase tracking-[0.22em] mb-1">{c.courseDetail.whoFor}</p>
             <p className="text-[#23201a]/80">{t.forWhom}</p>
           </div>
         </div>
@@ -104,12 +104,12 @@ export default function CourseDetail() {
 
         {/* Booking — dark accent card on the light page */}
         <div className="noise-overlay relative overflow-hidden rounded-2xl bg-[#141414] p-6 md:p-8 mt-14">
-          <p className="text-primary/45 text-[11px] uppercase tracking-[0.22em] mb-3">
+          <p className="text-primary/55 text-[11px] uppercase tracking-[0.22em] mb-3">
             {c.courseMeta.priceLabel}
           </p>
           <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
             <span className="text-primary text-2xl font-medium">{c.courseMeta.individual}</span>
-            <span className="text-primary/40">·</span>
+            <span className="text-primary/55">·</span>
             <span className="text-primary text-2xl font-medium">{c.courseMeta.couple}</span>
           </div>
           <p className="mt-2 text-primary/60 text-sm">{c.courseMeta.format}</p>
@@ -163,9 +163,9 @@ export default function CourseDetail() {
           })()}
 
           {(hasUrl(BOOKING.courseIndividual) || hasUrl(BOOKING.courseCouple)) && (
-            <p className="mt-3 text-primary/50 text-[11px]">{c.courseMeta.bookingInfo}</p>
+            <p className="mt-3 text-primary/55 text-[11px]">{c.courseMeta.bookingInfo}</p>
           )}
-          <p className="mt-3 text-primary/40 text-[11px]">{c.courseMeta.vat}</p>
+          <p className="mt-3 text-primary/55 text-[11px]">{c.courseMeta.vat}</p>
         </div>
 
         {/* Deepen 1:1 */}
@@ -183,7 +183,7 @@ export default function CourseDetail() {
 
         {/* Other courses */}
         <div className="mt-16 pt-10 border-t border-[#23201a]/12">
-          <p className="text-[#23201a]/45 text-[11px] uppercase tracking-[0.22em] mb-6">
+          <p className="text-[#23201a]/65 text-[11px] uppercase tracking-[0.22em] mb-6">
             {c.courseDetail.otherCourses}
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -204,9 +204,9 @@ export default function CourseDetail() {
                     />
                   </div>
                   <div className="p-5 flex flex-col flex-1">
-                    <span className="text-[#23201a]/45 text-[10px] uppercase tracking-[0.16em]">{ot.tag}</span>
+                    <span className="text-[#23201a]/65 text-[10px] uppercase tracking-[0.16em]">{ot.tag}</span>
                     <h3 className="mt-2 text-base font-medium text-[#23201a]">{ot.title}</h3>
-                    <span className="mt-3 inline-flex items-center gap-1 text-xs text-[#23201a]/55 group-hover:text-[#23201a] transition-colors">
+                    <span className="mt-3 inline-flex items-center gap-1 text-xs text-[#23201a]/65 group-hover:text-[#23201a] transition-colors">
                       {c.courseDetail.exploreShort}
                       <ArrowUpRight
                         className="w-3 h-3 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"

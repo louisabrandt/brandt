@@ -80,7 +80,7 @@ export default function NewsletterSignup() {
           onChange={(e) => setEmail(e.target.value)}
           required
           aria-label={c.newsletter.placeholder}
-          className="flex-1 bg-transparent px-0 py-2.5 text-primary placeholder:text-primary/40 text-sm focus:outline-none"
+          className="flex-1 bg-transparent px-0 py-2.5 text-primary placeholder:text-primary/55 text-sm focus:outline-none"
         />
         <button
           type="submit"

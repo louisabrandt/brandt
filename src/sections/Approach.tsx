@@ -54,12 +54,12 @@ export default function Approach() {
           </Reveal>
 
           <Reveal index={1} className="rounded-2xl bg-[#efe4d6] border border-[#23201a]/8 p-6 md:p-8">
-            <h3 className="text-[#23201a]/60 text-lg sm:text-xl font-medium">{c.approach.notTitle}</h3>
+            <h3 className="text-[#23201a]/65 text-lg sm:text-xl font-medium">{c.approach.notTitle}</h3>
             <ul className="mt-5 space-y-3">
               {c.approach.notList.map((item) => (
                 <li key={item} className="flex items-start gap-2.5">
                   <span className="mt-0.5 shrink-0 text-[#23201a]/30 text-sm leading-none">{'×'}</span>
-                  <span className="text-[#23201a]/50 text-sm sm:text-[15px] leading-[1.5]">{item}</span>
+                  <span className="text-[#23201a]/65 text-sm sm:text-[15px] leading-[1.5]">{item}</span>
                 </li>
               ))}
             </ul>
@@ -78,7 +78,7 @@ export default function Approach() {
           ))}
         </div>
 
-        <p className="mt-8 text-center text-[#23201a]/55 text-xs">{c.approach.confidentiality}</p>
+        <p className="mt-8 text-center text-[#23201a]/65 text-xs">{c.approach.confidentiality}</p>
       </div>
     </section>
   )
