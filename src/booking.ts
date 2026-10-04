@@ -6,8 +6,8 @@
  *
  * Recommended Cal.com events:
  *  - intro:            free 30-min "Kennenlernen" (no payment)
- *  - courseIndividual: 60-min themed course, individual  (Stripe, 90 €)
- *  - courseCouple:     60-min themed course, couple       (Stripe, 140 €)
+ *  - courseIndividual: 50-min themed course, individual  (Stripe, 110 €)
+ *  - courseCouple:     50-min themed course, couple       (Stripe, 160 €)
  */
 export const BOOKING = {
   intro: 'https://cal.com/louisabrandt/kennenlernen',
