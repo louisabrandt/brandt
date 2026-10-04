@@ -4,6 +4,7 @@ import WhatToExpect from '../sections/WhatToExpect'
 import HowItWorks from '../sections/HowItWorks'
 import WhatChanges from '../sections/WhatChanges'
 import FAQ from '../sections/FAQ'
+import CtaBand from '../sections/CtaBand'
 import Footer from '../sections/Footer'
 
 export default function Coaching() {
@@ -13,9 +14,10 @@ export default function Coaching() {
       <main className="bg-[#0a0a0a] overflow-x-hidden">
         <Services />
         <WhatToExpect />
-        <WhatChanges />
         <HowItWorks />
+        <WhatChanges />
         <FAQ />
+        <CtaBand secondary="courses" />
         <Footer />
       </main>
     </>

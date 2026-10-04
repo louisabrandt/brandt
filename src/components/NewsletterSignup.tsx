@@ -10,8 +10,8 @@ const encode = (data: Record<string, string>) =>
     .join('&')
 
 /**
- * Newsletter / stay-in-touch signup (Netlify Forms). Also serves as the
- * "waitlist" for group formats, since those start once enough people register.
+ * Newsletter / stay-in-touch signup (Netlify Forms). Also how people hear
+ * about new courses and group formats as they open.
  */
 export default function NewsletterSignup() {
   const c = useContent()

@@ -34,8 +34,6 @@ export default function Testimonials() {
             </Reveal>
           ))}
         </div>
-
-        <p className="mt-6 text-[#23201a]/45 text-xs">{c.testimonials.note}</p>
       </div>
     </section>
   )
