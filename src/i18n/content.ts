@@ -217,6 +217,7 @@ export const en = {
     ],
     pricing: ['Individual · €140', 'Couple · €180'],
     pricingNote: 'Final prices per session. As a small business under §19 of the German VAT Act, no VAT is charged.',
+    availability: 'I work with a few people at a time; weekly spots are limited.',
     priceLabel: 'Per session',
     cta: 'Book a free intro call',
     trust: 'Confidential from the very first message.',
@@ -299,6 +300,7 @@ export const en = {
   },
   courseMeta: {
     format: 'Online · 50-min live session · workbook & exercises',
+    includes: ['50-min live session, online', 'Workbook & exercises included', 'For individuals or couples'],
     priceLabel: 'Price',
     individual: 'Individual €110',
     couple: 'Couple €160',
@@ -630,6 +632,7 @@ export const de: Content = {
     ],
     pricing: ['Einzel · 140 €', 'Paar · 180 €'],
     pricingNote: 'Endpreise pro Sitzung. Als Kleinunternehmerin nach §19 UStG wird keine Umsatzsteuer ausgewiesen.',
+    availability: 'Ich arbeite mit wenigen Menschen gleichzeitig; die Plätze pro Woche sind begrenzt.',
     priceLabel: 'Pro Sitzung',
     cta: 'Kostenloses Erstgespräch buchen',
     trust: 'Vertraulich ab der allerersten Nachricht.',
@@ -712,6 +715,7 @@ export const de: Content = {
   },
   courseMeta: {
     format: 'Online · 50 Min. Live-Session · Unterlagen & Übungen',
+    includes: ['50-Min Live-Session, online', 'Unterlagen & Übungen inklusive', 'Für Einzelpersonen oder Paare'],
     priceLabel: 'Preis',
     individual: 'Einzel 110 €',
     couple: 'Paar 160 €',

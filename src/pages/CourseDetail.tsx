@@ -112,7 +112,14 @@ export default function CourseDetail() {
             <span className="text-primary/55">·</span>
             <span className="text-primary text-2xl font-medium">{c.courseMeta.couple}</span>
           </div>
-          <p className="mt-2 text-primary/60 text-sm">{c.courseMeta.format}</p>
+          <ul className="mt-4 space-y-2">
+            {c.courseMeta.includes.map((item) => (
+              <li key={item} className="flex items-center gap-2.5 text-primary/80 text-[13px]">
+                <Check className="w-4 h-4 text-[#8A9A76] shrink-0" strokeWidth={1.75} />
+                {item}
+              </li>
+            ))}
+          </ul>
 
           {(() => {
             const fallback = `${l('/contact')}?kurs=${encodeURIComponent(t.title)}`

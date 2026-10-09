@@ -128,6 +128,8 @@ export default function Services() {
           </div>
           <p className="text-[#23201a]/65 text-xs">{c.services.pricingNote}</p>
         </div>
+
+        <p className="mt-5 text-[#23201a]/65 text-sm italic font-serif">{c.services.availability}</p>
       </div>
     </section>
   )
