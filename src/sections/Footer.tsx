@@ -59,8 +59,16 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <p className="text-primary/55 text-[11px] uppercase tracking-[0.22em] mb-4">{c.footer.contact}</p>
-            <a href="mailto:lb@louisabrandt.com" className="text-primary/75 hover:text-primary transition-colors text-sm">
+            <a href="mailto:lb@louisabrandt.com" className="block text-primary/75 hover:text-primary transition-colors text-sm">
               lb@louisabrandt.com
+            </a>
+            <a
+              href="https://wa.me/491708809105"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block mt-2 text-primary/75 hover:text-primary transition-colors text-sm"
+            >
+              WhatsApp: +49 170 8809105
             </a>
           </div>
         </div>

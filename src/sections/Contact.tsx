@@ -1,6 +1,6 @@
 import { useState, useEffect, type FormEvent } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import { ArrowRight, Check } from 'lucide-react'
+import { ArrowRight, ArrowUpRight, Check } from 'lucide-react'
 import SectionLabel from '../components/SectionLabel'
 import { useContent } from '../i18n/content'
 
@@ -79,6 +79,18 @@ export default function Contact() {
             </p>
 
             <div className="mt-10 space-y-4 text-sm">
+              <div>
+                <p className="text-primary/55 text-[11px] uppercase tracking-[0.22em]">{c.contact.whatsappLabel}</p>
+                <a
+                  href={`https://wa.me/491708809105?text=${encodeURIComponent(c.contact.whatsappPrefill)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-primary hover:text-primary/70 transition-colors"
+                >
+                  {c.contact.whatsappText}
+                  <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={1.5} />
+                </a>
+              </div>
               <div>
                 <p className="text-primary/55 text-[11px] uppercase tracking-[0.22em]">{c.contact.emailLabel}</p>
                 <a href="mailto:lb@louisabrandt.com" className="text-primary hover:text-primary/70 transition-colors">
