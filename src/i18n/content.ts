@@ -19,6 +19,7 @@ export const en = {
     headlineItalic: 'built together.',
     sub1: "A steady, close relationship isn't down to luck. It's something you can learn to build.",
     sub2: 'Relationship coaching for couples and individuals who want deeper connection, better communication, and lasting stability. Online worldwide, and in person in Paphos and Vienna. In English and German.',
+    ctaNote: 'Free · 30 min · no obligation',
   },
   trustBar: [
     'Gottman Method',
@@ -306,6 +307,7 @@ export const en = {
     bookIndividual: 'Book as an individual',
     bookCouple: 'Book as a couple',
     bookingInfo: 'Pay securely online. Free rescheduling up to 24 h before the session.',
+    introNudge: 'Not sure yet? Start with a free intro call',
     vat: 'Final prices · no VAT (small-business scheme, §19 German VAT Act).',
     bookableNote: 'Every course is bookable on its own, for individuals or couples. Afterwards you decide whether to go deeper in coaching.',
     upsell: 'Want to keep going after the course? We can continue in ',
@@ -430,6 +432,7 @@ export const de: Content = {
     headlineItalic: 'gemeinsam gestaltet.',
     sub1: 'Eine tragfähige, nahe Beziehung ist keine Frage des Glücks. Sie ist eine Fähigkeit, die sich entwickeln lässt.',
     sub2: 'Beziehungscoaching für Paare und Einzelne, die sich echte Nähe, eine tragfähige Kommunikation und dauerhafte Stabilität wünschen. Weltweit online, persönlich in Paphos und Wien. Auf Deutsch und Englisch.',
+    ctaNote: 'Kostenlos · 30 Min · unverbindlich',
   },
   trustBar: [
     'Gottman-Methode',
@@ -717,6 +720,7 @@ export const de: Content = {
     bookIndividual: 'Als Einzelperson buchen',
     bookCouple: 'Als Paar buchen',
     bookingInfo: 'Sichere Online-Zahlung. Kostenlose Umbuchung bis 24 Std. vor dem Termin.',
+    introNudge: 'Noch unsicher? Starte mit einem kostenlosen Kennenlernen',
     vat: 'Endpreise · keine USt. (Kleinunternehmerin nach §19 UStG).',
     bookableNote: 'Jeder Kurs ist einzeln buchbar, für Einzelne oder Paare. Danach entscheidet ihr, ob ihr mit mir vertiefen möchtet.',
     upsell: 'Nach dem Kurs weitergehen? Wir können im ',

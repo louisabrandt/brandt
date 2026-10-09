@@ -162,8 +162,21 @@ export default function CourseDetail() {
             )
           })()}
 
+          {hasUrl(BOOKING.intro) && (
+            <a
+              href={BOOKING.intro}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackEvent('book: intro from course')}
+              className="mt-5 inline-flex items-center gap-1 text-primary/70 hover:text-primary text-xs underline decoration-primary/30 underline-offset-2 transition"
+            >
+              {c.courseMeta.introNudge}
+              <ArrowUpRight className="h-3 w-3" strokeWidth={1.5} />
+            </a>
+          )}
+
           {(hasUrl(BOOKING.courseIndividual) || hasUrl(BOOKING.courseCouple)) && (
-            <p className="mt-3 text-primary/55 text-[11px]">{c.courseMeta.bookingInfo}</p>
+            <p className="mt-4 text-primary/55 text-[11px]">{c.courseMeta.bookingInfo}</p>
           )}
           <p className="mt-3 text-primary/55 text-[11px]">{c.courseMeta.vat}</p>
         </div>

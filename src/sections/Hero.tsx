@@ -74,6 +74,7 @@ export default function Hero() {
                 className="mt-1"
               >
                 <PrimaryCTA />
+                <p className="mt-3 text-primary/60 text-xs">{c.hero.ctaNote}</p>
               </motion.div>
             </div>
           </div>

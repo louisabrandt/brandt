@@ -42,9 +42,11 @@ export default function SiteHeader() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-4">
-          <LangSwitch />
-          <BookLink className="group hidden sm:inline-flex items-center gap-1.5 hover:gap-2.5 transition-all duration-300 bg-[#B4552E] hover:bg-[#9E4826] rounded-full pl-4 pr-1 py-1 text-[#F3ECDE] font-medium text-xs sm:text-sm">
+        <div className="flex items-center gap-3 sm:gap-4">
+          <div className="hidden sm:block">
+            <LangSwitch />
+          </div>
+          <BookLink className="group inline-flex items-center gap-1.5 hover:gap-2.5 transition-all duration-300 bg-[#B4552E] hover:bg-[#9E4826] rounded-full pl-4 pr-1 py-1 text-[#F3ECDE] font-medium text-xs sm:text-sm">
             <span>{c.nav.book}</span>
             <span className="flex items-center justify-center bg-[#7C3A1E] rounded-full w-7 h-7 transition-transform duration-300 group-hover:scale-110">
               <ArrowRight className="w-3.5 h-3.5 text-[#F3ECDE]" strokeWidth={1.5} />
@@ -63,8 +65,8 @@ export default function SiteHeader() {
       </div>
 
       {open && (
-        <div className="md:hidden border-t border-primary/10 bg-[#0a0a0a] px-4 sm:px-6 py-4">
-          <nav className="flex flex-col gap-1">
+        <div className="md:hidden border-t border-primary/10 bg-[#0a0a0a] px-4 sm:px-6 py-3">
+          <nav className="flex flex-col">
             {NAV.map((n) => (
               <NavLink
                 key={n.to}
@@ -72,19 +74,15 @@ export default function SiteHeader() {
                 end
                 onClick={() => setOpen(false)}
                 className={({ isActive }) =>
-                  `py-2.5 text-[15px] ${isActive ? 'text-primary' : 'text-primary/75'}`
+                  `py-3 text-[15px] ${isActive ? 'text-primary' : 'text-primary/80'}`
                 }
               >
                 {label(n.key)}
               </NavLink>
             ))}
-            <BookLink
-              onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center gap-2 bg-[#B4552E] rounded-full px-5 py-2.5 text-[#F3ECDE] font-medium text-sm self-start"
-            >
-              {c.nav.book}
-              <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
-            </BookLink>
+            <div className="pt-3 mt-1 border-t border-primary/10">
+              <LangSwitch />
+            </div>
           </nav>
         </div>
       )}
