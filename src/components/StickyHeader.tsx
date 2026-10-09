@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Link, NavLink } from 'react-router-dom'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Menu, X } from 'lucide-react'
 import { NAV } from '../nav'
 import { useLang } from '../i18n/lang'
 import { useContent } from '../i18n/content'
@@ -12,6 +12,7 @@ import BookLink from './BookLink'
  *  calm nav + CTA anchor for the immersive home page. */
 export default function StickyHeader() {
   const [show, setShow] = useState(false)
+  const [open, setOpen] = useState(false)
   const { l } = useLang()
   const c = useContent()
 
@@ -23,7 +24,7 @@ export default function StickyHeader() {
   }, [])
 
   return (
-    <AnimatePresence>
+    <AnimatePresence onExitComplete={() => setOpen(false)}>
       {show && (
         <motion.header
           initial={{ y: -80, opacity: 0 }}
@@ -55,16 +56,50 @@ export default function StickyHeader() {
               ))}
             </nav>
 
-            <div className="flex items-center gap-4">
-              <LangSwitch />
+            <div className="flex items-center gap-3 sm:gap-4">
+              <div className="hidden sm:block">
+                <LangSwitch />
+              </div>
               <BookLink className="group inline-flex items-center gap-1.5 hover:gap-2.5 transition-all duration-300 bg-[#B4552E] hover:bg-[#9E4826] rounded-full pl-4 pr-1 py-1 text-[#F3ECDE] font-medium text-xs sm:text-sm">
                 <span>{c.nav.book}</span>
                 <span className="flex items-center justify-center bg-[#7C3A1E] rounded-full w-7 h-7 transition-transform duration-300 group-hover:scale-110">
                   <ArrowRight className="w-3.5 h-3.5 text-[#F3ECDE]" strokeWidth={1.5} />
                 </span>
               </BookLink>
+
+              <button
+                onClick={() => setOpen((v) => !v)}
+                className="md:hidden flex items-center justify-center h-10 w-10 -mr-1 rounded-full text-primary/80 hover:text-primary"
+                aria-label={open ? 'Menü schließen' : 'Menü öffnen'}
+                aria-expanded={open}
+              >
+                {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              </button>
             </div>
           </div>
+
+          {open && (
+            <div className="md:hidden border-t border-primary/10 bg-[#0a0a0a] px-4 sm:px-6 py-3">
+              <nav className="flex flex-col">
+                {NAV.map((n) => (
+                  <NavLink
+                    key={n.to}
+                    to={l(n.to)}
+                    end
+                    onClick={() => setOpen(false)}
+                    className={({ isActive }) =>
+                      `py-3 text-[15px] ${isActive ? 'text-primary' : 'text-primary/80'}`
+                    }
+                  >
+                    {c.nav[n.key]}
+                  </NavLink>
+                ))}
+                <div className="pt-3 mt-1 border-t border-primary/10">
+                  <LangSwitch />
+                </div>
+              </nav>
+            </div>
+          )}
         </motion.header>
       )}
     </AnimatePresence>
