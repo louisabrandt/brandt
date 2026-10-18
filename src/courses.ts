@@ -99,7 +99,7 @@ export const COURSES: Course[] = [
         "So much of how we love is shaped by how we hold ourselves. When your worth rises and falls with the other person's mood, approval or presence, closeness starts to feel like anxiety rather than steadiness. This course is about building an inner ground that doesn't wash away. You care for yourself, learn to like who you are, and find your own direction, so you can show up from a settled place and stay yourself inside intimacy.",
       learn: [
         'Where your sense of worth was shaped, and how it plays out in love',
-        'Taking care of yourself, and learning to genuinely love who you are',
+        'Meeting your inner critic with self-compassion, and genuinely liking who you are',
         "Finding your own purpose and direction, not only the couple's",
         'Staying yourself in closeness, instead of shrinking or performing',
         'Asking for what you need without apology or over-explaining',
@@ -119,7 +119,7 @@ export const COURSES: Course[] = [
         'Wie wir lieben, hängt stark davon ab, wie wir uns selbst halten. Wenn dein Wert mit der Stimmung, der Zustimmung oder der Anwesenheit des anderen steigt und fällt, wird Nähe eher zu Angst als zu Halt. In diesem Kurs baust du einen inneren Boden, der nicht wegbricht: Du sorgst für dich, lernst dich zu mögen und findest deine eigene Richtung, damit du gefestigt in die Beziehung gehst und in der Nähe du selbst bleibst.',
       learn: [
         'Wo dein Selbstwert geprägt wurde, und wie er sich in der Liebe zeigt',
-        'Für dich sorgen und lernen, wirklich zu mögen, wer du bist',
+        'Dem inneren Kritiker mit Selbstmitgefühl begegnen, und wirklich mögen, wer du bist',
         'Deinen eigenen Sinn und deine Richtung finden, nicht nur die des Paares',
         'In Nähe du selbst bleiben, statt zu schrumpfen oder zu funktionieren',
         'Um das bitten, was du brauchst, ohne Entschuldigung oder lange Erklärung',
@@ -229,7 +229,7 @@ export const COURSES: Course[] = [
       intro:
         "Most couples don't fight about what they're fighting about. The dishes, the lateness, the tone: that's the surface. Underneath runs something older and more tender, an unspoken need, a fear of not mattering, a quiet struggle over power. This course helps you find the real issue beneath the recurring one, and turn the arguments that keep repeating into conversations that bring you closer.",
       learn: [
-        'The three conflict patterns couples fall into, and yours',
+        'Your conflict style, and the cycle you both keep feeding',
         'Finding the real need under the surface complaint',
         'Interrupting escalation and stonewalling before they take over',
         'Repairing mid-conflict, not days later',
@@ -248,7 +248,7 @@ export const COURSES: Course[] = [
       intro:
         'Die meisten Paare streiten nicht über das, worüber sie streiten. Der Abwasch, das Zuspätkommen, der Ton: das ist die Oberfläche. Darunter läuft etwas Älteres und Zarteres, ein unausgesprochenes Bedürfnis, die Angst, nicht zu zählen, ein leiser Kampf um Macht. Dieser Kurs hilft euch, das wahre Thema unter dem wiederkehrenden zu finden, und die Streits, die sich wiederholen, in Gespräche zu verwandeln, die euch näherbringen.',
       learn: [
-        'Die drei Konfliktmuster, in die Paare geraten, und eures',
+        'Deinen Konfliktstil, und den Kreislauf, den ihr beide am Laufen haltet',
         'Das echte Bedürfnis unter der oberflächlichen Klage finden',
         'Eskalation und Mauern unterbrechen, bevor sie übernehmen',
         'Mitten im Konflikt reparieren, nicht erst Tage später',
@@ -317,7 +317,7 @@ export const COURSES: Course[] = [
       learn: [
         'Seeing the invisible power dynamics you both live inside',
         'Where you reach for control, and where you give it away',
-        'The link between powerlessness, resentment and withdrawal',
+        'Why, in a power struggle, both of you often feel powerless',
         'Sharing decisions and influence more evenly',
         'Moving from one-up and one-down to a partnership of equals',
       ],
@@ -336,7 +336,7 @@ export const COURSES: Course[] = [
       learn: [
         'Die unsichtbaren Machtdynamiken sehen, in denen ihr beide lebt',
         'Wo du nach Kontrolle greifst, und wo du sie abgibst',
-        'Der Zusammenhang von Ohnmacht, Groll und Rückzug',
+        'Warum sich im Machtkampf oft beide ohnmächtig fühlen',
         'Entscheidungen und Einfluss gleichmäßiger teilen',
         'Von oben-unten zu einer Partnerschaft auf Augenhöhe kommen',
       ],
@@ -491,7 +491,7 @@ export const COURSES: Course[] = [
       learn: [
         "Why desire fades, and why that's not a verdict on the relationship",
         'Understanding differences in desire without pressure or blame',
-        'Rebuilding presence and pleasure with structured, low-pressure steps',
+        'Mapping what fuels your desire and what quietly brakes it',
         'Reconnecting emotional safety with physical closeness',
         'Keeping desire alive through the seasons of a relationship',
       ],
@@ -510,7 +510,7 @@ export const COURSES: Course[] = [
       learn: [
         'Warum Begehren nachlässt, und warum das kein Urteil über die Beziehung ist',
         'Unterschiede im Begehren verstehen, ohne Druck oder Schuld',
-        'Präsenz und Lust mit strukturierten, druckarmen Schritten wieder aufbauen',
+        'Kartieren, was dein Begehren befeuert und was es leise bremst',
         'Emotionale Sicherheit und körperliche Nähe wieder verbinden',
         'Begehren durch die Jahreszeiten einer Beziehung lebendig halten',
       ],
