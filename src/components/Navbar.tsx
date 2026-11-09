@@ -30,7 +30,7 @@ export default function Navbar() {
         {/* Wordmark */}
         <Link
           to={l('/')}
-          className="font-serif font-medium text-xl md:text-2xl leading-none tracking-[0.01em] text-primary"
+          className="font-serif font-medium text-2xl md:text-3xl leading-none tracking-[0.01em] text-primary"
         >
           Brandt
         </Link>
