@@ -42,8 +42,8 @@ const canonicalFor = (base, lang) => {
 const META = {
   de: {
     '/': {
-      title: 'Brandt — Paar- & Beziehungscoaching | online & vor Ort',
-      desc: 'Beziehungscoaching für Paare und Einzelpersonen mit Louisa Brandt, M.Sc. Die Gottman-Methode verbunden mit Sexualtherapie. Weltweit online, persönlich in Paphos und Wien. Auf Deutsch und Englisch.',
+      title: 'Brandt — Paartherapie und Beziehungscoaching | online & vor Ort',
+      desc: 'Paartherapie und Beziehungscoaching mit Louisa Brandt, M.Sc. Für Paare und Einzelne: gute Beziehungen zu anderen und zu dir selbst sind keine Frage des Glücks, sondern eine Fähigkeit, die sich entwickeln lässt. Weltweit online, persönlich in Paphos und Wien.',
     },
     '/about': {
       title: 'Über Louisa Brandt — M.Sc. Psychologie, Beziehungscoach',
@@ -65,8 +65,8 @@ const META = {
   },
   en: {
     '/': {
-      title: 'Brandt — Couples & Relationship Coaching | Online & In-Person',
-      desc: 'Relationship coaching for couples and individuals with Louisa Brandt, M.Sc. The Gottman Method integrated with sex therapy. Online worldwide, in person in Paphos and Vienna. In English and German.',
+      title: 'Brandt — Couples Therapy & Relationship Coaching | Online & In-Person',
+      desc: 'Couples therapy and relationship coaching with Louisa Brandt, M.Sc. For couples and individuals: good relationships, with others and with yourself, are a skill you can grow. Online worldwide, in person in Paphos and Vienna.',
     },
     '/about': {
       title: 'About Louisa Brandt — M.Sc. Psychology, relationship coach',

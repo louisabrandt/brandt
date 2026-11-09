@@ -2,7 +2,6 @@ import { motion } from 'framer-motion'
 import Navbar from '../components/Navbar'
 import LazyVideo from '../components/LazyVideo'
 import PrimaryCTA from '../components/PrimaryCTA'
-import WordsPullUp from '../components/WordsPullUp'
 import { HERO_VIDEO_URL, TEXT_COLOR } from '../constants'
 import { useContent } from '../i18n/content'
 
@@ -25,12 +24,15 @@ export default function Hero() {
         {/* Hero content, bottom-aligned */}
         <div className="absolute bottom-0 left-0 right-0 z-10 p-5 sm:p-8 md:p-10 lg:p-12">
           <div className="flex flex-col items-start gap-4 sm:gap-5 max-w-3xl">
-            {/* Brand mark */}
-            <WordsPullUp
-              text="Brandt"
-              color={TEXT_COLOR}
-              className="text-[22vw] sm:text-[16vw] md:text-[12vw] lg:text-[8rem] font-serif font-medium leading-[0.9] tracking-[0.01em]"
-            />
+            {/* Eyebrow — what I do */}
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.32, ease: EASE }}
+              className="uppercase tracking-[0.24em] text-[11px] sm:text-xs text-primary/80"
+            >
+              {c.hero.eyebrow}
+            </motion.div>
 
             {/* Headline — Cormorant, one voice with the wordmark */}
             <motion.h1

@@ -26,14 +26,24 @@ export default function Navbar() {
   const c = useContent()
   return (
     <nav className="absolute top-0 left-1/2 -translate-x-1/2 z-20">
-      <div className="flex items-center gap-5 sm:gap-6 md:gap-8 bg-[#2E3A33] rounded-b-2xl md:rounded-b-3xl px-5 py-1 md:px-8">
-        {NAV.map((n) => (
-          <span key={n.to} className="text-[13px] sm:text-sm font-light">
-            <NavLink label={c.nav[n.key]} to={l(n.to)} />
-          </span>
-        ))}
-        <div className="hidden sm:block">
-          <LangSwitch />
+      <div className="flex flex-col items-center gap-1.5 bg-[#2E3A33] rounded-b-2xl md:rounded-b-3xl px-6 md:px-10 pt-2.5 pb-2">
+        {/* Wordmark */}
+        <Link
+          to={l('/')}
+          className="font-serif font-medium text-xl md:text-2xl leading-none tracking-[0.01em] text-primary"
+        >
+          Brandt
+        </Link>
+        {/* Links */}
+        <div className="flex items-center gap-5 sm:gap-6 md:gap-7">
+          {NAV.map((n) => (
+            <span key={n.to} className="text-[13px] sm:text-sm font-light">
+              <NavLink label={c.nav[n.key]} to={l(n.to)} />
+            </span>
+          ))}
+          <div className="hidden sm:block">
+            <LangSwitch />
+          </div>
         </div>
       </div>
     </nav>
