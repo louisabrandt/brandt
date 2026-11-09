@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <StickyHeader />
-      <main className="bg-[#0a0a0a] overflow-x-hidden">
+      <main className="bg-[#2E3A33] overflow-x-hidden">
         <Hero />
         <TrustBar />
         <ForWhom />

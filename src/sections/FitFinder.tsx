@@ -85,7 +85,7 @@ export default function FitFinder() {
   const t = courseText(course, lang)
 
   return (
-    <section id="fit" className="bg-[#0a0a0a] px-4 sm:px-6 md:px-10 lg:px-14 py-20 sm:py-24 md:py-28">
+    <section id="fit" className="bg-[#2E3A33] px-4 sm:px-6 md:px-10 lg:px-14 py-20 sm:py-24 md:py-28">
       <div className="max-w-3xl mx-auto">
         <SectionLabel className="mb-6">{c.fit.eyebrow}</SectionLabel>
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal text-primary text-center leading-[1.1] mb-3">
@@ -93,7 +93,7 @@ export default function FitFinder() {
         </h2>
         <p className="text-primary/55 text-sm text-center max-w-md mx-auto mb-10">{c.fit.subtext}</p>
 
-        <div className="rounded-2xl bg-[#101010] p-6 md:p-10 min-h-[320px] flex flex-col">
+        <div className="rounded-2xl bg-[#324039] p-6 md:p-10 min-h-[320px] flex flex-col">
           <AnimatePresence mode="wait">
             {!isDone ? (
               <motion.div
@@ -151,7 +151,7 @@ export default function FitFinder() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {/* Recommended course */}
-                  <div className="relative overflow-hidden rounded-2xl bg-[#212121] ring-1 ring-[#B4552E]/40 p-6 md:p-7 flex flex-col">
+                  <div className="relative overflow-hidden rounded-2xl bg-[#435349] ring-1 ring-[#B4552E]/40 p-6 md:p-7 flex flex-col">
                     <span className="text-[10px] uppercase tracking-[0.18em] text-primary/85 bg-[#B4552E]/25 rounded-full px-2.5 py-1 self-start">
                       {c.fit.bestFit}
                     </span>
@@ -162,11 +162,11 @@ export default function FitFinder() {
                     <p className="mt-2 text-primary/75 text-sm leading-[1.6] flex-1">{t.description}</p>
                     <Link
                       to={l(`/courses/${course.slug}`)}
-                      className="group mt-5 inline-flex items-center gap-2 hover:gap-3 transition-all duration-300 bg-[#B4552E] hover:bg-[#9E4826] rounded-full pl-5 pr-1.5 py-1.5 text-[#F3ECDE] font-medium text-sm self-start"
+                      className="group mt-5 inline-flex items-center gap-2 hover:gap-3 transition-all duration-300 bg-[#B4552E] hover:bg-[#9E4826] rounded-full pl-5 pr-1.5 py-1.5 text-[#F1EFE7] font-medium text-sm self-start"
                     >
                       <span>{c.fit.courseCta}</span>
                       <span className="flex items-center justify-center bg-[#7C3A1E] rounded-full w-9 h-9 transition-transform duration-300 group-hover:scale-110">
-                        <ArrowRight className="w-4 h-4 text-[#F3ECDE]" strokeWidth={1.5} />
+                        <ArrowRight className="w-4 h-4 text-[#F1EFE7]" strokeWidth={1.5} />
                       </span>
                     </Link>
                   </div>

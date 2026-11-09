@@ -14,10 +14,10 @@ export default function LangSwitch({ tone = 'dark' }: { tone?: 'dark' | 'ink' })
         : pathname.slice(3)
       : pathname
 
-  const activeCls = tone === 'ink' ? 'text-[#23201a]' : 'text-primary'
+  const activeCls = tone === 'ink' ? 'text-[#1D211E]' : 'text-primary'
   const idleCls =
     tone === 'ink'
-      ? 'text-[#23201a]/65 hover:text-[#23201a]/70'
+      ? 'text-[#1D211E]/65 hover:text-[#1D211E]/70'
       : 'text-primary/55 hover:text-primary/80'
 
   const item = (code: 'de' | 'en', label: string) =>
@@ -34,7 +34,7 @@ export default function LangSwitch({ tone = 'dark' }: { tone?: 'dark' | 'ink' })
   return (
     <div className="flex items-center gap-1.5 text-xs tracking-wide">
       {item('de', 'DE')}
-      <span className={tone === 'ink' ? 'text-[#23201a]/25' : 'text-primary/25'}>/</span>
+      <span className={tone === 'ink' ? 'text-[#1D211E]/25' : 'text-primary/25'}>/</span>
       {item('en', 'EN')}
     </div>
   )

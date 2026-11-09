@@ -14,7 +14,7 @@ export default function HowItWorks() {
   return (
     <section
       id="how-it-works"
-      className="bg-[#0a0a0a] px-4 sm:px-6 md:px-10 lg:px-14 py-20 sm:py-24 md:py-28"
+      className="bg-[#2E3A33] px-4 sm:px-6 md:px-10 lg:px-14 py-20 sm:py-24 md:py-28"
     >
       <div className="max-w-6xl mx-auto">
         <SectionLabel align="start" className="mb-5 sm:mb-6">
@@ -30,7 +30,7 @@ export default function HowItWorks() {
             <Reveal
               key={step.title}
               index={i}
-              className="rounded-2xl bg-[#101010] overflow-hidden flex flex-col"
+              className="rounded-2xl bg-[#324039] overflow-hidden flex flex-col"
             >
               <div
                 className="relative aspect-[16/10] overflow-hidden"
@@ -43,7 +43,7 @@ export default function HowItWorks() {
                   className="absolute inset-0 h-full w-full object-contain"
                 />
                 <span
-                  className="absolute top-4 left-5 text-4xl sm:text-5xl font-light tracking-tight text-[#0a0a0a]/35 tabular-nums"
+                  className="absolute top-4 left-5 text-4xl sm:text-5xl font-light tracking-tight text-[#2E3A33]/35 tabular-nums"
                   aria-hidden="true"
                 >
                   {String(i + 1).padStart(2, '0')}

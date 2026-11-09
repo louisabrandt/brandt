@@ -11,7 +11,7 @@ export default function RelationalCapacity() {
   return (
     <section
       id="relational-capacity"
-      className="bg-[#0a0a0a] px-4 sm:px-6 md:px-10 lg:px-14 py-20 sm:py-24 md:py-28"
+      className="bg-[#2E3A33] px-4 sm:px-6 md:px-10 lg:px-14 py-20 sm:py-24 md:py-28"
     >
       <div className="max-w-6xl mx-auto">
         <SectionLabel align="start" className="mb-5 sm:mb-6">
@@ -37,7 +37,7 @@ export default function RelationalCapacity() {
             <Reveal
               key={cap.title}
               index={i}
-              className="rounded-2xl bg-[#101010] p-6 flex flex-col min-h-[180px]"
+              className="rounded-2xl bg-[#324039] p-6 flex flex-col min-h-[180px]"
             >
               <h3 className="text-base sm:text-lg font-medium" style={{ color: TEXT_COLOR }}>
                 {cap.title}

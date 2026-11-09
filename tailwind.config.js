@@ -7,7 +7,8 @@ export default {
         primary: '#DEDBC8',
       },
       fontFamily: {
-        serif: ['"Instrument Serif"', 'serif'],
+        serif: ['"Cormorant Garamond"', 'serif'],
+        sans: ['"Hanken Grotesk"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
     },
   },

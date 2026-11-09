@@ -8,7 +8,7 @@ export default function Footer() {
   const { l } = useLang()
   const c = useContent()
   return (
-    <footer className="bg-[#0a0a0a] border-t border-white/10 px-4 sm:px-6 md:px-10 lg:px-14 py-14 sm:py-16">
+    <footer className="bg-[#2E3A33] border-t border-white/10 px-4 sm:px-6 md:px-10 lg:px-14 py-14 sm:py-16">
       <div className="max-w-6xl mx-auto">
         {/* Newsletter / stay in touch (also how people hear about new courses & group formats) */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-center pb-12 mb-12 border-b border-white/10">
@@ -25,7 +25,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-1">
-              <span className="text-2xl font-medium tracking-[-0.05em]" style={{ color: '#E1E0CC' }}>
+              <span className="text-2xl font-medium tracking-[-0.05em]" style={{ color: '#F1EFE7' }}>
                 Brandt
               </span>
             </div>

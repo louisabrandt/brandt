@@ -16,11 +16,11 @@ interface Offering {
 }
 
 function OfferingBody({ offering, tone }: { offering: Offering; tone: 'dark' | 'paper' }) {
-  const title = tone === 'paper' ? 'text-[#23201a]' : ''
-  const tagline = tone === 'paper' ? 'text-[#23201a]/65' : 'text-primary/60'
-  const desc = tone === 'paper' ? 'text-[#23201a]/75' : 'text-primary/70'
-  const meta = tone === 'paper' ? 'text-[#23201a]/65' : 'text-primary/55'
-  const price = tone === 'paper' ? 'text-[#23201a]' : 'text-primary'
+  const title = tone === 'paper' ? 'text-[#1D211E]' : ''
+  const tagline = tone === 'paper' ? 'text-[#1D211E]/65' : 'text-primary/60'
+  const desc = tone === 'paper' ? 'text-[#1D211E]/75' : 'text-primary/70'
+  const meta = tone === 'paper' ? 'text-[#1D211E]/65' : 'text-primary/55'
+  const price = tone === 'paper' ? 'text-[#1D211E]' : 'text-primary'
   return (
     <>
       <div className="flex items-start justify-between gap-3">
@@ -44,14 +44,14 @@ function OfferingBody({ offering, tone }: { offering: Offering; tone: 'dark' | '
 export default function Services() {
   const c = useContent()
   const header: Segment[] = [
-    { text: c.services.head1, className: 'text-[#23201a]' },
-    { text: c.services.head2, className: 'text-[#23201a]/65' },
+    { text: c.services.head1, className: 'text-[#1D211E]' },
+    { text: c.services.head2, className: 'text-[#1D211E]/65' },
   ]
 
   return (
     <section
       id="services"
-      className="bg-[#efe9de] px-4 sm:px-6 md:px-10 lg:px-14 py-20 sm:py-24 md:py-28"
+      className="bg-[#F4F2EC] px-4 sm:px-6 md:px-10 lg:px-14 py-20 sm:py-24 md:py-28"
     >
       <div className="max-w-6xl mx-auto">
         <SectionLabel tone="ink" align="start" className="mb-5 sm:mb-6">
@@ -66,9 +66,9 @@ export default function Services() {
           {/* Free intro call — featured dark accent card */}
           <Reveal
             index={0}
-            className="noise-overlay relative overflow-hidden rounded-2xl bg-[#1b1b1b] ring-1 ring-[#B4552E]/40 p-6 md:p-8 flex flex-col md:col-span-2 min-h-[260px]"
+            className="noise-overlay relative overflow-hidden rounded-2xl bg-[#3C4B43] ring-1 ring-[#B4552E]/40 p-6 md:p-8 flex flex-col md:col-span-2 min-h-[260px]"
           >
-            <span className="self-start text-[10px] uppercase tracking-[0.18em] text-[#F3ECDE] bg-[#B4552E] rounded-full px-2.5 py-1">
+            <span className="self-start text-[10px] uppercase tracking-[0.18em] text-[#F1EFE7] bg-[#B4552E] rounded-full px-2.5 py-1">
               {c.services.featured.price}
             </span>
             <h3 className="mt-5 text-xl font-medium" style={{ color: TEXT_COLOR }}>
@@ -101,9 +101,9 @@ export default function Services() {
             <Reveal
               key={o.number}
               index={i + 1}
-              className="rounded-2xl bg-[#f5f0e6] border border-[#23201a]/8 p-6 flex flex-col min-h-[240px]"
+              className="rounded-2xl bg-[#ECEAE2] border border-[#1D211E]/8 p-6 flex flex-col min-h-[240px]"
             >
-              <span className="text-[#23201a]/65 text-xs tabular-nums">{o.number}</span>
+              <span className="text-[#1D211E]/65 text-xs tabular-nums">{o.number}</span>
               <div className="mt-3 flex flex-col flex-1">
                 <OfferingBody offering={o} tone="paper" />
               </div>
@@ -114,22 +114,22 @@ export default function Services() {
         {/* Price reference + VAT note */}
         <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
           <div className="flex flex-wrap items-center gap-3">
-            <span className="text-[#23201a]/65 text-[11px] uppercase tracking-[0.18em]">
+            <span className="text-[#1D211E]/65 text-[11px] uppercase tracking-[0.18em]">
               {c.services.priceLabel}
             </span>
             {c.services.pricing.map((p) => (
               <span
                 key={p}
-                className="rounded-full border border-[#23201a]/15 bg-[#f5f0e6] px-4 py-2 text-[13px] text-[#23201a]/85 tabular-nums"
+                className="rounded-full border border-[#1D211E]/15 bg-[#ECEAE2] px-4 py-2 text-[13px] text-[#1D211E]/85 tabular-nums"
               >
                 {p}
               </span>
             ))}
           </div>
-          <p className="text-[#23201a]/65 text-xs">{c.services.pricingNote}</p>
+          <p className="text-[#1D211E]/65 text-xs">{c.services.pricingNote}</p>
         </div>
 
-        <p className="mt-5 text-[#23201a]/65 text-sm italic font-serif">{c.services.availability}</p>
+        <p className="mt-5 text-[#1D211E]/65 text-sm italic font-serif">{c.services.availability}</p>
       </div>
     </section>
   )

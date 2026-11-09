@@ -11,7 +11,7 @@ const EASE = [0.16, 1, 0.3, 1] as const
 export default function Hero() {
   const c = useContent()
   return (
-    <section className="h-screen w-full p-4 md:p-6 bg-[#0a0a0a]">
+    <section className="h-screen w-full p-4 md:p-6 bg-[#2E3A33]">
       <div className="relative h-full w-full overflow-hidden rounded-2xl md:rounded-[2rem]">
         {/* Background video */}
         <LazyVideo src={HERO_VIDEO_URL} className="absolute inset-0 h-full w-full" />

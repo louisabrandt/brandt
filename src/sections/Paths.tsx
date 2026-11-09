@@ -16,7 +16,7 @@ export default function Paths() {
   ]
 
   return (
-    <section className="bg-[#0a0a0a] px-4 sm:px-6 md:px-10 lg:px-14 py-20 sm:py-24 md:py-28">
+    <section className="bg-[#2E3A33] px-4 sm:px-6 md:px-10 lg:px-14 py-20 sm:py-24 md:py-28">
       <div className="max-w-6xl mx-auto">
         <SectionLabel align="start" className="mb-5 sm:mb-6">
           {c.paths.eyebrow}
@@ -30,7 +30,7 @@ export default function Paths() {
             <Reveal key={p.to} index={i}>
               <Link
                 to={l(p.to)}
-                className="group h-full rounded-2xl bg-[#101010] flex flex-col overflow-hidden hover:bg-[#141414] transition-colors"
+                className="group h-full rounded-2xl bg-[#324039] flex flex-col overflow-hidden hover:bg-[#37453E] transition-colors"
               >
                 <div
                   className="relative aspect-[16/9] overflow-hidden"

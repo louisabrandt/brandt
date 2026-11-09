@@ -11,16 +11,16 @@ export const HERO_VIDEO_URL = '/videos/hero.mp4'
 export const FEATURE_VIDEO_URL = '/videos/feature.mp4'
 
 /** Primary text color (slightly warmer than the Tailwind `primary` token). */
-export const TEXT_COLOR = '#E1E0CC'
+export const TEXT_COLOR = '#F1EFE7'
 
 /**
  * The single warm accent for primary calls-to-action — a terracotta drawn from
  * the illustration palette. Deep enough for cream text, and legible on both the
- * dark base (#0a0a0a) and the warm paper sections (#efe9de).
+ * dark base (#2E3A33) and the warm paper sections (#F4F2EC).
  */
 export const ACCENT = '#B4552E'
 export const ACCENT_HOVER = '#9E4826'
 export const ACCENT_DEEP = '#8F4021'
 /** Warm paper reading-room tokens (matches About + course detail pages). */
-export const PAPER = '#efe9de'
-export const INK = '#23201a'
+export const PAPER = '#F4F2EC'
+export const INK = '#1D211E'

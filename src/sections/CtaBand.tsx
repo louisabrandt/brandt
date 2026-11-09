@@ -13,9 +13,9 @@ interface CtaBandProps {
 export default function CtaBand({ variant = 'default', tone = 'paper', secondary }: CtaBandProps) {
   const c = useContent()
   const isPaper = tone === 'paper'
-  const bg = isPaper ? 'bg-[#efe9de]' : 'bg-[#0a0a0a]'
-  const head = isPaper ? 'text-[#23201a]' : 'text-primary'
-  const body = isPaper ? 'text-[#23201a]/70' : 'text-primary/70'
+  const bg = isPaper ? 'bg-[#F4F2EC]' : 'bg-[#2E3A33]'
+  const head = isPaper ? 'text-[#1D211E]' : 'text-primary'
+  const body = isPaper ? 'text-[#1D211E]/70' : 'text-primary/70'
 
   const heading =
     variant === 'about' ? c.cta.aboutHeading : variant === 'courses' ? c.cta.coursesHeading : c.cta.defaultHeading

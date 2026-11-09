@@ -11,7 +11,7 @@ export default function WhatChanges() {
   return (
     <section
       id="what-changes"
-      className="bg-[#efe9de] px-4 sm:px-6 md:px-10 lg:px-14 py-20 sm:py-24 md:py-28"
+      className="bg-[#F4F2EC] px-4 sm:px-6 md:px-10 lg:px-14 py-20 sm:py-24 md:py-28"
     >
       <div className="max-w-6xl mx-auto">
         <SectionLabel tone="ink" align="start" className="mb-5 sm:mb-6">
@@ -23,7 +23,7 @@ export default function WhatChanges() {
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.7, ease: EASE }}
-          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-[#23201a] max-w-3xl leading-[1.05]"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-[#1D211E] max-w-3xl leading-[1.05]"
         >
           {c.whatChanges.heading}
         </motion.h2>
@@ -33,21 +33,21 @@ export default function WhatChanges() {
             <Reveal
               key={outcome}
               index={i}
-              className="rounded-2xl bg-[#f5f0e6] border border-[#23201a]/8 p-6 flex flex-col gap-4 min-h-[160px]"
+              className="rounded-2xl bg-[#ECEAE2] border border-[#1D211E]/8 p-6 flex flex-col gap-4 min-h-[160px]"
             >
               <Check className="h-5 w-5 text-[#5e6b4a]" strokeWidth={1.75} />
-              <p className="text-[#23201a]/80 text-sm sm:text-[15px] leading-[1.5]">{outcome}</p>
+              <p className="text-[#1D211E]/80 text-sm sm:text-[15px] leading-[1.5]">{outcome}</p>
             </Reveal>
           ))}
         </div>
 
         <div className="mt-10 grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-8 lg:gap-12 items-center">
-          <p className="max-w-2xl text-lg sm:text-xl md:text-2xl font-normal text-[#23201a]/85 leading-[1.4]">
+          <p className="max-w-2xl text-lg sm:text-xl md:text-2xl font-normal text-[#1D211E]/85 leading-[1.4]">
             {c.whatChanges.closing}{' '}
             <span className="font-serif italic">{c.whatChanges.closingItalic}</span>
           </p>
           <div
-            className="relative overflow-hidden rounded-2xl aspect-[16/9] ring-1 ring-[#23201a]/10"
+            className="relative overflow-hidden rounded-2xl aspect-[16/9] ring-1 ring-[#1D211E]/10"
             style={{ backgroundColor: '#f2b79e' }}
           >
             <img

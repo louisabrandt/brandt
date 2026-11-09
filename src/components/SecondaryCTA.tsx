@@ -23,7 +23,7 @@ export default function SecondaryCTA({
   const { l } = useLang()
   const styles =
     tone === 'paper'
-      ? 'border-[#23201a]/25 text-[#23201a] hover:bg-[#23201a]/[0.06]'
+      ? 'border-[#1D211E]/25 text-[#1D211E] hover:bg-[#1D211E]/[0.06]'
       : 'border-primary/25 text-primary hover:bg-primary/[0.08]'
   return (
     <Link

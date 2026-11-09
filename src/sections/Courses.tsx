@@ -17,7 +17,7 @@ export default function Courses() {
   return (
     <section
       id="courses"
-      className="relative bg-[#0a0a0a] px-4 sm:px-6 md:px-10 lg:px-14 py-20 sm:py-24 md:py-28 overflow-hidden"
+      className="relative bg-[#2E3A33] px-4 sm:px-6 md:px-10 lg:px-14 py-20 sm:py-24 md:py-28 overflow-hidden"
     >
       <div className="bg-noise absolute inset-0 opacity-[0.15] pointer-events-none" />
 
@@ -61,7 +61,7 @@ export default function Courses() {
               <Reveal key={course.slug} index={i}>
                 <Link
                   to={l(`/courses/${course.slug}`)}
-                  className="group h-full rounded-2xl bg-[#101010] flex flex-col overflow-hidden hover:bg-[#141414] transition-colors"
+                  className="group h-full rounded-2xl bg-[#324039] flex flex-col overflow-hidden hover:bg-[#37453E] transition-colors"
                 >
                   <div
                     className="relative aspect-[5/4] overflow-hidden"

@@ -17,7 +17,7 @@ export default function SectionLabel({
   tone = 'cream',
   className = '',
 }: SectionLabelProps) {
-  const color = tone === 'ink' ? 'text-[#23201a]/65' : 'text-primary/65'
+  const color = tone === 'ink' ? 'text-[#1D211E]/65' : 'text-primary/65'
   return (
     <div
       className={`text-[10px] sm:text-[11px] uppercase tracking-[0.24em] ${color} ${

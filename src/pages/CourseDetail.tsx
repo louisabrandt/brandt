@@ -16,9 +16,9 @@ export default function CourseDetail() {
 
   if (!course) {
     return (
-      <div className="min-h-screen bg-[#efe9de] flex flex-col items-center justify-center text-center px-6">
-        <h1 className="text-[#23201a] text-2xl font-normal">{c.courseDetail.notFound}</h1>
-        <Link to={l('/courses')} className="mt-4 text-[#23201a]/65 hover:text-[#23201a] text-sm">
+      <div className="min-h-screen bg-[#F4F2EC] flex flex-col items-center justify-center text-center px-6">
+        <h1 className="text-[#1D211E] text-2xl font-normal">{c.courseDetail.notFound}</h1>
+        <Link to={l('/courses')} className="mt-4 text-[#1D211E]/65 hover:text-[#1D211E] text-sm">
           {c.courseDetail.backAll}
         </Link>
       </div>
@@ -29,18 +29,18 @@ export default function CourseDetail() {
   const others = COURSES.filter((o) => o.slug !== course.slug).slice(0, 3)
 
   return (
-    <div className="bg-[#efe9de] min-h-screen">
+    <div className="bg-[#F4F2EC] min-h-screen">
       {/* Top bar */}
-      <header className="border-b border-[#23201a]/12">
+      <header className="border-b border-[#1D211E]/12">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-10 h-14 flex items-center justify-between gap-4">
-          <Link to={l('/')} className="text-[#23201a] text-lg font-medium tracking-[-0.04em]">
+          <Link to={l('/')} className="text-[#1D211E] text-lg font-medium tracking-[-0.04em]">
             Brandt
           </Link>
           <div className="flex items-center gap-5 text-sm">
-            <Link to={l('/courses')} className="hidden sm:inline text-[#23201a]/65 hover:text-[#23201a] transition-colors">
+            <Link to={l('/courses')} className="hidden sm:inline text-[#1D211E]/65 hover:text-[#1D211E] transition-colors">
               {c.courseDetail.allCourses}
             </Link>
-            <Link to={l('/contact')} className="text-[#23201a]/65 hover:text-[#23201a] transition-colors">
+            <Link to={l('/contact')} className="text-[#1D211E]/65 hover:text-[#1D211E] transition-colors">
               {c.courseDetail.contact}
             </Link>
             <LangSwitch tone="ink" />
@@ -51,21 +51,21 @@ export default function CourseDetail() {
       <article className="max-w-3xl mx-auto px-4 sm:px-6 md:px-10 py-16 sm:py-20 md:py-24">
         <Link
           to={l('/courses')}
-          className="inline-flex items-center gap-1.5 text-[#23201a]/65 hover:text-[#23201a]/80 transition-colors text-sm"
+          className="inline-flex items-center gap-1.5 text-[#1D211E]/65 hover:text-[#1D211E]/80 transition-colors text-sm"
         >
           <ArrowUpRight className="h-3.5 w-3.5 -rotate-[135deg]" strokeWidth={1.5} />
           {c.courseDetail.courses}
         </Link>
 
-        <p className="mt-8 text-[#23201a]/65 text-[11px] uppercase tracking-[0.22em]">{t.tag}</p>
-        <h1 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-normal text-[#23201a] leading-[1.05] tracking-tight">
+        <p className="mt-8 text-[#1D211E]/65 text-[11px] uppercase tracking-[0.22em]">{t.tag}</p>
+        <h1 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-normal text-[#1D211E] leading-[1.05] tracking-tight">
           {t.title}
         </h1>
-        <p className="mt-6 text-[#23201a]/80 text-base md:text-lg leading-[1.65]">{t.intro}</p>
+        <p className="mt-6 text-[#1D211E]/80 text-base md:text-lg leading-[1.65]">{t.intro}</p>
 
         {/* Illustration */}
         <div
-          className="mt-10 relative overflow-hidden rounded-2xl aspect-[16/10] sm:aspect-[2/1] ring-1 ring-[#23201a]/8"
+          className="mt-10 relative overflow-hidden rounded-2xl aspect-[16/10] sm:aspect-[2/1] ring-1 ring-[#1D211E]/8"
           style={{ backgroundColor: course.accent }}
         >
           <img
@@ -76,34 +76,34 @@ export default function CourseDetail() {
         </div>
 
         {/* Meta */}
-        <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 text-sm border-y border-[#23201a]/12 py-6">
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 text-sm border-y border-[#1D211E]/12 py-6">
           <div>
-            <p className="text-[#23201a]/65 text-[11px] uppercase tracking-[0.22em] mb-1">{c.courseDetail.format}</p>
-            <p className="text-[#23201a]/80">{c.courseMeta.format}</p>
+            <p className="text-[#1D211E]/65 text-[11px] uppercase tracking-[0.22em] mb-1">{c.courseDetail.format}</p>
+            <p className="text-[#1D211E]/80">{c.courseMeta.format}</p>
           </div>
           <div>
-            <p className="text-[#23201a]/65 text-[11px] uppercase tracking-[0.22em] mb-1">{c.courseMeta.priceLabel}</p>
-            <p className="text-[#23201a]/80">{c.courseMeta.individual} · {c.courseMeta.couple}</p>
+            <p className="text-[#1D211E]/65 text-[11px] uppercase tracking-[0.22em] mb-1">{c.courseMeta.priceLabel}</p>
+            <p className="text-[#1D211E]/80">{c.courseMeta.individual} · {c.courseMeta.couple}</p>
           </div>
           <div>
-            <p className="text-[#23201a]/65 text-[11px] uppercase tracking-[0.22em] mb-1">{c.courseDetail.whoFor}</p>
-            <p className="text-[#23201a]/80">{t.forWhom}</p>
+            <p className="text-[#1D211E]/65 text-[11px] uppercase tracking-[0.22em] mb-1">{c.courseDetail.whoFor}</p>
+            <p className="text-[#1D211E]/80">{t.forWhom}</p>
           </div>
         </div>
 
         {/* What you'll explore */}
-        <h2 className="mt-14 text-xl sm:text-2xl font-normal text-[#23201a]">{c.courseDetail.explore}</h2>
+        <h2 className="mt-14 text-xl sm:text-2xl font-normal text-[#1D211E]">{c.courseDetail.explore}</h2>
         <ul className="mt-6 space-y-3.5">
           {t.learn.map((item) => (
             <li key={item} className="flex items-start gap-3">
               <Check className="w-4 h-4 mt-1 shrink-0 text-[#5e6b4a]" strokeWidth={1.75} />
-              <span className="text-[#23201a]/85 text-sm sm:text-base leading-[1.55]">{item}</span>
+              <span className="text-[#1D211E]/85 text-sm sm:text-base leading-[1.55]">{item}</span>
             </li>
           ))}
         </ul>
 
         {/* Booking — dark accent card on the light page */}
-        <div className="noise-overlay relative overflow-hidden rounded-2xl bg-[#141414] p-6 md:p-8 mt-14">
+        <div className="noise-overlay relative overflow-hidden rounded-2xl bg-[#37453E] p-6 md:p-8 mt-14">
           <p className="text-primary/55 text-[11px] uppercase tracking-[0.22em] mb-3">
             {c.courseMeta.priceLabel}
           </p>
@@ -133,14 +133,14 @@ export default function CourseDetail() {
                 ? `${url}?thema=${encodeURIComponent(t.title)}`
                 : fallback
               const cls = filled
-                ? `${pill} bg-[#B4552E] hover:bg-[#9E4826] text-[#F3ECDE]`
+                ? `${pill} bg-[#B4552E] hover:bg-[#9E4826] text-[#F1EFE7]`
                 : `${pill} border border-primary/25 text-primary hover:bg-primary/[0.08] pr-5`
               const inner = (
                 <>
                   <span>{label}</span>
                   {filled && (
                     <span className={`${circle} bg-[#7C3A1E]`}>
-                      <ArrowRight className="w-4 h-4 text-[#F3ECDE]" strokeWidth={1.5} />
+                      <ArrowRight className="w-4 h-4 text-[#F1EFE7]" strokeWidth={1.5} />
                     </span>
                   )}
                 </>
@@ -189,11 +189,11 @@ export default function CourseDetail() {
         </div>
 
         {/* Deepen 1:1 */}
-        <p className="mt-8 text-[#23201a]/65 text-sm leading-[1.6]">
+        <p className="mt-8 text-[#1D211E]/65 text-sm leading-[1.6]">
           {c.courseMeta.upsell}
           <Link
             to={l('/coaching')}
-            className="text-[#23201a] underline decoration-[#23201a]/30 underline-offset-2 hover:decoration-[#23201a] transition inline-flex items-center gap-1"
+            className="text-[#1D211E] underline decoration-[#1D211E]/30 underline-offset-2 hover:decoration-[#1D211E] transition inline-flex items-center gap-1"
           >
             {c.courseMeta.upsellLink}
             <ArrowRight className="h-3.5 w-3.5 -rotate-45" strokeWidth={1.5} />
@@ -202,8 +202,8 @@ export default function CourseDetail() {
         </p>
 
         {/* Other courses */}
-        <div className="mt-16 pt-10 border-t border-[#23201a]/12">
-          <p className="text-[#23201a]/65 text-[11px] uppercase tracking-[0.22em] mb-6">
+        <div className="mt-16 pt-10 border-t border-[#1D211E]/12">
+          <p className="text-[#1D211E]/65 text-[11px] uppercase tracking-[0.22em] mb-6">
             {c.courseDetail.otherCourses}
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -213,7 +213,7 @@ export default function CourseDetail() {
                 <Link
                   key={o.slug}
                   to={l(`/courses/${o.slug}`)}
-                  className="group rounded-2xl bg-[#f5f0e6] border border-[#23201a]/8 overflow-hidden hover:border-[#23201a]/15 transition-colors flex flex-col"
+                  className="group rounded-2xl bg-[#ECEAE2] border border-[#1D211E]/8 overflow-hidden hover:border-[#1D211E]/15 transition-colors flex flex-col"
                 >
                   <div className="relative aspect-[5/4] overflow-hidden" style={{ backgroundColor: o.accent }}>
                     <img
@@ -224,9 +224,9 @@ export default function CourseDetail() {
                     />
                   </div>
                   <div className="p-5 flex flex-col flex-1">
-                    <span className="text-[#23201a]/65 text-[10px] uppercase tracking-[0.16em]">{ot.tag}</span>
-                    <h3 className="mt-2 text-base font-medium text-[#23201a]">{ot.title}</h3>
-                    <span className="mt-3 inline-flex items-center gap-1 text-xs text-[#23201a]/65 group-hover:text-[#23201a] transition-colors">
+                    <span className="text-[#1D211E]/65 text-[10px] uppercase tracking-[0.16em]">{ot.tag}</span>
+                    <h3 className="mt-2 text-base font-medium text-[#1D211E]">{ot.title}</h3>
+                    <span className="mt-3 inline-flex items-center gap-1 text-xs text-[#1D211E]/65 group-hover:text-[#1D211E] transition-colors">
                       {c.courseDetail.exploreShort}
                       <ArrowUpRight
                         className="w-3 h-3 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"

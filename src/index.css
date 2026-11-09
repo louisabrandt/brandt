@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 * {
-  font-family: 'Almarai', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+  font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
     'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
 }
 
@@ -38,7 +38,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: #0a0a0a;
+  background: #2E3A33;
 }
 
 #root {
@@ -141,3 +141,6 @@ body {
 .animate-marquee-right {
   animation: marquee-right 26s linear infinite;
 }
+
+/* Variante B: Cormorant als Medium rendern */
+.font-serif{font-weight:500;}

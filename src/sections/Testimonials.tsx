@@ -7,14 +7,14 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="bg-[#efe9de] px-4 sm:px-6 md:px-10 lg:px-14 py-20 sm:py-24 md:py-28"
+      className="bg-[#F4F2EC] px-4 sm:px-6 md:px-10 lg:px-14 py-20 sm:py-24 md:py-28"
     >
       <div className="max-w-6xl mx-auto">
         <SectionLabel tone="ink" align="start" className="mb-5 sm:mb-6">
           {c.testimonials.eyebrow}
         </SectionLabel>
 
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal text-[#23201a] max-w-2xl mb-10 leading-[1.05]">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal text-[#1D211E] max-w-2xl mb-10 leading-[1.05]">
           {c.testimonials.heading}
         </h2>
 
@@ -23,14 +23,14 @@ export default function Testimonials() {
             <Reveal
               key={t.author}
               index={i}
-              className="rounded-2xl bg-[#f5f0e6] border border-[#23201a]/8 p-6 md:p-7 flex flex-col"
+              className="rounded-2xl bg-[#ECEAE2] border border-[#1D211E]/8 p-6 md:p-7 flex flex-col"
             >
-              <p className="text-[15px] leading-[1.65] text-[#23201a]/85 flex-1">
+              <p className="text-[15px] leading-[1.65] text-[#1D211E]/85 flex-1">
                 {t.before}
                 <span className="font-serif italic">{t.emphasis}</span>
                 {t.after}
               </p>
-              <p className="mt-5 text-xs text-[#23201a]/65">{t.author}</p>
+              <p className="mt-5 text-xs text-[#1D211E]/65">{t.author}</p>
             </Reveal>
           ))}
         </div>

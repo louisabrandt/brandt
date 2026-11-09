@@ -61,7 +61,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="bg-[#0a0a0a] px-4 sm:px-6 md:px-10 lg:px-14 py-20 sm:py-24 md:py-28"
+      className="bg-[#2E3A33] px-4 sm:px-6 md:px-10 lg:px-14 py-20 sm:py-24 md:py-28"
     >
       <div className="max-w-6xl mx-auto">
         <SectionLabel align="start" className="mb-5 sm:mb-6">
@@ -106,7 +106,7 @@ export default function Contact() {
 
           {/* Right — form */}
           <div className="lg:col-span-7">
-            <div className="rounded-2xl bg-[#101010] p-6 md:p-8">
+            <div className="rounded-2xl bg-[#324039] p-6 md:p-8">
               {submitted ? (
                 <div className="flex flex-col items-start gap-4 py-6">
                   <span className="flex items-center justify-center h-11 w-11 rounded-full bg-primary/10">
@@ -189,11 +189,11 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="group mt-1 inline-flex items-center gap-2 hover:gap-3 transition-all duration-300 bg-[#B4552E] hover:bg-[#9E4826] rounded-full pl-5 pr-1.5 py-1.5 text-[#F3ECDE] font-medium text-sm sm:text-base self-start disabled:opacity-60"
+                    className="group mt-1 inline-flex items-center gap-2 hover:gap-3 transition-all duration-300 bg-[#B4552E] hover:bg-[#9E4826] rounded-full pl-5 pr-1.5 py-1.5 text-[#F1EFE7] font-medium text-sm sm:text-base self-start disabled:opacity-60"
                   >
                     <span>{submitting ? c.contact.sending : c.contact.submit}</span>
                     <span className="flex items-center justify-center bg-[#7C3A1E] rounded-full w-9 h-9 sm:w-10 sm:h-10 transition-transform duration-300 group-hover:scale-110">
-                      <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-[#F3ECDE]" strokeWidth={1.5} />
+                      <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-[#F1EFE7]" strokeWidth={1.5} />
                     </span>
                   </button>
 

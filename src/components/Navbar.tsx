@@ -13,7 +13,7 @@ function NavLink({ label, to }: { label: string; to: string }) {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       className="inline-block py-2 transition-colors duration-300 whitespace-nowrap"
-      style={{ color: hover ? '#E1E0CC' : 'rgba(225, 224, 204, 0.8)' }}
+      style={{ color: hover ? '#F1EFE7' : 'rgba(225, 224, 204, 0.8)' }}
     >
       {label}
     </Link>

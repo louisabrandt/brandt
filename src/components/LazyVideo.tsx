@@ -46,7 +46,7 @@ export default function LazyVideo({ src, className = '', rootMargin = '400px' }:
   }, [rootMargin])
 
   return (
-    <div ref={ref} className={`${className} bg-[#0a0a0a]`} aria-hidden="true">
+    <div ref={ref} className={`${className} bg-[#2E3A33]`} aria-hidden="true">
       {show && (
         <video
           className="h-full w-full object-cover"

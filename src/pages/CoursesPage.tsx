@@ -8,7 +8,7 @@ export default function CoursesPage() {
   return (
     <>
       <SiteHeader />
-      <main className="bg-[#0a0a0a] overflow-x-hidden">
+      <main className="bg-[#2E3A33] overflow-x-hidden">
         <FitFinder />
         <Courses />
         <CtaBand variant="courses" secondary="coaching" />
