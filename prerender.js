@@ -43,15 +43,15 @@ const META = {
   de: {
     '/': {
       title: 'Brandt — Paartherapie & Beziehungscoaching | Zypern & online',
-      desc: 'Paartherapie und Beziehungscoaching mit Louisa Brandt, M.Sc., auf Deutsch und Englisch. Weltweit online und persönlich in Paphos (Zypern) und Wien, besonders für deutsch- und englischsprachige Paare und Expats auf Zypern.',
+      desc: 'Paartherapie und Beziehungscoaching mit Louisa Brandt, M.Sc., auf Deutsch und Englisch. Weltweit online und persönlich in Paphos (Zypern), besonders für deutsch- und englischsprachige Paare und Expats auf Zypern.',
     },
     '/about': {
       title: 'Über Louisa Brandt — M.Sc. Psychologie, Beziehungscoach',
-      desc: 'Wie ich mit Paaren und Einzelnen arbeite: Bindung, Emotionsregulation, Gottman-Methode und Sexualtherapie, ohne Fachjargon. Weltweit online, persönlich in Paphos und Wien.',
+      desc: 'Wie ich mit Paaren und Einzelnen arbeite: Bindung, Emotionsregulation, Gottman-Methode und Sexualtherapie, ohne Fachjargon. Weltweit online, persönlich in Paphos auf Zypern.',
     },
     '/coaching': {
       title: 'Coaching mit Louisa Brandt — Paare & Einzelne',
-      desc: '1:1-Beziehungscoaching: Sitzungen, Pakete und was dich erwartet. Die Gottman-Methode verbunden mit Sexualtherapie. Weltweit online oder persönlich in Paphos und Wien.',
+      desc: '1:1-Beziehungscoaching: Sitzungen, Pakete und was dich erwartet. Die Gottman-Methode verbunden mit Sexualtherapie. Weltweit online oder persönlich in Paphos auf Zypern.',
     },
     '/courses': {
       title: 'Kurse — Beziehungs-Psychoedukation | Brandt',
@@ -59,22 +59,22 @@ const META = {
     },
     '/contact': {
       title: 'Kontakt & Buchung — Paartherapie Zypern | Brandt',
-      desc: 'Buche ein Erstgespräch mit Louisa Brandt. Unverbindlich, vertraulich ab der ersten Nachricht. Weltweit online oder persönlich in Paphos (Zypern) und Wien, auf Deutsch und Englisch.',
+      desc: 'Buche ein Erstgespräch mit Louisa Brandt. Unverbindlich, vertraulich ab der ersten Nachricht. Weltweit online oder persönlich in Paphos (Zypern), auf Deutsch und Englisch.',
     },
     courseSuffix: (title) => `${title} — ein Brandt-Kurs`,
   },
   en: {
     '/': {
       title: 'Brandt — Couples Therapy & Relationship Coaching | Cyprus & Online',
-      desc: 'Couples therapy and relationship coaching with Louisa Brandt, M.Sc., in English and German. Online worldwide and in person in Paphos, Cyprus and in Vienna, especially for English- and German-speaking couples and expats in Cyprus.',
+      desc: 'Couples therapy and relationship coaching with Louisa Brandt, M.Sc., in English and German. Online worldwide and in person in Paphos, Cyprus, especially for English- and German-speaking couples and expats in Cyprus.',
     },
     '/about': {
       title: 'About Louisa Brandt — M.Sc. Psychology, relationship coach',
-      desc: 'How I work with couples and individuals: attachment, emotional regulation, the Gottman Method and sex therapy, without the jargon. Online worldwide, and in person in Paphos and Vienna.',
+      desc: 'How I work with couples and individuals: attachment, emotional regulation, the Gottman Method and sex therapy, without the jargon. Online worldwide, and in person in Paphos, Cyprus.',
     },
     '/coaching': {
       title: 'Coaching with Louisa Brandt — couples & individuals',
-      desc: 'One-to-one relationship coaching: sessions, packages, and what to expect. The Gottman Method integrated with sex therapy. Online worldwide, or in person in Paphos and Vienna.',
+      desc: 'One-to-one relationship coaching: sessions, packages, and what to expect. The Gottman Method integrated with sex therapy. Online worldwide, or in person in Paphos, Cyprus.',
     },
     '/courses': {
       title: 'Courses — relationship psychoeducation | Brandt',
@@ -82,7 +82,7 @@ const META = {
     },
     '/contact': {
       title: 'Contact & booking — Couples Therapy Cyprus | Brandt',
-      desc: 'Book a first conversation with Louisa Brandt. No obligation, confidential from the first message. Online worldwide, or in person in Paphos, Cyprus and Vienna, in English and German.',
+      desc: 'Book a first conversation with Louisa Brandt. No obligation, confidential from the first message. Online worldwide, or in person in Paphos, Cyprus, in English and German.',
     },
     courseSuffix: (title) => `${title} — a Brandt course`,
   },

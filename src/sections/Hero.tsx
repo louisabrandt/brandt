@@ -21,7 +21,7 @@ export default function Hero() {
 
         {/* Noise + legibility gradient */}
         <div className="noise-overlay absolute inset-0 pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#2E3A33]/35 via-transparent to-[#2E3A33]/80 pointer-events-none" />
 
         <Navbar />
 

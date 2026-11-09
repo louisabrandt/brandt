@@ -19,7 +19,7 @@ export const en = {
     headline: 'Nothing shapes your life like',
     headlineItalic: 'your relationships.',
     sub1: "Whether with a partner, with the people around you or with yourself: good relationships aren't luck. They're a skill you can grow.",
-    sub2: 'Relationship coaching for couples and individuals who want deeper connection, better communication, and lasting stability. Online worldwide, and in person in Paphos and Vienna. In English and German.',
+    sub2: 'Relationship coaching for couples and individuals who want deeper connection, better communication, and lasting stability. Online worldwide, and in person in Paphos, Cyprus. In English and German.',
     ctaNote: 'Free · 30 min · no obligation',
   },
   trustBar: [
@@ -36,10 +36,10 @@ export const en = {
   ],
   forWhom: {
     eyebrow: 'Does this sound familiar?',
-    head1: 'You can feel it:',
-    headItalic: 'something keeps repeating.',
+    head1: 'Something',
+    headItalic: 'keeps repeating.',
     intro:
-      'For couples and individuals who want to understand what keeps happening in their relationships, with a partner, with the people around them, or with themselves, instead of just working around it.',
+      'For couples and individuals who want to understand what keeps repeating in their relationships, with a partner, with the people around them, or with themselves, instead of only managing around it.',
     themesLabel: 'Common themes',
     themes: [
       'The same argument on repeat, whether it ends in raised voices or silence',
@@ -123,11 +123,11 @@ export const en = {
     head3: 'a relational coach.',
     lead: 'Most of what shows up in our relationships, the distance, the same argument on repeat, the slow fading of closeness, is rarely about communication skills alone. It usually goes back to how we learned to do closeness, trust and vulnerability, long before we met a particular person. That shapes how we connect with a partner, with the people around us, and with ourselves.',
     support:
-      'My work is grounded in psychological research and clinical training: attachment theory, relational systems thinking, emotional regulation, and current relationship science, including the Gottman Method. It stays practical and down to earth, with no therapy jargon, no blame, and no self-optimization talk.',
+      'My work is grounded in psychological research and clinical training: attachment theory, relational systems thinking, emotional regulation, and current relationship science, including the Gottman Method. It stays practical and down to earth, with no therapy jargon, no blame, and no self-optimization talk. My approach is humanistic: you set the direction and I help you get there, with respect for your freedom and the choices that are yours to make. To keep the quality high, I work with regular supervision and continued training.',
     credentials: [
       ['M.Sc.', 'Psychology', 'Clinical Psychology & Psychotherapy focus'],
       ['Method', 'Gottman-informed', 'Attachment & relational systems'],
-      ['Practice', 'Paphos, Vienna & online', 'Couples & individuals, EN & DE'],
+      ['Practice', 'Paphos, Cyprus & online', 'Couples & individuals, EN & DE'],
     ] as [string, string, string][],
   },
   approach: {
@@ -200,7 +200,7 @@ export const en = {
   services: {
     eyebrow: 'Working with me, one to one',
     head1: 'Ways to work together.',
-    head2: 'Online worldwide, or in person in Paphos, Cyprus and in Vienna.',
+    head2: 'Online worldwide, or in person in Paphos, Cyprus.',
     featured: {
       title: 'A free intro call',
       tagline: 'The place to start',
@@ -345,7 +345,7 @@ export const en = {
       { q: 'Do we both need to come?', a: 'Not necessarily. Couples work is strongest with both partners in the room, but individual relational work is just as valid, and many people start on their own.' },
       { q: 'What if only one of us wants to start?', a: "That's common. The work begins with whoever is ready. It stays focused on your perspective, your growth and your side of the dynamic, not on fixing the other person." },
       { q: 'How is this different from couples therapy or life coaching?', a: "It isn't about goal-setting, motivation or performance, and it isn't clinical treatment. It's about how you relate when things get hard, and about building the capacity to stay present in closeness, conflict and responsibility. The focus is depth and lasting change, not quick results." },
-      { q: 'Online or in person?', a: 'Both. Sessions take place online worldwide, or in person in Paphos, Cyprus and in Vienna.' },
+      { q: 'Online or in person?', a: 'Both. Sessions take place online worldwide, or in person in Paphos, Cyprus.' },
       { q: 'Do you offer English- and German-speaking couples therapy in Cyprus?', a: 'Yes. Sessions are available in English and German, in person in Paphos, Cyprus and online across the island and worldwide. English- and German-speaking couples, individuals and expats living in Cyprus are a frequent focus of the work.' },
       { q: 'Which languages?', a: 'Sessions are available in English and German.' },
       { q: 'Do you work with international and binational couples?', a: 'Yes, often. Cultural differences, languages, and the isolation that can come with relocation are a frequent focus of the work.' },
@@ -365,7 +365,7 @@ export const en = {
     whatsappText: '+49 170 8809105',
     whatsappPrefill: 'Hi Louisa, I came across your work and would love to learn more.',
     sessionsLabel: 'Sessions',
-    sessionsText: 'Online worldwide · in person in Paphos, Cyprus & Vienna · in English & German',
+    sessionsText: 'Online worldwide · in person in Paphos, Cyprus · in English & German',
     first: 'First name',
     last: 'Last name',
     email: 'Email',
@@ -408,10 +408,10 @@ export const en = {
     error: 'Something went wrong. Please email lb@louisabrandt.com.',
   },
   footer: {
-    tagline: 'Relationship coaching for couples and individuals. Online worldwide, and in person in Paphos & Vienna.',
+    tagline: 'Relationship coaching for couples and individuals. Online worldwide, and in person in Paphos, Cyprus.',
     navigate: 'Navigate',
     sessions: 'Sessions',
-    sessionsItems: ['Online worldwide', 'Paphos & Vienna', 'English & German'],
+    sessionsItems: ['Online worldwide', 'Paphos, Cyprus', 'English & German'],
     contact: 'Contact',
     rights: '© 2026 Louisa Brandt. All rights reserved.',
     imprint: 'Impressum',
@@ -436,7 +436,7 @@ export const de: Content = {
     headline: 'Nichts prägt dein Leben so sehr wie',
     headlineItalic: 'deine Beziehungen.',
     sub1: 'Ob mit einem Partner, mit den Menschen um dich herum oder mit dir selbst: Gute Beziehungen sind keine Frage des Glücks, sondern eine Fähigkeit, die sich entwickeln lässt.',
-    sub2: 'Beziehungscoaching für Paare und Einzelne, die sich echte Nähe, eine tragfähige Kommunikation und dauerhafte Stabilität wünschen. Weltweit online, persönlich in Paphos und Wien. Auf Deutsch und Englisch.',
+    sub2: 'Beziehungscoaching für Paare und Einzelne, die sich echte Nähe, eine tragfähige Kommunikation und dauerhafte Stabilität wünschen. Weltweit online, persönlich in Paphos auf Zypern. Auf Deutsch und Englisch.',
     ctaNote: 'Kostenlos · 30 Min · unverbindlich',
   },
   trustBar: [
@@ -453,10 +453,10 @@ export const de: Content = {
   ],
   forWhom: {
     eyebrow: 'Kommt dir das bekannt vor?',
-    head1: 'Du spürst es:',
-    headItalic: 'Etwas wiederholt sich.',
+    head1: 'Etwas',
+    headItalic: 'wiederholt sich.',
     intro:
-      'Für Paare und Einzelne, die verstehen möchten, was sich in ihren Beziehungen immer wieder abspielt, zu einem Partner, zum Umfeld oder zu sich selbst, statt es nur zu umschiffen.',
+      'Für Paare und Einzelne, die verstehen möchten, was sich in ihren Beziehungen immer wiederholt, mit dem Partner, mit den Menschen um sie herum oder mit sich selbst, statt es weiter nur zu verwalten.',
     themesLabel: 'Häufige Themen',
     themes: [
       'Immer derselbe Streit, ob er laut endet oder im Schweigen',
@@ -508,7 +508,7 @@ export const de: Content = {
     heading: 'Wie auch immer du',
     headingItalic: 'starten möchtest.',
     coaching: {
-      label: 'Die tiefere Arbeit, eins zu eins',
+      label: 'Die tiefere Arbeit, ganz persönlich',
       title: 'Coaching',
       desc: 'Fortlaufende Sitzungen für Paare und Einzelne, Schritt für Schritt an euren Mustern, gemeinsam. Beginne mit einem ruhigen Erstgespräch.',
       cta: 'Coaching entdecken',
@@ -540,11 +540,11 @@ export const de: Content = {
     head3: 'Beziehungscoach.',
     lead: 'Das meiste, was sich in unseren Beziehungen zeigt, die Distanz, der immer gleiche Streit, das leise Verblassen von Nähe, liegt selten allein an der Kommunikation. Es wurzelt darin, wie wir Nähe, Vertrauen und Verletzlichkeit erlebt haben, lange bevor wir einem bestimmten Menschen begegnet sind. Das prägt, wie wir mit einem Partner, mit den Menschen um uns und mit uns selbst in Verbindung gehen.',
     support:
-      'Meine Arbeit gründet in psychologischer Forschung und klinischer Ausbildung: Bindungstheorie, systemischem Denken, Affektregulation und aktueller Paarforschung, darunter die Gottman-Methode. Sie bleibt konkret und alltagsnah, ohne Therapiejargon, ohne Schuldzuweisungen und ohne Selbstoptimierung.',
+      'Meine Arbeit gründet in psychologischer Forschung und klinischer Ausbildung: Bindungstheorie, systemischem Denken, Affektregulation und aktueller Paarforschung, darunter die Gottman-Methode. Sie bleibt konkret und alltagsnah, ohne Therapiejargon, ohne Schuldzuweisungen und ohne Selbstoptimierung. Mein Zugang ist humanistisch: Du gibst die Richtung vor, ich begleite dich dorthin, mit Respekt vor deiner Freiheit und den Entscheidungen, die bei dir liegen. Für gleichbleibende Qualität sorge ich mit regelmäßiger Supervision und Fortbildung.',
     credentials: [
       ['M.Sc.', 'Psychologie', 'Schwerpunkt Klinische Psychologie & Psychotherapie'],
       ['Methode', 'Gottman-fundiert', 'Bindung & systemische Paararbeit'],
-      ['Praxis', 'Paphos, Wien & online', 'Paare & Einzelne, DE & EN'],
+      ['Praxis', 'Paphos (Zypern) & online', 'Paare & Einzelne, DE & EN'],
     ],
   },
   approach: {
@@ -615,9 +615,9 @@ export const de: Content = {
     bannerAfter: ' anfühlt, auch in schweren Phasen.',
   },
   services: {
-    eyebrow: 'Mit mir arbeiten, eins zu eins',
+    eyebrow: 'Mit mir arbeiten, ganz persönlich',
     head1: 'Wege, zusammenzuarbeiten.',
-    head2: 'Weltweit online oder persönlich in Paphos (Zypern) und Wien.',
+    head2: 'Weltweit online oder persönlich in Paphos (Zypern).',
     featured: {
       title: 'Kostenloses Kennenlernen',
       tagline: 'Der Anfang',
@@ -629,7 +629,7 @@ export const de: Content = {
     included: ['30 Minuten', 'Online', 'Kostenlos & unverbindlich'],
     offerings: [
       { number: '01', title: 'Paarsitzungen', tagline: 'Die Kernarbeit, gemeinsam', description: 'Evidenzbasierte Sitzungen für Paare, fundiert in Bindung und Affektregulation, die Einsicht in konkrete Schritte übersetzen, die ihr gemeinsam geht.', meta: '50 Min. · online oder vor Ort', price: 'ab 180 €' },
-      { number: '02', title: 'Einzelsitzungen', tagline: 'Beziehungsarbeit eins zu eins', description: 'Für alle, die an den eigenen Mustern arbeiten, an der Beziehung zu sich selbst und zum eigenen Umfeld, ob Single, zwischen Beziehungen oder während ein:e Partner:in noch nicht bereit ist.', meta: '50 Min. · online oder vor Ort', price: 'ab 140 €' },
+      { number: '02', title: 'Einzelsitzungen', tagline: 'Beziehungsarbeit, ganz persönlich', description: 'Für alle, die an den eigenen Mustern arbeiten, an der Beziehung zu sich selbst und zum eigenen Umfeld, ob Single, zwischen Beziehungen oder während ein:e Partner:in noch nicht bereit ist.', meta: '50 Min. · online oder vor Ort', price: 'ab 140 €' },
       { number: '03', title: 'Sitzungspakete', tagline: 'Für Veränderung, die bleibt', description: 'Einsicht allein trägt selten. Ein Paket gibt der Arbeit Struktur, Raum zum Integrieren und die Zeit, die echte Veränderung braucht.', meta: 'zweiwöchentlich · online oder vor Ort', price: 'auf Anfrage' },
       { number: '04', title: 'Gruppen & Workshops', tagline: 'Begleitete Formate', description: 'Begleitete Arbeit in kleinen, kuratierten Gruppen zu einem Beziehungsthema. Auf Anfrage auch für Organisationen.', meta: 'auf Anfrage', price: 'auf Anfrage' },
     ],
@@ -696,10 +696,10 @@ export const de: Content = {
       },
     ],
     progressOf: '/',
-    resultIntro: 'Nach deinen Antworten würde ich hier beginnen. Jeder Kurs, und die Arbeit eins zu eins, bleibt dir offen.',
+    resultIntro: 'Nach deinen Antworten würde ich hier beginnen. Jeder Kurs, und die persönliche Arbeit mit mir, bleibt dir offen.',
     bestFit: 'Passt am besten',
     courseCta: 'Kurs ansehen',
-    orOneToOne: 'Oder eins zu eins',
+    orOneToOne: 'Oder ganz persönlich',
     oneToOneTitle: 'Gemeinsam daran arbeiten',
     oneToOneText: 'Lieber persönlich und in deiner eigenen Tiefe? Beginne mit einem ruhigen, unverbindlichen Erstgespräch.',
     oneToOneCta: 'Erstgespräch buchen',
@@ -762,7 +762,7 @@ export const de: Content = {
       { q: 'Müssen wir beide kommen?', a: 'Nicht unbedingt. Paararbeit wirkt am stärksten, wenn beide dabei sind, doch Beziehungsarbeit allein ist genauso wertvoll, und viele beginnen für sich.' },
       { q: 'Was, wenn nur eine:r von uns anfangen möchte?', a: 'Das ist häufig. Die Arbeit beginnt mit dem, der bereit ist. Sie bleibt bei deiner Perspektive, deiner Entwicklung und deinem Anteil an der Dynamik, nicht beim Verändern des anderen.' },
       { q: 'Wie unterscheidet sich das von Paartherapie oder Life-Coaching?', a: 'Es geht nicht um Zielsetzung, Motivation oder Leistung, und es ist keine klinische Behandlung. Es geht darum, wie ihr in Beziehung tretet, wenn es schwer wird, und um die Fähigkeit, in Nähe, Konflikt und Verantwortung präsent zu bleiben. Der Fokus liegt auf Tiefe und bleibender Veränderung, nicht auf schnellen Ergebnissen.' },
-      { q: 'Online oder vor Ort?', a: 'Beides. Die Sitzungen finden weltweit online statt oder persönlich in Paphos (Zypern) und Wien.' },
+      { q: 'Online oder vor Ort?', a: 'Beides. Die Sitzungen finden weltweit online statt oder persönlich in Paphos (Zypern).' },
       { q: 'Gibt es deutsch- und englischsprachige Paartherapie auf Zypern?', a: 'Ja. Die Sitzungen sind auf Deutsch und Englisch möglich, persönlich in Paphos (Zypern) sowie online auf der ganzen Insel und weltweit. Deutsch- und englischsprachige Paare, Einzelpersonen und Expats, die auf Zypern leben, sind ein häufiger Schwerpunkt der Arbeit.' },
       { q: 'In welchen Sprachen?', a: 'Die Sitzungen sind auf Deutsch und Englisch möglich.' },
       { q: 'Arbeitest du mit internationalen und binationalen Paaren?', a: 'Ja, sehr oft. Kulturelle Unterschiede, Sprachen und die Isolation, die ein Umzug mit sich bringen kann, sind ein häufiger Schwerpunkt der Arbeit.' },
@@ -782,7 +782,7 @@ export const de: Content = {
     whatsappText: '+49 170 8809105',
     whatsappPrefill: 'Hallo Louisa, ich bin auf dein Angebot gestoßen und würde gern mehr erfahren.',
     sessionsLabel: 'Sitzungen',
-    sessionsText: 'Weltweit online · persönlich in Paphos (Zypern) & Wien · auf Deutsch & Englisch',
+    sessionsText: 'Weltweit online · persönlich in Paphos (Zypern) · auf Deutsch & Englisch',
     first: 'Vorname',
     last: 'Nachname',
     email: 'E-Mail',
@@ -805,7 +805,7 @@ export const de: Content = {
     whoFor: 'Für wen',
     explore: 'Was du erkundest',
     or1: 'Lieber persönlich und in deiner eigenen Tiefe?',
-    book1to1: 'Ein Erstgespräch eins zu eins buchen',
+    book1to1: 'Ein persönliches Erstgespräch buchen',
     otherCourses: 'Weitere Kurse',
     exploreShort: 'Ansehen',
     notFound: 'Kurs nicht gefunden',
@@ -825,10 +825,10 @@ export const de: Content = {
     error: 'Etwas ist schiefgelaufen. Bitte schreib an lb@louisabrandt.com.',
   },
   footer: {
-    tagline: 'Beziehungscoaching für Paare und Einzelpersonen. Weltweit online und persönlich in Paphos & Wien.',
+    tagline: 'Beziehungscoaching für Paare und Einzelpersonen. Weltweit online und persönlich in Paphos (Zypern).',
     navigate: 'Navigation',
     sessions: 'Sitzungen',
-    sessionsItems: ['Weltweit online', 'Paphos & Wien', 'Deutsch & Englisch'],
+    sessionsItems: ['Weltweit online', 'Paphos (Zypern)', 'Deutsch & Englisch'],
     contact: 'Kontakt',
     rights: '© 2026 Louisa Brandt. Alle Rechte vorbehalten.',
     imprint: 'Impressum',
