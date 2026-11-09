@@ -20,7 +20,7 @@ export default function SiteHeader() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-10 lg:px-14 h-14 flex items-center justify-between gap-4">
         <Link
           to={l('/')}
-          className="text-primary text-lg font-medium tracking-[-0.04em]"
+          className="text-primary text-lg font-serif font-medium tracking-[0.01em]"
         >
           Brandt
         </Link>

@@ -30,7 +30,7 @@ export default function Hero() {
               <WordsPullUp
                 text="Brandt"
                 color={TEXT_COLOR}
-                className="text-[26vw] sm:text-[24vw] md:text-[20vw] lg:text-[17vw] xl:text-[16vw] font-medium leading-[0.85] tracking-[-0.07em]"
+                className="text-[26vw] sm:text-[24vw] md:text-[20vw] lg:text-[17vw] xl:text-[16vw] font-serif font-medium leading-[0.85] tracking-[0.01em]"
               />
             </div>
 

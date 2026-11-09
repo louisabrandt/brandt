@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
+body {
   font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
     'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
 }
@@ -144,3 +144,6 @@ body {
 
 /* Variante B: Cormorant als Medium rendern */
 .font-serif{font-weight:500;}
+
+/* Formularelemente erben die Body-Schrift (Hanken Grotesk) */
+button, input, textarea, select { font-family: inherit; }

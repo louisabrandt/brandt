@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#DEDBC8',
+        primary: '#F1EFE7',
       },
       fontFamily: {
         serif: ['"Cormorant Garamond"', 'serif'],

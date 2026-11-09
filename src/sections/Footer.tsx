@@ -25,7 +25,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-1">
-              <span className="text-2xl font-medium tracking-[-0.05em]" style={{ color: '#F1EFE7' }}>
+              <span className="text-2xl font-serif font-medium tracking-[0.01em]" style={{ color: '#F1EFE7' }}>
                 Brandt
               </span>
             </div>
