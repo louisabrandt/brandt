@@ -39,7 +39,7 @@ export const en = {
     head1: 'You can feel it:',
     headItalic: 'something keeps repeating.',
     intro:
-      'For couples and individuals who want to understand what keeps happening between them, instead of just working around it.',
+      'For couples and individuals who want to understand what keeps happening in their relationships, with a partner, with the people around them, or with themselves, instead of just working around it.',
     themesLabel: 'Common themes',
     themes: [
       'The same argument on repeat, whether it ends in raised voices or silence',
@@ -121,7 +121,7 @@ export const en = {
     head1: "I'm Louisa Brandt,",
     headItalic: 'M.Sc. in Psychology,',
     head3: 'a relational coach.',
-    lead: 'Most of what shows up between two people, the distance, the same argument on repeat, the slow fading of closeness, is rarely about communication skills alone. It usually goes back to how each of you learned to do closeness, trust and vulnerability, long before you ever met.',
+    lead: 'Most of what shows up in our relationships, the distance, the same argument on repeat, the slow fading of closeness, is rarely about communication skills alone. It usually goes back to how we learned to do closeness, trust and vulnerability, long before we met a particular person. That shapes how we connect with a partner, with the people around us, and with ourselves.',
     support:
       'My work is grounded in psychological research and clinical training: attachment theory, relational systems thinking, emotional regulation, and current relationship science, including the Gottman Method. It stays practical and down to earth, with no therapy jargon, no blame, and no self-optimization talk.',
     credentials: [
@@ -212,7 +212,7 @@ export const en = {
     included: ['30 minutes', 'Online', 'Free, no obligation'],
     offerings: [
       { number: '01', title: 'Couples Sessions', tagline: 'The core work, together', description: 'Evidence-based sessions for couples, grounded in attachment and emotional regulation, that turn insight into concrete steps you take together.', meta: '50 min · online or in person', price: 'from €180' },
-      { number: '02', title: 'Individual Sessions', tagline: 'One-to-one relational work', description: "For anyone working on their own patterns, whether single, between relationships, or while a partner isn't ready to join.", meta: '50 min · online or in person', price: 'from €140' },
+      { number: '02', title: 'Individual Sessions', tagline: 'One-to-one relational work', description: "For anyone working on their own patterns and on the relationship with themselves and the people around them, whether single, between relationships, or while a partner isn't ready to join.", meta: '50 min · online or in person', price: 'from €140' },
       { number: '03', title: 'Session Packages', tagline: 'For change that lasts', description: 'Insight alone rarely holds. A package gives the work structure, room to integrate, and the time real change actually takes.', meta: 'biweekly · online or in person', price: 'On request' },
       { number: '04', title: 'Groups & Workshops', tagline: 'Guided group formats', description: 'Facilitated work in small, curated groups around one relational theme. Available for groups and organizations on request.', meta: 'on request', price: 'On request' },
     ],
@@ -293,7 +293,7 @@ export const en = {
     eyebrow: 'Courses & psychoeducation',
     heading: 'Learn the inner structure,',
     headingItalic: 'together.',
-    intro: 'Prefer to go at your own pace? Focused, evidence-based courses on the dynamics that shape relationships, so you can understand your patterns and practise responding differently. Every course works for individuals or couples, online.',
+    intro: 'Prefer to go at your own pace? Focused, evidence-based courses on the dynamics that shape our relationships, with others and with ourselves, so you can understand your patterns and practise responding differently. Every course works for individuals or couples, online.',
     topicIntro: "Already know what you want to work on, whether it's a specific challenge or growing yourself within your relationships? You can ",
     topicLink: 'book a session on that exact topic',
     topicOutro: '.',
@@ -434,7 +434,7 @@ export const de: Content = {
     eyebrow: 'Paartherapie und Beziehungscoaching',
     headline: 'Nichts prägt dein Leben so sehr wie',
     headlineItalic: 'deine Beziehungen.',
-    sub1: 'Ob mit einem Partner, mit den Menschen um dich herum oder mit dir selbst: gute Beziehungen sind keine Frage des Glücks, sondern eine Fähigkeit, die sich entwickeln lässt.',
+    sub1: 'Ob mit einem Partner, mit den Menschen um dich herum oder mit dir selbst: Gute Beziehungen sind keine Frage des Glücks, sondern eine Fähigkeit, die sich entwickeln lässt.',
     sub2: 'Beziehungscoaching für Paare und Einzelne, die sich echte Nähe, eine tragfähige Kommunikation und dauerhafte Stabilität wünschen. Weltweit online, persönlich in Paphos und Wien. Auf Deutsch und Englisch.',
     ctaNote: 'Kostenlos · 30 Min · unverbindlich',
   },
@@ -453,9 +453,9 @@ export const de: Content = {
   forWhom: {
     eyebrow: 'Kommt dir das bekannt vor?',
     head1: 'Du spürst es:',
-    headItalic: 'etwas wiederholt sich.',
+    headItalic: 'Etwas wiederholt sich.',
     intro:
-      'Für Paare und Einzelne, die verstehen möchten, was sich zwischen ihnen immer wieder abspielt, statt es nur zu umschiffen.',
+      'Für Paare und Einzelne, die verstehen möchten, was sich in ihren Beziehungen immer wieder abspielt, zu einem Partner, zum Umfeld oder zu sich selbst, statt es nur zu umschiffen.',
     themesLabel: 'Häufige Themen',
     themes: [
       'Immer derselbe Streit, ob er laut endet oder im Schweigen',
@@ -537,7 +537,7 @@ export const de: Content = {
     head1: 'Ich bin Louisa Brandt,',
     headItalic: 'M.Sc. in Psychologie,',
     head3: 'Beziehungscoach.',
-    lead: 'Das meiste, was sich zwischen zwei Menschen zeigt, die Distanz, der immer gleiche Streit, das leise Verblassen von Nähe, liegt selten allein an der Kommunikation. Es wurzelt darin, wie jede:r von euch Nähe, Vertrauen und Verletzlichkeit erlebt hat, lange bevor ihr euch begegnet seid.',
+    lead: 'Das meiste, was sich in unseren Beziehungen zeigt, die Distanz, der immer gleiche Streit, das leise Verblassen von Nähe, liegt selten allein an der Kommunikation. Es wurzelt darin, wie wir Nähe, Vertrauen und Verletzlichkeit erlebt haben, lange bevor wir einem bestimmten Menschen begegnet sind. Das prägt, wie wir mit einem Partner, mit den Menschen um uns und mit uns selbst in Verbindung gehen.',
     support:
       'Meine Arbeit gründet in psychologischer Forschung und klinischer Ausbildung: Bindungstheorie, systemischem Denken, Affektregulation und aktueller Paarforschung, darunter die Gottman-Methode. Sie bleibt konkret und alltagsnah, ohne Therapiejargon, ohne Schuldzuweisungen und ohne Selbstoptimierung.',
     credentials: [
@@ -628,7 +628,7 @@ export const de: Content = {
     included: ['30 Minuten', 'Online', 'Kostenlos & unverbindlich'],
     offerings: [
       { number: '01', title: 'Paarsitzungen', tagline: 'Die Kernarbeit, gemeinsam', description: 'Evidenzbasierte Sitzungen für Paare, fundiert in Bindung und Affektregulation, die Einsicht in konkrete Schritte übersetzen, die ihr gemeinsam geht.', meta: '50 Min. · online oder vor Ort', price: 'ab 180 €' },
-      { number: '02', title: 'Einzelsitzungen', tagline: 'Beziehungsarbeit eins zu eins', description: 'Für alle, die an den eigenen Mustern arbeiten, ob Single, zwischen Beziehungen oder während ein:e Partner:in noch nicht bereit ist.', meta: '50 Min. · online oder vor Ort', price: 'ab 140 €' },
+      { number: '02', title: 'Einzelsitzungen', tagline: 'Beziehungsarbeit eins zu eins', description: 'Für alle, die an den eigenen Mustern arbeiten, an der Beziehung zu sich selbst und zum eigenen Umfeld, ob Single, zwischen Beziehungen oder während ein:e Partner:in noch nicht bereit ist.', meta: '50 Min. · online oder vor Ort', price: 'ab 140 €' },
       { number: '03', title: 'Sitzungspakete', tagline: 'Für Veränderung, die bleibt', description: 'Einsicht allein trägt selten. Ein Paket gibt der Arbeit Struktur, Raum zum Integrieren und die Zeit, die echte Veränderung braucht.', meta: 'zweiwöchentlich · online oder vor Ort', price: 'auf Anfrage' },
       { number: '04', title: 'Gruppen & Workshops', tagline: 'Begleitete Formate', description: 'Begleitete Arbeit in kleinen, kuratierten Gruppen zu einem Beziehungsthema. Auf Anfrage auch für Organisationen.', meta: 'auf Anfrage', price: 'auf Anfrage' },
     ],
@@ -709,7 +709,7 @@ export const de: Content = {
     eyebrow: 'Kurse & Psychoedukation',
     heading: 'Verstehe die innere Struktur,',
     headingItalic: 'gemeinsam.',
-    intro: 'Lieber in deinem eigenen Tempo? Fokussierte, evidenzbasierte Kurse zu den Dynamiken, die Beziehungen prägen, damit du deine Muster verstehst und übst, anders zu reagieren. Jeder Kurs eignet sich für Einzelne oder Paare, online.',
+    intro: 'Lieber in deinem eigenen Tempo? Fokussierte, evidenzbasierte Kurse zu den Dynamiken, die unsere Beziehungen prägen, zu anderen und zu dir selbst, damit du deine Muster verstehst und übst, anders zu reagieren. Jeder Kurs eignet sich für Einzelne oder Paare, online.',
     topicIntro: 'Du weißt schon, woran du arbeiten möchtest, ob eine konkrete Herausforderung oder deine eigene Entwicklung im Kontext von Beziehungen? Dann kannst du ',
     topicLink: 'direkt eine Session zu genau diesem Thema buchen',
     topicOutro: '.',
@@ -785,7 +785,7 @@ export const de: Content = {
     last: 'Nachname',
     email: 'E-Mail',
     phone: 'Telefon (optional)',
-    message: 'Kurz: was führt dich her?',
+    message: 'Kurz: Was führt dich her?',
     submit: 'Erstgespräch buchen',
     sending: 'Wird gesendet…',
     trust: 'Das Kennenlernen ist kostenlos, 30 Min., online. Unverbindlich, und vertraulich ab der allerersten Nachricht.',
