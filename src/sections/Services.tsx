@@ -68,7 +68,7 @@ export default function Services() {
             index={0}
             className="noise-overlay relative overflow-hidden rounded-2xl bg-[#3C4B43] ring-1 ring-[#A74F2B]/40 p-6 md:p-8 flex flex-col md:col-span-2 min-h-[260px]"
           >
-            <span className="self-start text-[10px] uppercase tracking-[0.18em] text-[#F1EFE7] bg-[#A74F2B] rounded-full px-2.5 py-1">
+            <span className="self-start text-[11px] uppercase tracking-[0.18em] text-[#F1EFE7] bg-[#A74F2B] rounded-full px-2.5 py-1">
               {c.services.featured.price}
             </span>
             <h3 className="mt-5 text-xl font-medium" style={{ color: TEXT_COLOR }}>

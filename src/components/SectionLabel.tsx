@@ -20,7 +20,7 @@ export default function SectionLabel({
   const color = tone === 'ink' ? 'text-[#1D211E]/65' : 'text-primary/65'
   return (
     <div
-      className={`text-[10px] sm:text-[11px] uppercase tracking-[0.24em] ${color} ${
+      className={`text-[11px] sm:text-[11px] uppercase tracking-[0.24em] ${color} ${
         align === 'center' ? 'text-center' : 'text-left'
       } ${className}`}
     >

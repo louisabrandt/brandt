@@ -224,7 +224,7 @@ export default function CourseDetail() {
                     />
                   </div>
                   <div className="p-5 flex flex-col flex-1">
-                    <span className="text-[#1D211E]/65 text-[10px] uppercase tracking-[0.16em]">{ot.tag}</span>
+                    <span className="text-[#1D211E]/65 text-[11px] uppercase tracking-[0.16em]">{ot.tag}</span>
                     <h3 className="mt-2 text-base font-medium text-[#1D211E]">{ot.title}</h3>
                     <span className="mt-3 inline-flex items-center gap-1 text-xs text-[#1D211E]/65 group-hover:text-[#1D211E] transition-colors">
                       {c.courseDetail.exploreShort}
