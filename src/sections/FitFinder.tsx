@@ -172,7 +172,7 @@ export default function FitFinder() {
                   </div>
 
                   {/* Optional 1:1 */}
-                  <div className="relative overflow-hidden rounded-2xl bg-black border border-primary/10 p-6 md:p-7 flex flex-col">
+                  <div className="relative overflow-hidden rounded-2xl bg-[#2E3A33] border border-primary/10 p-6 md:p-7 flex flex-col">
                     <span className="text-[10px] uppercase tracking-[0.18em] text-primary/55 border border-primary/15 rounded-full px-2.5 py-1 self-start">
                       {c.fit.orOneToOne}
                     </span>

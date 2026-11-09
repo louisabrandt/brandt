@@ -24,59 +24,47 @@ export default function Hero() {
 
         {/* Hero content, bottom-aligned */}
         <div className="absolute bottom-0 left-0 right-0 z-10 p-5 sm:p-8 md:p-10 lg:p-12">
-          <div className="grid grid-cols-12 items-end gap-4 md:gap-6">
+          <div className="flex flex-col items-start gap-4 sm:gap-5 max-w-3xl">
             {/* Brand mark */}
-            <div className="col-span-12 lg:col-span-7">
-              <WordsPullUp
-                text="Brandt"
-                color={TEXT_COLOR}
-                className="text-[26vw] sm:text-[24vw] md:text-[20vw] lg:text-[17vw] xl:text-[16vw] font-serif font-medium leading-[0.85] tracking-[0.01em]"
-              />
-            </div>
+            <WordsPullUp
+              text="Brandt"
+              color={TEXT_COLOR}
+              className="text-[22vw] sm:text-[16vw] md:text-[12vw] lg:text-[8rem] font-serif font-medium leading-[0.9] tracking-[0.01em]"
+            />
 
-            {/* Right column: headline + copy + CTA */}
-            <div className="col-span-12 lg:col-span-5 flex flex-col gap-4 sm:gap-5 pb-1 sm:pb-3">
-              <motion.h1
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.4, ease: EASE }}
-                className="text-2xl sm:text-3xl md:text-4xl font-normal leading-[1.05] tracking-[-0.01em]"
-                style={{ color: TEXT_COLOR }}
-              >
-                {c.hero.headline}{' '}
-                <span className="font-serif italic">{c.hero.headlineItalic}</span>
-              </motion.h1>
+            {/* Headline — Cormorant, one voice with the wordmark */}
+            <motion.h1
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.4, ease: EASE }}
+              className="font-serif font-medium text-3xl sm:text-4xl md:text-5xl lg:text-[3.3rem] leading-[1.03] tracking-[0]"
+              style={{ color: TEXT_COLOR }}
+            >
+              {c.hero.headline}{' '}
+              <span className="italic">{c.hero.headlineItalic}</span>
+            </motion.h1>
 
-              <motion.p
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.52, ease: EASE }}
-                className="text-primary/85 text-sm sm:text-base"
-                style={{ lineHeight: 1.35 }}
-              >
-                {c.hero.sub1}
-              </motion.p>
+            {/* Single supporting line */}
+            <motion.p
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.52, ease: EASE }}
+              className="text-primary/85 text-sm sm:text-base max-w-xl"
+              style={{ lineHeight: 1.4 }}
+            >
+              {c.hero.sub1}
+            </motion.p>
 
-              <motion.p
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.62, ease: EASE }}
-                className="text-primary/70 text-xs sm:text-sm"
-                style={{ lineHeight: 1.5 }}
-              >
-                {c.hero.sub2}
-              </motion.p>
-
-              <motion.div
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.74, ease: EASE }}
-                className="mt-1"
-              >
-                <PrimaryCTA />
-                <p className="mt-3 text-primary/60 text-xs">{c.hero.ctaNote}</p>
-              </motion.div>
-            </div>
+            {/* CTA */}
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.64, ease: EASE }}
+              className="mt-1"
+            >
+              <PrimaryCTA />
+              <p className="mt-3 text-primary/60 text-xs">{c.hero.ctaNote}</p>
+            </motion.div>
           </div>
         </div>
       </div>
