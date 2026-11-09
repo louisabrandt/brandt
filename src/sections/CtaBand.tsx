@@ -4,7 +4,8 @@ import { useContent } from '../i18n/content'
 
 interface CtaBandProps {
   variant?: 'default' | 'about' | 'courses'
-  tone?: 'paper' | 'dark'
+  /** 'paper' warm off-white, 'light' a brighter near-white panel, 'dark' green. */
+  tone?: 'paper' | 'light' | 'dark'
   /** Optional second action pointing at another section. */
   secondary?: 'courses' | 'coaching'
 }
@@ -12,10 +13,10 @@ interface CtaBandProps {
 /** A calm closing call-to-action band, reused at the foot of several pages. */
 export default function CtaBand({ variant = 'default', tone = 'paper', secondary }: CtaBandProps) {
   const c = useContent()
-  const isPaper = tone === 'paper'
-  const bg = isPaper ? 'bg-[#F4F2EC]' : 'bg-[#2E3A33]'
-  const head = isPaper ? 'text-[#1D211E]' : 'text-primary'
-  const body = isPaper ? 'text-[#1D211E]/70' : 'text-primary/70'
+  const isDark = tone === 'dark'
+  const bg = isDark ? 'bg-[#2E3A33]' : tone === 'light' ? 'bg-[#FBFAF6]' : 'bg-[#F4F2EC]'
+  const head = isDark ? 'text-primary' : 'text-[#1D211E]'
+  const body = isDark ? 'text-primary/70' : 'text-[#1D211E]/70'
 
   const heading =
     variant === 'about' ? c.cta.aboutHeading : variant === 'courses' ? c.cta.coursesHeading : c.cta.defaultHeading
@@ -42,7 +43,7 @@ export default function CtaBand({ variant = 'default', tone = 'paper', secondary
             <SecondaryCTA
               label={secondaryProps.label}
               to={secondaryProps.to}
-              tone={isPaper ? 'paper' : 'dark'}
+              tone={isDark ? 'dark' : 'paper'}
             />
           )}
         </div>

@@ -11,7 +11,7 @@ export default function CoursesPage() {
       <main className="bg-[#2E3A33] overflow-x-hidden">
         <FitFinder />
         <Courses />
-        <CtaBand variant="courses" secondary="coaching" />
+        <CtaBand variant="courses" secondary="coaching" tone="light" />
         <Footer />
       </main>
     </>
