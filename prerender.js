@@ -42,8 +42,8 @@ const canonicalFor = (base, lang) => {
 const META = {
   de: {
     '/': {
-      title: 'Brandt — Paartherapie und Beziehungscoaching | online & vor Ort',
-      desc: 'Paartherapie und Beziehungscoaching mit Louisa Brandt, M.Sc. Für Paare und Einzelne: gute Beziehungen zu anderen und zu dir selbst sind keine Frage des Glücks, sondern eine Fähigkeit, die sich entwickeln lässt. Weltweit online, persönlich in Paphos und Wien.',
+      title: 'Brandt — Paartherapie & Beziehungscoaching | Zypern & online',
+      desc: 'Paartherapie und Beziehungscoaching mit Louisa Brandt, M.Sc., auf Deutsch und Englisch. Weltweit online und persönlich in Paphos (Zypern) und Wien, besonders für deutsch- und englischsprachige Paare und Expats auf Zypern.',
     },
     '/about': {
       title: 'Über Louisa Brandt — M.Sc. Psychologie, Beziehungscoach',
@@ -58,15 +58,15 @@ const META = {
       desc: 'Fokussierte, evidenzbasierte Kurse zu den Mustern, die Beziehungen prägen. Mach das kurze Quiz und finde deinen Kurs. Für Einzelne oder Paare, online.',
     },
     '/contact': {
-      title: 'Kontakt & Buchung — Brandt',
-      desc: 'Buche ein Erstgespräch mit Louisa Brandt. Unverbindlich, vertraulich ab der ersten Nachricht. Weltweit online oder persönlich in Paphos und Wien.',
+      title: 'Kontakt & Buchung — Paartherapie Zypern | Brandt',
+      desc: 'Buche ein Erstgespräch mit Louisa Brandt. Unverbindlich, vertraulich ab der ersten Nachricht. Weltweit online oder persönlich in Paphos (Zypern) und Wien, auf Deutsch und Englisch.',
     },
     courseSuffix: (title) => `${title} — ein Brandt-Kurs`,
   },
   en: {
     '/': {
-      title: 'Brandt — Couples Therapy & Relationship Coaching | Online & In-Person',
-      desc: 'Couples therapy and relationship coaching with Louisa Brandt, M.Sc. For couples and individuals: good relationships, with others and with yourself, are a skill you can grow. Online worldwide, in person in Paphos and Vienna.',
+      title: 'Brandt — Couples Therapy & Relationship Coaching | Cyprus & Online',
+      desc: 'Couples therapy and relationship coaching with Louisa Brandt, M.Sc., in English and German. Online worldwide and in person in Paphos, Cyprus and in Vienna, especially for English- and German-speaking couples and expats in Cyprus.',
     },
     '/about': {
       title: 'About Louisa Brandt — M.Sc. Psychology, relationship coach',
@@ -81,8 +81,8 @@ const META = {
       desc: 'Focused, evidence-based courses on the patterns that shape relationships. Take the short quiz to find your fit. For individuals or couples, online.',
     },
     '/contact': {
-      title: 'Contact & booking — Brandt',
-      desc: 'Book a first conversation with Louisa Brandt. No obligation, confidential from the first message. Online worldwide, or in person in Paphos and Vienna.',
+      title: 'Contact & booking — Couples Therapy Cyprus | Brandt',
+      desc: 'Book a first conversation with Louisa Brandt. No obligation, confidential from the first message. Online worldwide, or in person in Paphos, Cyprus and Vienna, in English and German.',
     },
     courseSuffix: (title) => `${title} — a Brandt course`,
   },

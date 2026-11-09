@@ -12,11 +12,11 @@
     <title>Brandt — Couples Therapy &amp; Relationship Coaching | Online &amp; In-Person</title>
     <meta
       name="description"
-      content="Couples therapy and relationship coaching with Louisa Brandt, M.Sc. For couples and individuals: good relationships, with others and with yourself, are a skill you can grow. Online worldwide and in person in Paphos & Vienna. Sessions in English & German."
+      content="Couples therapy and relationship coaching with Louisa Brandt, M.Sc., in English & German. For couples and individuals: good relationships, with others and with yourself, are a skill you can grow. Online worldwide and in person in Paphos, Cyprus & Vienna — for English- and German-speaking couples and expats in Cyprus."
     />
     <meta
       name="keywords"
-      content="couples coaching, relationship coaching, couples counseling, Gottman Method, sex therapy, attachment, emotional regulation, Paphos, Vienna, online, English, German, Louisa Brandt"
+      content="couples therapist Cyprus, couples counseling Cyprus, relationship coaching Cyprus, English-speaking couples therapist Paphos, German-speaking couples therapist Cyprus, Paartherapie Zypern, Paartherapeutin Zypern, Beziehungscoaching Zypern, couples coaching, Gottman Method, sex therapy, attachment, emotional regulation, Paphos, Vienna, expats Cyprus, online, English, German, Louisa Brandt"
     />
 
     <!-- Open Graph -->
@@ -30,7 +30,7 @@
     />
     <meta
       property="og:description"
-      content="Couples therapy and relationship coaching for couples and individuals. Good relationships, with others and with yourself, are a skill you can grow. Online worldwide and in person in Paphos & Vienna."
+      content="Couples therapy and relationship coaching for couples and individuals, in English & German. Good relationships, with others and with yourself, are a skill you can grow. Online worldwide and in person in Paphos, Cyprus & Vienna — for English- and German-speaking couples and expats in Cyprus."
     />
     <meta property="og:image" content="https://louisabrandt.com/og-image.png" />
     <meta property="og:image:type" content="image/png" />
@@ -46,7 +46,7 @@
     />
     <meta
       name="twitter:description"
-      content="Couples therapy and relationship coaching for couples and individuals. Good relationships, with others and with yourself, are a skill you can grow. Online worldwide and in person in Paphos & Vienna."
+      content="Couples therapy and relationship coaching for couples and individuals, in English & German. Good relationships, with others and with yourself, are a skill you can grow. Online worldwide and in person in Paphos, Cyprus & Vienna — for English- and German-speaking couples and expats in Cyprus."
     />
     <meta name="twitter:image" content="https://louisabrandt.com/og-image.png" />
 
@@ -88,7 +88,7 @@
             "email": "lb@louisabrandt.com",
             "priceRange": "€140–€220",
             "currenciesAccepted": "EUR",
-            "description": "Evidence-based couples and relationship coaching for couples and individuals. The Gottman Method integrated with insights and tools from sex therapy, attachment theory and emotional regulation. Online worldwide and in person in Paphos and Vienna, in English and German.",
+            "description": "Evidence-based couples and relationship coaching for couples and individuals, in English and German. The Gottman Method integrated with insights and tools from sex therapy, attachment theory and emotional regulation. Online worldwide and in person in Paphos, Cyprus and in Vienna, Austria — a strong fit for English- and German-speaking couples and expats in Cyprus.",
             "serviceType": "Couples counseling and relationship coaching",
             "founder": { "@id": "https://louisabrandt.com/#louisa" },
             "provider": { "@id": "https://louisabrandt.com/#louisa" },
@@ -107,8 +107,34 @@
               "Intimacy and desire discrepancy"
             ],
             "areaServed": [
-              { "@type": "City", "name": "Paphos" },
-              { "@type": "City", "name": "Vienna" }
+              { "@type": "Country", "name": "Cyprus" },
+              { "@type": "Country", "name": "Austria" },
+              {
+                "@type": "City",
+                "name": "Paphos",
+                "containedInPlace": { "@type": "Country", "name": "Cyprus" }
+              },
+              {
+                "@type": "City",
+                "name": "Vienna",
+                "containedInPlace": { "@type": "Country", "name": "Austria" }
+              },
+              { "@type": "AdministrativeArea", "name": "Worldwide (online)" }
+            ],
+            "location": [
+              {
+                "@type": "Place",
+                "name": "Paphos, Cyprus",
+                "address": { "@type": "PostalAddress", "addressLocality": "Paphos", "addressCountry": "CY" },
+                "geo": { "@type": "GeoCoordinates", "latitude": 34.7720, "longitude": 32.4297 }
+              },
+              {
+                "@type": "Place",
+                "name": "Vienna, Austria",
+                "address": { "@type": "PostalAddress", "addressLocality": "Vienna", "addressCountry": "AT" },
+                "geo": { "@type": "GeoCoordinates", "latitude": 48.2082, "longitude": 16.3738 }
+              },
+              { "@type": "VirtualLocation", "name": "Online (worldwide)", "url": "https://louisabrandt.com/" }
             ],
             "makesOffer": {
               "@type": "OfferCatalog",
@@ -167,7 +193,11 @@
             "@type": "Person",
             "@id": "https://louisabrandt.com/#louisa",
             "name": "Louisa Brandt",
-            "jobTitle": "Relational Dynamics Coach",
+            "jobTitle": "Couples Therapist & Relationship Coach",
+            "areaServed": [
+              { "@type": "Country", "name": "Cyprus" },
+              { "@type": "Country", "name": "Austria" }
+            ],
             "worksFor": { "@id": "https://louisabrandt.com/#practice" },
             "url": "https://louisabrandt.com/",
             "email": "lb@louisabrandt.com",
@@ -227,7 +257,15 @@
                 "name": "Online or in person?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Both. Sessions take place online worldwide, or in person in Paphos and Vienna."
+                  "text": "Both. Sessions take place online worldwide, or in person in Paphos, Cyprus and in Vienna, Austria."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you offer English- and German-speaking couples therapy in Cyprus?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Sessions are available in English and German, in person in Paphos, Cyprus and online across the island and worldwide. English- and German-speaking couples, individuals and expats living in Cyprus are a frequent focus of the work."
                 }
               },
               {
