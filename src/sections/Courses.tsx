@@ -37,13 +37,13 @@ export default function Courses() {
           <span className="font-serif italic">{c.coursesSection.headingItalic}</span>
         </m.h2>
 
-        <p className="mt-6 max-w-2xl text-sm md:text-[15px] leading-[1.6] text-primary/70">
+        <p className="mt-6 max-w-2xl text-sm md:text-base leading-[1.6] text-primary/70">
           {c.coursesSection.intro}
         </p>
-        <p className="mt-3 max-w-2xl text-sm md:text-[15px] leading-[1.6] text-primary/60">
+        <p className="mt-3 max-w-2xl text-sm md:text-base leading-[1.6] text-primary/60">
           {c.courseMeta.format} · {c.courseMeta.individual} · {c.courseMeta.couple}
         </p>
-        <p className="mt-3 max-w-2xl text-sm md:text-[15px] leading-[1.6] text-primary/60">
+        <p className="mt-3 max-w-2xl text-sm md:text-base leading-[1.6] text-primary/60">
           {c.coursesSection.topicIntro}
           <Link
             to={l('/contact')}
@@ -76,13 +76,13 @@ export default function Courses() {
                   </div>
                   <div className="p-6 flex flex-col flex-1">
                     <div className="flex items-baseline justify-between gap-2">
-                      <span className="text-primary/60 text-[11px] uppercase tracking-[0.16em]">{t.tag}</span>
+                      <span className="text-primary/60 text-xs uppercase tracking-[0.16em]">{t.tag}</span>
                       <span className="text-primary/70 text-xs tabular-nums shrink-0">{c.courseMeta.priceShort}</span>
                     </div>
                     <h3 className="mt-3 text-lg font-medium" style={{ color: TEXT_COLOR }}>
                       {t.title}
                     </h3>
-                    <p className="mt-2 text-primary/70 text-[13px] sm:text-sm leading-[1.55] flex-1">
+                    <p className="mt-2 text-primary/70 text-xs sm:text-sm leading-[1.55] flex-1">
                       {t.description}
                     </p>
                     <span className="mt-4 inline-flex items-center gap-1.5 text-xs text-primary/60 group-hover:text-primary transition-colors">

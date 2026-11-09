@@ -74,13 +74,13 @@ export default function Contact() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-primary leading-[1.05] max-w-xl">
               {c.contact.heading}
             </h2>
-            <p className="mt-6 max-w-md text-sm md:text-[15px] leading-[1.65] text-primary/70">
+            <p className="mt-6 max-w-md text-sm md:text-base leading-[1.65] text-primary/70">
               {c.contact.intro}
             </p>
 
             <div className="mt-10 space-y-4 text-sm">
               <div>
-                <p className="text-primary/60 text-[11px] uppercase tracking-[0.22em]">{c.contact.whatsappLabel}</p>
+                <p className="text-primary/60 text-xs uppercase tracking-[0.22em]">{c.contact.whatsappLabel}</p>
                 <a
                   href={`https://wa.me/491708809105?text=${encodeURIComponent(c.contact.whatsappPrefill)}`}
                   target="_blank"
@@ -92,13 +92,13 @@ export default function Contact() {
                 </a>
               </div>
               <div>
-                <p className="text-primary/60 text-[11px] uppercase tracking-[0.22em]">{c.contact.emailLabel}</p>
+                <p className="text-primary/60 text-xs uppercase tracking-[0.22em]">{c.contact.emailLabel}</p>
                 <a href="mailto:lb@louisabrandt.com" className="text-primary hover:text-primary/70 transition-colors">
                   lb@louisabrandt.com
                 </a>
               </div>
               <div>
-                <p className="text-primary/60 text-[11px] uppercase tracking-[0.22em]">{c.contact.sessionsLabel}</p>
+                <p className="text-primary/60 text-xs uppercase tracking-[0.22em]">{c.contact.sessionsLabel}</p>
                 <p className="text-primary/80 leading-[1.6]">{c.contact.sessionsText}</p>
               </div>
             </div>

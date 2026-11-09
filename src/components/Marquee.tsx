@@ -1,6 +1,6 @@
 function Pill({ label }: { label: string }) {
   return (
-    <div className="liquid-glass flex h-12 md:h-14 shrink-0 items-center rounded-full px-5 text-[13px] text-primary/85 whitespace-nowrap">
+    <div className="liquid-glass flex h-12 md:h-14 shrink-0 items-center rounded-full px-5 text-xs text-primary/85 whitespace-nowrap">
       <span>{label}</span>
     </div>
   )

@@ -35,7 +35,7 @@ function OfferingBody({ offering, tone }: { offering: Offering; tone: 'dark' | '
         </div>
         <span className={`shrink-0 text-sm font-medium tabular-nums ${price}`}>{offering.price}</span>
       </div>
-      <p className={`mt-3 text-[13px] sm:text-sm leading-[1.6] flex-1 ${desc}`}>{offering.description}</p>
+      <p className={`mt-3 text-xs sm:text-sm leading-[1.6] flex-1 ${desc}`}>{offering.description}</p>
       <p className={`mt-4 text-xs tracking-wide ${meta}`}>{offering.meta}</p>
     </>
   )
@@ -68,7 +68,7 @@ export default function Services() {
             index={0}
             className="noise-overlay relative overflow-hidden rounded-2xl bg-[#3C4B43] ring-1 ring-[#A74F2B]/40 p-6 md:p-8 flex flex-col md:col-span-2 min-h-[260px]"
           >
-            <span className="self-start text-[11px] uppercase tracking-[0.18em] text-[#F1EFE7] bg-[#A74F2B] rounded-full px-2.5 py-1">
+            <span className="self-start text-xs uppercase tracking-[0.18em] text-[#F1EFE7] bg-[#A74F2B] rounded-full px-2.5 py-1">
               {c.services.featured.price}
             </span>
             <h3 className="mt-5 text-xl font-medium" style={{ color: TEXT_COLOR }}>
@@ -77,13 +77,13 @@ export default function Services() {
             <p className="mt-1 text-primary/60 text-xs sm:text-sm font-serif italic">
               {c.services.featured.tagline}
             </p>
-            <p className="mt-3 text-primary/70 text-[13px] sm:text-sm leading-[1.6] flex-1">
+            <p className="mt-3 text-primary/70 text-xs sm:text-sm leading-[1.6] flex-1">
               {c.services.featured.description}
             </p>
 
             <ul className="mt-5 flex flex-wrap gap-x-5 gap-y-2">
               {c.services.included.map((item) => (
-                <li key={item} className="flex items-center gap-1.5 text-primary/75 text-xs sm:text-[13px]">
+                <li key={item} className="flex items-center gap-1.5 text-primary/75 text-xs">
                   <Check className="h-3.5 w-3.5 text-[#5e6b4a]" strokeWidth={2} />
                   {item}
                 </li>
@@ -92,7 +92,7 @@ export default function Services() {
 
             <div className="mt-6 flex flex-col gap-2">
               <PrimaryCTA label={c.services.cta} />
-              <span className="text-primary/60 text-[11px]">{c.services.trust}</span>
+              <span className="text-primary/60 text-xs">{c.services.trust}</span>
             </div>
           </Reveal>
 
@@ -114,13 +114,13 @@ export default function Services() {
         {/* Price reference + VAT note */}
         <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
           <div className="flex flex-wrap items-center gap-3">
-            <span className="text-[#1D211E]/65 text-[11px] uppercase tracking-[0.18em]">
+            <span className="text-[#1D211E]/65 text-xs uppercase tracking-[0.18em]">
               {c.services.priceLabel}
             </span>
             {c.services.pricing.map((p) => (
               <span
                 key={p}
-                className="rounded-full border border-[#1D211E]/15 bg-[#ECEAE2] px-4 py-2 text-[13px] text-[#1D211E]/85 tabular-nums"
+                className="rounded-full border border-[#1D211E]/15 bg-[#ECEAE2] px-4 py-2 text-xs text-[#1D211E]/85 tabular-nums"
               >
                 {p}
               </span>

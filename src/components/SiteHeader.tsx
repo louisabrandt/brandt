@@ -74,7 +74,7 @@ export default function SiteHeader() {
                 end
                 onClick={() => setOpen(false)}
                 className={({ isActive }) =>
-                  `py-3 text-[15px] ${isActive ? 'text-primary' : 'text-primary/80'}`
+                  `py-3 text-base ${isActive ? 'text-primary' : 'text-primary/80'}`
                 }
               >
                 {label(n.key)}

@@ -44,13 +44,13 @@ export default function Paths() {
                   />
                 </div>
                 <div className="p-6 md:p-8 flex flex-col flex-1">
-                  <span className="text-primary/60 text-[11px] uppercase tracking-[0.16em]">
+                  <span className="text-primary/60 text-xs uppercase tracking-[0.16em]">
                     {p.label}
                   </span>
                   <h3 className="mt-2 text-2xl sm:text-3xl font-medium" style={{ color: TEXT_COLOR }}>
                     {p.title}
                   </h3>
-                  <p className="mt-3 text-primary/70 text-sm sm:text-[15px] leading-[1.6] flex-1">
+                  <p className="mt-3 text-primary/70 text-sm sm:text-base leading-[1.6] flex-1">
                     {p.desc}
                   </p>
                   <span className="mt-5 inline-flex items-center gap-1.5 text-sm text-primary/70 group-hover:text-primary transition-colors">

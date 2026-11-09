@@ -34,7 +34,7 @@ export default function Footer() {
 
           {/* Navigate */}
           <div>
-            <p className="text-primary/60 text-[11px] uppercase tracking-[0.22em] mb-4">{c.footer.navigate}</p>
+            <p className="text-primary/60 text-xs uppercase tracking-[0.22em] mb-4">{c.footer.navigate}</p>
             <ul className="space-y-2.5">
               {NAV.map((n) => (
                 <li key={n.to}>
@@ -48,7 +48,7 @@ export default function Footer() {
 
           {/* Sessions */}
           <div>
-            <p className="text-primary/60 text-[11px] uppercase tracking-[0.22em] mb-4">{c.footer.sessions}</p>
+            <p className="text-primary/60 text-xs uppercase tracking-[0.22em] mb-4">{c.footer.sessions}</p>
             <ul className="space-y-2.5 text-sm text-primary/75">
               {c.footer.sessionsItems.map((s) => (
                 <li key={s}>{s}</li>
@@ -58,7 +58,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <p className="text-primary/60 text-[11px] uppercase tracking-[0.22em] mb-4">{c.footer.contact}</p>
+            <p className="text-primary/60 text-xs uppercase tracking-[0.22em] mb-4">{c.footer.contact}</p>
             <a href="mailto:lb@louisabrandt.com" className="block text-primary/75 hover:text-primary transition-colors text-sm">
               lb@louisabrandt.com
             </a>

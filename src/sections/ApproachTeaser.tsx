@@ -23,7 +23,7 @@ export default function ApproachTeaser() {
           {c.approachTeaser.heading}
         </m.h2>
 
-        <p className="mt-6 max-w-2xl mx-auto text-sm md:text-[15px] leading-[1.7] text-primary/70">
+        <p className="mt-6 max-w-2xl mx-auto text-sm md:text-base leading-[1.7] text-primary/70">
           {c.approachTeaser.para}
         </p>
 

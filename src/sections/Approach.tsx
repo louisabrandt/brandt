@@ -30,7 +30,7 @@ export default function Approach() {
             {c.approach.heading}
           </m.h2>
 
-          <div className="mt-8 space-y-5 text-sm md:text-[15px] leading-[1.7] text-[#1D211E]/75">
+          <div className="mt-8 space-y-5 text-sm md:text-base leading-[1.7] text-[#1D211E]/75">
             <p>{c.approach.p1}</p>
             <p>{c.approach.p2}</p>
             <p className="text-[#1D211E]/90">{c.approach.p3}</p>
@@ -47,7 +47,7 @@ export default function Approach() {
               {c.approach.isList.map((item) => (
                 <li key={item} className="flex items-start gap-2.5">
                   <Check className="h-4 w-4 mt-0.5 shrink-0 text-[#5e6b4a]" strokeWidth={1.75} />
-                  <span className="text-[#1D211E]/80 text-sm sm:text-[15px] leading-[1.5]">{item}</span>
+                  <span className="text-[#1D211E]/80 text-sm sm:text-base leading-[1.5]">{item}</span>
                 </li>
               ))}
             </ul>
@@ -59,7 +59,7 @@ export default function Approach() {
               {c.approach.notList.map((item) => (
                 <li key={item} className="flex items-start gap-2.5">
                   <span className="mt-0.5 shrink-0 text-[#1D211E]/30 text-sm leading-none">{'×'}</span>
-                  <span className="text-[#1D211E]/65 text-sm sm:text-[15px] leading-[1.5]">{item}</span>
+                  <span className="text-[#1D211E]/65 text-sm sm:text-base leading-[1.5]">{item}</span>
                 </li>
               ))}
             </ul>
@@ -71,7 +71,7 @@ export default function Approach() {
           {c.approach.concepts.map((concept) => (
             <span
               key={concept}
-              className="rounded-full border border-[#1D211E]/15 bg-[#ECEAE2] px-4 py-2 text-[13px] text-[#1D211E]/85"
+              className="rounded-full border border-[#1D211E]/15 bg-[#ECEAE2] px-4 py-2 text-xs text-[#1D211E]/85"
             >
               {concept}
             </span>

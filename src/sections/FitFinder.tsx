@@ -125,7 +125,7 @@ export default function FitFinder() {
                 </div>
 
                 <h3 className="text-primary text-lg sm:text-xl font-normal">{questions[step].q}</h3>
-                <p className="text-primary/60 text-[13px] mt-1.5 mb-5">{questions[step].hint}</p>
+                <p className="text-primary/60 text-xs mt-1.5 mb-5">{questions[step].hint}</p>
 
                 <div className="flex flex-col gap-3">
                   {questions[step].options.map((label, oIndex) => (
@@ -152,10 +152,10 @@ export default function FitFinder() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {/* Recommended course */}
                   <div className="relative overflow-hidden rounded-2xl bg-[#435349] ring-1 ring-[#A74F2B]/40 p-6 md:p-7 flex flex-col">
-                    <span className="text-[11px] uppercase tracking-[0.18em] text-primary/85 bg-[#A74F2B]/25 rounded-full px-2.5 py-1 self-start">
+                    <span className="text-xs uppercase tracking-[0.18em] text-primary/85 bg-[#A74F2B]/25 rounded-full px-2.5 py-1 self-start">
                       {c.fit.bestFit}
                     </span>
-                    <p className="mt-5 text-primary/60 text-[11px] uppercase tracking-[0.16em]">{t.tag}</p>
+                    <p className="mt-5 text-primary/60 text-xs uppercase tracking-[0.16em]">{t.tag}</p>
                     <h3 className="mt-1 text-lg sm:text-xl font-medium" style={{ color: TEXT_COLOR }}>
                       {t.title}
                     </h3>
@@ -173,7 +173,7 @@ export default function FitFinder() {
 
                   {/* Optional 1:1 */}
                   <div className="relative overflow-hidden rounded-2xl bg-[#2E3A33] border border-primary/10 p-6 md:p-7 flex flex-col">
-                    <span className="text-[11px] uppercase tracking-[0.18em] text-primary/60 border border-primary/15 rounded-full px-2.5 py-1 self-start">
+                    <span className="text-xs uppercase tracking-[0.18em] text-primary/60 border border-primary/15 rounded-full px-2.5 py-1 self-start">
                       {c.fit.orOneToOne}
                     </span>
                     <h3 className="mt-5 text-lg sm:text-xl font-medium text-primary/70">{c.fit.oneToOneTitle}</h3>
@@ -190,7 +190,7 @@ export default function FitFinder() {
 
                 {alternates.length > 0 && (
                   <div className="mt-5">
-                    <p className="text-primary/60 text-[11px] uppercase tracking-[0.18em] mb-3">{c.fit.alsoWorth}</p>
+                    <p className="text-primary/60 text-xs uppercase tracking-[0.18em] mb-3">{c.fit.alsoWorth}</p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {alternates.map((alt) => {
                         const at = courseText(alt, lang)
@@ -201,7 +201,7 @@ export default function FitFinder() {
                             className="group flex items-center justify-between gap-3 rounded-xl border border-primary/12 px-4 py-3 hover:border-primary/30 transition-colors"
                           >
                             <span className="min-w-0">
-                              <span className="block text-primary/60 text-[11px] uppercase tracking-[0.16em]">{at.tag}</span>
+                              <span className="block text-primary/60 text-xs uppercase tracking-[0.16em]">{at.tag}</span>
                               <span className="block text-primary/85 text-sm truncate">{at.title}</span>
                             </span>
                             <ArrowUpRight

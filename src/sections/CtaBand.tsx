@@ -35,7 +35,7 @@ export default function CtaBand({ variant = 'default', tone = 'paper', secondary
         <h2 className={`text-2xl sm:text-3xl md:text-4xl font-normal leading-[1.1] ${head}`}>
           {heading}
         </h2>
-        <p className={`mt-5 max-w-xl mx-auto text-sm md:text-[15px] leading-[1.7] ${body}`}>{text}</p>
+        <p className={`mt-5 max-w-xl mx-auto text-sm md:text-base leading-[1.7] ${body}`}>{text}</p>
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
           <PrimaryCTA />
           {secondaryProps && (

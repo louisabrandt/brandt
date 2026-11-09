@@ -88,7 +88,7 @@ export default function StickyHeader() {
                     end
                     onClick={() => setOpen(false)}
                     className={({ isActive }) =>
-                      `py-3 text-[15px] ${isActive ? 'text-primary' : 'text-primary/80'}`
+                      `py-3 text-base ${isActive ? 'text-primary' : 'text-primary/80'}`
                     }
                   >
                     {c.nav[n.key]}

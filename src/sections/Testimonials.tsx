@@ -25,7 +25,7 @@ export default function Testimonials() {
               index={i}
               className="rounded-2xl bg-[#ECEAE2] border border-[#1D211E]/8 p-6 md:p-7 flex flex-col"
             >
-              <p className="text-[15px] leading-[1.65] text-[#1D211E]/85 flex-1">
+              <p className="text-base leading-[1.65] text-[#1D211E]/85 flex-1">
                 {t.before}
                 <span className="font-serif italic">{t.emphasis}</span>
                 {t.after}

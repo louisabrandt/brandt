@@ -37,7 +37,7 @@ function FaqItem({ item, isOpen, onToggle }: { item: QA; isOpen: boolean; onTogg
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="overflow-hidden"
           >
-            <p className="pb-5 pr-8 max-w-3xl text-[#1D211E]/70 text-sm sm:text-[15px] leading-[1.65]">
+            <p className="pb-5 pr-8 max-w-3xl text-[#1D211E]/70 text-sm sm:text-base leading-[1.65]">
               {item.a}
             </p>
           </m.div>
@@ -71,7 +71,7 @@ export default function FAQ() {
         </div>
 
         <div className="mt-10 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-[#1D211E]/70 text-sm md:text-[15px] max-w-md leading-[1.65]">{c.faq.softClose}</p>
+          <p className="text-[#1D211E]/70 text-sm md:text-base max-w-md leading-[1.65]">{c.faq.softClose}</p>
           <PrimaryCTA />
         </div>
       </div>

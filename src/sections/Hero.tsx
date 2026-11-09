@@ -33,7 +33,7 @@ export default function Hero() {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.32, ease: EASE }}
-              className="uppercase tracking-[0.24em] text-[11px] sm:text-xs text-primary/80"
+              className="uppercase tracking-[0.24em] text-xs text-primary/80"
             >
               {c.hero.eyebrow}
             </m.div>

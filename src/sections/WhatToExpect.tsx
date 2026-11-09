@@ -22,7 +22,7 @@ function Bullets({ items }: { items: string[] }) {
       {items.map((item) => (
         <li key={item} className="flex items-start gap-2.5">
           <Check className="h-4 w-4 mt-0.5 shrink-0 text-[#8A9A76]" strokeWidth={1.75} />
-          <span className="text-primary/75 text-[13px] sm:text-sm leading-[1.5]">{item}</span>
+          <span className="text-primary/75 text-xs sm:text-sm leading-[1.5]">{item}</span>
         </li>
       ))}
     </ul>
@@ -53,7 +53,7 @@ export default function WhatToExpect() {
           {c.expect.heading}
         </m.h2>
 
-        <p className="mt-6 max-w-3xl text-sm md:text-[15px] leading-[1.6] text-primary/70">
+        <p className="mt-6 max-w-3xl text-sm md:text-base leading-[1.6] text-primary/70">
           {c.expect.intro}
         </p>
 
@@ -61,12 +61,12 @@ export default function WhatToExpect() {
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
           <Reveal index={0} className="noise-overlay relative overflow-hidden rounded-2xl bg-[#435349] p-6 md:p-8">
             <CardTitle>{c.expect.card1Title}</CardTitle>
-            <p className="mt-4 text-primary/75 text-sm sm:text-[15px] leading-[1.6]">{c.expect.card1}</p>
+            <p className="mt-4 text-primary/75 text-sm sm:text-base leading-[1.6]">{c.expect.card1}</p>
           </Reveal>
 
           <Reveal index={1} className="noise-overlay relative overflow-hidden rounded-2xl bg-[#435349] p-6 md:p-8">
             <CardTitle>{c.expect.card2Title}</CardTitle>
-            <p className="mt-4 text-primary/75 text-sm sm:text-[15px] leading-[1.6]">{c.expect.card2}</p>
+            <p className="mt-4 text-primary/75 text-sm sm:text-base leading-[1.6]">{c.expect.card2}</p>
           </Reveal>
 
           <Reveal index={2} className="noise-overlay relative overflow-hidden rounded-2xl bg-[#435349] p-6 md:p-8">
@@ -76,7 +76,7 @@ export default function WhatToExpect() {
 
           <Reveal index={3} className="noise-overlay relative overflow-hidden rounded-2xl bg-[#435349] p-6 md:p-8">
             <CardTitle>{c.expect.card4Title}</CardTitle>
-            <p className="mt-4 text-primary/70 text-[13px] sm:text-sm leading-[1.55]">{c.expect.card4Intro}</p>
+            <p className="mt-4 text-primary/70 text-xs sm:text-sm leading-[1.55]">{c.expect.card4Intro}</p>
             <Bullets items={c.expect.sexTherapy} />
           </Reveal>
         </div>

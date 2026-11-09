@@ -37,7 +37,7 @@ export default function Navbar() {
         {/* Links */}
         <div className="flex items-center gap-5 sm:gap-6 md:gap-7">
           {NAV.map((n) => (
-            <span key={n.to} className="text-[13px] sm:text-sm font-light">
+            <span key={n.to} className="text-xs sm:text-sm font-light">
               <NavLink label={c.nav[n.key]} to={l(n.to)} />
             </span>
           ))}

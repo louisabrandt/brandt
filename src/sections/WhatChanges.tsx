@@ -36,7 +36,7 @@ export default function WhatChanges() {
               className="rounded-2xl bg-[#ECEAE2] border border-[#1D211E]/8 p-6 flex flex-col gap-4 min-h-[160px]"
             >
               <Check className="h-5 w-5 text-[#5e6b4a]" strokeWidth={1.75} />
-              <p className="text-[#1D211E]/80 text-sm sm:text-[15px] leading-[1.5]">{outcome}</p>
+              <p className="text-[#1D211E]/80 text-sm sm:text-base leading-[1.5]">{outcome}</p>
             </Reveal>
           ))}
         </div>

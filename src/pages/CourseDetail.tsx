@@ -57,7 +57,7 @@ export default function CourseDetail() {
           {c.courseDetail.courses}
         </Link>
 
-        <p className="mt-8 text-[#1D211E]/65 text-[11px] uppercase tracking-[0.22em]">{t.tag}</p>
+        <p className="mt-8 text-[#1D211E]/65 text-xs uppercase tracking-[0.22em]">{t.tag}</p>
         <h1 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-normal text-[#1D211E] leading-[1.05] tracking-tight">
           {t.title}
         </h1>
@@ -78,15 +78,15 @@ export default function CourseDetail() {
         {/* Meta */}
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 text-sm border-y border-[#1D211E]/12 py-6">
           <div>
-            <p className="text-[#1D211E]/65 text-[11px] uppercase tracking-[0.22em] mb-1">{c.courseDetail.format}</p>
+            <p className="text-[#1D211E]/65 text-xs uppercase tracking-[0.22em] mb-1">{c.courseDetail.format}</p>
             <p className="text-[#1D211E]/80">{c.courseMeta.format}</p>
           </div>
           <div>
-            <p className="text-[#1D211E]/65 text-[11px] uppercase tracking-[0.22em] mb-1">{c.courseMeta.priceLabel}</p>
+            <p className="text-[#1D211E]/65 text-xs uppercase tracking-[0.22em] mb-1">{c.courseMeta.priceLabel}</p>
             <p className="text-[#1D211E]/80">{c.courseMeta.individual} · {c.courseMeta.couple}</p>
           </div>
           <div>
-            <p className="text-[#1D211E]/65 text-[11px] uppercase tracking-[0.22em] mb-1">{c.courseDetail.whoFor}</p>
+            <p className="text-[#1D211E]/65 text-xs uppercase tracking-[0.22em] mb-1">{c.courseDetail.whoFor}</p>
             <p className="text-[#1D211E]/80">{t.forWhom}</p>
           </div>
         </div>
@@ -104,7 +104,7 @@ export default function CourseDetail() {
 
         {/* Booking — dark accent card on the light page */}
         <div className="noise-overlay relative overflow-hidden rounded-2xl bg-[#37453E] p-6 md:p-8 mt-14">
-          <p className="text-primary/60 text-[11px] uppercase tracking-[0.22em] mb-3">
+          <p className="text-primary/60 text-xs uppercase tracking-[0.22em] mb-3">
             {c.courseMeta.priceLabel}
           </p>
           <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
@@ -114,7 +114,7 @@ export default function CourseDetail() {
           </div>
           <ul className="mt-4 space-y-2">
             {c.courseMeta.includes.map((item) => (
-              <li key={item} className="flex items-center gap-2.5 text-primary/80 text-[13px]">
+              <li key={item} className="flex items-center gap-2.5 text-primary/80 text-xs">
                 <Check className="w-4 h-4 text-[#8A9A76] shrink-0" strokeWidth={1.75} />
                 {item}
               </li>
@@ -183,9 +183,9 @@ export default function CourseDetail() {
           )}
 
           {(hasUrl(BOOKING.courseIndividual) || hasUrl(BOOKING.courseCouple)) && (
-            <p className="mt-4 text-primary/60 text-[11px]">{c.courseMeta.bookingInfo}</p>
+            <p className="mt-4 text-primary/60 text-xs">{c.courseMeta.bookingInfo}</p>
           )}
-          <p className="mt-3 text-primary/60 text-[11px]">{c.courseMeta.vat}</p>
+          <p className="mt-3 text-primary/60 text-xs">{c.courseMeta.vat}</p>
         </div>
 
         {/* Deepen 1:1 */}
@@ -203,7 +203,7 @@ export default function CourseDetail() {
 
         {/* Other courses */}
         <div className="mt-16 pt-10 border-t border-[#1D211E]/12">
-          <p className="text-[#1D211E]/65 text-[11px] uppercase tracking-[0.22em] mb-6">
+          <p className="text-[#1D211E]/65 text-xs uppercase tracking-[0.22em] mb-6">
             {c.courseDetail.otherCourses}
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -224,7 +224,7 @@ export default function CourseDetail() {
                     />
                   </div>
                   <div className="p-5 flex flex-col flex-1">
-                    <span className="text-[#1D211E]/65 text-[11px] uppercase tracking-[0.16em]">{ot.tag}</span>
+                    <span className="text-[#1D211E]/65 text-xs uppercase tracking-[0.16em]">{ot.tag}</span>
                     <h3 className="mt-2 text-base font-medium text-[#1D211E]">{ot.title}</h3>
                     <span className="mt-3 inline-flex items-center gap-1 text-xs text-[#1D211E]/65 group-hover:text-[#1D211E] transition-colors">
                       {c.courseDetail.exploreShort}

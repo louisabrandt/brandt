@@ -25,14 +25,14 @@ export default function ForWhom() {
             <div className="text-2xl sm:text-3xl md:text-4xl font-normal text-[#1D211E] leading-[1.05]">
               <WordsPullUpMultiStyle segments={heading} className="!justify-start text-left" />
             </div>
-            <p className="mt-6 max-w-md text-sm md:text-[15px] leading-[1.65] text-[#1D211E]/75">
+            <p className="mt-6 max-w-md text-sm md:text-base leading-[1.65] text-[#1D211E]/75">
               {c.forWhom.intro}
             </p>
           </div>
 
           {/* Right — common themes list */}
           <div className="lg:col-span-7">
-            <p className="text-[#1D211E]/65 text-[11px] uppercase tracking-[0.22em] mb-2">
+            <p className="text-[#1D211E]/65 text-xs uppercase tracking-[0.22em] mb-2">
               {c.forWhom.themesLabel}
             </p>
             <ul className="border-t border-[#1D211E]/12">
@@ -58,7 +58,7 @@ export default function ForWhom() {
           index={0}
           className="noise-overlay relative overflow-hidden rounded-2xl bg-[#3C4B43] p-6 md:p-8 mt-10 lg:mt-12"
         >
-          <p className="text-primary/60 text-[11px] sm:text-xs uppercase tracking-[0.22em] mb-5">
+          <p className="text-primary/60 text-xs uppercase tracking-[0.22em] mb-5">
             {c.forWhom.expatEyebrow}
           </p>
           <div className="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-6 lg:gap-10 items-center">
@@ -77,7 +77,7 @@ export default function ForWhom() {
               <h2 className="text-primary text-xl sm:text-2xl font-normal leading-snug">
                 {c.forWhom.expatHeading}
               </h2>
-              <p className="mt-4 text-primary/70 text-sm sm:text-[15px] leading-[1.65]">
+              <p className="mt-4 text-primary/70 text-sm sm:text-base leading-[1.65]">
                 {c.forWhom.expatText}
               </p>
             </div>

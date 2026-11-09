@@ -28,7 +28,7 @@ export default function RelationalCapacity() {
           {c.relCap.heading} <span className="font-serif italic">{c.relCap.headingItalic}</span>
         </m.h2>
 
-        <p className="mt-6 max-w-2xl text-sm md:text-[15px] leading-[1.6] text-primary/70">
+        <p className="mt-6 max-w-2xl text-sm md:text-base leading-[1.6] text-primary/70">
           {c.relCap.intro}
         </p>
 
@@ -42,7 +42,7 @@ export default function RelationalCapacity() {
               <h3 className="text-base sm:text-lg font-medium" style={{ color: TEXT_COLOR }}>
                 {cap.title}
               </h3>
-              <p className="mt-2 text-primary/70 text-[13px] sm:text-sm leading-[1.55]">
+              <p className="mt-2 text-primary/70 text-xs sm:text-sm leading-[1.55]">
                 {cap.desc}
               </p>
             </Reveal>

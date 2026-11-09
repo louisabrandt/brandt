@@ -91,7 +91,7 @@ export default function About() {
         </m.p>
 
         {/* Credentials grid */}
-        <div className="mt-12 sm:mt-14 max-w-2xl mx-auto grid grid-cols-[auto_1fr_auto] items-center gap-x-4 gap-y-3 text-[11px] sm:text-xs text-left border-t border-[#1D211E]/12 pt-8">
+        <div className="mt-12 sm:mt-14 max-w-2xl mx-auto grid grid-cols-[auto_1fr_auto] items-center gap-x-4 gap-y-3 text-xs text-left border-t border-[#1D211E]/12 pt-8">
           {c.about.credentials.map(([marker, mid, detail]) => (
             <div key={marker} className="contents">
               <span className="text-[#1D211E] font-normal">{marker}</span>
