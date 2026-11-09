@@ -58,7 +58,7 @@ export default function Courses() {
               <Reveal key={course.slug} index={i}>
                 <Link
                   to={l(`/courses/${course.slug}`)}
-                  className="group h-full rounded-2xl bg-white ring-1 ring-[#1D211E]/[0.08] flex flex-col overflow-hidden shadow-[0_1px_2px_rgba(29,33,30,0.04)] hover:shadow-[0_16px_36px_-18px_rgba(29,33,30,0.32)] hover:-translate-y-1 transition-all duration-300"
+                  className="group h-full rounded-2xl bg-[#324039] hover:bg-[#37453E] flex flex-col overflow-hidden shadow-[0_8px_24px_-14px_rgba(29,33,30,0.45)] hover:shadow-[0_18px_38px_-18px_rgba(29,33,30,0.5)] hover:-translate-y-1 transition-all duration-300"
                 >
                   <div
                     className="relative aspect-[5/4] overflow-hidden"
@@ -73,16 +73,16 @@ export default function Courses() {
                   </div>
                   <div className="p-6 flex flex-col flex-1">
                     <div className="flex items-baseline justify-between gap-2">
-                      <span className="text-[#1D211E]/55 text-xs uppercase tracking-[0.16em]">{t.tag}</span>
-                      <span className="text-[#1D211E]/80 text-xs tabular-nums shrink-0">{c.courseMeta.priceShort}</span>
+                      <span className="text-primary/60 text-xs uppercase tracking-[0.16em]">{t.tag}</span>
+                      <span className="text-primary/70 text-xs tabular-nums shrink-0">{c.courseMeta.priceShort}</span>
                     </div>
-                    <h3 className="mt-3 text-lg font-medium text-[#1D211E]">
+                    <h3 className="mt-3 text-lg font-medium text-primary">
                       {t.title}
                     </h3>
-                    <p className="mt-2 text-[#1D211E]/70 text-xs sm:text-sm leading-[1.55] flex-1">
+                    <p className="mt-2 text-primary/70 text-xs sm:text-sm leading-[1.55] flex-1">
                       {t.description}
                     </p>
-                    <span className="mt-4 inline-flex items-center gap-1.5 text-xs text-[#A74F2B] group-hover:gap-2.5 transition-all">
+                    <span className="mt-4 inline-flex items-center gap-1.5 text-xs text-primary/60 group-hover:text-primary transition-colors">
                       {c.coursesSection.explore}
                       <ArrowUpRight
                         className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
