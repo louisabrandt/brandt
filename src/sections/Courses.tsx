@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { ArrowUpRight } from 'lucide-react'
 import SectionLabel from '../components/SectionLabel'
 import Reveal from '../components/Reveal'
-import { TEXT_COLOR } from '../constants'
 import { COURSES, courseIllustration, courseText } from '../courses'
 import { useLang } from '../i18n/lang'
 import { useContent } from '../i18n/content'
@@ -17,12 +16,10 @@ export default function Courses() {
   return (
     <section
       id="courses"
-      className="relative bg-[#2E3A33] px-4 sm:px-6 md:px-10 lg:px-14 py-20 sm:py-24 md:py-28 overflow-hidden"
+      className="relative bg-[#F4F2EC] px-4 sm:px-6 md:px-10 lg:px-14 py-20 sm:py-24 md:py-28 overflow-hidden"
     >
-      <div className="bg-noise absolute inset-0 opacity-[0.15] pointer-events-none" />
-
       <div className="relative max-w-6xl mx-auto">
-        <SectionLabel align="start" className="mb-5 sm:mb-6">
+        <SectionLabel align="start" tone="ink" className="mb-5 sm:mb-6">
           {c.coursesSection.eyebrow}
         </SectionLabel>
 
@@ -31,23 +28,23 @@ export default function Courses() {
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.7, ease: EASE }}
-          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-primary max-w-3xl leading-[1.05]"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-[#1D211E] max-w-3xl leading-[1.05]"
         >
           {c.coursesSection.heading}{' '}
           <span className="font-serif italic">{c.coursesSection.headingItalic}</span>
         </m.h2>
 
-        <p className="mt-6 max-w-2xl text-sm md:text-base leading-[1.6] text-primary/70">
+        <p className="mt-6 max-w-2xl text-sm md:text-base leading-[1.6] text-[#1D211E]/75">
           {c.coursesSection.intro}
         </p>
-        <p className="mt-3 max-w-2xl text-sm md:text-base leading-[1.6] text-primary/60">
+        <p className="mt-3 max-w-2xl text-sm md:text-base leading-[1.6] text-[#1D211E]/60">
           {c.courseMeta.format} · {c.courseMeta.individual} · {c.courseMeta.couple}
         </p>
-        <p className="mt-3 max-w-2xl text-sm md:text-base leading-[1.6] text-primary/60">
+        <p className="mt-3 max-w-2xl text-sm md:text-base leading-[1.6] text-[#1D211E]/65">
           {c.coursesSection.topicIntro}
           <Link
             to={l('/contact')}
-            className="text-primary underline decoration-primary/30 underline-offset-2 hover:decoration-primary transition"
+            className="text-[#A74F2B] underline decoration-[#A74F2B]/30 underline-offset-2 hover:decoration-[#A74F2B] transition"
           >
             {c.coursesSection.topicLink}
           </Link>
@@ -61,7 +58,7 @@ export default function Courses() {
               <Reveal key={course.slug} index={i}>
                 <Link
                   to={l(`/courses/${course.slug}`)}
-                  className="group h-full rounded-2xl bg-[#324039] flex flex-col overflow-hidden hover:bg-[#37453E] transition-colors"
+                  className="group h-full rounded-2xl bg-white ring-1 ring-[#1D211E]/[0.08] flex flex-col overflow-hidden shadow-[0_1px_2px_rgba(29,33,30,0.04)] hover:shadow-[0_16px_36px_-18px_rgba(29,33,30,0.32)] hover:-translate-y-1 transition-all duration-300"
                 >
                   <div
                     className="relative aspect-[5/4] overflow-hidden"
@@ -76,16 +73,16 @@ export default function Courses() {
                   </div>
                   <div className="p-6 flex flex-col flex-1">
                     <div className="flex items-baseline justify-between gap-2">
-                      <span className="text-primary/60 text-xs uppercase tracking-[0.16em]">{t.tag}</span>
-                      <span className="text-primary/70 text-xs tabular-nums shrink-0">{c.courseMeta.priceShort}</span>
+                      <span className="text-[#1D211E]/55 text-xs uppercase tracking-[0.16em]">{t.tag}</span>
+                      <span className="text-[#1D211E]/80 text-xs tabular-nums shrink-0">{c.courseMeta.priceShort}</span>
                     </div>
-                    <h3 className="mt-3 text-lg font-medium" style={{ color: TEXT_COLOR }}>
+                    <h3 className="mt-3 text-lg font-medium text-[#1D211E]">
                       {t.title}
                     </h3>
-                    <p className="mt-2 text-primary/70 text-xs sm:text-sm leading-[1.55] flex-1">
+                    <p className="mt-2 text-[#1D211E]/70 text-xs sm:text-sm leading-[1.55] flex-1">
                       {t.description}
                     </p>
-                    <span className="mt-4 inline-flex items-center gap-1.5 text-xs text-primary/60 group-hover:text-primary transition-colors">
+                    <span className="mt-4 inline-flex items-center gap-1.5 text-xs text-[#A74F2B] group-hover:gap-2.5 transition-all">
                       {c.coursesSection.explore}
                       <ArrowUpRight
                         className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
@@ -99,7 +96,7 @@ export default function Courses() {
           })}
         </div>
 
-        <p className="mt-8 max-w-2xl text-primary/60 text-sm leading-[1.6]">
+        <p className="mt-8 max-w-2xl text-[#1D211E]/60 text-sm leading-[1.6]">
           {c.courseMeta.bookableNote}
         </p>
       </div>

@@ -16,7 +16,7 @@ export default function SiteHeader() {
   const label = (key: (typeof NAV)[number]['key']) => c.nav[key]
 
   return (
-    <header className="sticky top-0 z-50 bg-[#2E3A33]/90 backdrop-blur-md border-b border-primary/10">
+    <header className="sticky top-0 z-50 bg-[#2E3A33] shadow-[0_8px_30px_-10px_rgba(0,0,0,0.45)]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-10 lg:px-14 h-14 flex items-center justify-between gap-4">
         <Link
           to={l('/')}
