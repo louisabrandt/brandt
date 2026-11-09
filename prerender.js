@@ -54,8 +54,8 @@ const META = {
       desc: '1:1-Beziehungscoaching: Sitzungen, Pakete und was dich erwartet. Die Gottman-Methode verbunden mit Sexualtherapie. Weltweit online oder persönlich in Paphos auf Zypern.',
     },
     '/courses': {
-      title: 'Kurse — Beziehungs-Psychoedukation | Brandt',
-      desc: 'Fokussierte, evidenzbasierte Kurse zu den Mustern, die Beziehungen prägen. Mach das kurze Quiz und finde deinen Kurs. Für Einzelne oder Paare, online.',
+      title: 'Themenkurse — Beziehungs-Psychoedukation | Brandt',
+      desc: 'Fokussierte, evidenzbasierte Kurse zu den Mustern, die Beziehungen prägen. Mach das kurze Quiz und finde deinen Themenkurs. Für Einzelne oder Paare, online.',
     },
     '/contact': {
       title: 'Kontakt & Buchung — Paartherapie Zypern | Brandt',
@@ -77,7 +77,7 @@ const META = {
       desc: 'One-to-one relationship coaching: sessions, packages, and what to expect. The Gottman Method integrated with sex therapy. Online worldwide, or in person in Paphos, Cyprus.',
     },
     '/courses': {
-      title: 'Courses — relationship psychoeducation | Brandt',
+      title: 'Themed Courses — relationship psychoeducation | Brandt',
       desc: 'Focused, evidence-based courses on the patterns that shape relationships. Take the short quiz to find your fit. For individuals or couples, online.',
     },
     '/contact': {

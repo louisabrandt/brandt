@@ -9,7 +9,7 @@ export const en = {
   nav: {
     about: 'About',
     coaching: 'Coaching',
-    courses: 'Courses',
+    courses: 'Themed Courses',
     contact: 'Contact',
     book: 'Book a first conversation',
   },
@@ -56,7 +56,7 @@ export const en = {
   approachTeaser: {
     eyebrow: 'How I work',
     heading: 'Underneath the same argument, there is usually a pattern.',
-    para: "I don't treat a relationship as a problem to be fixed. We look at how each of you responds when it matters most, and build the capacity to stay present in closeness, in conflict, and in the responsibility that comes with both. Grounded in attachment, emotional regulation, the Gottman Method and sex therapy, without the jargon.",
+    para: "I don't treat a relationship as a problem to be fixed. We look at how each of you responds when it matters most, and build the capacity to stay present in closeness, in conflict, and in the responsibility that comes with both. As a clinically trained psychologist, I recognise destructive dynamics early, where they begin, and we interrupt them before they set in, which often spares a couple, and any children, a great deal of pain. Grounded in attachment, emotional regulation, the Gottman Method and sex therapy, without the jargon.",
     cta: 'More about my approach',
   },
   testimonials: {
@@ -110,10 +110,10 @@ export const en = {
     aboutHeading: 'Ready to understand your patterns?',
     aboutText:
       "You've seen how I work. A first conversation is where we turn that into your situation, together, and look at what a first step could be. No obligation, confidential throughout.",
-    coursesHeading: 'Not sure which course fits?',
+    coursesHeading: 'Not sure which themed course fits?',
     coursesText:
       'A free 30-minute intro call is the easiest way to find your starting point, whether that is a specific course or something more. No pressure, no obligation.',
-    exploreCourses: 'Explore the courses',
+    exploreCourses: 'Explore the themed courses',
     exploreCoaching: 'Explore coaching',
   },
   about: {
@@ -225,7 +225,7 @@ export const en = {
   },
   fit: {
     eyebrow: 'Find your fit',
-    heading: 'Which course fits you right now?',
+    heading: 'Which themed course fits you right now?',
     subtext: 'Four quick questions. No right answers, just a starting point that fits where you are.',
     back: 'Back',
     questions: [
@@ -290,10 +290,10 @@ export const en = {
     startOver: 'Start over',
   },
   coursesSection: {
-    eyebrow: 'Courses & psychoeducation',
+    eyebrow: 'Themed courses & psychoeducation',
     heading: 'Learn the inner structure,',
     headingItalic: 'together.',
-    intro: 'Prefer to go at your own pace? Focused, evidence-based courses on the dynamics that shape our relationships, with others and with ourselves, so you can understand your patterns and practise responding differently. Every course works for individuals or couples, online.',
+    intro: 'Prefer to go at your own pace? Focused, evidence-based themed courses on the dynamics that shape our relationships, with others and with ourselves, so you can understand your patterns and practise responding differently. Every course works for individuals or couples, online.',
     topicIntro: "Already know what you want to work on, whether it's a specific challenge or growing yourself within your relationships? You can ",
     topicLink: 'book a session on that exact topic',
     topicOutro: '.',
@@ -382,18 +382,18 @@ export const en = {
     coursePrefill: "I'm interested in the course: ",
   },
   courseDetail: {
-    courses: 'Courses',
+    courses: 'Themed Courses',
     format: 'Format',
     bookable: 'Bookable',
     whoFor: "Who it's for",
     explore: "What you'll explore",
     or1: 'Prefer to work through this personally, and at your own depth?',
     book1to1: 'Book a one-on-one first conversation',
-    otherCourses: 'Other courses',
+    otherCourses: 'Other themed courses',
     exploreShort: 'Explore',
     notFound: 'Course not found',
-    backAll: '← Back to all courses',
-    allCourses: 'All courses',
+    backAll: '← Back to all themed courses',
+    allCourses: 'All themed courses',
     contact: 'Contact',
   },
   newsletter: {
@@ -426,7 +426,7 @@ export const de: Content = {
   nav: {
     about: 'Über mich',
     coaching: 'Coaching',
-    courses: 'Kurse',
+    courses: 'Themenkurse',
     contact: 'Kontakt',
     book: 'Erstgespräch buchen',
   },
@@ -473,7 +473,7 @@ export const de: Content = {
   approachTeaser: {
     eyebrow: 'Wie ich arbeite',
     heading: 'Unter demselben Streit liegt meist ein Muster.',
-    para: 'Ich betrachte eine Beziehung nicht als Problem, das sich reparieren lässt. Wir schauen gemeinsam, wie ihr beide reagiert, wenn es darauf ankommt, und stärken die Fähigkeit, in Nähe, im Konflikt und in der Verantwortung präsent zu bleiben. Fundiert in Bindungsforschung, Affektregulation, der Gottman-Methode und Sexualtherapie, in klarer Sprache statt Fachjargon.',
+    para: 'Ich betrachte eine Beziehung nicht als Problem, das sich reparieren lässt. Wir schauen gemeinsam, wie ihr beide reagiert, wenn es darauf ankommt, und stärken die Fähigkeit, in Nähe, im Konflikt und in der Verantwortung präsent zu bleiben. Als klinisch ausgebildete Psychologin erkenne ich destruktive Dynamiken früh, dort wo sie beginnen, und wir stoppen sie, bevor sie sich festfahren, das erspart einem Paar und den beteiligten Kindern oft viel Leid. Fundiert in Bindungsforschung, Affektregulation, der Gottman-Methode und Sexualtherapie, in klarer Sprache statt Fachjargon.',
     cta: 'Mehr über meinen Ansatz',
   },
   testimonials: {
@@ -517,7 +517,7 @@ export const de: Content = {
       label: 'Ein Thema, einzeln buchbar',
       title: 'Kurse',
       desc: 'Einzelne, fokussierte Sitzungen zu genau einem Beziehungsthema, mit Unterlagen und Übungen. Mach das kurze Quiz und finde das passende.',
-      cta: 'Kurse entdecken',
+      cta: 'Themenkurse entdecken',
     },
   },
   cta: {
@@ -527,10 +527,10 @@ export const de: Content = {
     aboutHeading: 'Bereit, deine Muster zu verstehen?',
     aboutText:
       'Du hast gesehen, wie ich arbeite. Im Erstgespräch schauen wir gemeinsam auf deine Situation und darauf, wie ein erster Schritt aussehen könnte. Ohne Verpflichtung, durchgehend vertraulich.',
-    coursesHeading: 'Unsicher, welcher Kurs passt?',
+    coursesHeading: 'Unsicher, welcher Themenkurs passt?',
     coursesText:
       'Ein kostenloses 30-minütiges Kennenlernen ist der einfachste Weg, deinen Startpunkt zu finden, ob ein bestimmter Kurs oder mehr. Kein Druck, keine Verpflichtung.',
-    exploreCourses: 'Kurse entdecken',
+    exploreCourses: 'Themenkurse entdecken',
     exploreCoaching: 'Coaching entdecken',
   },
   about: {
@@ -641,8 +641,8 @@ export const de: Content = {
     trust: 'Vertraulich ab der allerersten Nachricht.',
   },
   fit: {
-    eyebrow: 'Finde deinen Kurs',
-    heading: 'Welcher Kurs passt gerade zu dir?',
+    eyebrow: 'Finde deinen Themenkurs',
+    heading: 'Welcher Themenkurs passt gerade zu dir?',
     subtext: 'Vier kurze Fragen. Keine richtigen Antworten, nur ein Ausgangspunkt, der zu dir passt.',
     back: 'Zurück',
     questions: [
@@ -707,10 +707,10 @@ export const de: Content = {
     startOver: 'Von vorn',
   },
   coursesSection: {
-    eyebrow: 'Kurse & Psychoedukation',
+    eyebrow: 'Themenkurse & Psychoedukation',
     heading: 'Verstehe die innere Struktur,',
     headingItalic: 'gemeinsam.',
-    intro: 'Lieber in deinem eigenen Tempo? Fokussierte, evidenzbasierte Kurse zu den Dynamiken, die unsere Beziehungen prägen, zu anderen und zu dir selbst, damit du deine Muster verstehst und übst, anders zu reagieren. Jeder Kurs eignet sich für Einzelne oder Paare, online.',
+    intro: 'Lieber in deinem eigenen Tempo? Fokussierte, evidenzbasierte Themenkurse zu den Dynamiken, die unsere Beziehungen prägen, zu anderen und zu dir selbst, damit du deine Muster verstehst und übst, anders zu reagieren. Jeder Kurs eignet sich für Einzelne oder Paare, online.',
     topicIntro: 'Du weißt schon, woran du arbeiten möchtest, ob eine konkrete Herausforderung oder deine eigene Entwicklung im Kontext von Beziehungen? Dann kannst du ',
     topicLink: 'direkt eine Session zu genau diesem Thema buchen',
     topicOutro: '.',
@@ -799,18 +799,18 @@ export const de: Content = {
     coursePrefill: 'Ich interessiere mich für den Kurs: ',
   },
   courseDetail: {
-    courses: 'Kurse',
+    courses: 'Themenkurse',
     format: 'Format',
     bookable: 'Buchbar',
     whoFor: 'Für wen',
     explore: 'Was du erkundest',
     or1: 'Lieber persönlich und in deiner eigenen Tiefe?',
     book1to1: 'Ein persönliches Erstgespräch buchen',
-    otherCourses: 'Weitere Kurse',
+    otherCourses: 'Weitere Themenkurse',
     exploreShort: 'Ansehen',
     notFound: 'Kurs nicht gefunden',
-    backAll: '← Zurück zu allen Kursen',
-    allCourses: 'Alle Kurse',
+    backAll: '← Zurück zu allen Themenkursen',
+    allCourses: 'Alle Themenkurse',
     contact: 'Kontakt',
   },
   newsletter: {
