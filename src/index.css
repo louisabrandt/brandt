@@ -78,6 +78,15 @@ body {
   background-size: 240px 240px;
 }
 
+/* The film grain reads too heavy on small, high-density phone screens —
+   drop it on mobile and keep the subtle texture only on larger screens. */
+@media (max-width: 767px) {
+  .noise-overlay::after,
+  .bg-noise {
+    display: none;
+  }
+}
+
 /* ------------------------------------------------------------------ */
 /* Liquid-glass surface (buttons, pills, icon buttons)                 */
 /* ------------------------------------------------------------------ */
