@@ -145,5 +145,11 @@ body {
 /* Variante B: Cormorant als Medium rendern */
 .font-serif{font-weight:500;}
 
+/* Hero fills the *visible* viewport. Mobile browsers count 100vh as the
+   large viewport (toolbar hidden), which pushes the bottom-anchored CTA under
+   the address bar on first paint. svh (small viewport) keeps it on screen;
+   the vh line is the fallback for browsers without svh. */
+.h-hero { height: 100vh; height: 100svh; }
+
 /* Formularelemente erben die Body-Schrift (Hanken Grotesk) */
 button, input, textarea, select { font-family: inherit; }
