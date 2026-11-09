@@ -6,6 +6,12 @@ interface LazyVideoProps {
   className?: string
   /** Start loading this far before the element scrolls into view. */
   rootMargin?: string
+  /**
+   * A still image shown before (and behind) the video. It's painted from the
+   * prerendered markup, so it carries the first paint instead of the video —
+   * and it stays visible for visitors who prefer reduced motion.
+   */
+  poster?: string
 }
 
 const prefersReducedMotion = () =>
@@ -19,7 +25,12 @@ const prefersReducedMotion = () =>
  * loading entirely for visitors who prefer reduced motion, and keeps a solid
  * dark background so there is never a flash or empty frame.
  */
-export default function LazyVideo({ src, className = '', rootMargin = '400px' }: LazyVideoProps) {
+export default function LazyVideo({
+  src,
+  className = '',
+  rootMargin = '400px',
+  poster,
+}: LazyVideoProps) {
   const ref = useRef<HTMLDivElement>(null)
   const [show, setShow] = useState(false)
 
@@ -46,11 +57,17 @@ export default function LazyVideo({ src, className = '', rootMargin = '400px' }:
   }, [rootMargin])
 
   return (
-    <div ref={ref} className={`${className} bg-[#2E3A33]`} aria-hidden="true">
+    <div
+      ref={ref}
+      className={`${className} bg-[#2E3A33] bg-cover bg-center`}
+      style={poster ? { backgroundImage: `url(${poster})` } : undefined}
+      aria-hidden="true"
+    >
       {show && (
         <video
           className="h-full w-full object-cover"
           src={src}
+          poster={poster}
           autoPlay
           loop
           muted

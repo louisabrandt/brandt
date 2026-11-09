@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import Navbar from '../components/Navbar'
 import LazyVideo from '../components/LazyVideo'
 import PrimaryCTA from '../components/PrimaryCTA'
-import { HERO_VIDEO_URL, TEXT_COLOR } from '../constants'
+import { HERO_VIDEO_URL, HERO_POSTER_URL, TEXT_COLOR } from '../constants'
 import { useContent } from '../i18n/content'
 
 const EASE = [0.16, 1, 0.3, 1] as const
@@ -13,7 +13,11 @@ export default function Hero() {
     <section className="h-hero w-full p-4 md:p-6 bg-[#2E3A33]">
       <div className="relative h-full w-full overflow-hidden rounded-2xl md:rounded-[2rem]">
         {/* Background video */}
-        <LazyVideo src={HERO_VIDEO_URL} className="absolute inset-0 h-full w-full" />
+        <LazyVideo
+          src={HERO_VIDEO_URL}
+          poster={HERO_POSTER_URL}
+          className="absolute inset-0 h-full w-full"
+        />
 
         {/* Noise + legibility gradient */}
         <div className="noise-overlay absolute inset-0 pointer-events-none" />

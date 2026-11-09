@@ -8,6 +8,13 @@
  */
 export const HERO_VIDEO_URL = '/videos/hero.mp4'
 
+/**
+ * Lightweight first-frame still for the hero. Painted immediately (it's in the
+ * prerendered markup) so the Largest Contentful Paint doesn't wait for the
+ * autoplay video to download — and it's what reduced-motion visitors see.
+ */
+export const HERO_POSTER_URL = '/videos/hero-poster.webp'
+
 export const FEATURE_VIDEO_URL = '/videos/feature.mp4'
 
 /** Primary text color (slightly warmer than the Tailwind `primary` token). */

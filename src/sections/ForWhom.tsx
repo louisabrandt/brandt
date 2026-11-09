@@ -41,7 +41,7 @@ export default function ForWhom() {
                   key={theme}
                   className="flex items-baseline gap-4 sm:gap-5 py-4 border-b border-[#1D211E]/12"
                 >
-                  <span className="text-[#1D211E]/35 text-xs tabular-nums shrink-0">
+                  <span className="text-[#1D211E]/65 text-xs tabular-nums shrink-0">
                     {String(i + 1).padStart(2, '0')}
                   </span>
                   <span className="text-[#1D211E]/85 text-base sm:text-lg leading-[1.45]">
@@ -74,9 +74,9 @@ export default function ForWhom() {
               />
             </div>
             <div>
-              <h3 className="text-primary text-xl sm:text-2xl font-normal leading-snug">
+              <h2 className="text-primary text-xl sm:text-2xl font-normal leading-snug">
                 {c.forWhom.expatHeading}
-              </h3>
+              </h2>
               <p className="mt-4 text-primary/70 text-sm sm:text-[15px] leading-[1.65]">
                 {c.forWhom.expatText}
               </p>
