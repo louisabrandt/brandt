@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { ArrowUpRight } from 'lucide-react'
 import SectionLabel from '../components/SectionLabel'
@@ -26,7 +26,7 @@ export default function Courses() {
           {c.coursesSection.eyebrow}
         </SectionLabel>
 
-        <motion.h2
+        <m.h2
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, margin: '-80px' }}
@@ -35,12 +35,12 @@ export default function Courses() {
         >
           {c.coursesSection.heading}{' '}
           <span className="font-serif italic">{c.coursesSection.headingItalic}</span>
-        </motion.h2>
+        </m.h2>
 
         <p className="mt-6 max-w-2xl text-sm md:text-[15px] leading-[1.6] text-primary/70">
           {c.coursesSection.intro}
         </p>
-        <p className="mt-3 max-w-2xl text-sm md:text-[15px] leading-[1.6] text-primary/55">
+        <p className="mt-3 max-w-2xl text-sm md:text-[15px] leading-[1.6] text-primary/60">
           {c.courseMeta.format} · {c.courseMeta.individual} · {c.courseMeta.couple}
         </p>
         <p className="mt-3 max-w-2xl text-sm md:text-[15px] leading-[1.6] text-primary/60">
@@ -76,7 +76,7 @@ export default function Courses() {
                   </div>
                   <div className="p-6 flex flex-col flex-1">
                     <div className="flex items-baseline justify-between gap-2">
-                      <span className="text-primary/55 text-[10px] uppercase tracking-[0.16em]">{t.tag}</span>
+                      <span className="text-primary/60 text-[10px] uppercase tracking-[0.16em]">{t.tag}</span>
                       <span className="text-primary/70 text-xs tabular-nums shrink-0">{c.courseMeta.priceShort}</span>
                     </div>
                     <h3 className="mt-3 text-lg font-medium" style={{ color: TEXT_COLOR }}>
@@ -99,7 +99,7 @@ export default function Courses() {
           })}
         </div>
 
-        <p className="mt-8 max-w-2xl text-primary/55 text-sm leading-[1.6]">
+        <p className="mt-8 max-w-2xl text-primary/60 text-sm leading-[1.6]">
           {c.courseMeta.bookableNote}
         </p>
       </div>

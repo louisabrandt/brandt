@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { Check } from 'lucide-react'
 import SectionLabel from '../components/SectionLabel'
 import Reveal from '../components/Reveal'
@@ -18,7 +18,7 @@ export default function WhatChanges() {
           {c.whatChanges.eyebrow}
         </SectionLabel>
 
-        <motion.h2
+        <m.h2
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, margin: '-80px' }}
@@ -26,7 +26,7 @@ export default function WhatChanges() {
           className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-[#1D211E] max-w-3xl leading-[1.05]"
         >
           {c.whatChanges.heading}
-        </motion.h2>
+        </m.h2>
 
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
           {c.whatChanges.outcomes.map((outcome, i) => (

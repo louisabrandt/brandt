@@ -5,7 +5,7 @@ import SectionLabel from '../components/SectionLabel'
 import { useContent } from '../i18n/content'
 
 const FIELD_CLASS =
-  'w-full bg-transparent border-b border-primary/20 px-0 py-3 text-primary placeholder:text-primary/55 text-sm focus:outline-none focus:border-primary/50 transition-colors'
+  'w-full bg-transparent border-b border-primary/20 px-0 py-3 text-primary placeholder:text-primary/60 text-sm focus:outline-none focus:border-primary/50 transition-colors'
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
@@ -80,7 +80,7 @@ export default function Contact() {
 
             <div className="mt-10 space-y-4 text-sm">
               <div>
-                <p className="text-primary/55 text-[11px] uppercase tracking-[0.22em]">{c.contact.whatsappLabel}</p>
+                <p className="text-primary/60 text-[11px] uppercase tracking-[0.22em]">{c.contact.whatsappLabel}</p>
                 <a
                   href={`https://wa.me/491708809105?text=${encodeURIComponent(c.contact.whatsappPrefill)}`}
                   target="_blank"
@@ -92,13 +92,13 @@ export default function Contact() {
                 </a>
               </div>
               <div>
-                <p className="text-primary/55 text-[11px] uppercase tracking-[0.22em]">{c.contact.emailLabel}</p>
+                <p className="text-primary/60 text-[11px] uppercase tracking-[0.22em]">{c.contact.emailLabel}</p>
                 <a href="mailto:lb@louisabrandt.com" className="text-primary hover:text-primary/70 transition-colors">
                   lb@louisabrandt.com
                 </a>
               </div>
               <div>
-                <p className="text-primary/55 text-[11px] uppercase tracking-[0.22em]">{c.contact.sessionsLabel}</p>
+                <p className="text-primary/60 text-[11px] uppercase tracking-[0.22em]">{c.contact.sessionsLabel}</p>
                 <p className="text-primary/80 leading-[1.6]">{c.contact.sessionsText}</p>
               </div>
             </div>
@@ -189,7 +189,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="group mt-1 inline-flex items-center gap-2 hover:gap-3 transition-all duration-300 bg-[#B4552E] hover:bg-[#9E4826] rounded-full pl-5 pr-1.5 py-1.5 text-[#F1EFE7] font-medium text-sm sm:text-base self-start disabled:opacity-60"
+                    className="group mt-1 inline-flex items-center gap-2 hover:gap-3 transition-all duration-300 bg-[#A74F2B] hover:bg-[#9E4826] rounded-full pl-5 pr-1.5 py-1.5 text-[#F1EFE7] font-medium text-sm sm:text-base self-start disabled:opacity-60"
                   >
                     <span>{submitting ? c.contact.sending : c.contact.submit}</span>
                     <span className="flex items-center justify-center bg-[#7C3A1E] rounded-full w-9 h-9 sm:w-10 sm:h-10 transition-transform duration-300 group-hover:scale-110">
@@ -197,7 +197,7 @@ export default function Contact() {
                     </span>
                   </button>
 
-                  <p className="text-primary/55 text-xs leading-[1.6]">{c.contact.trust}</p>
+                  <p className="text-primary/60 text-xs leading-[1.6]">{c.contact.trust}</p>
                 </form>
               )}
             </div>

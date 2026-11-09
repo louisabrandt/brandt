@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import Navbar from '../components/Navbar'
 import LazyVideo from '../components/LazyVideo'
 import PrimaryCTA from '../components/PrimaryCTA'
@@ -29,17 +29,17 @@ export default function Hero() {
         <div className="absolute bottom-0 left-0 right-0 z-10 p-5 sm:p-8 md:p-10 lg:p-12">
           <div className="flex flex-col items-start gap-4 sm:gap-5 max-w-3xl">
             {/* Eyebrow — what I do */}
-            <motion.div
+            <m.div
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.32, ease: EASE }}
               className="uppercase tracking-[0.24em] text-[11px] sm:text-xs text-primary/80"
             >
               {c.hero.eyebrow}
-            </motion.div>
+            </m.div>
 
             {/* Headline — Cormorant, one voice with the wordmark */}
-            <motion.h1
+            <m.h1
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4, ease: EASE }}
@@ -48,10 +48,10 @@ export default function Hero() {
             >
               {c.hero.headline}{' '}
               <span className="italic">{c.hero.headlineItalic}</span>
-            </motion.h1>
+            </m.h1>
 
             {/* Single supporting line */}
-            <motion.p
+            <m.p
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.52, ease: EASE }}
@@ -59,10 +59,10 @@ export default function Hero() {
               style={{ lineHeight: 1.4 }}
             >
               {c.hero.sub1}
-            </motion.p>
+            </m.p>
 
             {/* CTA */}
-            <motion.div
+            <m.div
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.64, ease: EASE }}
@@ -70,7 +70,7 @@ export default function Hero() {
             >
               <PrimaryCTA />
               <p className="mt-3 text-primary/60 text-xs">{c.hero.ctaNote}</p>
-            </motion.div>
+            </m.div>
           </div>
         </div>
       </div>

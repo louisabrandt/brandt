@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import { motion, useInView } from 'framer-motion'
+import { m, useInView } from 'framer-motion'
 
 interface WordsPullUpProps {
   text: string
@@ -26,7 +26,7 @@ export default function WordsPullUp({
   return (
     <div ref={ref} className={`inline-flex flex-wrap ${className}`} style={{ color }}>
       {words.map((word, i) => (
-        <motion.span
+        <m.span
           key={`${word}-${i}`}
           initial={{ y: 20, opacity: 0 }}
           animate={isInView ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
@@ -39,7 +39,7 @@ export default function WordsPullUp({
           style={{ marginRight: '0.18em' }}
         >
           {word}
-        </motion.span>
+        </m.span>
       ))}
     </div>
   )

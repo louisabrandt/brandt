@@ -25,7 +25,7 @@ export const TEXT_COLOR = '#F1EFE7'
  * the illustration palette. Deep enough for cream text, and legible on both the
  * dark base (#2E3A33) and the warm paper sections (#F4F2EC).
  */
-export const ACCENT = '#B4552E'
+export const ACCENT = '#A74F2B'
 export const ACCENT_HOVER = '#9E4826'
 export const ACCENT_DEEP = '#8F4021'
 /** Warm paper reading-room tokens (matches About + course detail pages). */

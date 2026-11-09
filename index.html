@@ -51,6 +51,9 @@
     <meta name="twitter:image" content="https://louisabrandt.com/og-image.png" />
 
     <!-- Self-hosted fonts (Cormorant Garamond + Hanken Grotesk) — no third-party requests -->
+    <!-- Preload the two above-the-fold faces so hero text paints without a swap flash -->
+    <link rel="preload" href="/fonts/cormorant-garamond-500-normal-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/hanken-grotesk-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="/fonts.css" />
 
     <!-- Analytics: GoatCounter — cookieless, no personal data, no consent banner needed -->

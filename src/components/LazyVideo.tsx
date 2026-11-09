@@ -9,7 +9,7 @@ interface LazyVideoProps {
   /**
    * A still image shown before (and behind) the video. It's painted from the
    * prerendered markup, so it carries the first paint instead of the video —
-   * and it stays visible for visitors who prefer reduced motion.
+   * and it stays visible for visitors who prefer reduced m.
    */
   poster?: string
 }

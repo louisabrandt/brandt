@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { Check } from 'lucide-react'
 import SectionLabel from '../components/SectionLabel'
 import Reveal from '../components/Reveal'
@@ -20,7 +20,7 @@ export default function Approach() {
             {c.approach.eyebrow}
           </SectionLabel>
 
-          <motion.h2
+          <m.h2
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true, margin: '-80px' }}
@@ -28,7 +28,7 @@ export default function Approach() {
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-[#1D211E] leading-[1.05]"
           >
             {c.approach.heading}
-          </motion.h2>
+          </m.h2>
 
           <div className="mt-8 space-y-5 text-sm md:text-[15px] leading-[1.7] text-[#1D211E]/75">
             <p>{c.approach.p1}</p>

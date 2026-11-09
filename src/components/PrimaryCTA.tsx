@@ -22,7 +22,7 @@ export default function PrimaryCTA({ label, to = BOOK_TO, className = '' }: Prim
   const { l } = useLang()
   const c = useContent()
   const external = hasUrl(BOOKING.intro)
-  const cls = `group inline-flex items-center gap-2 hover:gap-3 transition-all duration-300 bg-[#B4552E] hover:bg-[#9E4826] rounded-full pl-5 pr-1.5 py-1.5 text-[#F1EFE7] font-medium text-sm sm:text-base ${className}`
+  const cls = `group inline-flex items-center gap-2 hover:gap-3 transition-all duration-300 bg-[#A74F2B] hover:bg-[#9E4826] rounded-full pl-5 pr-1.5 py-1.5 text-[#F1EFE7] font-medium text-sm sm:text-base ${className}`
   const inner = (
     <>
       <span>{label ?? c.nav.book}</span>

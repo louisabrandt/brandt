@@ -18,7 +18,7 @@ export default function LangSwitch({ tone = 'dark' }: { tone?: 'dark' | 'ink' })
   const idleCls =
     tone === 'ink'
       ? 'text-[#1D211E]/65 hover:text-[#1D211E]/70'
-      : 'text-primary/55 hover:text-primary/80'
+      : 'text-primary/60 hover:text-primary/80'
 
   const item = (code: 'de' | 'en', label: string) =>
     code === lang ? (

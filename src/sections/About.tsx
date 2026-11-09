@@ -1,5 +1,5 @@
 import { Fragment, useRef } from 'react'
-import { motion, useScroll } from 'framer-motion'
+import { m, useScroll } from 'framer-motion'
 import WordsPullUpMultiStyle, { type Segment } from '../components/WordsPullUpMultiStyle'
 import AnimatedLetter from '../components/AnimatedLetter'
 import SectionLabel from '../components/SectionLabel'
@@ -38,7 +38,7 @@ export default function About() {
         </div>
 
         {/* Portrait */}
-        <motion.img
+        <m.img
           src="/louisa.webp"
           alt="Louisa Brandt"
           initial={{ opacity: 0, y: 16 }}
@@ -80,7 +80,7 @@ export default function About() {
         </p>
 
         {/* Supporting paragraph */}
-        <motion.p
+        <m.p
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, margin: '-80px' }}
@@ -88,7 +88,7 @@ export default function About() {
           className="text-[#1D211E]/70 text-sm sm:text-base max-w-2xl mx-auto mt-6 leading-[1.6]"
         >
           {c.about.support}
-        </motion.p>
+        </m.p>
 
         {/* Credentials grid */}
         <div className="mt-12 sm:mt-14 max-w-2xl mx-auto grid grid-cols-[auto_1fr_auto] items-center gap-x-4 gap-y-3 text-[11px] sm:text-xs text-left border-t border-[#1D211E]/12 pt-8">

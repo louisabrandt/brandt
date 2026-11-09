@@ -104,12 +104,12 @@ export default function CourseDetail() {
 
         {/* Booking — dark accent card on the light page */}
         <div className="noise-overlay relative overflow-hidden rounded-2xl bg-[#37453E] p-6 md:p-8 mt-14">
-          <p className="text-primary/55 text-[11px] uppercase tracking-[0.22em] mb-3">
+          <p className="text-primary/60 text-[11px] uppercase tracking-[0.22em] mb-3">
             {c.courseMeta.priceLabel}
           </p>
           <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
             <span className="text-primary text-2xl font-medium">{c.courseMeta.individual}</span>
-            <span className="text-primary/55">·</span>
+            <span className="text-primary/60">·</span>
             <span className="text-primary text-2xl font-medium">{c.courseMeta.couple}</span>
           </div>
           <ul className="mt-4 space-y-2">
@@ -133,7 +133,7 @@ export default function CourseDetail() {
                 ? `${url}?thema=${encodeURIComponent(t.title)}`
                 : fallback
               const cls = filled
-                ? `${pill} bg-[#B4552E] hover:bg-[#9E4826] text-[#F1EFE7]`
+                ? `${pill} bg-[#A74F2B] hover:bg-[#9E4826] text-[#F1EFE7]`
                 : `${pill} border border-primary/25 text-primary hover:bg-primary/[0.08] pr-5`
               const inner = (
                 <>
@@ -183,9 +183,9 @@ export default function CourseDetail() {
           )}
 
           {(hasUrl(BOOKING.courseIndividual) || hasUrl(BOOKING.courseCouple)) && (
-            <p className="mt-4 text-primary/55 text-[11px]">{c.courseMeta.bookingInfo}</p>
+            <p className="mt-4 text-primary/60 text-[11px]">{c.courseMeta.bookingInfo}</p>
           )}
-          <p className="mt-3 text-primary/55 text-[11px]">{c.courseMeta.vat}</p>
+          <p className="mt-3 text-primary/60 text-[11px]">{c.courseMeta.vat}</p>
         </div>
 
         {/* Deepen 1:1 */}

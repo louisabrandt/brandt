@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import SectionLabel from '../components/SectionLabel'
 import SecondaryCTA from '../components/SecondaryCTA'
 import { useContent } from '../i18n/content'
@@ -13,7 +13,7 @@ export default function ApproachTeaser() {
       <div className="max-w-3xl mx-auto text-center">
         <SectionLabel className="mb-6">{c.approachTeaser.eyebrow}</SectionLabel>
 
-        <motion.h2
+        <m.h2
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, margin: '-80px' }}
@@ -21,7 +21,7 @@ export default function ApproachTeaser() {
           className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-primary leading-[1.05]"
         >
           {c.approachTeaser.heading}
-        </motion.h2>
+        </m.h2>
 
         <p className="mt-6 max-w-2xl mx-auto text-sm md:text-[15px] leading-[1.7] text-primary/70">
           {c.approachTeaser.para}

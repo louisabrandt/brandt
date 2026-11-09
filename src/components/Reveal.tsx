@@ -1,5 +1,5 @@
 import { useRef, type ReactNode } from 'react'
-import { motion, useInView } from 'framer-motion'
+import { m, useInView } from 'framer-motion'
 
 const ENTRANCE_EASE = [0.22, 1, 0.36, 1] as const
 
@@ -14,7 +14,7 @@ export default function Reveal({ index = 0, className, children }: RevealProps) 
   const ref = useRef<HTMLDivElement>(null)
   const inView = useInView(ref, { once: true, margin: '-80px' })
   return (
-    <motion.div
+    <m.div
       ref={ref}
       initial={{ opacity: 0, scale: 0.97 }}
       animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.97 }}
@@ -22,6 +22,6 @@ export default function Reveal({ index = 0, className, children }: RevealProps) 
       className={className}
     >
       {children}
-    </motion.div>
+    </m.div>
   )
 }

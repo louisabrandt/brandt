@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import { motion, useInView } from 'framer-motion'
+import { m, useInView } from 'framer-motion'
 
 export interface Segment {
   text: string
@@ -40,7 +40,7 @@ export default function WordsPullUpMultiStyle({
       className={`inline-flex flex-wrap justify-center ${className}`}
     >
       {words.map(({ word, className: wordClass }, i) => (
-        <motion.span
+        <m.span
           key={`${word}-${i}`}
           initial={{ y: 20, opacity: 0 }}
           animate={isInView ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
@@ -53,7 +53,7 @@ export default function WordsPullUpMultiStyle({
           style={{ marginRight: '0.22em' }}
         >
           {word}
-        </motion.span>
+        </m.span>
       ))}
     </div>
   )

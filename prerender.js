@@ -130,7 +130,14 @@ for (const lang of LANGS) {
   for (const base of PAGE_BASES) {
     const routePath = localize(base, lang)
     const meta = META[lang][base]
-    const html = inject(withHead(template, { base, lang, title: meta.title, desc: meta.desc }), render(routePath))
+    let html = inject(withHead(template, { base, lang, title: meta.title, desc: meta.desc }), render(routePath))
+    // Only the home page shows the hero: preload its poster so it carries the LCP.
+    if (base === '/') {
+      html = html.replace(
+        '</head>',
+        '<link rel="preload" as="image" href="/videos/hero-poster.webp" fetchpriority="high" /></head>',
+      )
+    }
     writePage(routePath, html)
     urls.push({ loc: canonicalFor(base, lang), priority: base === '/' ? '1.0' : '0.9' })
   }

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, m } from 'framer-motion'
 import { Plus } from 'lucide-react'
 import SectionLabel from '../components/SectionLabel'
 import PrimaryCTA from '../components/PrimaryCTA'
@@ -30,7 +30,7 @@ function FaqItem({ item, isOpen, onToggle }: { item: QA; isOpen: boolean; onTogg
       </button>
       <AnimatePresence initial={false}>
         {isOpen && (
-          <motion.div
+          <m.div
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
@@ -40,7 +40,7 @@ function FaqItem({ item, isOpen, onToggle }: { item: QA; isOpen: boolean; onTogg
             <p className="pb-5 pr-8 max-w-3xl text-[#1D211E]/70 text-sm sm:text-[15px] leading-[1.65]">
               {item.a}
             </p>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </div>

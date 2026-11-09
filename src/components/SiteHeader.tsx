@@ -46,7 +46,7 @@ export default function SiteHeader() {
           <div className="hidden sm:block">
             <LangSwitch />
           </div>
-          <BookLink className="group inline-flex items-center gap-1.5 hover:gap-2.5 transition-all duration-300 bg-[#B4552E] hover:bg-[#9E4826] rounded-full pl-4 pr-1 py-1 text-[#F1EFE7] font-medium text-xs sm:text-sm">
+          <BookLink className="group inline-flex items-center gap-1.5 hover:gap-2.5 transition-all duration-300 bg-[#A74F2B] hover:bg-[#9E4826] rounded-full pl-4 pr-1 py-1 text-[#F1EFE7] font-medium text-xs sm:text-sm">
             <span>{c.nav.book}</span>
             <span className="flex items-center justify-center bg-[#7C3A1E] rounded-full w-7 h-7 transition-transform duration-300 group-hover:scale-110">
               <ArrowRight className="w-3.5 h-3.5 text-[#F1EFE7]" strokeWidth={1.5} />

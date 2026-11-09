@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { Check } from 'lucide-react'
 import SectionLabel from '../components/SectionLabel'
 import LazyVideo from '../components/LazyVideo'
@@ -43,7 +43,7 @@ export default function WhatToExpect() {
           {c.expect.eyebrow}
         </SectionLabel>
 
-        <motion.h2
+        <m.h2
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, margin: '-80px' }}
@@ -51,7 +51,7 @@ export default function WhatToExpect() {
           className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-primary max-w-3xl leading-[1.05]"
         >
           {c.expect.heading}
-        </motion.h2>
+        </m.h2>
 
         <p className="mt-6 max-w-3xl text-sm md:text-[15px] leading-[1.6] text-primary/70">
           {c.expect.intro}

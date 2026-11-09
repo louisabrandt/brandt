@@ -19,7 +19,7 @@ function OfferingBody({ offering, tone }: { offering: Offering; tone: 'dark' | '
   const title = tone === 'paper' ? 'text-[#1D211E]' : ''
   const tagline = tone === 'paper' ? 'text-[#1D211E]/65' : 'text-primary/60'
   const desc = tone === 'paper' ? 'text-[#1D211E]/75' : 'text-primary/70'
-  const meta = tone === 'paper' ? 'text-[#1D211E]/65' : 'text-primary/55'
+  const meta = tone === 'paper' ? 'text-[#1D211E]/65' : 'text-primary/60'
   const price = tone === 'paper' ? 'text-[#1D211E]' : 'text-primary'
   return (
     <>
@@ -66,9 +66,9 @@ export default function Services() {
           {/* Free intro call — featured dark accent card */}
           <Reveal
             index={0}
-            className="noise-overlay relative overflow-hidden rounded-2xl bg-[#3C4B43] ring-1 ring-[#B4552E]/40 p-6 md:p-8 flex flex-col md:col-span-2 min-h-[260px]"
+            className="noise-overlay relative overflow-hidden rounded-2xl bg-[#3C4B43] ring-1 ring-[#A74F2B]/40 p-6 md:p-8 flex flex-col md:col-span-2 min-h-[260px]"
           >
-            <span className="self-start text-[10px] uppercase tracking-[0.18em] text-[#F1EFE7] bg-[#B4552E] rounded-full px-2.5 py-1">
+            <span className="self-start text-[10px] uppercase tracking-[0.18em] text-[#F1EFE7] bg-[#A74F2B] rounded-full px-2.5 py-1">
               {c.services.featured.price}
             </span>
             <h3 className="mt-5 text-xl font-medium" style={{ color: TEXT_COLOR }}>
@@ -92,7 +92,7 @@ export default function Services() {
 
             <div className="mt-6 flex flex-col gap-2">
               <PrimaryCTA label={c.services.cta} />
-              <span className="text-primary/55 text-[11px]">{c.services.trust}</span>
+              <span className="text-primary/60 text-[11px]">{c.services.trust}</span>
             </div>
           </Reveal>
 

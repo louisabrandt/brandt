@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import SectionLabel from '../components/SectionLabel'
 import Reveal from '../components/Reveal'
 import { TEXT_COLOR } from '../constants'
@@ -18,7 +18,7 @@ export default function RelationalCapacity() {
           {c.relCap.eyebrow}
         </SectionLabel>
 
-        <motion.h2
+        <m.h2
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, margin: '-80px' }}
@@ -26,7 +26,7 @@ export default function RelationalCapacity() {
           className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-primary max-w-3xl leading-[1.05]"
         >
           {c.relCap.heading} <span className="font-serif italic">{c.relCap.headingItalic}</span>
-        </motion.h2>
+        </m.h2>
 
         <p className="mt-6 max-w-2xl text-sm md:text-[15px] leading-[1.6] text-primary/70">
           {c.relCap.intro}

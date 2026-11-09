@@ -1,4 +1,4 @@
-import { MotionConfig } from 'framer-motion'
+import { LazyMotion, domAnimation, MotionConfig } from 'framer-motion'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { LanguageProvider } from './i18n/lang'
 import ScrollToTop from './components/ScrollToTop'
@@ -13,7 +13,8 @@ import CourseDetail from './pages/CourseDetail'
 export default function App() {
   return (
     <LanguageProvider>
-      <MotionConfig reducedMotion="user">
+      <LazyMotion features={domAnimation} strict>
+        <MotionConfig reducedMotion="user">
         <ScrollToTop />
         <Analytics />
         <Routes>
@@ -33,7 +34,8 @@ export default function App() {
           <Route path="/en/contact" element={<ContactPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
-      </MotionConfig>
+        </MotionConfig>
+      </LazyMotion>
     </LanguageProvider>
   )
 }

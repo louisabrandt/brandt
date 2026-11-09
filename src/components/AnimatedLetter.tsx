@@ -1,4 +1,4 @@
-import { motion, useTransform, type MotionValue } from 'framer-motion'
+import { m, useTransform, type MotionValue } from 'framer-motion'
 
 interface AnimatedLetterProps {
   char: string
@@ -17,8 +17,8 @@ export default function AnimatedLetter({ char, progress, range }: AnimatedLetter
   const opacity = useTransform(progress, range, [0.2, 1])
 
   return (
-    <motion.span style={{ opacity }} className="inline">
+    <m.span style={{ opacity }} className="inline">
       {char === ' ' ? ' ' : char}
-    </motion.span>
+    </m.span>
   )
 }
