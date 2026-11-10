@@ -11,7 +11,7 @@ export default function WhatChanges() {
   return (
     <section
       id="what-changes"
-      className="bg-[#F4F2EC] px-4 sm:px-6 md:px-10 lg:px-14 py-20 sm:py-24 md:py-28"
+      className="bg-[#F4F2EC] px-4 sm:px-6 md:px-10 lg:px-14 py-14 sm:py-24 md:py-28"
     >
       <div className="max-w-6xl mx-auto">
         <SectionLabel tone="ink" align="start" className="mb-5 sm:mb-6">

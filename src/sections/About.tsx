@@ -1,7 +1,5 @@
-import { Fragment, useRef } from 'react'
-import { m, useScroll } from 'framer-motion'
+import { m } from 'framer-motion'
 import WordsPullUpMultiStyle, { type Segment } from '../components/WordsPullUpMultiStyle'
-import AnimatedLetter from '../components/AnimatedLetter'
 import SectionLabel from '../components/SectionLabel'
 import { useContent } from '../i18n/content'
 
@@ -9,11 +7,6 @@ const EASE = [0.16, 1, 0.3, 1] as const
 
 export default function About() {
   const c = useContent()
-  const leadRef = useRef<HTMLParagraphElement>(null)
-  const { scrollYProgress } = useScroll({
-    target: leadRef,
-    offset: ['start 0.8', 'end 0.3'],
-  })
 
   const headingSegments: Segment[] = [
     { text: c.about.head1, className: 'font-normal' },
@@ -21,12 +14,8 @@ export default function About() {
     { text: c.about.head3, className: 'font-normal' },
   ]
 
-  const lead = c.about.lead
-  const words = lead.split(' ')
-  const total = lead.length
-
   return (
-    <section id="about" className="bg-[#F4F2EC] px-4 py-20 sm:py-28 md:py-36">
+    <section id="about" className="bg-[#F4F2EC] px-4 py-16 sm:py-28 md:py-36">
       <div className="max-w-3xl mx-auto text-center">
         <SectionLabel tone="ink" className="mb-8 sm:mb-10">
           {c.about.eyebrow}
@@ -48,36 +37,16 @@ export default function About() {
           className="mt-10 sm:mt-14 w-full rounded-2xl object-cover ring-1 ring-[#1D211E]/10"
         />
 
-        {/* Lead — scroll-linked character reveal */}
-        <p
-          ref={leadRef}
-          className="relative text-[#1D211E] text-base sm:text-lg md:text-xl max-w-2xl mx-auto mt-12 sm:mt-16 leading-[1.6]"
+        {/* Lead — clean fade-in; full contrast so it stays readable on mobile */}
+        <m.p
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.7, ease: EASE }}
+          className="text-[#1D211E] text-base sm:text-lg md:text-xl max-w-2xl mx-auto mt-12 sm:mt-16 leading-[1.6]"
         >
-          {(() => {
-            let idx = 0
-            return words.map((word, wi) => {
-              const letters = word.split('').map((ch) => {
-                const i = idx++
-                const pr = i / total
-                return (
-                  <AnimatedLetter
-                    key={i}
-                    char={ch}
-                    progress={scrollYProgress}
-                    range={[pr - 0.1, pr + 0.05]}
-                  />
-                )
-              })
-              idx++ // account for the space that follows this word
-              return (
-                <Fragment key={wi}>
-                  <span className="inline-block">{letters}</span>
-                  {wi < words.length - 1 ? ' ' : null}
-                </Fragment>
-              )
-            })
-          })()}
-        </p>
+          {c.about.lead}
+        </m.p>
 
         {/* Supporting paragraph */}
         <m.p

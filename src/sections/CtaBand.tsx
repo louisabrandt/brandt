@@ -31,7 +31,7 @@ export default function CtaBand({ variant = 'default', tone = 'paper', secondary
         : null
 
   return (
-    <section className={`${bg} px-4 sm:px-6 md:px-10 lg:px-14 py-20 sm:py-24`}>
+    <section className={`${bg} px-4 sm:px-6 md:px-10 lg:px-14 py-14 sm:py-24`}>
       <div className="max-w-3xl mx-auto text-center">
         <h2 className={`text-2xl sm:text-3xl md:text-4xl font-normal leading-[1.1] ${head}`}>
           {heading}

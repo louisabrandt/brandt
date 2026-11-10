@@ -13,7 +13,7 @@ export default function ForWhom() {
   return (
     <section
       id="for-whom"
-      className="bg-[#F4F2EC] px-4 sm:px-6 md:px-10 lg:px-14 py-20 sm:py-24 md:py-28"
+      className="bg-[#F4F2EC] px-4 sm:px-6 md:px-10 lg:px-14 py-14 sm:py-24 md:py-28"
     >
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">

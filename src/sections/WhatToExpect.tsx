@@ -34,7 +34,7 @@ export default function WhatToExpect() {
   return (
     <section
       id="what-to-expect"
-      className="relative bg-[#2E3A33] px-4 sm:px-6 md:px-10 lg:px-14 py-20 sm:py-24 md:py-28 overflow-hidden"
+      className="relative bg-[#2E3A33] px-4 sm:px-6 md:px-10 lg:px-14 py-14 sm:py-24 md:py-28 overflow-hidden"
     >
       <div className="bg-noise absolute inset-0 opacity-[0.15] pointer-events-none" />
 

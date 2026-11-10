@@ -9,7 +9,7 @@ const EASE = [0.16, 1, 0.3, 1] as const
 export default function ApproachTeaser() {
   const c = useContent()
   return (
-    <section className="bg-[#2E3A33] px-4 sm:px-6 md:px-10 lg:px-14 py-20 sm:py-24 md:py-28">
+    <section className="bg-[#2E3A33] px-4 sm:px-6 md:px-10 lg:px-14 py-14 sm:py-24 md:py-28">
       <div className="max-w-3xl mx-auto text-center">
         <SectionLabel className="mb-6">{c.approachTeaser.eyebrow}</SectionLabel>
 

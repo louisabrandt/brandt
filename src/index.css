@@ -162,3 +162,12 @@ body {
 
 /* Formularelemente erben die Body-Schrift (Hanken Grotesk) */
 button, input, textarea, select { font-family: inherit; }
+
+/* Mobile: keep form fields at >=16px so iOS Safari doesn't auto-zoom on focus. */
+@media (max-width: 767px) {
+  input:not([type='checkbox']):not([type='radio']),
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}

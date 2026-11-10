@@ -16,7 +16,7 @@ export default function Courses() {
   return (
     <section
       id="courses"
-      className="relative bg-[#F4F2EC] px-4 sm:px-6 md:px-10 lg:px-14 py-20 sm:py-24 md:py-28 overflow-hidden"
+      className="relative bg-[#F4F2EC] px-4 sm:px-6 md:px-10 lg:px-14 py-14 sm:py-24 md:py-28 overflow-hidden"
     >
       <div className="relative max-w-6xl mx-auto">
         <SectionLabel align="start" tone="ink" className="mb-5 sm:mb-6">

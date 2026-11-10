@@ -85,7 +85,7 @@ export default function FitFinder() {
   const t = courseText(course, lang)
 
   return (
-    <section id="fit" className="bg-[#2E3A33] px-4 sm:px-6 md:px-10 lg:px-14 py-20 sm:py-24 md:py-28">
+    <section id="fit" className="bg-[#2E3A33] px-4 sm:px-6 md:px-10 lg:px-14 py-14 sm:py-24 md:py-28">
       <div className="max-w-3xl mx-auto">
         <SectionLabel className="mb-6">{c.fit.eyebrow}</SectionLabel>
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal text-primary text-center leading-[1.1] mb-3">
