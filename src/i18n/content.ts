@@ -51,7 +51,7 @@ export const en = {
     expatEyebrow: 'For internationals & expats',
     expatHeading: 'Love across borders carries its own weight.',
     expatText:
-      "Binational and international couples move between different languages, cultures and unspoken expectations. Relocation can cut you off from the friends, family and routines that once held you, and place all of that weight on the relationship itself. It's a frequent focus of the work, and a big reason many international couples reach out.",
+      "Binational and international couples move between different languages, cultures and unspoken expectations. Relocation can cut you off from the friends, family and routines that once held you, and place all of that weight on the relationship itself. It's a frequent focus of the work, and a big reason many international couples reach out. A good part of what we do is making both your inner worlds legible to each other, across cultures and languages, so understanding grows instead of blame.",
   },
   approachTeaser: {
     eyebrow: 'How I work',
@@ -350,7 +350,8 @@ export const en = {
       { q: 'Which languages?', a: 'Sessions are available in English and German.' },
       { q: 'Do you work with international and binational couples?', a: 'Yes, often. Cultural differences, languages, and the isolation that can come with relocation are a frequent focus of the work.' },
       { q: 'How long does it take?', a: "There's no fixed timeline. Some people start with a few sessions to get clarity. Others choose ongoing work over several months for change that lasts. We talk it through in the first conversation." },
-      { q: 'Is it confidential?', a: 'Yes. Confidentiality is fundamental. It holds from the first contact and continues after the work ends. Nothing is shared with anyone.' },
+      { q: 'Is it confidential?', a: "Yes. Confidentiality is fundamental. It holds from the first contact and continues after the work ends. I don't work on behalf of third parties, such as insurers, employers or authorities, and I write no reports or assessments. If you prefer, you can reach out anonymously at first." },
+      { q: "How do I know if we're a fit?", a: 'Trust your gut in the free intro call. The relationship with me matters as much as any method, so notice how it feels to talk, whether you feel understood and at ease. There is no pressure to decide on the spot.' },
       { q: 'What happens in the first conversation?', a: "It's a free, 30-minute online call: what brings you here, the patterns you're noticing, and whether this work fits you right now. No agenda, and no obligation to continue." },
       { q: 'Can this save our relationship?', a: "I can't promise that, and it would be dishonest to try. My role isn't to tell you to stay or to leave. It's to help you see your wishes, your options and your responsibilities clearly, so you can make honest decisions you can stand behind." },
     ],
@@ -468,7 +469,7 @@ export const de: Content = {
     expatEyebrow: 'Für Internationals & Expats',
     expatHeading: 'Liebe über Grenzen hinweg hat ihr eigenes Gewicht.',
     expatText:
-      'Binationale und internationale Paare bewegen sich zwischen Sprachen, Kulturen und unausgesprochenen Erwartungen. Ein Umzug kann euch von den Freunden, der Familie und den Routinen trennen, die euch einmal getragen haben, und legt dieses Gewicht ganz auf die Beziehung. Das ist ein häufiger Schwerpunkt meiner Arbeit und ein wichtiger Grund, warum sich viele internationale Paare an mich wenden.',
+      'Binationale und internationale Paare bewegen sich zwischen Sprachen, Kulturen und unausgesprochenen Erwartungen. Ein Umzug kann euch von den Freunden, der Familie und den Routinen trennen, die euch einmal getragen haben, und legt dieses Gewicht ganz auf die Beziehung. Das ist ein häufiger Schwerpunkt meiner Arbeit und ein wichtiger Grund, warum sich viele internationale Paare an mich wenden. Ein großer Teil der Arbeit ist, eure beiden inneren Welten über Kulturen und Sprachen hinweg füreinander lesbar zu machen, damit Verständnis wächst statt Schuldzuweisung.',
   },
   approachTeaser: {
     eyebrow: 'Wie ich arbeite',
@@ -767,7 +768,8 @@ export const de: Content = {
       { q: 'In welchen Sprachen?', a: 'Die Sitzungen sind auf Deutsch und Englisch möglich.' },
       { q: 'Arbeitest du mit internationalen und binationalen Paaren?', a: 'Ja, sehr oft. Kulturelle Unterschiede, Sprachen und die Isolation, die ein Umzug mit sich bringen kann, sind ein häufiger Schwerpunkt der Arbeit.' },
       { q: 'Wie lange dauert es?', a: 'Es gibt keinen festen Zeitrahmen. Manche beginnen mit einigen Sitzungen für Klarheit. Andere entscheiden sich über mehrere Monate für fortlaufende Arbeit, wenn Veränderung bleiben soll. Wir klären das im Erstgespräch.' },
-      { q: 'Ist es vertraulich?', a: 'Ja. Vertraulichkeit ist die Grundlage. Sie gilt ab dem ersten Kontakt und bleibt auch nach dem Ende der Arbeit bestehen. Nichts wird mit Dritten geteilt.' },
+      { q: 'Ist es vertraulich?', a: 'Ja. Vertraulichkeit ist die Grundlage. Sie gilt ab dem ersten Kontakt und bleibt auch nach dem Ende der Arbeit bestehen. Ich arbeite nicht im Auftrag Dritter, etwa Versicherungen, Arbeitgebern oder Behörden, und erstelle keine Gutachten. Wenn du möchtest, kannst du dich zunächst auch anonym melden.' },
+      { q: 'Woran merke ich, ob es passt?', a: 'Vertrau deinem Bauchgefühl im kostenlosen Erstgespräch. Die Beziehung zu mir zählt genauso viel wie jede Methode, achte also darauf, wie sich das Gespräch anfühlt, ob du dich verstanden und wohl fühlst. Du musst dich nicht sofort entscheiden.' },
       { q: 'Was passiert im Erstgespräch?', a: 'Ein kostenloses, 30-minütiges Online-Gespräch: was dich herbringt, die Muster, die du bemerkst, und ob diese Arbeit gerade zu dir passt. Keine Agenda, keine Verpflichtung.' },
       { q: 'Kann das unsere Beziehung retten?', a: 'Das kann ich nicht versprechen, und es wäre unredlich, es zu behaupten. Meine Rolle ist nicht, dir zu sagen, ob du bleiben oder gehen sollst, sondern dir zu helfen, deine Wünsche, deine Möglichkeiten und deine Verantwortung klar zu sehen, damit du eine ehrliche, tragfähige Entscheidung treffen kannst.' },
     ],
