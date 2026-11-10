@@ -39,7 +39,7 @@ export const en = {
     head1: 'Something',
     headItalic: 'keeps repeating.',
     intro:
-      'For couples and individuals who want to understand what keeps repeating in their relationships, with a partner, with the people around them, or with themselves, instead of only managing around it.',
+      'For couples and individuals who want to understand what keeps repeating in their relationships, with a partner, with the people around them, or with themselves, and who are ready to change it.',
     themesLabel: 'Common themes',
     themes: [
       'The same argument on repeat, whether it ends in raised voices or silence',
@@ -332,7 +332,7 @@ export const en = {
       'Less constant stress and overwhelm',
       'More steadiness, in conflict and in closeness',
       'More warmth and presence for each other',
-      'Stronger resilience and lasting wellbeing',
+      'An ease that lasts',
     ],
     closing: 'The relationship stops running on old, automatic scripts, and starts being shaped by',
     closingItalic: 'awareness, choice, and shared responsibility.',
@@ -457,7 +457,7 @@ export const de: Content = {
     head1: 'Etwas',
     headItalic: 'wiederholt sich.',
     intro:
-      'Für Paare und Einzelne, die verstehen möchten, was sich in ihren Beziehungen immer wiederholt, mit dem Partner, mit den Menschen um sie herum oder mit sich selbst, statt es weiter nur zu verwalten.',
+      'Für Paare und Einzelne, die verstehen möchten, was sich in ihren Beziehungen immer wiederholt, mit dem Partner, mit den Menschen um sie herum oder mit sich selbst, und bereit sind, es zu verändern.',
     themesLabel: 'Häufige Themen',
     themes: [
       'Immer derselbe Streit, ob er laut endet oder im Schweigen',
@@ -740,17 +740,17 @@ export const de: Content = {
     steps: [
       { title: 'Erstgespräch buchen', description: 'Ein ruhiges, unverbindliches erstes Gespräch, um eure Situation zu verstehen und zu sehen, ob diese Arbeit passt. Ohne Verpflichtung, weiterzumachen.' },
       { title: 'Wir machen die Muster sichtbar', description: 'Gemeinsam zeichnen wir nach, wie ihr beide in Nähe, Konflikt und Intimität reagiert, und entwickeln ein ehrliches, gemeinsames Bild dessen, was wirklich geschieht.' },
-      { title: 'Strukturierte, fortlaufende Arbeit', description: 'Konkrete Werkzeuge und Schritte, im Tempo, das für euch beide stimmt, die Einsicht in Wahlmöglichkeit und Wiederholung in bleibende Veränderung verwandeln.' },
+      { title: 'Strukturierte, fortlaufende Arbeit', description: 'Konkrete Werkzeuge und Schritte, im Tempo, das für euch beide stimmt, damit aus Einsicht eine echte Wahl wird und aus Wiederholung bleibende Veränderung.' },
     ],
   },
   whatChanges: {
     eyebrow: 'Was sich verändert',
-    heading: 'Was sich mit der Zeit zu verschieben beginnt.',
+    heading: 'Was mit der Zeit in Bewegung kommt.',
     outcomes: [
-      'Weniger chronischer Stress und Überforderung',
-      'Mehr Stabilität, im Konflikt und in der Nähe',
+      'Weniger Dauerstress und Überforderung',
+      'Mehr Halt, im Streit wie in der Nähe',
       'Mehr Wärme und Präsenz füreinander',
-      'Mehr Resilienz und dauerhaftes Wohlbefinden',
+      'Mehr Gelassenheit, die bleibt',
     ],
     closing: 'Die Beziehung läuft nicht länger nach alten, automatischen Mustern, sondern wird getragen von',
     closingItalic: 'Bewusstheit, Wahl und gemeinsamer Verantwortung.',
