@@ -90,6 +90,17 @@ export default function About() {
           {c.about.support}
         </m.p>
 
+        {/* Personal note — the calling, early practice, and a human touch */}
+        <m.p
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.7, ease: EASE }}
+          className="text-[#1D211E]/70 text-sm sm:text-base max-w-2xl mx-auto mt-5 leading-[1.6]"
+        >
+          {c.about.calling}
+        </m.p>
+
         {/* Credentials grid */}
         <div className="mt-12 sm:mt-14 max-w-2xl mx-auto grid grid-cols-[auto_1fr_auto] items-center gap-x-4 gap-y-3 text-xs text-left border-t border-[#1D211E]/12 pt-8">
           {c.about.credentials.map(([marker, mid, detail]) => (
