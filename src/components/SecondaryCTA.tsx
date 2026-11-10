@@ -28,7 +28,7 @@ export default function SecondaryCTA({
   return (
     <Link
       to={l(to)}
-      className={`group inline-flex items-center gap-2 hover:gap-3 transition-all duration-300 rounded-full border px-5 py-[0.65rem] font-medium text-sm sm:text-base ${styles} ${className}`}
+      className={`group inline-flex items-center justify-center gap-2 hover:gap-3 transition-all duration-300 rounded-full border px-5 py-[0.65rem] min-h-[2.75rem] font-medium text-sm sm:text-base ${styles} ${className}`}
     >
       <span>{label}</span>
       <ArrowRight

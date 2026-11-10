@@ -124,7 +124,7 @@ export default function CourseDetail() {
           {(() => {
             const fallback = `${l('/contact')}?kurs=${encodeURIComponent(t.title)}`
             const pill =
-              'group inline-flex items-center gap-2 hover:gap-3 transition-all duration-300 rounded-full pl-5 pr-1.5 py-1.5 font-medium text-sm'
+              'group inline-flex items-center justify-center gap-2 hover:gap-3 transition-all duration-300 rounded-full pl-5 pr-1.5 py-1.5 min-h-[2.75rem] font-medium text-sm'
             const circle =
               'flex items-center justify-center rounded-full w-9 h-9 transition-transform duration-300 group-hover:scale-110'
             const btn = (url: string, label: string, filled: boolean, ev: string) => {
