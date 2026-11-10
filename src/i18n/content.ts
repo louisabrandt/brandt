@@ -125,7 +125,7 @@ export const en = {
     support:
       'My work is grounded in psychological research and clinical training: attachment theory, relational systems thinking, emotional regulation, and current relationship science, including the Gottman Method. It stays practical and down to earth, with no therapy jargon, no blame, and no self-optimization talk. My approach is humanistic: you set the direction and I help you get there, with respect for your freedom and the choices that are yours to make. To keep the quality high, I work with regular supervision and continued training.',
     calling:
-      "This work is a calling for me. Already during my studies, at the Caritas marriage, family and life counselling service, I accompanied couples and individuals through conflict and crisis, and saw again and again how much eases once a person understands themselves better. That is what I hope to encourage: the more clearly we know ourselves, the more freely we can shape our lives. My own balance I find in music, at the piano, the violin and the guitar.",
+      "This work is a calling for me. Already during my studies, at the Caritas marriage, family and life counselling service, I accompanied couples and individuals through conflict and crisis, and saw again and again how much eases once a person understands themselves better. That is what I hope to encourage: the more clearly we know ourselves, the more freely we can shape our lives.",
     credentials: [
       ['M.Sc.', 'Psychology', 'Clinical Psychology & Psychotherapy focus'],
       ['Method', 'Gottman-informed', 'Attachment & relational systems'],
@@ -545,7 +545,7 @@ export const de: Content = {
     support:
       'Meine Arbeit gründet in psychologischer Forschung und klinischer Ausbildung: Bindungstheorie, systemischem Denken, Affektregulation und aktueller Paarforschung, darunter die Gottman-Methode. Sie bleibt konkret und alltagsnah, ohne Therapiejargon, ohne Schuldzuweisungen und ohne Selbstoptimierung. Mein Zugang ist humanistisch: Du gibst die Richtung vor, ich begleite dich dorthin, mit Respekt vor deiner Freiheit und den Entscheidungen, die bei dir liegen. Für gleichbleibende Qualität sorge ich mit regelmäßiger Supervision und Fortbildung.',
     calling:
-      'Dieser Beruf ist für mich Berufung. Schon während meines Studiums habe ich in der Ehe-, Familien- und Lebensberatung der Caritas Paare und Einzelpersonen durch Konflikte und Krisen begleitet und immer wieder erlebt, wie viel sich löst, wenn ein Mensch sich selbst besser versteht. Genau dazu möchte ich ermutigen: Je klarer wir uns kennen, desto freier können wir unser Leben gestalten. Meinen eigenen Ausgleich finde ich in der Musik, am Klavier, der Geige und der Gitarre.',
+      'Dieser Beruf ist für mich Berufung. Schon während meines Studiums habe ich in der Ehe-, Familien- und Lebensberatung der Caritas Paare und Einzelpersonen durch Konflikte und Krisen begleitet und immer wieder erlebt, wie viel sich löst, wenn ein Mensch sich selbst besser versteht. Genau dazu möchte ich ermutigen: Je klarer wir uns kennen, desto freier können wir unser Leben gestalten.',
     credentials: [
       ['M.Sc.', 'Psychologie', 'Schwerpunkt Klinische Psychologie & Psychotherapie'],
       ['Methode', 'Gottman-fundiert', 'Bindung & systemische Paararbeit'],
