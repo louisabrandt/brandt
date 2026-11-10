@@ -151,7 +151,7 @@ export default function FitFinder() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {/* Recommended course */}
-                  <div className="relative overflow-hidden rounded-2xl bg-[#435349] ring-1 ring-[#A74F2B]/40 p-6 md:p-7 flex flex-col">
+                  <div className="relative overflow-hidden rounded-2xl bg-[#46574B] ring-1 ring-[#A74F2B]/40 p-6 md:p-7 flex flex-col">
                     <span className="text-xs uppercase tracking-[0.18em] text-primary/85 bg-[#A74F2B]/25 rounded-full px-2.5 py-1 self-start">
                       {c.fit.bestFit}
                     </span>

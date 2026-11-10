@@ -59,22 +59,22 @@ export default function WhatToExpect() {
 
         {/* Themed bento */}
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
-          <Reveal index={0} className="noise-overlay relative overflow-hidden rounded-2xl bg-[#435349] p-6 md:p-8">
+          <Reveal index={0} className="noise-overlay relative overflow-hidden rounded-2xl bg-[#46574B] p-6 md:p-8">
             <CardTitle>{c.expect.card1Title}</CardTitle>
             <p className="mt-4 text-primary/75 text-sm sm:text-base leading-[1.6]">{c.expect.card1}</p>
           </Reveal>
 
-          <Reveal index={1} className="noise-overlay relative overflow-hidden rounded-2xl bg-[#435349] p-6 md:p-8">
+          <Reveal index={1} className="noise-overlay relative overflow-hidden rounded-2xl bg-[#46574B] p-6 md:p-8">
             <CardTitle>{c.expect.card2Title}</CardTitle>
             <p className="mt-4 text-primary/75 text-sm sm:text-base leading-[1.6]">{c.expect.card2}</p>
           </Reveal>
 
-          <Reveal index={2} className="noise-overlay relative overflow-hidden rounded-2xl bg-[#435349] p-6 md:p-8">
+          <Reveal index={2} className="noise-overlay relative overflow-hidden rounded-2xl bg-[#46574B] p-6 md:p-8">
             <CardTitle>{c.expect.card3Title}</CardTitle>
             <Bullets items={c.expect.practical} />
           </Reveal>
 
-          <Reveal index={3} className="noise-overlay relative overflow-hidden rounded-2xl bg-[#435349] p-6 md:p-8">
+          <Reveal index={3} className="noise-overlay relative overflow-hidden rounded-2xl bg-[#46574B] p-6 md:p-8">
             <CardTitle>{c.expect.card4Title}</CardTitle>
             <p className="mt-4 text-primary/70 text-xs sm:text-sm leading-[1.55]">{c.expect.card4Intro}</p>
             <Bullets items={c.expect.sexTherapy} />

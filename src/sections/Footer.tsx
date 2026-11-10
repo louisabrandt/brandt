@@ -24,6 +24,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           {/* Brand */}
           <div className="lg:col-span-1">
+            <img
+              src="/motif-hearts.svg"
+              alt=""
+              aria-hidden="true"
+              className="h-11 w-auto mb-3 opacity-90"
+            />
             <div className="flex items-center gap-1">
               <span className="text-2xl font-serif font-medium tracking-[0.01em]" style={{ color: '#F1EFE7' }}>
                 Brandt
